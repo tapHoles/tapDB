@@ -1,0 +1,6 @@
+{
+    domain: "https://500px.com",
+    privacy_url: [
+    "https://about.500px.com/privacy/"
+     ]
+}
