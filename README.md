@@ -1,2 +1,2 @@
-# tapDB
-Db for all the Terms&amp;Privacy policies for websites.
+# tapDB 
+Db for all the Terms&amp;Privacy policies for web-sites.
