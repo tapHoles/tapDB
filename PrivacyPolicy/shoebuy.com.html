@@ -1,0 +1,1196 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head><!-- INSERT BY TRANSFORMER. SELECTOR=head,LOCATION=prepend --><script>
+/*  Rapid+JS v3.1.0 Released on 2017-01-27T16:33Z | (c) Yottaa, Inc. | https://www.yottaa.com/rapidjs-license */ (function(h,T){T(h)})('undefined'!==typeof window?window:this,function(h,T){function ja(a,b,c,d){if(f.sequenceWrites&&'script'==a.nodeName.toLowerCase()){for(var g in A)if(0<A[g].length&&d.writeLocation!=A[g][0].getWriteSelector())return e.def(d.writeLocation)&&(a.yo_writeSelector=d.writeLocation),A[g][0].addScript(a),!1;g=null;f&&(g=e.select(d.writeLocation));if(null!=g){a.write_context=new y(g,a,d.writeLocation);var l=A[d.writeLocation];e.undef(l)&&(l=A[d.writeLocation]=[]);l.push(a.write_context); N=function(){var a=Array.prototype.slice.call(arguments,0,-1).join('');0<l.length&&l[l.length-1].collectDocumentWrite(a)};a.original_onload=a.onload;a.original_onreadystatechange=a.onreadystatechange;a.onload=a.onreadystatechange=null;var h=!1;a.onerror=a.onload=function(){h||this.readyState&&'loaded'!==this.readyState&&'complete'!==this.readyState||(e.log('loading ',this,this.write_context.getId()),h=!0,this.original_onload?this.original_onload.call(arguments):k.publish({topic:'sequence/afterloaded/'+ a.src,message:a}),this.write_context.finalizeWriteOverride(),this.original_onload=this.write_context=this.onload=this.onreadystatechange=null)};a.onreadystatechange=function(){h||this.readyState&&'loaded'!==this.readyState&&'complete'!==this.readyState||(e.log('loading ',this,this.write_context.getId()),h=!0,this.original_onload||k.publish({topic:'sequence/afterloaded/'+a.src,message:a}),this.write_context.finalizeWriteOverride(),this.original_onload=this.write_context=this.onload=this.onreadystatechange= null);this.original_onreadystatechange&&this.original_onreadystatechange.call(arguments)}}}return!0}function U(a,b){for(;a.firstChild;)a.removeChild(a.firstChild);e.writeHTML(a,b)}function ka(){if(0!=f.afterShockLoaded){for(var a=0;a<f.delayed.length;a++)if('none'!=f.delayed[a].delayType)return;null!=f.intervalID&&(clearInterval(f.intervalID),f.intervalID=null,e.log('Turning off response timer all objects are loaded.'))}}function V(a){f.sequenceWrites&&e.undef(a.yo_write)&&(a.yo_write=a.write,N=la, a.writeln=a.write=function(){var b=Array.prototype.slice.call(arguments).join('');N(b,a)})}function la(a,b){for(var c=!1,d=0;d<f.write.length;d++){var g=f.write[d];if(a.match(g.start)||1==g.state){var d={document:b},l;for(l in g)d[l]=g[l];c=!0;g.string&&0==O?g.string+=a:(g.state=1,g.string=a);if(e.undef(g.end)||a.match(g.end)){if(e.undef(d.delayType)||'none'==d.delayType){g.config=d;if(e.def(d.onBefore))d.onBefore(g,b);e.undef(d.selector)||null==d.selector?d.selector=b:d.selector=e.select(d.selector); d.selector.yo_write?(O=!0,-1!=g.string.indexOf('m_js_controller.js')&&(O=!0),d.selector.yo_write(g.string)):e.writeHTML(d.selector,g.string,d.how);if(e.def(d.onAfter))d.onAfter(g,b)}else e.undef(d.selector)?(d.selector='yo_write_'+Math.floor(1E9*Math.random()),e.undef(d.how)&&(d.how='append'),e.undef(d.delayValue)&&(d.delayValue=d.selector),document.yo_write('<di'+'v id='+d.selector+' style=width:0px;height:0px></di'+'v>'),d.selector=e.select(d.selector).parentNode):d.selector=e.select(d.selector),l=Yo.sequence.resource(''), e.def(d.onBefore)&&l.beforeLoading(d.onBefore),e.def(d.onLoad)&&l.afterLoaded(d.onLoad),l.type='inner',l.how=g.how,l.newNode=a,l.before=d.selector,l.me=d.selector,f.delayed.push(l),domCompleteTriggered&&l.execute();g.state=2;g.string=''}break}}0==c&&b.yo_write(a);e.log('write hander = '+a)}function U(a,b){for(;a.firstChild;)a.removeChild(a.firstChild);ma(a,b)}function ma(a,b,c){var d=document.createElement('div');d.innerHTML='string'===typeof b?b:b.innerHTML;for(b=d.childNodes;0<b.length;)'insert'== c?a.parentNode.insertBefore(d.removeChild(b[0]),a):a.appendChild(d.removeChild(b[0]));return this}function W(a){for(var b=0;b<f.srcAttrs.length;b++){var c=a.getAttribute(f.srcAttrs[b]);if(null!=c)return c}return(c=a.getAttribute('src'))&&'data:image/cloaked;plain,'==c.slice(0,25)?c.substring(25):null}function na(a){a='string'===typeof a?e.select(a):a;var b=content=e.select(a.getAttribute(f.pre+'location')),c=a.getAttribute(f.pre+'how'),d=new (_delayed()),g=a.nodeName.toLowerCase(),l=a;'eval'==c|| 'gpt'==c?(content=a.innerHTML,d=Yo.sequence.script(content)):null==c&&(c='replace');var t=a.getAttribute(f.pre+'delayType'),k=a.getAttribute(f.pre+'delayValue');a.getAttribute('src');var u=W(a),r=u&&0<u.length?'src':'inner',p=a.getAttribute(f.pre+'animator'),n=a.getAttribute(f.pre+'onbefore');null!=n&&e.isFunction(h[n])&&d.beforeLoading(h[n]);var m=a.getAttribute(f.pre+'onLoad');null!=m&&e.isFunction(h[m])&&d.afterLoaded(h[m]);null==content&&(content=a,c='insert');if(-1===e.inArray(a,f.targets)){d.animator= p;if('img'==g)null==t&&(t='lazy'),null==b&&(b=a);else if('script'==g){g=a.getAttribute('type');null!=g&&(g=g.split('/'),2<g.length&&(t=g[2],k=g[3]));p=a.getAttribute(f.pre+'writeLocation');g=a.getAttribute(f.pre+'src');if(null!=g)return null==t&&(t='none'),d=Yo.sequence.script(g)[t](k),null!=n&&e.isFunction(h[n])&&d.beforeLoading(h[n]),null!=m&&e.isFunction(h[m])&&d.afterLoaded(h[m]),null!=p&&d.writeLocation(p),d.me=a,d.load(),d;null==b&&(b=a);null!=p&&(d.writeLocation=p)}null==t&&(t='none');1==e.contains(document.documentElement, a)&&a.setAttribute(f.pre+'loaded','true');d[t](k);d.before=b;d.me=l;d.type=r;d.srcAttr=u;d.how=c;d.match=!1;d.newNode='eval'==c||'gpt'==c?content:a;return d}}function X(a){return function(b,c,d){var g=J[(a?'on':'')+b];if(g)g.triggered?setTimeout(function(){c(g.event)},0):g.listeners.push(c);else return a?this.yo_addEventListener(b,c,d):this.yo_attachEvent(b,c,d)}}function oa(a,b,c){function d(a){e.log('Loading '+c.before.src+' via event handler '+c.delayValue);c.afterShock();var g=null;e.def(a.currentTarget)? g=a.currentTarget:e.def(a.srcElement)&&(g=a.srcElement);e.removeEvent(g,b[0],d)}e.log('Adding event ',b[0],b[1]);e.addEvent(a,b[0],d)}function Y(a,b){return a.top>b.top-a.height&&a.bottom<b.bottom+f.offset+2*a.height&&a.left>b.left-a.width&&a.right<b.right+f.offset+2*a.width}function pa(a,b){return Z(this,a,b,'insert')}function qa(a){return Z(this,a,a,'append')}function Z(a,b,c,d){k.publish({topic:'sequence/captured',message:{parentNode:a,newNode:b,before:c,captureType:d}});if(0==aa(b,a,function(a, e){var g=a.clone();g.type=d;g.newNode=b;g.before=c;g.me=e;f.delayed.push(g);b.setAttribute(f.srcAttr,b.getAttribute(f.srcAttr))}))return K.safeWriteInsert(b,c,a,G(b),'append'==d);a=f.delayed[f.delayed.length-1];if(domCompleteTriggered||'none'==a.delayType)return a.execute()}function aa(a,b,c){var d=a.nodeName.toLowerCase(),g=null,f=!1;if('script'==d||'iframe'==d){g=G(a);c(g,b);var f=!0,h=!1;a.onload&&(a.onloadOriginal=a.onload);a.onreadystatechange&&(a.onreadystatechangeOriginal=a.onreadystatechange); a.onreadystatechange=a.onload=null;a.onreadystatechange=function(){h||this.readyState&&'loaded'!==this.readyState&&'complete'!==this.readyState||(k.publish({topic:'sequence/afterloaded/'+g.key,message:g}),h=!0);this.onreadystatechangeOriginal&&this.onreadystatechangeOriginal.apply(this,arguments)};a.onload=function(){0==h&&(k.publish({topic:'sequence/afterloaded/'+g.key,message:g}),h=!0);this.onloadOriginal&&this.onloadOriginal.apply(this,arguments)}}else if(g=G(b),null==g||'none'!=g.delayType)c(g, b),g.before=b,f=!0;e.log(a.nodeName+' '+a.src+' is'+(f?' ':' NOT ')+'sequenced.');0==f&&k.publish({topic:'sequence/beforeloading/'+g.key,message:g});return f}function G(a){var b=a.src;1==e.def(a.yo_src)&&(b=a.yo_src);if(null==b||0==b.length)return b=new (_delayed()),b.delayType='none',b;for(var c=0;c<f.resources.length;c++){var d=f.resources[c],g;if(g=1==d.match){g=d.url;var l=b;null==g||null==l?g=!1:(e.log('Match src',l,'and url',g),g='string'===typeof g&&-1!=l.indexOf(g)||null!=l.match(g));g=1== g}if(g)return e.log('Found configuration for '+b+' delayType '+d.delayType),'empty'==d.delayType&&(a.src=null==d.delaySrc?'data:text/javascript;plain,//':d.delaySrc,d.delayType='none'),d}e.log('Did NOT find configuration for '+b+' checking local configuration. ');b=new (_delayed());if(null!=a.delayType)'empty'==a.delayType&&(a.src=null==a.delaySrc?'data:text/javascript;plain,//':a.delaySrc,a.delayType='none'),b[a.delayType](a.delayValue);else b[f.defaultType](f.defaultDelay);b.before=a;return b}function ba(){for(var a= 0;a<f.resources.length;a++){var b=f.resources[a];if(!b.isConfig){var c=new (_delayed());c.key=c.url=b.url;c.match=!0;c.local=!0;c[b.delayType](b.delayValue);f.resources[a]=c}}}function H(){var a='0123456789abcdef'.split(''),b=[],c=Math.random,d;b[8]=b[13]=b[18]=b[23]='-';b[14]='4';for(var g=0;36>g;g++)b[g]||(d=0|16*c(),b[g]=a[19==g?d&3|8:d&15]);return b.join('')}function ra(){var a=f.rum.key?f.rum.key:e.getCookie('yo-rum-key'),b=0,c=0,d=0;if(0!=e.def(h.localStorage)){for(var g=0;g<f.delayed.length;g++){var l= f.delayed[g];l.newNode&&l.newNode.nodeName?'img'==l.newNode.nodeName.toLowerCase()?c++:'script'==l.newNode.nodeName.toLowerCase()&&b++:l.me.nodeName&&'script'==l.me.nodeName.toLowerCase()&&d++}b={sitekey:a,id:H(),v:'1',t:'navigation',dl:document.location.href,ua:navigator.userAgent,dt:document.title,nt:e.def(h.performance),rt:e.def(h.performance)&&e.def(h.performance.getEntries),md:e.metaDataValue('X-Yottaa-Optimizations'),sequencing:{script_src:b,seq_image:c,seq_script_code:d,delayed:f.delayed.length}}; c=localStorage.getItem('rapid-js-visitor-2');null!=c?(c=JSON.parse(c),d=(new Date).getTime()>c.date+18E5,b.visitor={date:(new Date).getTime(),hit:c.hit+1,session_hit:d?1:c.session_hit+1,visitor_id:c.visitor_id?c.visitor_id:H(),sessions:d?c.sessions+1:c.sessions,session_id:d?H():c.session_id}):b.visitor={date:(new Date).getTime(),hit:1,session_hit:1,sessions:1,visitor_id:H(),session_id:H()};localStorage.setItem('rapid-js-visitor-2',JSON.stringify(b.visitor));localStorage.removeItem('rapid-js-qed'); c=localStorage.getItem('rapid-js-qoe-2');null!=c&&(b.qoe=JSON.parse(c));if(1==b.nt)for(a in b.navigationtiming={},c=h.performance.timing,c)'toJSON'!=a&&(b.navigationtiming[a]=c[a]);_sendData(b)}}var f={defaultDelay:5E3,defaultType:'none',log:!1,throttle:20,sequenceXHR:!1,sequenceWrites:!1,sendTimingData:!1,timingDataURL:'',offset:100,loadOnDOM:!1,scan:['script','img'],resources:[],abTesting:[],write:[],intervalID:null,lazyCheckSize:!0,pre:'data-yo-',srcAttrs:['data-yo-src','data-yo-srcset'],afterShockLoaded:!1}, q={log:function(){if(f.log&&(q.def(h)&&q.def(h.console)&&q.def(h.console.log)||q.def(self)&&q.def(self.console)&&q.def(self.console.log))){for(var a='',b=0;b<arguments.length;b++){var c=arguments[b],d;'object'===typeof c&&c&&q.def(c.nodeName)?(d=c.yo_src?'yo_src '+c.yo_src:c.src?'src '+c.src:'id '+c.id,a+='['+c.nodeName+', '+d+'] '):a+=c+' '}console.log('Yo.utils.log: '+a)}},def:function(a){return'undefined'!=typeof a},undef:function(a){return!q.def(a)},isFunction:function(a){return!!(a&&a.constructor&& a.call&&a.apply)},inArray:function(a,b,c){var d;if(b){if(Array.prototype.indexOf)return Array.prototype.indexOf.call(b,a,c);d=b.length;for(c=c?0>c?Math.max(0,d+c):c:0;c<d;c++)if(c in b&&b[c]===a)return c}return-1},decodeSafeString:function(a){return decodeURI(a)}},k={},D={},sa=1,ca={},P=[];_executeCallback=function(a,b){setTimeout(function(){a.callback.call(a.context,b.message,b.topic)},0)};_addWildcards=function(a,b){for(var c=0;c<P.length;c++){var d=P[c];null!=b.topic.match(d.topic)&&a.push(d)}}; k.subscribe=function(a){a.id=++sa;q.undef(a.priority)&&(a.priority=0);q.undef(a.priority)&&(a.priority=0);'string'===typeof a.topic&&-1!=a.topic.indexOf('*')&&(a.topic=new RegExp(a.topic.replace(/\*/g,'.*')));if('string'===typeof a.topic){a.topic=a.topic.toLowerCase();1==q.undef(D[a.topic])&&(D[a.topic]=[]);D[a.topic].push(a);D[a.topic].sort(function(a,b){return b.priority-a.priority});var b=ca[a.topic];q.def(b)&&a.callback.call(b.context,b.message,b.topic)}else P.push(a);q.log('_pubsub.subscribe', a.topic,a.id);return a.id};k.publish=function(a){a.topic=a.topic.toLowerCase();var b=D[a.topic],b=1==q.undef(b)?[]:b.slice(0);_addWildcards(b,a);a.persistent&&(ca[a.topic]=a);if(1==q.def(b)){for(var c=[],d=0;d<b.length;d++){var g=b[d],e=!0;1==a.async?_executeCallback(g,a):(e=g.callback.call(g.context,a.message,a.topic),c.push(e));q.log('_pubsub.publish',g.topic,g.id);if(0==e&&!0===a.cancellable)break}return c}q.log('_pubsub.publish',a.topic,'no callbacks');return 0};k.unsubscribe=function(a){for(var b in D)for(var c= D[b],d=0;d<c.length;d++)if(c[d].id==a)return c.splice(d,1),q.log('_pubsub.unsubscribe','found'),!0;q.log('_pubsub.unsubscribe','not found');return!1};var F=document,da=h;_loadCookieConfig=function(){var a=Yo.utils.getCookie('yo-aftershock-config');if(null!=a&&0<a.length)try{a=eval(a),Yo.configure(a)}catch(b){}};_domready=function(){function a(a){b(a)}function b(a){('poll'===a||'readystatechange'===a.type)&&'complete'!==F.readyState||d||(d=!0,f.afterShockLoaded=!0,k.publish({topic:'core/load',async:!0, message:Yo,persistent:!0}))}function c(){try{F.documentElement.doScroll('left')}catch(l){setTimeout(c,50);return}b('poll')}var d=!1,g=!0;if('complete'===F.readyState)f.afterShockLoaded=!0,k.publish({topic:'core/load',async:!0,message:Yo,persistent:!0});else{if(F.createEventObject&&F.documentElement.doScroll){try{g=!da.frameElement}catch(l){}g&&c()}1==f.loadOnDOM&&(e.addEvent(document,'DOMContentLoaded',b),e.addEvent(document,'readystatechange',b));e.addEvent(h,'load',a)}};k.subscribe({topic:'core/start', callback:function(){_loadCookieConfig();_domready()}});var e=q,da=h;e.addEvent=function(a,b,c){a.attachEvent?a.attachEvent('on'+b,c):a.addEventListener&&a.addEventListener(b,c,!1)};e.removeEvent=function(a,b,c){a.detachEvent?a.detachEvent('on'+b,c):a.removeEventListener(b,c,!1)};e.metaDataValue=function(a,b){var c=document.getElementsByName(a);return null!=c&&1==c.length?1==arguments.length?c[0].getAttribute('content'):c[0].setAttribute('content',b):null};e.rewrite=function(a){var b=e.metaDataValue('resource.version'), c=e.metaDataValue('cdn.hostname'),d=e.metaDataValue('adn.id');return location.protocol+c+'/'+d+'/'+location.hostname+'/'+b+(0!=a.indexOf('/')?'/':'')+a};e.select=function(a){var b;if(null==a||1==a.length)return null;if('document'==a)return document;if('window'==a)return h;if(e.def(a.nodeName))return a;if('.'==a[0])return a=document.getElementsByClassName(a.substring(1)),0<a.length?a[0]:null;if(-1!=(b=a.indexOf('['))){var c=a.substring(0,b),d=a.substring(b+1),g=d.indexOf(']'),f=d.indexOf('['),d=d.substring(0, g),t,k=[],m=null;if(-1!=(t=d.indexOf('~')))g=2;else if(-1!=(t=d.indexOf('*')))g=1;else if(-1!=(t=d.indexOf('=')))g=0;else return null;if(-1!=f){f=a.substring(b+1+f+1);b=f.indexOf(']');try{f=parseInt(f.substring(0,b))}catch(n){}}var r=d.substring(0,t);t=d.substring(t+1);2==g&&(m=new RegExp(t));c=document.getElementsByTagName(c);for(b=0;b<c.length;b++){var p=0<r.length?c[b].getAttribute(r):c[b].innerHTML;0==g&&p==t?k.push(c[b]):1==g&&null!=p&&-1!=p.indexOf(t)?k.push(c[b]):2==g&&null!=p&&-1!=p.search(m)&& k.push(c[b])}e.log(a,d,r,t,0==k.length?k.length:k[0]);return-1!=f?f<k.length?k[f]:null:k[0]}'#'==a[0]&&(a=a.substring(1));return document.getElementById(a)};e.writeHTML=function(a,b,c){var d=document.createElement('div');d.innerHTML='string'===typeof b?b:b.innerHTML;for(b=d.childNodes;0<b.length;)if('script'==b[0].nodeName.toLowerCase())if(b[0].src)Yo.sequence.script(d.removeChild(b[0]).src).load();else try{eval(d.removeChild(b[0]).innerHTML)}catch(g){e.log(g)}else'insert'==c?a.parentNode.insertBefore(d.removeChild(b[0]), a):a.appendChild(d.removeChild(b[0]))};e.getCookie=function(a){for(var b=document.cookie.split(';'),c=0;c<b.length;c++){var d=b[c];if(-1!=d.indexOf(a)){for(;' '==d.charAt(0);)d=d.substring(1,d.length);return d.substring(a.length+1,d.length)}}return null};e.setCookie=function(a,b,c){var d='';c&&(d=new Date,d=new Date(d.getTime()+1E3*c),d='; expires='+d.toGMTString());document.cookie=a+'='+b+d+'; path=/';return!0};e.contains=document.documentElement.compareDocumentPosition?function(a,b){return!!(a.compareDocumentPosition(b)& 16)}:document.documentElement.contains?function(a,b){return a!==b&&(a.contains?a.contains(b):!1)}:function(a,b){for(;b=b.parentNode;)if(b===a)return!0;return!1};e.updateHeadItemAttributes=function(a,b,c){0>a&&(document.cookie='yo-disable-instanton=true;Max-Age=2',h.location.reload(!0));a=document.documentElement.getElementsByTagName('head')[0].children[a];for(var d=0;d<b.length;d++)a.removeAttribute(b[d]);for(var g in c)a.setAttribute(g,c[g])};e.replaceHeadItemContent=function(a,b){0>a&&(document.cookie= 'yo-disable-instanton=true;Max-Age=2',h.location.reload(!0));document.documentElement.getElementsByTagName('head')[0].children[a].textContent=b};var K={},A={},y=function(a,b,c){this.writeContent='';this.writeLocation=a;this.writeSelector=c;this.offScreenDom=null;this.node=b;this.scripts=[];this.id='yo_write_'+Math.floor(1E9*Math.random());e.log('creating WriteContext',this.id,this.node.src);y.prototype.getId=function(a){return this.id};y.prototype.collectDocumentWrite=function(a){this.writeContent+= a;e.log('write override',this.getId(),this.node.src,a)};y.prototype.addScript=function(a){this.scripts.push(a)};y.prototype.getWriteSelector=function(a){return this.writeSelector};y.prototype.executeDeferredScripts=function(){for(var a=0;a<this.scripts.length;a++){var b=this.scripts[a].getAttribute('src');e.def(this.scripts[a].yo_src)&&(b=this.scripts[a].yo_src);Yo.sequence.script(b).none().writeLocation(this.scripts[a].yo_writeSelector).load()}};y.prototype.finalizeWriteOverride=function(){null== this.writeLocation?e.log('write location is null, content ignored',this.getId(),this.node.src):0<this.writeContent.length?(e.log('creating off screen DOM',this.getId(),this.node.src),this.offScreenDom=F.createElement('div'),this.offScreenDom.innerHTML=this.writeContent):e.log('no content, just continue',this.getId(),this.node.src);this.continueWrite()};y.prototype.insertContent=function(){for(;0<this.offScreenDom.childNodes.length;){var a=this.offScreenDom.childNodes[0],b=a.nodeName.toLowerCase(); if('script'==b){b=a.getAttribute('language');if(null==b||'vbscript'!=b.toLowerCase()){A[this.writeSelector].push(this);try{this.offScreenDom.removeChild(a)}catch(l){}Yo.sequence.script(a.getAttribute('src')).none().writeLocation(this.writeSelector).load();return!1}try{eval(a.innerHTML),this.offScreenDom.removeChild(a)}catch(l){}this.writeLocation.parentNode.insertBefore(a,this.writeLocation)}else if('link'==b&&'stylesheet'==a.getAttribute('rel').toLowerCase()){document.getElementsByTagName('head')[0].appendChild(a); try{this.offScreenDom.removeChild(a)}catch(l){}}else this.writeLocation.parentNode.insertBefore(a,this.writeLocation)}this.offScreenDom.innerHTML='';return!0};y.prototype.continueWrite=function(){for(var a=A[this.writeSelector],b=a.pop();b;){e.log('Continue writing ',b.getId());if(b.offScreenDom&&0==b.insertContent())break;0==a.length&&b.executeDeferredScripts();b=a.pop()}}};K.safeWriteInsert=function(a,b,c,d,g){if(1==ja(a,b,c,d)){var f;a:{try{1==e.def(a.yo_src)&&(a.src=a.yo_src);f=1==g?c.yo_ac(a): c.yo_ib(a,b);break a}catch(t){e.log('ERROR adding node into dom',a,t)}f=void 0}return f}};f.delayed=[];f.targets=[];var x=function(){this.executed=!1;this.cont=!0};x.prototype.afterLoaded=function(a){k.subscribe({topic:'sequence/afterloaded/'+this.key,callback:a,context:this});return this};x.prototype.beforeLoading=function(a){k.subscribe({topic:'sequence/beforeloading/'+this.key,callback:a,context:this});return this};x.prototype.execute=function(){return this.afterShock()};x.prototype.clone=function(){var a= new x,b;for(b in this)a[b]=this[b];return a};x.prototype.preventDefault=function(){this.cont=!1};x.prototype.key=null;x.prototype.isConfig=function(a){return this.delayType==a};x.prototype.afterShock=function(){var a=null;if(1!=this.loaded&&(this.delayType='none',this.loaded=!0,e.log('Injecting ',this.newNode,', by ',this.type,' into the DOM now.'),k.publish({topic:'sequence/beforeloading/'+this.key,message:this}),0!=this.cont)){var b=this.newNode,c=this.type,d=this.before;if('insert'==c)a=K.safeWriteInsert(b, d,this.me,this,!1);else if('append'==c)a=K.safeWriteInsert(b,null,this.me,this,!0);else if('replace'==c)this.me.replaceChild(b,d);else if('attributesrc'==c)d.setAttribute('src',b.yo_src);else if('src'==c)e.def(this.animator)&&null!=this.animator?animator(d,this.animator):e.def(f.animator)&&animator(d,f.animator),b=d.getAttribute(f.pre+'srcset'),null!=b&&d.setAttribute('srcset',b),d.src=this.srcAttr;else if('style'==c)b.setAttribute('style',b.getAttribute(f.pre+'style'));else if('inner'==c){e.log(this.how+ ' -> '+b);if('replace'==this.how)U(d,b);else if('eval'==this.how||'gpt'==this.how)try{b=b.replace('<scri'+'ipt>','').replace('\x3c/scri'+'ipt>',''),'gpt'==this.how&&(b='googletag.cmd.push(function() { googletag.pubads().enableSyncRendering = function(){}; '+b+'});'),h.eval(b)}catch(l){e.log('Error eval',l)}else e.writeHTML(d,b,this.how);k.publish({topic:'sequence/afterloaded/'+this.key,message:this})}else if('xhr'==c){this.xhr.onreadystatechange&&(this.xhr.original_oonreadystatechange=this.xhr.onreadystatechange); var g=this;this.xhr.onreadystatechange=function(a){4==g.xhr.readyState&&k.publish({topic:'sequence/afterloaded/'+g.key,message:[a,this]});g.xhr.original_oonreadystatechange&&g.xhr.original_oonreadystatechange.call(arguments)};this.xhr.xhr_send.apply(this.xhr,this.xhr._yo.send_args)}else'image'==c&&this.loadImage(this);ka();return a}};_delayed=function(){return x};var L=function(a){var b=new (_delayed());b.key=b.url=a;b.match=!0;e.undef(f.resources)&&(f.resources=[]);for(var c=-1,d=0;d<f.resources.length;d++){var g= f.resources[d].url;if('string'===typeof a&&'string'===typeof g&&-1!=a.indexOf(g)||'string'!==typeof g&&'string'===typeof a&&null!=a.match(g)){c=d;break}}b.writeLocation=function(a){this.writeLocation=a;return this};-1==c?f.resources.push(b):f.resources.splice(c,0,b);return b},N=null,O=!1;k.subscribe({topic:'core/configure',callback:function(){V(document)}});var B={};_xhrOpen=function(a,b,c,d,g){this._yo={open_args:arguments,async:!1===c?!1:!0};e.log('xhr open = '+b+', async '+c);k.publish({topic:'sequence/captured', message:this._yo});return this.xhr_open.apply(this,arguments)};_xhrSend=function(a){if(e.undef(this._yo)||!0!==this._yo.async)return this.xhr_send.apply(this,arguments);var b=this,c={src:this._yo.open_args[1],nodeName:'xhr'};if(0==aa(c,c,function(a,c){var d=a.clone();d.type='xhr';d.xhr=b;d.newNode=c;f.delayed.push(d);1==f.afterShockLoaded&&d.execute()}))return e.log('xhr send is NOT defered, '+c.src),this.xhr_send.apply(this,arguments);this._yo.send_args=arguments;e.log('xhr send is defered, '+c.src+ ', '+f.delayed[f.delayed.length-1].delayType)};_xhrAbort=function(){if(e.undef(this._yo)||e.undef(this._yo.send_args)||!0!==this._yo.async)return this.xhr_abort.apply(this,arguments);e.log('Abort to the xhr object is called',' async true')};B.create=function(a){return L(a)};B.captureMethods=function(a){1==e.undef(a.XMLHttpRequest.prototype.xhr_open)&&(a.XMLHttpRequest.prototype.xhr_open=a.XMLHttpRequest.prototype.open,a.XMLHttpRequest.prototype.xhr_send=a.XMLHttpRequest.prototype.send,a.XMLHttpRequest.prototype.xhr_abort= a.XMLHttpRequest.prototype.abort)};B.overrideMethods=function(a){a.XMLHttpRequest.prototype.open=_xhrOpen;a.XMLHttpRequest.prototype.send=_xhrSend;a.XMLHttpRequest.prototype.abort=_xhrAbort};B.captureMethods(h);k.subscribe({topic:'core/configure',callback:function(){1==f.sequenceXHR&&1==e.def(XMLHttpRequest)&&B.overrideMethods(h)}});k.subscribe({topic:'core/load',callback:function(){Yo.sequence.scanTags(!1)}});var w={},J={};_trackEvent=function(a,b,c){e.def(J[b])||(J['on'+b]={object:a,name:b,triggered:!1, event:null,listeners:[]},e.addEvent(a,b,function(a){var c=J['on'+b],d=c.listeners;c.event=a;navigator.userAgent.match(/MSIE /)&&(c.event={type:a.type});for(var e=0;e<d.length;e++)d[e].call(c.object,a);c.triggered=!0}),!a.yo_addEventListener&&a.addEventListener&&c&&(a.yo_addEventListener=a.addEventListener,a.addEventListener=X(!0)),!a.yo_attachEvent&&a.attachEvent&&c&&(a.yo_attachEvent=a.attachEvent,a.attachEvent=X(!1)))};w.loadEvents=function(){_trackEvent(h,'load',!0);_trackEvent(document,'readystatechange', !1);_trackEvent(document,'DOMContentLoaded',!1);_trackEvent(document,'DOMFrameContentLoaded',!0)};var M=null,ea=function(a){this.tempImage=new M;var b=a.image.onload;a.image.onload=null;this.tempImage.onload=function(c){b&&b.call(a.image,c);k.publish({topic:'sequence/afterloaded/'+a.key,message:arguments})};var c=a.image.onerror;a.image.onerror=null;this.tempImage.onerror=function(b){c&&c.call(a.image,b);k.publish({topic:'sequence/afterloaded/'+a.key,message:arguments})};k.publish({topic:'sequence/beforeloading/'+ a.key,message:arguments});this.tempImage.src=a.src},ta=function(){null==M&&(M=Image,Image=function(){var a=new M;try{Object.defineProperty(a,'src',{set:function(b){Yo.utils.log('Overloaded image src being set',b);b={src:b,key:b.toLowerCase()};k.publish({topic:'sequence/captured',message:b});var c={src:b.src,key:b.key,nodeName:'image'};nodeConfig=G(c);var d=nodeConfig.clone();d.type='image';d.src=c.src;d.image=this;d.newNode=c;f.delayed.push(d);d.loadImage=ea;1==f.afterShockLoaded&&d.execute();b.image= a;'none'==nodeConfig.delayType&&ea(b)}})}catch(b){e.log(b)}return a})};k.subscribe({topic:'core/configure',callback:function(){1==f.sequenceImage&&ta()}});k.subscribe({topic:'core/load',callback:function(){}});_delayed().prototype.defer=function(a){this.delayType='defer';this.delayValue=a;this.execute=function(){if(0!=f.afterShockLoaded&&1!=this.executed){this.executed=!0;e.log('Loading ',this.newNode,' via timer event. It will load in ',this.delayValue);var a=this;setTimeout(function(){a.afterShock()}, 1*this.delayValue);return this}};return this};_delayed().prototype.event=function(a){this.delayType='event';this.delayValue=a;this.execute=function(){if(0!=f.afterShockLoaded&&1!=this.executed){this.executed=!0;e.log('Event handling '+this.before.src+' '+this.delayValue);var a=this.delayValue.split(' '),c=a[0].toLowerCase();if('beforeloading'==c||'afterloaded'==c){a=a[1];if('#adjacent'==a)return this.defer(0);k.subscribe({topic:'sequence/'+c+'/'+a,context:this,callback:function(a){e.log('Loading '+ this.before.src+' via event handler '+this.delayValue);this.afterShock()}})}else oa(e.select(a[1]),a,this);return this}};return this};k.subscribe({topic:'core/load',callback:function(){}});var E={},C={top:0-f.offset,left:0-f.offset,height:0,width:0,right:0,bottom:0};_throttle=function(a,b){var c=0;return function(){var d=+new Date;d-c<b||(c=d,a.apply(this,arguments))}};_saveViewport=function(){C.height=h.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;C.bottom=C.height; C.width=h.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;C.right=C.width};_showIfVisible=function(a,b,c){if(1==e.contains(document.documentElement,c)){if(a=_getBoundingClientRect(c),0==_advancedDetectionMode(c)&&a.top<C.height+f.offset||1==_advancedDetectionMode(c)&&(!f.lazyCheckSize||0<a.width&&0<a.height)&&1==Y(a,C)&&1==_notClipped(c,a))return e.log('showIfVisible is visible ',b,', ',c),f.delayed[b].afterShock(),!0}else return!1};_advancedDetectionMode=function(a){return null!= f.intervalID&&e.def(a.getBoundingClientRect)};_getBoundingClientRect=function(a){a=a.getBoundingClientRect();e.undef(a.width)&&(a={top:a.top,left:a.left,right:a.right,bottom:a.bottom,width:a.right-a.left,height:a.bottom-a.top});return a};_notClipped=function(a,b){for(var c=a.parentNode;null!=c&&1==c.nodeType;){var d=Q(c,'overflow');if(d&&'hidden'==d.toLowerCase())a.yo_clipped=c;else if(0==Q(c,'opacity')||'none'==Q(c,'display'))return!1;c=c.parentNode}1==e.undef(a.yo_clipped)&&(a.yo_clipped=!1);return 0!= a.yo_clipped?Y(b,_getBoundingClientRect(a.yo_clipped)):!0};var v,fa;document.defaultView&&document.defaultView.getComputedStyle&&(v=function(a,b){var c,d;if(d=a.ownerDocument.defaultView){if(d=d.getComputedStyle(a,null))c=d.getPropertyValue(b),''!==c||e.contains(a.ownerDocument.documentElement,a)||(c=a.style[b]);return c}});document.documentElement.currentStyle&&(fa=function(a,b){var c=a.currentStyle&&a.currentStyle[b];return''===c?'auto':c});var Q=v||fa;document.getElementsByClassName||(document.getElementsByClassName= function(a){return this.querySelectorAll('.'+a)});E.scrollHandler=function(a){_saveViewport();if(e.undef(document.documentElement.getBoundingClientRect))return!0;for(var b=a=0;b<f.delayed.length;b++)if(f.delayed[b].isConfig('lazy')){var c=b,d=f.delayed[c],g=d.delayValue;if('string'===typeof g)g=e.select(g);else if(null==g||e.def(g))g=d.before;null!=g&&_showIfVisible(d.before,c,g);a++}};E.delayed=function(a){this.delayType='lazy';this.delayValue=a;this.execute=function(a){return this};return this}; v=_throttle(E.scrollHandler,20);e.addEvent(h,'scroll',v);e.addEvent(h,'resize',v);k.subscribe({topic:'core/load',callback:function(){E.scrollHandler()}});_delayed().prototype.lazy=E.delayed;k.subscribe({topic:'core/configure',callback:function(a){0<a.lazyTimer&&null==f.intervalID&&(f.intervalID=setInterval(E.scrollHandler,a.lazyTimer))}});_delayed().prototype.none=function(){this.delayType='none';this.execute=function(){return this.afterShock()};return this};_delayed().prototype.remove=function(a, b,c){var d=!1,g='yostore'+e.metaDataValue('resource.version')+this.key;e.undef(a)||'always'==a?d=!0:'session'==a?sessionStorage&&'true'==sessionStorage.getItem(g)?d=!0:sessionStorage&&sessionStorage.setItem(g,'true'):'visitor'==a&&(localStorage&&'true'==localStorage.getItem(g)?d=!0:localStorage&&localStorage.setItem(g,'true'));if(1==d)this.delayType='remove',this.execute=function(){return this};else this[b](c);return this};var m={};domCompleteTriggered=!1;m.node=function(a){if(a=e.select(a))a.yo_ac= e.def(a.yo_ac)?a.yo_ac:a.appendChild,a.yo_ib=e.def(a.yo_ib)?a.yo_ib:a.insertBefore,a.appendChild=qa,a.insertBefore=pa};m.clearNode=function(a){e.def(a.yo_ib)&&(a.insertBefore=a.yo_ib);e.def(a.yo_ac)&&(a.appendChild=a.yo_ac)};m.addScanner=function(a){f.scan||(f.scan=[]);-1===e.inArray(a,f.scan)&&f.scan.push(a)};m.displayNow=function(){e.log('Handle the display of all visible tags up to now.');m.scanTags(!0);E.scrollHandler({})};m.createTimer=function(a,b){Yo.configure({lazyTimer:a});b&&Yo.configure({lazyCheckSize:b})}; m.createElement=function(a){a.yo_createElement||(a.yo_createElement=a.createElement,a.createElement=function(b){var c=a.yo_createElement(b),d=b.toLowerCase();Yo.utils.log('_sequencing.createElement',c,b);if('iframe'==d&&1==Yo.utils.undef(c.yo_src_override)){c.yo_src_override=!0;try{Object.defineProperty(c,'src',{set:function(a){if(this.yo_src=a)if(Yo.utils.log('Object.src',a),nodeConfig=G(this),null!=nodeConfig&&'none'!=nodeConfig.delayType){if(a=nodeConfig.clone(),a.type='attributesrc',a.newNode= this,a.before=this,a.me=this,f.delayed.push(a),domCompleteTriggered)return a.execute()}else this.setAttribute('src',a)},get:function(){return this.yo_src}})}catch(g){Yo.utils.log(g)}}return c})};m.resource=L;m.script=function(a){var b=L(a);b.src=a;b.newNode=a;b.before={src:a};b.load=function(a){var b=document.createElement('script');b.type='text/javascript';b.async=!0;b.yo_src=this.url;(a||document.getElementsByTagName('script')[0].parentNode).appendChild(b);return this};b.eval=function(){f.delayed.push(this); this.how='eval';this.type='inner';this.execute();return this};b.writeLocation=function(a){this.writeLocation=a;return this};return b};m.xhr=B.create;m.content=function(a){var b=na(a);k.publish({topic:'sequence/captured',message:{delayed:b,location:a}});b.load=function(){e.log('Sequence a script = '+a.id+', type '+this.type);null==this.delayType||'none'==this.delayType?e.log('Content found that needs to be loaded immediately'):e.log('Content found that needs to be sequenced',this.delayType,this.delayValue); this.execute(f.delayed.length-1);f.delayed.push(this)};return b};m.event=w;m.image=function(a){return L(a)};m.scanTags=function(a){if(f.scan){for(var b=0,c=f.scan.length;b<c;b++){var d=f.scan[b],g=a,h=document.getElementsByTagName(d),k;e.log('Find all '+d+' tags in the document.');for(var m=0,u=h.length;m<u;m+=1)if(k=h[m],g||'true'!==k.getAttribute(f.pre+'loaded')){var r=W(k),p=k.getAttribute(f.pre+'style');r?(e.log('Found src ',d,', src = '+r+' tag to handle with AfterShocK.'),Yo.sequence.content(k).load()): 'script'==d?(r=k.getAttribute('type'),k.getAttribute(f.pre+'src'),r&&-1<r.indexOf('yo/sequence')?(e.log('Found a '+d+', yo/sequence tag to handle with AfterShocK.'),Yo.sequence.content(k).load()):'yo/abtest'==r&&_abTestScript(k)):p&&(e.log('Found style ',d,', src = '+r+' tag to handle with AfterShocK.'),k=Yo.sequence.content(k),k.type='style',k.before=k.newNode,k.load())}}!0!==a&&(f.scan=[])}};m.cloakImages=function(a,b){if(1!=e.undef(h.btoa))for(var c=0,d=a.length;c<d;c+=1){var g=a[c],f=document.getElementsByTagName(g); e.log('Cloak '+g);for(var k=0,m=f.length;k<m;k+=1)for(var u=f[k],r=0,p=b.length;r<p;r+=1){var n=b[r],q=u.getAttribute(n);null!=q&&(e.log('Cloak '+g,n,q),u.setAttribute(n,'data:image/cloaked;base64,'+btoa(q)))}}};m.document=V;m.captureMethods=B.captureMethods;m.overrideMethods=B.overrideMethods;w=document.getElementsByTagName('script');0<w.length&&m.node(w[0].parentNode);m.node(document.getElementsByTagName('head')[0]);k.subscribe({topic:'core/start',callback:function(){ba()}});k.subscribe({topic:'core/configure', callback:function(){ba()}});k.subscribe({topic:'core/load',callback:function(){domCompleteTriggered=!0;for(var a=0;a<f.delayed.length;a++)f.delayed[a].execute()}});var ha=0,R=[],I=[];_sendData=function(a){if(!0===f.rum.post){var b=new XMLHttpRequest;b.onreadystatechange=function(){4==this.readyState&&e.log('Rum data response received',this.status)};b.open('POST',f.rum.beaconUrl,!0);b.setRequestHeader('Content-type','application/json');b.send(JSON.stringify(a))}else{var b=document.createElement('img'), c=f.rum.beaconUrl+'?';e.log('Sending timing data to ',c);for(var d in a)c+=d+'='+encodeURIComponent(a[d])+'&';b.src=c}};_sendResourceTiming=function(){if(0!=e.def(h.performance)&&0!=e.def(h.performance.getEntries)){for(var a=f.rum.key?f.rum.key:e.getCookie('yo-rum-key'),b={key:a,v:'1',t:'resource',ua:navigator.userAgent,dl:document.location.href,dt:document.title,nt:e.def(h.performance),rt:e.def(h.performance)&&e.def(h.performance.getEntries),md:e.metaDataValue('X-Yottaa-Optimizations')},c=h.performance.getEntries(), d=ha;d<c.length;d++){var g=c[d],l=g.name.indexOf(f.rum.beaconUrl);if(!(0<=l&&8>=l)){var l=document.createElement('img'),k=f.rum.beaconUrl+'?';for(a in g)b[a]=g[a];e.log('Sending timing data to ',k);for(a in b)k+=a+'='+encodeURIComponent(b[a])+'&';l.src=k}}ha=d}};_captureResource=function(){if(0!=e.def(h.performance)&&0!=e.def(h.performance.getEntries)&&0!=e.def(h.localStorage)){for(var a=h.performance.timing,b=0,c=0,d=a.domInteractive-a.navigationStart,g=a.domContentLoadedEventEnd-a.navigationStart, k=a.domComplete-a.navigationStart,m=a.loadEventEnd-a.navigationStart,q=h.performance.getEntries(),a=q.length,u=0;u<a;u++){var r=q[u],p=r.startTime,n=0;p<=d?(c+=f.rum.advanced.domInteractiveCoef,n=1):p<=g?(c+=f.rum.advanced.domContentLoadedEventCoef,n=2):p<=k?(c+=f.rum.advanced.domCompleteCoef,n=3):p<=m?(c+=f.rum.advanced.loadEventCoef,n=4):0<r.duration&&(b+=r.duration);r.duration>f.rum.advanced.alertTime?I.push({duration:r.duration,type:0,zone:n,name:r.name,size:r.decodedBodySize,page:h.location.href}): r.decodedBodySize>f.rum.advanced.alertSize&&I.push({duration:r.duration,type:1,zone:n,name:r.name,size:r.decodedBodySize,page:h.location.href})}if(h.performance.getEntriesByName)for(d=document.getElementsByTagName('script'),u=0;u<d.length;u++)null!=d[u].src&&''!=d[u].src&&(q=h.performance.getEntriesByName(d[u].src),null!=q&&0!=q.length||I.push({duration:0,type:2,zone:0,name:d[u].src,size:0,page:h.location.href}));localStorage.removeItem('rapid-js-qed');d=localStorage.getItem('rapid-js-qoe-2');null== d?d={v:2,entries:a,timeSavings:b,sessionTime:b,journeyTime:b,qed:c,page:h.location.href,violations:I,jsErrors:R,date:(new Date).getTime()}:(d=JSON.parse(d),g=(new Date).getTime()>d.date+18E5,d={v:2,entries:a,timeSavings:b,sessionTime:g?b:d.sessionTime+b,journeyTime:d.journeyTime+b,qed:c,page:h.location.href,violations:I,jsErrors:R,date:(new Date).getTime()});localStorage.setItem('rapid-js-qoe-2',JSON.stringify(d))}};w=function(a,b,c,d,g){e.undef(g)&&(g={alertTime:1E3,alertSize:1024E3,domInteractiveCoef:200, domContentLoadedEventCoef:150,domCompleteCoef:100,loadEventCoef:50});f.rum={beaconUrl:a,requests:b,key:c,post:d,advanced:g};k.subscribe({topic:'core/js/error',callback:function(a,b){R.push(a)}})};k.subscribe({topic:'core/load',callback:function(){e.def(f.rum)&&e.def(f.rum.beaconUrl)&&(ra(),f.rum.requests&&(_sendResourceTiming(),k.subscribe({topic:/.*afterloaded.*/,callback:function(){_sendResourceTiming()}})),e.addEvent(h,'unload',function(){e.log('unload window event triggered');_captureResource()}))}}); w('https://qoe.yottaa.com/log-nt',!1,'key',!0);var z={};v={};_abTest=function(a,b,c,d,g,f,k,m){return Yo.sequence.resource(d).none().beforeLoading(function(){e.log('adding the google segmentation using a custom (dimension'+a+', '+b+', '+c+')',g,f);Yo.stats().errors.has&&(c+='_error');if('universal'==g){var d=!1;h.ga=function(){if(e.def(a)&&2<arguments.length&&0<=arguments[0].indexOf('set')&&arguments[1]!='dimension'+a){if((h.ga.q=h.ga.q||[]).push(arguments),ga(arguments[0],'dimension'+a,c),d=!0,1== e.def(k)){for(var b=[],g=0;g<h.ga.q.length;g++)if(3!=h.ga.q[g].length||h.ga.q[g][1]!='dimension'+k)b[b.length]=h.ga.q[g];h.ga.q=b}}else(h.ga.q=h.ga.q||[]).push(arguments),1==e.undef(k)&&0==d&&((h.ga.q=h.ga.q||[]).push(['set','dimension'+a,c]),d=!0);_abTestAnalyticsUniversal(arguments)}}else if(e.def(_gaq)){for(var l=1,p=[],n=0;n<_gaq.length;n++)e.def(_gaq[n])&&2<_gaq[n].length&&-1!=_gaq[n][0].indexOf('_setCustomVar')?(1!=e.undef(a)&&_gaq[n][1]==a||1!=e.undef(k)&&_gaq[n][1]==k||(p[p.length]=_gaq[n]), l=n):p[p.length]=_gaq[n];_gaq=p;e.def(a)&&(p='_setCustomVar',0<_gaq.length&&0<_gaq[0].length&&(n=_gaq[0][0].indexOf('.'),-1!=n&&(p=_gaq[0][0].substring(0,n+1)+p)),e.def(m)&&(a=m),_gaq.splice(l,0,[p,a,b,c,e.undef(f)?2:f]));e.log('abTestAnalyticsClassic()');_abTestAnalyticsClassic()}else e.log('Error creating ga information, no selected version',g)})};_getCookieVariant=function(a){return e.getCookie('yo_abtesting_'+a.name+'v'+a.version)};_setCookieVariant=function(a,b,c){e.setCookie('yo_abtesting_'+ a.name+'v'+a.version,b,c)};_configureAbTestAnalytics=function(){var a=config.abTestingAnalytics;e.def(a)&&e.undef(a.loaded)&&(_abTest(void 0,void 0,void 0,a.url,a.gaVersion),e.log('Registering analytics',a.url,a.gaVersion),a.loaded=!0)};_executeAllAbTest=function(){e.undef(f.abTestingAnalytics)?e.log('Analytics for ab testing not properly defined'):'classic'==f.abTestingAnalytics.gaVersion?_executeAllAbTestClassic():_executeAllAbTestUniversal()};_executeAllAbTestUniversal=function(){for(var a in f.abTesting){var b= f.abTesting[a];_executeAbTest(b);ga('set','dimension'+b.analytics.index,b.valuePrefix+b.name+'_v'+b.version+'_'+b.chosenVariant)}1==z.delayedTrack&&ga('send','pageview')};_executeAllAbTestClassic=function(){var a=null;if(e.def(h._gat)&&e.def(z.uaCode))for(var b=h._gat._getTrackers(),c=0;c<b.length;c++)b[c]._getAccount()==z.uaCode&&(a=b[c]);for(var d in f.abTesting)b=f.abTesting[d],_executeAbTest(b),c=2,'hit'==b.analytics.stickiness?c=3:'visitor'==b.analytics.stickiness&&(c=1),null!=a?a._setCustomVar(b.analytics.index, b.analytics.name,b.valuePrefix+b.name+'_v'+b.version+'_'+b.chosenVariant,c):e.def(h._gaq)&&h._gaq.push(['_setCustomVar',b.analytics.index,b.analytics.name,b.valuePrefix+b.name+'_v'+b.version+'_'+b.chosenVariant,c]);1==z.delayedTrack&&(null!=a?(a._trackPageview(),e.log('pageTracker._trackPageview()')):e.def(h._gaq)?(h._gaq.push(['_trackPageview']),e.log("window._gaq.push(['_trackPageview'])")):e.log('Did not find the UA code so we can not track'))};_executeAbTest=function(a){var b=_getCookieVariant(a); null==b&&(b=_chooseVariant(a));'hit'!=a.stickiness&&_setCookieVariant(a,b,'visitor'==a.stickiness?864E5:60*(e.undef(a.sessionTime)?30:a.sessionTime));e.log('Variant',b,'was chooen for test',a.name);a.chosenVariant=b;a=a.variants[b];if(e.undef(a))'original'!=b&&e.log('Using original content as the variant',b,'was not found');else for(b=0;b<a.targets.length;b++){var c=a.targets[b];'function'==typeof c?c():Yo.sequence.content(c).load()}};_abTestScript=function(a){var b=a.getAttribute(f.pre+'abtestname'), c=f.abTesting[b];if(e.undef(c))e.log('Found variant script for test',b,"but doesn't exist");else if(b=a.getAttribute(f.pre+'variant'),e.def(c.variants[b]))e.log('Variant script with existing name',b,'already exists. This variant will be excluded');else{var b=a.getAttribute(f.pre+'variantname'),d=a.getAttribute(f.pre+'splitcondition');e.undef(c.variants[b])?c.variants[b]={splitCondition:d,targets:[a]}:c.variants[b].targets.push(a);e.log('Found script variant',b,'with splitCondition',d)}};_chooseVariant= function(a){var b=a.variants;if('percentage'==a.splitBy){var c=0,d;for(d in b){a=b[d];var g=c;a.splitCondition*=1;c+=a.splitCondition;a.splitCondition+=g}100<b[b.length-1]&&e.log('Total percentage of variants is greater than 100, test will always leave out some variants');c=100*Math.random();for(d in b)if(a=b[d],c<a.splitCondition)return d;return'original'}e.log('Unsupported splitType',a.splitBy,'for test',a.name)};_abTestAnalyticsUniversal=function(a){'send'==a[0]&&e.def(z.delayedTrack)&&(h.ga.q.pop(), z.delayedTrack=!0)};_abTestAnalyticsClassic=function(a){if(e.def(z.delayedTrack)){a=[];for(var b=0;b<_gaq.length;b++)e.undef(_gaq[b])||1>_gaq[b].length||'_trackPageview'!=_gaq[b][0]?('_setAccount'==_gaq[b][0]&&(z.uaCode=_gaq[b][1]),a[a.length]=_gaq[b]):z.delayedTrack=!0;_gaq=a}};v.universal=function(a,b,c,d){return _abTest(a,void 0,b,c,'universal',void 0,d)};v.classic=function(a,b,c,d,e,f){return _abTest(a,b,c,d,'classic',e,f)};v.omniture=function(a,b,c,d){var e=s.t;s.t=function(){c&&(s[c]=d+s[c]); s['eVar'+a]=b;return e.apply(this,arguments)}};v.abTesting=function(a){e.undef(a.variants)&&(a.variants={});e.undef(a.splitBy)&&(a.splitBy='percentage');e.undef(a.stickiness)&&(a.stickiness='session');e.undef(a.version)&&(a.version='0');e.undef(a.analytics)&&(a.analytics={});e.undef(a.analytics.valuePrefix)&&(a.analytics.valuePrefix='yo_abtesting_');e.undef(a.analytics.name)&&(a.analytics.name='yottaa_abtest');e.undef(a.valuePrefix)&&(a.valuePrefix='');f.abTesting[a.name]=a};v.abVariant=function(a, b){var c=f.abTesting[name];e.undef(c)&&e.log('Test',name,'was not defined');c.variants.push(b)};k.subscribe({topic:'core/load',callback:function(){_executeAllAbTest()}});var ia={releaseDate:'2017-01-27',errors:{has:!1},config:f},S=function(){return ia};k.subscribe({topic:'core/configure',callback:function(a){S.config=f}});k.subscribe({topic:'core/start',callback:function(){S.config=f}});e.addEvent(h,'error',function(a){var b=a.message,c=a.lineno,d=a.filename;3==arguments.length&&(b=arguments[0],d=arguments[1], c=arguments[2]);e.log('errorCapture',b,c,d);k.publish({topic:'core/js/error',persistent:!0,message:{message:b,filename:d,line:c}});ia.errors={has:!0}});h.Yo||(h.Yo={});w={utils:e,pubsub:k,configure:function(a){if('string'===typeof a){var b='ul= dl= dt= sd= sr= vp='.split(' ');b[0]+=navigator.language;b[1]+=encodeURIComponent(h.location.href.substring(0,1E3));b[2]+=encodeURIComponent(document.title);b[3]+=h.screen.colorDepth;b[4]+=h.screen.width+','+h.screen.height;b[5]+=h.screen.availWidth+','+h.screen.availHeight; document.write('<script src="'+a+'&'+b.join('&')+'">\x3c/scri'+'ipt>')}else for(b in a)'resources'==b?f.resources=f.resources.concat(a.resources):f[b]=a[b];k.publish({topic:'core/configure',message:f})},sequence:m,rum:w,abTesting:v,insert:{HEAD_START:'head_start',HEAD_END:'head_end',BODY_START:'body_start',BODY_END:'body_end',location:function(a){null!=document.body?document.write("<di'+'v id='yo_tag_"+a+"'></di'+'v>"):document.write("<script id='yo_tag_"+a+"'>\x3c/script>");k.publish({topic:'tag/location/'+ a,persistent:!0})},resource:function(a,b,c,d){var g=Yo.sequence.script(a);g.loaded=!0;k.subscribe({topic:'tag/location/'+b,callback:function(){var a=e.select('#yo_tag_'+b);Yo.sequence.node(a);c&&''!=c||(c='none');g[c](d);g.loaded=!1;g.load(a)}});return g},script:function(a,b,c,d){var e=Yo.sequence.script(a);e.loaded=!0;k.subscribe({topic:'tag/location/'+b,callback:function(){c&&''!=c||(c='none');e[c](d);e.loaded=!1;e.eval()}});return e},content:function(a,b,c,d){var g=document.createElement('script'); c&&''!=c||(c='none');g.setAttribute('type','yo/sequencing/'+c+'/'+d);var f=Yo.sequence.content(g);f.loaded=!0;0==b.indexOf('css:')?k.subscribe({topic:'core/load',callback:function(){e.def(a.nodeName)?g.appendChild(a):g.innerHTML=a;var c=b.split(':');f.before=e.select(c[1]);3==c.length&&('after'==c[2]?null==f.before.nextSibling?(f.before=f.before.parentNode,f.how='append'):f.before=f.before.nextSibling:'prepend'==c[2]?0<f.before.childNodes.length?f.before=f.before.childNodes[0]:f.how='append':'append'== c[2]&&(f.how='append'));f.loaded=!1;f.load()}}):k.subscribe({topic:'tag/location/'+b,callback:function(){e.def(a.nodeName)?g.appendChild(a):g.innerHTML=a;f.loaded=!1;f.before=e.select('#yo_tag_'+b);f.load()}});return f}},stats:S};h.Yo=w;k.publish({topic:'core/start',message:w});h.yo_addScaner=Yo.sequence.addScanner;h.yo_createTimer=Yo.sequence.createTimer;h.yo_displayNow=Yo.sequence.displayNow;h.yo_configureAfterShock=Yo.configure;h.yo_afterShockStats=Yo.stats;h.yo_nodeWatch=Yo.sequence.node;h.yo_addResource= function(a,b,c,d,e,f){a=Yo.sequence.resource(a);a[b](c);d&&a.beforeLoading(d);e&&a.afterLoaded(e);f&&a.writeLocation(f)};h.yo_scriptLoader=function(a,b,c,d,e,f){a=Yo.sequence.script(a);a[b](c);d&&a.beforeLoading(d);e&&a.afterLoaded(e);f&&a.writeLocation(f);a.load()};h.yo_deferLoadResource=function(a,b,c,d,e){yo_addResource(a,'defer',b,c,d,e)};h.yo_lazyLoadResource=function(a,b,c,d,e){yo_addResource(a,'lazy',b,c,d,e)};return h.Yo}); 
+</script><!-- INSERT BY TRANSFORMER. SELECTOR=head,LOCATION=prepend --><script>
+  //Facebook
+//Yo.sequence.resource('utag.369.js').defer(5000);  //This script seems to hold back other utag scripts
+  Yo.sequence.resource('fbevents.js').defer(5000);
+
+  //Norton
+  Yo.sequence.resource('rollover.core.js').defer(5000);
+
+  //Tellapart
+  Yo.sequence.resource('utag.11.js').defer(5000);
+  //Yo.sequence.resource('crumb.js').defer(5000);
+
+  //Boldchat
+  Yo.sequence.resource('utag.240.js').defer(5000);
+  Yo.sequence.resource('vms.js').defer(5000);
+
+  //Baynote
+  //Yo.sequence.resource('baynote.js').lazy('div[data-yo-baynote=true]');
+  //Yo.sequence.resource('baynote.js').defer(5000);
+  Yo.sequence.resource('utag.340.js').none();
+
+  Yo.sequence.resource('utag.js').none();
+
+  //Google Analytics
+  Yo.sequence.resource('utag.326.js').none();
+  Yo.sequence.resource('google-analytics').none();
+
+  //Coremetrics
+  Yo.sequence.resource('utag.3.js').none();
+  Yo.sequence.resource('coremetrics').none();
+
+  //Symantec
+  Yo.sequence.resource('utag.351.js').none();
+  Yo.sequence.resource('utag.363.js').none();
+  Yo.sequence.resource('symantec.com').none();
+
+  Yo.sequence.resource('sdk.js').none();
+
+  Yo.sequence.resource(/.*/).defer(0);
+</script><!-- INSERT BY TRANSFORMER. SELECTOR=head,LOCATION=prepend --><script> 
+ //Baynote
+  Yo.sequence.resource('baynote.js').lazy('div[data-yo-baynote=true]');
+
+</script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		
+<title>Privacy Policy - Shoes.com - FREE Shipping & Exchanges</title>
+		<meta name="keywords" content=""/>
+<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+
+
+		
+		<!-- protect legacy browser clickjacking -->
+		<style id="antiClickjack">body{display:none !important;}</style>
+		<script type="text/javascript">
+		   if (self === top) {
+		       var antiClickjack = document.getElementById("antiClickjack");
+		       antiClickjack.parentNode.removeChild(antiClickjack);
+		   } else {
+		       top.location = self.location;
+		   }
+		</script>
+		
+
+<script type="text/javascript">
+window['optimizely'] = window['optimizely'] || [];
+window['optimizely'].push(["customTag", "pageName", "INFO: privacy" ], ["customTag", "pageType", "info"]);
+</script>
+<script type="text/javascript" src="//cdn.optimizely.com/js/2449200562.js"></script>
+
+
+		<link href="//fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css" data-norem />
+		<link href="https://plus.google.com/100884594301749756433" rel="publisher">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" type="text/css" media="screen" title="" charset="utf-8" data-norem />
+		<link href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/css-SBV116/bootstrap.css?yocs=c_e_&amp;yoloc=us" media="screen, projection" rel="stylesheet" type="text/css" data-norem />
+		<link href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/css-SBV116/shoebuy-v3.css?yocs=c_e_&amp;yoloc=us" media="screen, projection" rel="stylesheet" type="text/css" data-norem />
+		<link href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/css-SBV116/print-v3.css?yocs=c_e_&amp;yoloc=us" media="print" rel="stylesheet" type="text/css" data-norem />
+		<link href="/css-SBV116/sitecss/shoebuy/generated/sb-app.css" rel="stylesheet" type="text/css" />
+		<link href="/css-SBV116/sitecss/shoebuy/generated/sb-header.css" rel="stylesheet" type="text/css" />
+		<link href="/css-SBV116/sitecss/shoebuy/generated/sb-home.css" rel="stylesheet" type="text/css" />
+		<link href="/css-SBV116/sitecss/shoebuy/generated/sb-cart.css" rel="stylesheet" type="text/css" />
+		<link href="/css-SBV116/sitecss/shoebuy/generated/sb-quickview.css" rel="stylesheet" type="text/css" />
+		<link href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/css-SBV116/font-awesome-4.0.3/css/font-awesome.min.css?yocs=c_e_&amp;yoloc=us" rel="stylesheet" type="text/css" data-norem />
+		
+		<!--[if IE 7]>
+			<link rel="stylesheet" type="text/css" media="all" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/css-SBV116/ie7-v3.css?yocs=c_e_&amp;yoloc=us" data-norem />
+		<![endif]-->
+		<!--[if IE 8]>
+			<link rel="stylesheet" type="text/css" media="all" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/css-SBV116/ie8-v3.css?yocs=c_e_&amp;yoloc=us" data-norem />
+		<![endif]-->
+		<!--[if IE 9]>
+			<link rel="stylesheet" type="text/css" media="all" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/css-SBV116/ie9-v3.css?yocs=c_e_&amp;yoloc=us" data-norem />
+		<![endif]-->
+		<!--[if lt IE 9]>
+          	<script src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/sitejs/shoebuy/v4/html5shiv.js?yocs=c_e_&amp;yoloc=us"></script>
+		<![endif]-->
+		
+        <script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/jquery-1.10.0.min.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/underscore-min.js?yocs=c_e_&amp;yoloc=us"></script>
+        <script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/jquery.migrate-1.2.1.min.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/jquery-ui-1.10.2.min.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/jquery.form.min.js?yocs=c_e_&amp;yoloc=us"></script>
+        <script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/jsrender.min.js?yocs=c_e_&amp;yoloc=us"></script>
+        <script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/browserDetect.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/bootstrap.min.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript">
+		  var secureUrl = "https://www.shoes.com";
+		</script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/common-v4.js?yocs=c_e_&amp;yoloc=us"></script>
+		
+        <script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/jquery.cookie-1.4.1.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/pmxdr-client.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/migrate/cookie.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript">
+			var toEndpoint = "https://www.shoes.com/services/migrate/cookie";
+			var fromEndpoint = "https://www.shoebuy.com/services/migrate/cookie";
+			var cookiesMigrated = $.cookie('SBCookiesMigrated');
+			if (!cookiesMigrated) {
+				migrateCookies(fromEndpoint, toEndpoint, function() {
+                    $.cookie('SBCookiesMigrated', $.now(), { expires: 365, path: '/' });
+                    doShoeBuyInit();
+                    populate_rewards_member_info();
+					//location.reload();
+				}, function(){
+					doShoeBuyInit();
+					populate_rewards_member_info();
+				});
+			} else {
+				jQuery(window).load(function(){
+					doShoeBuyInit();
+					if (typeof populate_rewards_member_info === 'function'){
+						populate_rewards_member_info();
+					}
+				});
+			}
+		</script>
+		
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/waypoints.min.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/jslider/bin/jquery.slider.min.js?yocs=c_e_&amp;yoloc=us"></script>
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/header.js?yocs=c_e_&amp;yoloc=us"></script>
+		
+		<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/tealium-v4.js?yocs=c_e_&amp;yoloc=us"></script>
+		
+		
+		
+		<script type="text/javascript">
+			imagePathContainer.setImagePath("/pi");
+		    $(function() {
+                //bind action to cart button in header
+                $(".button.cart").on("click", function(event) {
+                    $.get("/controller/cart/save-location", {ref: window.location.pathname}).always(function() {
+                        window.location.href = "https://www.shoes.com/cart/cart";
+                    });
+                });
+            })
+        </script>
+
+        
+
+        <script type="text/javascript">
+	        function ShoeBuyConfig() {
+	            this.pageId = 'null';
+	            this.node = 'null';
+	            this.bazaarvoiceEnabled = 'false';
+
+	            this.getPageId = function(){return this.pageId;};
+	            this.isBazaarvoiceEnabled = function(){return this.bazaarvoiceEnabled;};
+	            this.getNode = function(){return this.node;};
+	        }
+	        var shoebuyConfig = new ShoeBuyConfig();
+        </script>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-57x57.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="apple-touch-icon" sizes="60x60" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-60x60.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="apple-touch-icon" sizes="72x72" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-72x72.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="apple-touch-icon" sizes="76x76" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-76x76.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="apple-touch-icon" sizes="114x114" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-114x114.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="apple-touch-icon" sizes="120x120" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-120x120.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="apple-touch-icon" sizes="144x144" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-144x144.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="apple-touch-icon" sizes="152x152" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-152x152.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="apple-touch-icon" sizes="180x180" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/apple-icon-180x180.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="icon" type="image/png" sizes="192x192" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/android-icon-192x192.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="icon" type="image/png" sizes="32x32" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/favicon-32x32.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="icon" type="image/png" sizes="96x96" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/favicon-96x96.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="icon" type="image/png" sizes="16x16" href="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/favicon-16x16.png?yocs=c_f_&amp;yoloc=us">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+		<script type="yo/sequence/defer/5000" data-yo-src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/facebook.js?yocs=c_e_&amp;yoloc=us"></script>
+<meta property='fb:app_id' content='146327295405912'/>
+<meta property="og:title" content="Privacy"/>
+<meta property="og:site_name" content="Shoes.com"/>
+<meta property="og:url" content="https://www.shoes.com/privacy.htm"/>
+<meta property="og:image" content="/images-SBV116/siteimgs/shoebuy/v4/header/Shoes.com-2017-horiz-notag-260x80.png"/>
+
+		
+        
+
+
+
+<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/json2.js?yocs=c_e_&amp;yoloc=us"></script>
+<script type="text/javascript" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/sbref.js?yocs=c_e_&amp;yoloc=us"></script>
+<script type="text/javascript">
+createSBRef({
+callback : parseAsyncResponse,
+qry_args : ['link', 'cm_mmc'],
+async_req : '/mkt/sbref-async.jsp',
+special_links : [
+	{link_test : /ca_sb_tellapart/, duration : 7}
+]});
+</script>
+
+
+	</head>
+	<body id="" class="" ><!-- INSERT BY TRANSFORMER. SELECTOR=body,LOCATION=prepend --><script>
+  Yo.sequence.node(document.body);
+</script>
+		
+
+
+
+<div id="fb-root"></div>
+<script type="text/javascript" >
+
+var badIE = false;
+</script>
+<!--[if lte IE 8]>
+<script type="text/javascript" >
+badIE = true;
+</script>
+<![endif]-->
+<script type="yo/sequence/event/afterloaded *facebook.js" data-yo-how="eval" >
+if(badIE) {
+
+loadFacebookScriptFrameworkAsync({appId: 146327295405912, xfbml: true 
+, channelUrl: 'www.shoes.com/pbar/facebook_channel.jsp?version=1'});
+
+}
+
+</script>
+<div class="sb-found-wrap sb-page-wide">
+		<header class="sb-header--main">
+				
+				
+
+<div class="sb-userbar">
+    <div class="grd-row grd-collapse">
+        <div class="grd-small-12 grd-columns">
+            <ul class="sb-no-bullets sb-userbar-menu"></ul>
+            <div class="sb-hdr-help">
+                <div class="sb-hdr-help-tab"></div>
+                <div class="sb-hdr-help-inner">
+                    <div class="grd-row grd-collapse">
+                        <div class="grd-small-12 grd-columns">
+                            <div class="grd-spacer-half"></div>
+                            <div class="grd-row">
+                                <div class="grd-small-2 grd-columns">
+                                    <img src="/images-SBV116/siteimgs/shoebuy/v4/header/sb-help-email.png" alt="Email">
+                                </div>
+                                <div class="grd-small-10 grd-columns">
+                                    <div class="sb-upper"><strong>Email</strong></div>
+                                    <div><a href="mailto:service@shoes.com"
+                                            class="sb-orange sb-to-underline">service@shoes.com</a></div>
+                                </div>
+                            </div>
+                            <div class="grd-spacer-half"></div>
+                            <div class="grd-row">
+                                <div class="grd-small-2 grd-columns">
+                                    <img src="/images-SBV116/siteimgs/shoebuy/v4/header/sb-help-phone.png" alt="Phone">
+                                </div>
+                                <div class="grd-small-10 grd-columns">
+                                    <div class="sb-upper"><strong>Call</strong></div>
+                                    <div>1 (888) 200 - 8414</div>
+                                    <div style="font-size:12px">
+                                        Mon - Fri: 8:00 AM - Midnight ET
+                                        <br/>
+                                        Sat - Sun: 8:00 AM - 11:00 PM ET
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grd-spacer-half"></div>
+                            <div class="grd-row">
+                                <div class="grd-small-12 grd-columns">
+                                    <!-- BoldChat Live Chat Button HTML v5.00 (Type=Web,ChatButton=Shoebuy Header Chat Button,Website=Shoes.com) -->
+                                    <div style="text-align: center; white-space: nowrap;">
+                                        <script type="text/javascript">
+                                          var bccbId = Math.random(); document.write(unescape('%3Cdiv id=' + bccbId + '%3E%3C/div%3E'));
+                                          window._bcvma = window._bcvma || [];
+                                          _bcvma.push(["setAccountID", "883211821955532300"]);
+                                          _bcvma.push(["setParameter", "WebsiteID", "875234090666971142"]);
+                                          _bcvma.push(["setParameter", "CustomUrl", ""])
+                                          _bcvma.push(["setParameter", "WindowParameters", "vr=&vi=&ve=&vp=&vn=&lc="])
+                                          _bcvma.push(["addStatic", {type: "chat", bdid: "875234090366473431", id: bccbId}]);
+                                          var bcLoad = function(){
+                                            if(window.bcLoaded) return; window.bcLoaded = true;
+                                            var vms = document.createElement("script"); vms.type = "text/javascript"; vms.async = true;
+                                            vms.src = ('https:'==document.location.protocol?'https://':'http://') + "vmss.boldchat.com/aid/883211821955532300/bc.vms4/vms.js";
+                                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vms, s);
+                                          };
+                                          if(window.pageViewer && pageViewer.load) pageViewer.load();
+                                          else if(document.readyState=="complete") bcLoad();
+                                          else if(window.addEventListener) window.addEventListener('load', bcLoad, false);
+                                          else window.attachEvent('onload', bcLoad);
+                                        </script>
+                                    </div>
+                                    <!-- /BoldChat Live Chat Button HTML v5.00 -->
+                                </div>
+                            </div>
+                            <div class="grd-spacer-half"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="userbarTemplate" type="text/x-jsrender">
+<li class="sb-upper">
+    <img src="/images-SBV116/siteimgs/shoebuy/v4/header/sb-hdr-chaticon-white.png" alt="help icon">
+    <a href="/info/csindex" class="sb-hdr-btn--help sb-white sb-to-underline helpIe8">Help</a>
+</li>
+{{if loggedIn}}
+    <li><a href="{{:logoutUrl}}" class="normal sb-white sb-to-underline bypass" id="siteLogout">Sign
+    Out</a></li>
+    <li> <img src="/images-SBV116/siteimgs/shoebuy/v4/header/sb-hdr-myaccount-white.png" alt="my account icon">
+    <a href="/cust/account" class="sb-white sb-to-underline">My Account</a></li>
+    <li>Welcome, {{:firstName}}</li>
+{{else}}
+    <li>
+    <img src="/images-SBV116/siteimgs/shoebuy/v4/header/sb-hdr-myaccount-white.png" alt="my account icon">
+    <a href="{{:loginUrl}}" class="sb-white sb-to-underline">Hello, SIGN IN</a></li>
+{{/if}}
+</script>
+<script type="text/javascript" charset="utf-8">
+    var loginFunction = function() {
+        
+        loginMsg({
+            baseurl_ssl:'https://www.shoes.com',
+            loginphrase:'Sign In',
+            logoutphrase:'Sign Out',
+            registerphrase:'Sign Up',
+            accountphrase:'My Account',
+        
+        hello_extra:'<span id="signed-in-extra"><a href="/cust/account">My Account</a></span>',
+                
+                compact:true
+    });
+    
+    };
+
+    $(function() {loginFunction()});
+</script>
+
+<!--MODALS-->
+
+
+<div id="modal-generic-error" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <img src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/header/Shoes.com-2017-horiz-notag-260x80.png?yocs=c_f_&amp;yoloc=us" alt="Shoes.com" />
+    </div>
+    <div class="modal-body" style="text-align:center;">
+        <span class="crt-heading sb-orange"><strong>Error</strong></span>
+        <p class="sb-generic-error-message"></p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn button" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+
+
+				<div class="sb-hdr-inner--main">
+				    <div class="grd-spacer-half"></div>
+				    <div class="grd-row-10 grd-collapse">
+				        <div class="grd-small-4 grd-columns">
+				            <div class="grd-row-10 grd-collapse">
+				                <div class="grd-small-7 grd-columns">
+				                    <div class="sb-hdr-logo">
+				                        <a href="/"><img src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/header/Shoes.com-2017-horiz-notag-260x80.png?yocs=c_f_&amp;yoloc=us" alt="shoes.com" title="shoes.com"></a>
+				                    </div>
+				                </div>
+				                <div class="grd-small-3 grd-columns">
+				                    <div class="sb-hdr-promo">
+				                    	<a href="/info/why-shop">
+					                    	<span class="sb-rev">
+					                        	FREE SHIPPING
+					                        </span>
+					                        <span class="sb-rev">				                        
+					                        	NO MINIMUM
+					                    	</span>
+				                    	</a>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="grd-small-6 grd-columns">
+				            <div class="grd-row-10 grd-collapse">
+				                <div class="grd-small-6 grd-columns">
+				                    <a href="#" class="sb-search-adv-btn right">ADVANCED SEARCH</a>
+				                </div>
+				            </div>
+				            <div class="grd-row-10 grd-collapse">
+				                <div class="grd-small-6 grd-columns">
+				                    <div class="grd-row-10 grd-collapse">
+				                        <div class="grd-small-1 grd-columns">
+				                        </div>
+				                        <div class="grd-small-9 grd-columns">
+				                            <div class="sb-search-wrap">
+				                                <form id="searchform" name="search" method="get" action="/s.jsp" class="sb-search-form">
+				                                    <div class="sb-search-bar">
+				                                        <div class="sb-search-field-wrap">
+				                                            <input type="text" class="sb-search-field" name="Search" maxlength="50" id="search" value="" placeholder="Search (Keyword, brands, etc.)">
+				                                        </div>
+				                                        <button class="sb-search-submit" type="submit"></button>
+				                                    </div>
+				                                </form>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				                <div class="grd-small-4 grd-end grd-columns">
+				                    <div class="grd-row-10 grd-collapse">
+				                        <div class="grd-small-5 grd-columns sb-rewards-container">
+				                            <a href="/info/rewards" class="sb-hdr-btn--text sb-to-orange align-center" title="Learn more about Rewards">
+									<span class="sb-blk">ShoeFan</span>
+									<span class="sb-blk">Rewards</span>
+															</a>
+				                        </div>
+				                        <div class="grd-small-5 grd-columns">
+				                            <a href="https://www.shoes.com/cart/cart" class="sb-hdr-btn--text sb-hdr-btn--dropdown sb-hdr-btn--cart">
+																<span class="sb-blk sb-hdr-cart-icon sb-hdr-cart-icon--main cartCnt">0</span>
+																<span class="sb-blk sb-hdr-cart-label">Cart</span>
+																<span class="sb-hdr-chevron sb-hdr-chevron--primary"></span>
+															</a>
+				                            <div class="sb-hdr-cart-preview">
+				                                <div class="sb-hdr-cart-tab"></div>
+				                                <div class="sb-hdr-cart-inner sb-hdr-cart-inner--loader align-center">
+				                                    <div class="grd-spacer-2"></div>
+				                                    <img src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/crt-loading-48.gif?yocs=c_f_&amp;yoloc=us" alt="Loading..." />
+				                                    <div class="grd-spacer-2"></div>
+				                                </div>
+				                                <div class="sb-hdr-cart-inner sb-hdr-cart-inner--unavailable">
+				                                    <div class="grd-spacer-2"></div>
+				                                    <div class="align-center">
+				                                        Your cart is currently unavailable
+				                                    </div>
+				                                    <div class="grd-spacer-2"></div>
+				                                </div>
+				                                <div class="sb-hdr-cart-inner sb-hdr-cart-inner--main">
+				                                    <div class="grd-row">
+				                                        <div class="grd-small-12 grd-columns">
+				                                            <div class="sb-hdr-cart-preview-line-items"></div>
+				                                            <div class="grd-spacer-half"></div>
+				                                            <div class="grd-row">
+				                                                <a href="https://www.shoes.com/cart/cart" class="sb-button-3 sb-upper">Checkout</a>
+				                                            </div>
+				                                            <div class="grd-spacer-half"></div>
+				                                        </div>
+				                                    </div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="grd-spacer-half"></div>
+				    <div class="grd-row sb-hdr-advsearch-wrap sb-hdr-advsearch-wrap--loading align-center">
+				        <div class="grd-spacer-half"></div>
+				        <img src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/crt-loading-48.gif?yocs=c_f_&amp;yoloc=us" alt="Loading..." />
+				    </div>
+				    <div class="grd-row sb-hdr-advsearch-wrap sb-hdr-advsearch-wrap--unavailable">
+				        <div class="grd-spacer-half"></div>
+				        <div class="grd-row grd-collapse sb-hdr-advsearch-heading sb-upper">
+				            <div class="grd-small-6 grd-columns">
+				                Advanced search is currently unavailable
+				            </div>
+				            <div class="grd-small-6 grd-columns align-right">
+				                <a href="#" class="sb-hdr-btn--advsearch-close">Close &nbsp;&#x2715;</a>
+				            </div>
+				        </div>
+				    </div>
+				    <div id="advsearch-main-header" class="grd-row sb-hdr-advsearch-wrap sb-hdr-advsearch-wrap--main">
+				    </div>
+				    <div class="grd-spacer-half"></div>
+				    <div class="grd-row grd-collapse">
+				        <nav class="sb-hdr-nav grd-small-12 grd-columns">
+				            <ul class="sb-no-bullets sb-list-justify">
+				                
+				                    <li>
+				                        <a href="/womens-shoes/category_8" data-subnav-section="women" data-subnav-index="1" manual_cm_sp="topnav-_-header_women-_-main" class="">
+				                            Women
+				                        </a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a href="/mens-shoes/category_2" data-subnav-section="men" data-subnav-index="2" manual_cm_sp="topnav-_-header_men-_-main" class="">
+				                            Men
+				                        </a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a href="/kids-shoes/category_1" data-subnav-section="kids" data-subnav-index="3" manual_cm_sp="topnav-_-header_kids-_-main" class="">
+				                            Kids
+				                        </a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a href="/all-brands/category_9" data-subnav-section="brands" data-subnav-index="4" manual_cm_sp="topnav-_-header_brands-_-main" class="">
+				                            Brands
+				                        </a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a href="/boots/category_390" data-subnav-section="boots" data-subnav-index="5" manual_cm_sp="topnav-_-header_boots-_-main" class="">
+				                            Boots
+				                        </a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a href="/clothing/category_3" data-subnav-section="clothing" data-subnav-index="6" manual_cm_sp="topnav-_-header_clothing-_-main" class="">
+				                            Clothing
+				                        </a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a href="/bags/category_5" data-subnav-section="bags" data-subnav-index="7" manual_cm_sp="topnav-_-header_bags-_-main" class="">
+				                            Bags
+				                        </a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a href="/info/specialty-shops" data-subnav-section="shops" data-subnav-index="8" manual_cm_sp="topnav-_-header_shops-_-main" class="">
+				                            Shops
+				                        </a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a href="/sale/category_6" data-subnav-section="sale" data-subnav-index="9" manual_cm_sp="topnav-_-header_sale-_-main" class="sb-red">
+				                            Sale
+				                        </a>
+				                    </li>
+				                    
+				            </ul>
+				        </nav>
+				    </div>
+				</div>
+				<div class="sb-hdr-end"></div>
+
+				<div class="grd-row sb-subnav-wrap">
+					<div class="sb-subnav">
+						<div class="sb-subnav-tab"></div>
+						<div class="grd-small-12 grd-columns sb-subnav-bg">
+						<div class="sb-subnav-inner-placeholder" />
+                        </div>
+					</div>
+				</div>
+			</header>
+
+			<header class="sb-header--mini">
+
+				<div class="sb-hdr-inner--mini">
+
+					<div class="grd-spacer-half"></div>
+
+					<div class="grd-row grd-collapse">
+						<div class="grd-small-2 grd-columns">
+							<div class="sb-hdr-logo">
+								<a href="/"><img src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/header/Shoes.com-2017-horiz-notag-260x80.png?yocs=c_f_&amp;yoloc=us" alt="shoes.com"></a>
+							</div>
+						</div>
+
+						<div class="grd-small-10 grd-columns">
+							<div class="grd-row">
+								<div class="grd-small-10 grd-columns">
+									<div class="sb-search-wrap">
+										<div class="sb-search-bar">
+											<form id="searchform-mini" name="search" method="get"
+												  action="/s.jsp" class="sb-search-form">
+											<div class="sb-search-field-wrap">
+												<input type="text" class="sb-search-field" name="Search" maxlength="50" id="search-mini" value="" placeholder="Search (Keyword, brands, etc.)" />
+											</div>
+											<button class="sb-search-submit" type="submit"></button>
+											</form>
+										</div>
+									</div>
+								</div>
+
+								<div class="grd-small-2 grd-end grd-columns">
+									<a href="https://www.shoes.com/cart/cart" class="sb-blk right sb-hdr-btn--dropdown sb-hdr-btn--cart">
+										<span class="sb-blk sb-hdr-cart-icon cartCnt">0</span>
+										<span class="sb-hdr-chevron sb-hdr-chevron--primary"></span>
+									</a>
+									<div class="sb-hdr-cart-preview"></div>
+								</div>
+							</div>
+
+							<div class="grd-row">
+								<div class="grd-small-12 grd-columns">
+									<nav class="sb-hdr-nav">
+										<ul class="sb-no-bullets sb-list-justify">
+											<li><a href="/womens-shoes/category_8" data-subnav-section="women" data-subnav-index="1" manual_cm_sp="topnav-_-header_women-_-sticky" class="">Women</a></li>
+											<li><a href="/mens-shoes/category_2" data-subnav-section="men" data-subnav-index="2" manual_cm_sp="topnav-_-header_men-_-sticky" class="">Men</a></li>
+											<li><a href="/kids-shoes/category_1" data-subnav-section="kids" data-subnav-index="3" manual_cm_sp="topnav-_-header_kids-_-sticky" class="">Kids</a></li>
+											<li><a href="/all-brands/category_9" data-subnav-section="brands" data-subnav-index="4" manual_cm_sp="topnav-_-header_brands-_-sticky" class="">Brands</a></li>
+											<li><a href="/boots/category_390" data-subnav-section="boots" data-subnav-index="5" manual_cm_sp="topnav-_-header_boots-_-sticky" class="">Boots</a></li>
+											<li><a href="/clothing/category_3" data-subnav-section="clothing" data-subnav-index="6" manual_cm_sp="topnav-_-header_clothing-_-sticky" class="">Clothing</a></li>
+											<li><a href="/bags/category_5" data-subnav-section="bags" data-subnav-index="7" manual_cm_sp="topnav-_-header_bags-_-sticky" class="">Bags</a></li>
+											<li><a href="/info/specialty-shops" data-subnav-section="shops" data-subnav-index="8" manual_cm_sp="topnav-_-header_shops-_-sticky" class="">Shops</a></li>
+											<li><a href="/sale/category_6" data-subnav-section="sale" data-subnav-index="9" manual_cm_sp="topnav-_-header_sale-_-sticky" class="sb-red">Sale</a></li>
+											
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="grd-row sb-subnav-wrap"></div>
+			</header>
+			<script id="sb-hdr-cart-preview-line-item-tpl" type="text/x-jsrender">
+			<div class="grd-row grd-collapse sb-hdr-cart-preview-line-item">
+			  <div class="grd-small-3 grd-columns">
+                <img src="{{: swatchImage || styleImage || '/images-SBV116/siteimgs/shoebuy/v4/sb-hdr-prod-giftcard.png'}}" alt="{{:brandName}} {{:modelName}}">
+			  </div>
+			  <div class="grd-small-9 grd-columns grd-gutter-left-half">
+				<div class="sb-upper">
+					{{if skuUrl}}
+						<a href="{{:skuUrl}}" class="sb-to-orange">{{if title}}{{:title}}{{else}}E-Gift Certificate{{/if}}</a>
+					{{else styleUrl}}
+						<a href="https://www.shoes.com{{:styleUrl}}" class="sb-to-orange">{{if title}}{{:title}}{{else}}E-Gift Certificate{{/if}}</a>
+					{{else}}
+						<a href="https://www.shoes.com/cart/cart" class="sb-to-orange">{{if title}}{{:title}}{{else}}E-Gift Certificate{{/if}}</a>
+					{{/if}}
+				</div>
+				<div class="sb-hdr-cart-preview-detail">
+				  {{if title}}
+					  {{if color}}
+					  Color: {{:color}}<br>
+					  {{/if}}
+					  {{if size}}Size: {{:size}}{{/if}}
+					  {{if size && width}} | {{/if}}
+					  {{if width}}Width: {{:width}}{{/if}}
+					  {{if width || (size && !width)}} | {{/if}}
+					  Qty: {{:quantity}}
+				  {{/if}}
+				</div>
+			  </div>
+			</div>
+			</script>
+			<script id="sb-hdr-cart-preview-empty-tpl" type="text/x-jsrender">
+			<div class="grd-row grd-collapse sb-hdr-cart-preview-line-item">
+			  <div class="grd-small-12 grd-columns">
+				Your cart is empty
+			  </div>
+			</div>
+			</script>
+			<script id="sb-hdr-rewards-loggedin-tpl" type="text/x-jsrender">
+				<a href="/cust/rewards" class="sb-hdr-btn--text sb-to-orange align-center" title="{{:title}}">
+					<span class="sb-blk">{{:line1}}</span>
+					<span class="sb-blk">{{:line2}}</span>
+				</a>
+			</script>
+			<script id="sb-hdr-rewards-loggedout-tpl" type="text/x-jsrender">
+				<a href="/info/rewards" class="sb-hdr-btn--text sb-to-orange align-center"
+				title="Learn more about Rewards">
+					<span class="sb-blk">ShoeFan</span>
+					<span class="sb-blk">Rewards</span>
+				</a>
+			</script>
+
+		</div>
+		
+		
+			  
+
+
+
+
+
+
+
+
+
+
+	
+		
+				<div class="sb-page-wide sb-found-wrap">
+				    <div class="grd-row">
+				      <div class="hpg-promo-img grd-small-12 grd-columns">
+					<div id="pbar">
+						
+
+<script type="text/javascript">
+var pbarIHeight = 'inherit'; var pbarIBackground = 'url(/images-SBV116/promobar_bkgd.gif)'; var pbarHeight = 'inherit'; setupPbar('/pbar');
+</script>
+					</div>
+				      </div><!--end hpg-promo-img grd-small-12 grd-columns -->
+				    </div><!--end grd-row -->
+				</div><!--end sb-page-wide sb-found-wrap-->
+					
+
+		
+
+                <div id="exchange-header-wrap"></div>
+
+		
+			<div class="container_24">
+		
+
+
+
+	<div class="content_area border_gray clearfix">
+	
+
+
+	
+		<!-- left column -->
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+		
+
+
+
+
+<div class="grid_19 breadcrumb_area">
+
+    <div class="breadcrumbs" data-yo-baynote="true"><a href="/" class="breadcrumbtext">Home</a> &gt; <a href="/customer/index.jsp" class="breadcrumbtext">Customer Service</a> &gt;&nbsp;Privacy</div>
+
+
+</div><!--end breadcrumb_area-->
+	
+	
+
+	
+
+
+
+
+<div class="content_area border_gray">
+        <section class="grid_19 helpInfo">
+                <div class="content_box privacyFaq">
+                        <h1 class="page_title">Privacy Policy</h1>
+                        <div class="info-sec">
+                                <p style="text-align:center;"><span class="highlight">Your Privacy Rights</span><br />
+                                <i>Last Updated: April 25, 2017</i></b></p>
+
+                                <p>Shoebuy.com, Inc. respects the privacy of our users and has developed this Privacy Policy to demonstrate its commitment to protecting your privacy.  This Privacy Policy is intended to describe for
+                                you, as an individual who is a user of Shoebuy.com, Inc.'s web sites and services, the information we collect, how that information may be used, with whom it may be shared, and your
+                                choices about such uses and disclosures.</p>
+
+                                <p>We encourage you to read this Privacy Policy carefully when using our website or services or transacting business with us.  By using our website, you are accepting the practices described in
+                                this Privacy Policy. Shoebuy.com, Inc. is a part of the Walmart family of companies.</p>
+
+                                <p>If you have any questions about our privacy practices, please refer to the end of this Privacy Policy for information on how to contact us.</p>
+                        </div>
+                        <div class="info-sec">
+                                <a name="iwc"></a>
+                                <h2>Information we collect about you</h2>
+
+                                <p><span class="highlight">In General</span>,  We may collect personal information that can identify you such as your name and email address and other information that does not identify you.  When you provide personal
+                                information through our website, the information may be sent to servers located in the United States and other countries around the world.</p>
+                                <ul>
+                                <li><span class="highlight">Information you provide.</span> We may collect and store any personal information you enter on our website or provide to us in some other manner. This includes identifying information, such as
+                                your name, address, e-mail address, telephone number and fax number, and, if you transact business with us, financial information such as your payment method
+                                (valid credit card number, type, expiration date or other financial information).  We also may request information about your interests and activities, your gender and age, other demographic
+                                information and reviews of our web site or products that we sell.
+                                <li><span class="highlight">Information from other sources.</span>  We may also periodically obtain both personal and non-personal information about you from Walmart business partners, contractors and other
+                                third parties and add it to our account information or other information we have collected.  Examples of information that we may receive include updated delivery and address information, purchase
+                                history, and additional demographic information.
+                                <li><span class="highlight">Information about others.</span>  We may also collect and store personal information about other people that you provide to us.  If you use our website to send others (friends, relatives,
+                                colleagues, etc.) a product as a gift, information that may interest them or messages (such as invitations) through our system, we may store your personal information, and the personal information of
+                                each such recipient.</li>
+                                </ul>
+
+                                <p><span class="highlight">Use of cookies and other technologies to collect information.</span> We use various technologies to collect information from your computer and about your activities on our site.</p>
+
+                                <ul><li><span class="highlight">Information collected automatically.</span>
+                                <p>We automatically collect information from your browser when you visit our website.  This information includes your IP address, your browser
+                                type and language, access times, the content of any undeleted cookies that your browser previously accepted from us (see "Cookies" below), and the referring website address.</p>
+                                <li><span class="highlight">Cookies.</span>
+                                <p>When you visit our website, we may assign your computer one or more <a href="privacy-info#cookies">cookies</a>, to facilitate access to our site and to personalize your online
+                                experience.  Through the use of a cookie, we also may automatically collect information about your online activity on our site, such as the web pages you visit, the links you click, and the searches
+                                you conduct on our site.  Most browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies.  If you choose to decline <a
+                                href="/info/privacy-info#cookies">cookies</a>, please note that you may not be able to sign in or use some of the interactive features offered on our website.</p>
+
+                                <li><span class="highlight">Other Technologies.</span>
+                                <p>We may use standard Internet technology, such as <a href="/info/privacy-info#beacon">web beacons</a> and other similar technologies, to track your use of our
+                                site.  We also may include web beacons in e-mail messages or newsletters to determine whether messages have been opened and acted upon. The information we obtain in this manner enables us to customize
+                                the services we offer our website visitors to deliver targeted advertisements and to measure the overall effectiveness of our online advertising and content or other activities.</p>
+
+                                <a name="ioc"></a><li><span class="highlight">Information collected by third-parties.</span>
+                                <p>We may allow third-parties, including our authorized service providers, Walmart, advertising companies, and ad networks,
+                                to display advertisements on and off our site.  These companies may use tracking technologies, such as <a href="/info/privacy-info#cookies">cookies</a>, to collect information about users who view or
+                                interact with their advertisements.  Our website does not provide any personal information to these third parties.  This information allows them to deliver targeted advertisements and gauge their
+                                effectiveness.  Some of these third-party advertising companies may be advertising networks that are members of the <a href="http://www.networkadvertising.org/">Network Advertising Initiative</a>, which offers a
+                                single location to opt out of ad targeting from member companies.</p>
+
+                                <li><span class="highlight">Do Not Track.</span>
+                                <p>Do Not Track is a voluntary program among Internet advertisers that is intended to give users the ability to opt out of behaviorial targeting and advertising.  At this time, we do not respond to "do not track" settings from browsers.</ul>
+  </div>
+                        <div class="info-sec">
+                                <a name="hwu"></a>
+                                <h2>How we use the information we collect</h2>
+
+                                <p><span class="highlight">In general.</span> We may use information that we collect about you to:</p>
+                                <ul><li>deliver the products and services that you have requested;
+                                <li>manage your account and provide you with customer support;
+                                <li>perform research and analysis about your use of, or interest in, our products, services, or content, or products, services or content offered by others;
+                                <li>communicate with you by e-mail, postal mail, telephone and/or mobile devices about products or services that may be of interest to you either from us, Walmart, or other third parties;
+                                <li>develop and display content and advertising tailored to your interests on our site and other sites;
+                                <li>verify your eligibility and deliver prizes in connection with contests and sweepstakes;
+                                <li>enforce our terms and conditions;
+                                <li>manage our business; and
+                                <li>perform functions as otherwise described to you at the time of collection.</ul>
+
+                                <p><span class="highlight">Financial information.</span> We may use financial information or payment method to process payment for any purchases made on our website, enroll you in the discount, rebate, and other programs
+                                in which you elect to participate, to protect against or identify possible fraudulent transactions, and otherwise as needed to manage our business.</p>
+
+                                <p><span class="highlight">Job applicants.</span> If your personal information is submitted through our website when applying for a position with our company, the information will be used solely in connection with
+                                considering and acting upon your application.  We may retain your personal information for a period of time, but only for the purpose of considering your application for current or future
+                                available positions.
+                                This information may be shared with our Walmart companies for the purpose of evaluating your qualifications for other available positions, as well as with third-party service providers retained by
+                                us to collect, maintain and analyze candidate submissions for job postings.</p>
+                                <p>Please review "Your choices about collection and use of your information" below.</p>
+                        </div>
+   <div class="info-sec">
+                                <a name="ww"></a>
+                                <h2>With whom we share your information</h2>
+                                <p>We want you to understand when and with whom we may share personal or other information we have collected about you or your activities on our web site or while using our services.</p>
+
+                                <p><span class="highlight">Personal information.</span> We do not share your personal information with others except as indicated below or when we inform you and give you an opportunity to opt out of having
+                                your personal information shared.  We may share personal information with: </p>
+
+                                <ul><li><span class="highlight">Authorized service providers:</span> <p>We may share your personal information with our authorized service providers that perform certain services on our behalf.  These services may
+                                include fulfilling orders, processing credit card payments, delivering packages, providing customer service and marketing assistance, performing business and sales analysis, supporting our website
+                                functionality, and supporting contests, sweepstakes, surveys and other features offered through our website.  These service providers may have access to personal information needed to perform their
+                                functions but are not permitted to share or use such information for any other purposes.</p>
+
+                                <li><span class="highlight">Business partners:</span> <p>When you make purchases, reservations or engage in promotions offered through our website, we may share personal information with the businesses with which we
+                                partner to offer you those products, services, promotions, contests and/or sweepstakes.  When you elect to engage in a particular merchant's offer or program, you authorize us to provide your email address and
+                                other information to that merchant.</p>
+                                <li><span class="highlight">Other Walmart businesses.</span> <p>We are part of the Walmart corporate family of businesses, which include Wal-Mart Stores, Inc., Walmart.com, Jet.com, Hayneedle.com, Samsclub.com, VUDU and others.  We may share information we collect,
+                                including personal information, with Walmart companies.  Sharing information with Walmart companies enables us to provide you with information about a variety of products and services that might interest you.</p>
+                                <li><span class="highlight">Other Situations.</span> <p>We also may disclose your information:</p>
+
+                                <ul><li><p>In response to a subpoena or similar investigative demand, a court order, or a request for cooperation from a law enforcement or other government agency; to establish or exercise our
+                                legal
+                                rights; to defend against legal claims; or as otherwise required by law.  In such cases, we may raise or waive any legal objection or right available to us.</p>
+                                <li><p>When we believe disclosure is appropriate in connection with efforts to investigate, prevent, or take other action regarding illegal activity, suspected fraud or other wrongdoing; to
+                                protect and
+                                defend the rights, property or safety of our company, our users, our employees, or others; to comply with applicable law or cooperate with law enforcement; or to enforce our website terms and
+                                conditions or other agreements or policies.</p>
+                                <li><p>In connection with a substantial corporate transaction, such as the sale of our business, a divestiture, merger, consolidation, or asset sale, or in the unlikely event of bankruptcy.  The
+                                personal information which you provide to us is an asset of Shoebuy.com, Inc. and may be included in the assets transferred in the event of a substantial corporate transaction.</ul></ul>
+
+                                <p>Any third parties to whom we may disclose personal information may have their own privacy policies which describe how they use and disclose personal information.  Those policies will govern
+                                use,
+                                handling and disclosure of your personal information once we have shared it with those third parties as described in this Privacy Policy.  If you want to learn more about their privacy practices, we
+                                encourage you to visit the websites of those third parties.  These entities or their servers may be located either inside or outside the United States.</p>
+
+                                <p><span class="highlight">Aggregated and non-personal information.</span> We may share aggregated and non-personal information we collect under any of the above circumstances.  We may also share it with third parties
+                                and Walmart to develop and deliver targeted advertising on our websites and on websites of third parties.  We may combine non-personal information we collect with additional non-personal
+                                information collected from other sources.  We also may share aggregated information with third parties, including advisors, advertisers and investors, for the purpose of conducting general business
+                                analysis.  For example, we may tell our advertisers the number of visitors to our website and the most popular features or services accessed.  This information does not contain any personal information
+                                and may be used to develop website content and services that we hope you and other users will find of interest and to target content and advertising.</p>
+                        </div>
+                        <div class="info-sec">
+   <h2>Third-party websites</h2>
+                                <P>There are a number of places on our website where you may click on a link to access other websites that do not operate under this Privacy Policy.  For example, if you click on an advertisement
+                                or a search result on our website, you may be taken to a website that we do not control.  These third-party websites may independently solicit and collect information, including personal information, from
+                                you and, in some instances, provide us with information about your activities on those websites.  We recommend that you consult the privacy statements of all third-party websites you visit by clicking
+                                on the "privacy" link typically located at the bottom of the web page you are visiting.</p>
+
+                        </div>
+                        <div class="info-sec">
+
+                                <h2>How you can access your information</h2>
+
+                                <p>If you have an online account with us, you have the ability to review and update your personal information online by <a href="https://www.shoes.com/cust/login">logging into your account</a>. You can also review and
+                                update your
+                                personal information by contacting us.  More information about how to contact us is provided below.</p>
+                                <a name="yc"></a><p><span class="highlight">Your choices about collection and use of your information</span></p>
+                                <ul><li>You can choose not to provide us with certain information, but that may result in you being unable to use certain features of our website because such information may be required in order for
+                                you to register as a member; purchase products or services; participate in a contest, promotion, survey, or sweepstakes; ask a question; or initiate other transactions on our website.<br>
+                                <li>At any time you can choose to no longer receive commercial or promotional emails from us by accessing <a href="/info/remove">www.shoes.com/info/remove</a> and enter your email address.  You also
+                                will be given the opportunity, in any commercial e-mail that we send to you, to opt out of receiving such messages in the future.  It may take up to 10 days for us to process an opt-out request.  We may send you
+                                other types of transactional and relationship e-mail communications, such as service announcements, administrative notices, and surveys, without offering you the opportunity to opt out of receiving
+                                them.<br>
+                                <li>You may tell us not to share your personal information with non-affiliated third parties (i.e. entities outside of Walmart) for direct marketing purposes by accessing <a
+                                href="/info/remove">www.shoes.com/info/remove</a> or by sending a written request to the email address or mailing address below:<br><br>
+
+                                <p style="text-align:center;"><a href="mailto:privacy@shoes.com">privacy@shoes.com</a><br>or<br>
+                                Privacy Officer<br>Shoebuy.com, Inc.<br>One Constitution Wharf, Suite 200<br>Charlestown, MA 02129-2025<br><br> 
+                                </p>
+                                </li>
+                                </ul>
+
+                        </div>
+                        <div class="info-sec">
+   <a name="sec"></a>
+                                <h2>How we protect your personal information</h2>
+                                <p>We take appropriate security measures (including physical, electronic and procedural measures) to help safeguard your personal information from unauthorized access and disclosure.  For example,
+                                only
+                                authorized employees are permitted to access personal information, and they may do so only for permitted business functions.  In addition, we use encryption in the transmission of your sensitive
+                                personal information between your system and ours, and we use firewalls to help prevent unauthorized persons from gaining access to your personal information.  </p>
+                                <p>We want you to feel confident using our website to transact business.  However, no system can be completely secure.  Therefore, although we take steps to secure your information, we do not
+                                promise, and
+                                you should not expect, that your personal information, searches, or other communications will always remain secure. Users should also take care with how they handle and disclose their personal
+                                information and should avoid sending personal information through insecure email.  Please refer to the <a href="http://www.consumer.ftc.gov" rel="nofollow" target="_blank">Federal Trade Commission</a>
+                                for information about how to protect yourself against identity theft.</p>
+
+                        </div>
+                        <div class="info-sec">
+                                <h2>Reviews and other posted information</h2>
+                                <p>We may provide areas on our websites where you can post information including reviews of products.  Such postings are governed by our <a href="/info/terms">Terms of Use</a>.  In
+                                addition, such
+                                postings may appear on other websites or when searches are executed on the subject of your posting.  Also, whenever you voluntarily disclose personal information on publicly-viewable web pages, that
+                                information will be publicly available and can be collected and used by others.  For example, if you post your email address, you may receive unsolicited messages.  We cannot control who reads your
+                                posting or what other users may do with the information you voluntarily post, so we encourage you to exercise discretion and caution with respect to your personal information.  Once you have posted
+                                information, you will not be able to edit or delete such information.</p>
+                        </div>
+                        <div class="info-sec">
+                                <h2>Children's privacy</h2>
+                                <p>Our website is a general audience site, and we do not knowingly collect personal information from children under the age of 13. </p>
+                        </div>
+                        <div class="info-sec">
+                                <a name="cali"></a>
+                                <h2>Your California privacy rights</h2>
+                                <p>Under California law, if you are a resident of California, you have the right to control how your personal information is shared with third parties for their direct marketing purposes.
+                                Following
+                                receipt of a request from you, we will provide you with a cost free means of informing us that you do not want your personal information to be shared with third parties for the direct marketing
+                                purposes of such third parties.  For purposes of this notice, third parties do not include Walmart.</p>
+                                <p>We provide you with a cost free means of informing us that you do not want your personal information to be shared with third parties for the direct marketing purposes of such third parties.  If
+                                you
+                                would like to exercise your right under California law to tell us that you do not wish your personal information to be shared with third parties for their direct marketing purposes, you should send
+                                your written request to the email address or the mailing address below.  We will respond to your request within 30 days.</p>
+                                <br>
+                                <p style="text-align:center;"><a href="mailto:privacy@shoes.com">privacy@shoes.com</a><br>or<br>
+                                Privacy Officer<br>Shoebuy.com, Inc.<br>One Constitution Wharf, Suite 200<br>Charlestown, MA 02129-2025<br><br>
+                                </p>
+                        </div>
+   <div class="info-sec">
+                                <h2>Visiting our websites from outside the United States</h2>
+                                <p>This Privacy Policy is intended to cover collection of information on our website from residents of the United States.  If you are visiting our website from outside the United States, please be
+                                aware that your information may be transferred to, stored, and processed in the United States where our servers are located and our central database is operated.  The data protection and other laws of the
+                                United States and other countries might not be as comprehensive as those in your country.  Please be assured that we seek to take reasonable steps to ensure that your privacy is protected.  By using
+                                our services, you understand that your information may be transferred to our facilities and those third parties with whom we share it as described in this Privacy Policy. </p>
+                        </div>
+                        <div class="info-sec">
+                                <h2>Changes to this Privacy Policy</h2>
+                                <p>We will occasionally update this Privacy Policy to reflect changes in our practices and services.  When we post changes to this Privacy Policy, we will revise the "last updated" date at the top
+                                of this
+                                Privacy Policy.  If we make any material changes in the way we collect, use, and/or share your personal information, we will notify you by sending an e-mail to the e-mail address you most recently
+                                provided us in your account, profile or registration (unless we do not have such an email address), and/or by prominently posting notice of the changes on our website.  We recommend that you check our
+                                website from time to time to inform yourself of any changes in this Privacy Policy or any of our other policies.  The form of our Privacy Policy in effect from time to time will apply to all
+                                information that we have collected.</p>
+                        </div>
+                        <div class="info-sec">
+                                <h2>How to contact us</h2>
+                                <p>If you have any questions about this Privacy Policy or our information-handling practices, or if you would like to request information about our disclosure of personal information to third
+                                parties for
+                                their direct marketing purposes, please contact us by e-mail or postal mail as follows:</p>
+
+                                <p style="text-align:center;">
+                                Privacy Officer<br>Shoebuy.com, Inc.<br>One Constitution Wharf, Suite 200<br>Charlestown, MA 02129-2025<br>
+                                <a href="mailto:privacy@shoes.com">privacy@shoes.com</a></p>
+                        </div>
+                        <div class="info-sec">
+                                <p>&copy; 2017 Walmart Stores, Inc.  All rights reserved.</p>
+                                </div>
+                                <div class="info-sec">
+                                <p><a href="#">Back to Top</a>
+                                 | <a href="/">Back to Homepage</a> 
+                                </p>
+                        </div>
+                </div><!--end content_box-->
+        </section><!--end grid_19-->
+        <div class="clear"></div>
+</div>
+
+
+
+ 
+ 
+
+
+
+
+<script type="text/javascript">
+Tealium.getInstance('').setData({breadcrumb:Tealium.getBreadcrumb('"INFO: INFO CUSTOMER SERVICE PRIVACY"', 'info'),category_path:"Home > Customer Service > Privacy",cleansed_vanity_url:"https:\/\/www.shoes.com\/privacy.htm",customer_email:Tealium.getCustomerEmail(),customer_id:Tealium.getCustomerId(),customer_partner_id:Tealium.getCustomerPartnerId(),date:Tealium.getDateStr(),environment:"prod",is_mobile:"",language:"EN",locale:"en_US",logged_in:Tealium.isLoggedIn(),onsite_search_term:Tealium.getOnSiteSearch(),page_category:"INFO",page_name:"INFO: INFO CUSTOMER SERVICE PRIVACY",page_type:"info",page_url:window.location.href,site_name:"Shoes.com",timestamp:Tealium.getTimestampStr()});
+
+</script>
+<script type="text/javascript">
+if (!window.tealiumLoaded) {
+	(function(a,b,c,d){
+	 a='//tags.tiqcdn.com/utag/shoebuy/main/prod/utag.js';
+	 b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+	 d.onload=function(){
+		 Tealium.setTealiumLoaded();
+		 
+		 Tealium.getInstance('').fireView();
+		 
+	 };
+	 d.onreadystatechange=function(){
+		 if(/loaded|complete/.test(d.readyState)) {
+		     Tealium.setTealiumLoaded();
+		     
+	         Tealium.getInstance('').fireView();
+	         
+		 }
+	 };
+	 a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+	})();
+}
+</script>
+
+
+
+
+	<div class="clear"></div>
+    
+</div>
+
+
+
+</div>
+
+
+ <footer class="sb-page-wide sb-footer">
+    <div class="grd-row grd-spacer-1"></div>
+    <div class="grd-row">
+        <div class="grd-small-12 grd-columns"><hr /></div>
+    </div>
+
+    <div class="grd-row">
+        <div class="grd-small-6 grd-columns">
+            <h3>Stay Connected</h3>
+            <ul class="sb-icons">
+                <li>
+                    <a href="https://www.facebook.com/shoesdotcom" target="_blank">
+                        <img class="social-facebook footer-social" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/spacer.gif?yocs=c_f_&amp;yoloc=us" height="28" width="30" alt="shoes.com Facebook" title="shoes.com Facebook" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/shoesdotcom/" target="_blank" title="shoes.com on Instagram">
+                        <img class="social-instagram footer-social" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/spacer.gif?yocs=c_f_&amp;yoloc=us" height="28" width="30" alt="shoes.com Instagram" title="shoes.com Instagram" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/shoesdotcom" target="_blank">
+                        <img class="social-twitter footer-social" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/spacer.gif?yocs=c_f_&amp;yoloc=us" height="28" width="30" alt="shoes.com Twitter" title="shoes.com Twitter" />
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://www.pinterest.com/shoesdotcom/" target="_blank">
+                        <img class="social-pinterest footer-social" src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/spacer.gif?yocs=c_f_&amp;yoloc=us" height="30" width="30" alt="shoes.com Pinterest" title="shoes.com Pinterest" />
+                    </a>
+                </li>   
+            </ul>
+        </div>
+
+        <div class="grd-small-6 grd-columns align-right">
+        </div>
+    </div>
+
+    <div class="grd-row grd-spacer-1"></div>
+
+    <div class="grd-row">
+        <div class="grd-small-6 grd-columns">
+            <a class="grd-thin-box-2 sb-border-box sb-gift-cards" href="/info/gcbuy">
+            <span class="sb-image-wrapper">
+              <img src="/images-SBV116/siteimgs/shoebuy/v4/sb-hdr-prod-giftcard.png" style="padding-top:5px;width:118px">
+            </span>
+            <span class="sb-gift-cards-text">
+              <span class="sb-heading">Give the gift of shoes and more</span>
+              <span>E-Gift Certificates are the perfect fit.<span class="inline light-blue">&nbsp;</span></span>
+            </span>
+            </a>
+        </div>
+        <div class="grd-small-6 grd-columns">
+            <div class="grd-thin-box-2 sb-border-box sb-subscribe">
+                <div class="sb-heading">Get exclusive deals, sneak peeks &#38; more!</div>
+                <div>
+                    <form action="https://www.shoes.com/cust/email-signup" class="email-signup-form" method="post">
+                        <input class="sb-input-lg" type="email" placeholder="email address" name="email" />
+                        <button class="sb-button-orange" name="subscribebtn" type="submit" value="Subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grd-row grd-spacer-2"></div>
+
+    <div class="grd-row">
+        <nav class="grd-small-12 grd-columns">
+            <ul class="sb-footer-nav">
+                <li><a href="/info/about">About</a></li>
+                <li><a href="/contact/careers">Careers</a></li>
+                <li><a href="/info/the-shoesmart-library">ShoeSmart Library</a></li>
+                <li><a href="/coupons">Shoes.com Coupons</a></li>
+                <li><a href="/info/rewards">Rewards</a></li>
+                <li><a href="/info/csindex">Customer Service</a></li>
+                <li><a href="/info/returns">Returns</a></li>
+<br>
+                <li><a href="/info/terms">Terms</a></li>
+                    <li><a href="/info/privacy">Privacy</a></li>
+                <li><a href="/info/international-shipping">International</a></li>
+                <li><a href="/info/site-guide">Site Guide</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="grd-row grd-spacer-1"></div>
+
+    <div class="grd-row">
+        <div class="grd-small-12 grd-columns">
+              
+              <div class="sb-copy">&copy;1999 - 2018 Shoebuy.com, Inc. All Rights Reserved.
+                <br><br><img src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/images-SBV116/siteimgs/shoebuy/v4/header/shoes.com-2017-notag-logo.png?yocs=c_f_&amp;yoloc=us" alt="shoes.com" title="shoes.com"></div>
+        </div>
+    </div>
+</footer>
+
+
+        <div class="JScache" style="display:none">
+            <input type="hidden" name="promptSearch" value="Enter Search" id="promptSearch" />
+            <input type="hidden" name="promptSubscription" value="Enter Email Address" id="promptSubscription" />
+        </div>
+
+
+<!-- site-info site03 / shoebuy.com-a / unknown / [islive] / Sat Jan 20 05:06:48 EST 2018, SEOIndexed=false, SEOURLAvailable=false -->
+
+
+    <script src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/jquery.jcarousel.min.js?yocs=c_e_&amp;yoloc=us"></script>
+    <script src="/jscript-SBV116/sitejs/shoebuy/v4/sb-home.js"></script>
+
+    <script src="//cdn-us-ec.yottaa.net/550c587c2106b06b5100362d/www.shoes.com/v~19.139/jscript-SBV116/sitejs/shoebuy/v4/rem.js?yocs=c_e_&amp;yoloc=us"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){remjs(window);});
+    </script>
+    </body>
+</html>
+

@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html class="no-js ">
+<head>
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIEVFdTGwQGUFRRAwU="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+<meta name="description" content="Watch the official American Idol online at ABC.com. Get exclusive videos and free episodes." />
+<meta name="keywords" content="American Idol, abc American Idol, American Idol videos, American Idol news" />
+<link rel="alternate" href="android-app://com.disney.datg.videoplatforms.android.abc/abcplayer" />
+<link rel="apple-touch-icon" href="//cdn1.edgedatg.com/aws/abc/prod/images/abclogo_57x57.png" />
+<link rel="shortcut icon" href="//cdn1.edgedatg.com/aws/abc/prod/images/favicon-abc.ico" />
+<meta name="apple-itunes-app" content="app-id=364191819, app-argument=http://abc.go.com/watch-live" />
+<meta name="google-play-app" content="app-id=com.disney.datg.videoplatforms.android.abc" />
+<meta name="google-site-verification" content="U_5rA3lHEyQuPWd3EHhOBfNDoweYB-btpslPdxUKpCs" />
+<meta name="msApplication-ID" content="App" />
+<meta name="msApplication-PackageFamilyName" content="ABC.ABCPlayer" />
+<meta name="msapplication-TileColor" content="#2D2D2D" />
+<meta name="msapplication-TileImage" content="//cdn1.edgedatg.com/aws/abc/prod/images/favicon_ie10.png" />
+<meta name="msvalidate.01" content="0EABD001D404EA9DDE2025E9E4F14CAF" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta property="fb:app_id" content="137585909851" />
+<meta property="og:app_id" content="137585909851" />
+<meta name="og:image" content="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/showimages/323b2b1a7b86186be3a9d9d13d3d28d0/1200x627-Q80_323b2b1a7b86186be3a9d9d13d3d28d0.jpg" />
+<link rel="canonical" href="https://abc.go.com/shows/american-idol" />
+<meta name="twitter:site" content="@{twitter.account}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="og:description" content="Watch the official American Idol online at ABC.com. Get exclusive videos and free episodes." />
+<meta name="twitter:image" content="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/showimages/323b2b1a7b86186be3a9d9d13d3d28d0/1200x627-Q80_323b2b1a7b86186be3a9d9d13d3d28d0.jpg" />
+<meta name="og:image" content="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/showimages/323b2b1a7b86186be3a9d9d13d3d28d0/1200x627-Q80_323b2b1a7b86186be3a9d9d13d3d28d0.jpg" />
+<meta name="og:title" content="Watch American Idol TV Show - ABC.com" />
+<meta name="og:url" content="https://abc.go.com/shows/american-idol" />
+<meta property="og:site_name" content="ABC" />
+<meta name="og:type" content="website" />
+<title>Watch American Idol TV Show - ABC.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<script type='text/javascript'> var WindowEvent;(function(n){n[n.Load="load"]="Load";n[n.BeforeUnload="beforeunload"]="BeforeUnload";n[n.Abort="abort"]="Abort";n[n.Error="error"]="Error"})(WindowEvent||(WindowEvent={}));var AjaxTiming=function(){function n(n,t,i,r){var u=this;this.getPerformanceTimings=function(n){u.connect=n.connectEnd-n.connectStart;u.dns=n.domainLookupEnd-n.domainLookupStart;u.duration=n.duration;u.load=n.responseEnd-n.responseStart;u.wait=n.responseStart-n.requestStart;u.start=n.startTime;u.redirect=n.redirectEnd-n.redirectStart;n.secureConnectionStart&&(u.ssl=n.connectEnd-n.secureConnectionStart)};this.url=n;this.method=t;this.isAsync=i;this.open=r}return n}(),ProfilerJsError=function(){function n(n,t,i){this.count=0;this.message=n;this.url=t;this.lineNumber=i}return n.createText=function(n,t,i){return[n,t,i].join(":")},n.prototype.getText=function(){return n.createText(this.message,this.url,this.lineNumber)},n}(),ProfilerEventManager=function(){function n(){this.events=[];this.hasAttachEvent=!!window.attachEvent}return n.prototype.add=function(n,t,i){this.events.push({type:n,target:t,func:i});this.hasAttachEvent?t.attachEvent("on"+n,i):t.addEventListener(n,i,!1)},n.prototype.clear=function(){for(var n,t=0,i=this.events;t<i.length;t++)n=i[t],this.hasAttachEvent?n.target.detachEvent(n.type,n.func):n.target.removeEventListener(n.type,n.func,!1);this.events=[]},n}(),RProfiler=function(){function n(){function s(n){var t=n.target||n.srcElement;return t.nodeType==3&&(t=t.parentNode),u("N/A",t.src||t.URL,-1),!1}var n=this,u,f,t,i,e;this.restUrl="g.3gl.net/jp/370/v3/M";this.startTime=(new Date).getTime();this.version=2;this.info={};this.hasInsight=!1;this.data={start:this.startTime,jsCount:0,jsErrors:[],loadTime:-1,loadFired:!1,ajax:[]};this.eventManager=new ProfilerEventManager;this.startAjaxCapture=function(){var i=XMLHttpRequest.prototype,o=i.open,s=i.send,r=[],u={},e=n.data.ajax,h=25,f=typeof performance=="object"&&typeof window.performance.now=="function"&&typeof window.performance.getEntriesByType=="function",t;f&&typeof window.performance.setResourceTimingBufferSize=="function"&&window.performance.setResourceTimingBufferSize(300);t=function(){return f?window.performance.now():(new Date).getTime()};i.open=function(n,i,u,f,e){u===void 0&&(u=!0);this.rpIndex=r.length;r.push(new AjaxTiming(i,n,u,t()));o.call(this,n,i,u,f,e)};i.send=function(n){var i=this,c=this.onreadystatechange,o;(this.onreadystatechange=function(n){var o=r[i.rpIndex],l,s;if(o){l=i.readyState;switch(l){case 1:o.connectionEstablished=t();break;case 2:o.requestReceived=t();break;case 3:o.processingTime=t();break;case 4:o.complete=t();s=!!(i.response&&i.response!=null&&i.response!=undefined);switch(i.responseType){case"text":case"":typeof i.responseText=="string"&&(o.responseSize=i.responseText.length);break;case"json":s&&typeof i.response.toString=="function"&&(o.responseSize=i.response.toString().length);break;case"arraybuffer":s&&typeof i.response.byteLength=="number"&&(o.responseSize=i.response.byteLength);break;case"blob":s&&typeof i.response.size=="number"&&(o.responseSize=i.response.size)}(function(n){setTimeout(function(){var r,s,h,c,o;if(f){var i=n.url,t=[],l=performance.getEntriesByType("resource");for(r=0,s=l;r<s.length;r++)h=s[r],h.name==i&&t.push(h);if(e.push(n),t.length!=0){if(u[i]||(u[i]=[]),t.length==1){n.getPerformanceTimings(t[0]);u[i].push(0);return}c=u[i];for(o in t)if(c.indexOf(o)==-1){n.getPerformanceTimings(t[o]);c.push(o);return}n.getPerformanceTimings(t[0])}}},h)})(o,e)}typeof c=="function"&&c.call(i,n)}},o=r[this.rpIndex],o)&&(n&&!isNaN(n.length)&&(o.sendSize=n.length),o.send=t(),s.call(this,n))}};this.recordPageLoad=function(){n.data.loadTime=(new Date).getTime();n.data.loadFired=!0};this.addError=function(t,i,r){var s,f,u,e,o;for(n.data.jsCount++,s=ProfilerJsError.createText(t,i,r),f=n.data.jsErrors,u=0,e=f;u<e.length;u++)if(o=e[u],o.getText()==s){o.count++;return}f.push(new ProfilerJsError(t,i,r))};this.addInfo=function(t,i,r){if(!n.isNullOrEmpty(t)){if(n.isNullOrEmpty(r))n.info[t]=i;else{if(n.isNullOrEmpty(i))return;n.isNullOrEmpty(n.info[t])&&(n.info[t]={});n.info[t][i]=r}n.hasInsight=!0}};this.clearInfo=function(){n.info={};n.hasInsight=!1};this.getInfo=function(){return n.hasInsight?n.info:null};this.eventManager.add(WindowEvent.Load,window,this.recordPageLoad);u=this.addError;this.startAjaxCapture();window.opera?this.eventManager.add(WindowEvent.Error,document,s):"onerror"in window&&(f=window.onerror,window.onerror=function(n,t,i){return(u(n,t,i),!!f)?f(n,t,i):!1});!window.__cpCdnPath||(this.restUrl=window.__cpCdnPath.trim());t=document.createElement("iframe");i=t.style;i.position="absolute";i.top="-10000px";i.left="-1000px";e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e);var o=t.contentWindow.document.open("text/html","replace"),h=window.location.protocol+"//",r='<body onload="';r+="function s(u){var d=document,s=d.createElement('script');s.type='text/javascript';s.src=u;d.body.appendChild(s);}";r+="s('"+h+this.restUrl+"');";r+='"><\/body>';o.write(r);o.close()}return n.prototype.isNullOrEmpty=function(n){if(n===undefined||n===null)return!0;if(typeof n=="string"){var t=n;return t.trim().length==0}return!1},n.prototype.dispatchCustomEvent=function(n){(function(n){function t(n,t){t=t||{bubbles:!1,cancelable:!1,detail:undefined};var i=document.createEvent("CustomEvent");return i.initCustomEvent(n,t.bubbles,t.cancelable,t.detail),i}if(typeof n.CustomEvent=="function")return!1;t.prototype=Event.prototype;n.CustomEvent=t})(window);var t=new CustomEvent(n);window.dispatchEvent(t)},n}(),profiler=new RProfiler;window.RProfiler=profiler;window.WindowEvent=WindowEvent;profiler.dispatchCustomEvent("GlimpseLoaded"); </script><link rel="stylesheet" type="text/css" href="//cdn1.edgedatg.com/aws/site/3.4.2.2/css/production/001/001/abcfonts.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn1.edgedatg.com/aws/site/3.4.2.2/css/production/001/001/abc.css"/>
+<script type="text/javascript" src="//cdn1.edgedatg.com/aws/site/3.4.2.2/js/production/001/001/modernizr.js"></script>
+<script type="text/javascript" src="https://cdn1.edgedatg.com/aws/apps/datg/web-js-telemetry-service/1.0.0.6/production/js/datgts.js"></script>
+<script type="text/javascript" src="https://cdn1.edgedatg.com/aws/apps/datg/web-player-unity/1.0.13.7/js/embed.min.js"></script>
+
+<!-- optimizely --> <script src="//cdn.optimizely.com/js/9823262.js"></script>
+<!-- nielsen scripts --> <script type="text/javascript" src="//secure-us.imrworldwide.com/novms/js/2/ggcmb500.js"></script><script type="text/javascript">window.addEventListener && window.addEventListener('load', function() {NOLCMB && NOLCMB.getInstance().ggInitialize({apid: 'P977BD2A1-4ED9-426B-9B6C-9344202FA2C4', sfcode: 'us', apn: 'ABC'});});</script>
+</head>
+<body  data-l-id="2027567" data-l-name="" data-l-type="" class="butterscotch t-dark aluminum show-homepage"  data-show-title="American Idol">
+
+
+<!-- crazy egg scripts --> <script type="text/javascript"> setTimeout(function() {var a=document.createElement("script"); var b=document.getElementsByTagName("script")[0]; a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/8430.js?"+Math.floor(new Date().getTime()/3600000); a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)} , 1); </script><div class="page-wrapper">
+    
+    <div  data-m-id="2022943" data-m-name="flyout" data-m-type="livetvalert"     class="module m-live-tv-alert flyout"
+>
+</div>    
+    <div class="header-modules">
+        <header
+   data-m-id="52087" data-m-name="main_menu" data-m-type="menu" class="m-menu module ">
+  <div class="m-menu-wrapper">
+          <section class="m-mvpdauth">
+    <div class="row">            <span class="mvpd-auth-bar-text"></span>
+            </div>
+</section>        <div class="row m-menu-row">
+      <aside class="m-menu-logo-title small-10">
+                  <a href="/" tabindex="1">
+            <img class="m-menu-logo left" src="https://cdn1.edgedatg.com/aws/assets/cp/web/abc/images/abc_butterscotch_logo_v2.png"
+                 alt="ABC"/>
+          </a>
+                <script type="application/ld+json">
+                    {
+                        "@context": "http://schema.org/",
+                        "@type": "abc.com",
+                        "url": "http://abc.go.com",
+                        "logo": "https://cdn1.edgedatg.com/aws/assets/cp/web/abc/images/abc_butterscotch_logo_v2.png"
+                    }
+                </script>
+                              <div
+              class="m-menu-page-title hide-for-large-up m-menu-page-title-only ">
+              <a href="#"
+                 class="m-menu-showtitle text3 regular black truncate-text"></a>
+                        <span class="m-menu-tune-in text6 light grey"><span
+                            class="bold"></span></span>
+            </div>
+                        </aside>
+      <nav class="m-menu-global-navigation small-1">
+                  <a class="m-menu-mobile-global-link faded-grey hide-for-large-up right" href="#" data-t-id="l46">
+            <span class="m-menu-mobile-bar"></span>
+            <span class="m-menu-mobile-bar"></span>
+            <span class="m-menu-mobile-bar"></span>
+            <span class="m-menu-mobile-bar"></span>
+          </a>
+                <ul class="m-menu-global-list-navigation inline-list show-for-large-up">
+                            <li data-t-id="l0">
+                    <div class="m-menu-global-section">
+                      <a class="light faded-grey m-menu-item m-menu-showlist-link"
+                         href="#"
+                         target="module" tabindex="2">
+                        shows                                                  <span class="abc-icon-arrow-down faded-grey"></span>
+                                              </a>
+                    </div>
+                  </li>
+                                  <li data-t-id="l1">
+                    <div class="m-menu-global-section">
+                      <a class="light faded-grey m-menu-item m-menu--link"
+                         href="/schedule"
+                         target="_self" tabindex="23">
+                        schedule                                              </a>
+                    </div>
+                  </li>
+                                  <li data-t-id="l2">
+                    <div class="m-menu-global-section">
+                      <a class="light faded-grey m-menu-item m-menu-live-link"
+                         href="/watch-live"
+                         target="_self" tabindex="24">
+                        live tv                                              </a>
+                    </div>
+                  </li>
+                                  <li data-t-id="l3">
+                    <div class="m-menu-global-section">
+                      <a class="light faded-grey m-menu-item m-menu-favorites-link"
+                         href="/my-profile"
+                         target="_self" tabindex="25">
+                        continue watching                                              </a>
+                    </div>
+                  </li>
+                                  <li data-t-id="l4">
+                    <div class="m-menu-global-section">
+                      <a class="light faded-grey m-menu-item m-menu-apps-link"
+                         href="/apps"
+                         target="_self" tabindex="26">
+                        apps                                              </a>
+                    </div>
+                  </li>
+                                      <li
+            data-t-id="l5"            >
+              <div class="m-menu-global-section">
+                <a class="light faded-grey m-menu-global-link" href="#" tabindex="27">
+                  More
+                  <span class="abc-icon-arrow-down faded-grey"></span>
+                </a>
+              </div>
+            </li>
+                            </ul>
+      </nav>
+              <div class="m-menu-global-navigation-search-icon">
+          <a class="light faded-grey m-menu-search-link abc-icon-magnify-glass" href="#" tabindex="35" data-t-id="l47"></a>
+        </div>
+          </div>
+  </div>
+      <form class="m-menu-search" method="get" action="//search.abc.go.com/search">
+    <div class="m-menu-search-wrapper">
+        <div class="row">
+            <header class="m-menu-search-form columns">
+                <div class="m-menu-search-close abc-icon-circle-close grey"></div>
+                <button type="submit" class="m-menu-search-icon abc-icon-magnify-glass grey"></button>
+                <input class="grey" name="q" id="searchInput" type="text"/>
+                <label class="m-menu-search-label grey">Start Typing...</label>
+            </header>
+            <div class="searchResults" data-ramp-ac-input="searchInput"
+                 data-ramp-ac-config="//embed.widget.cx/sites/abccom/ac.json" data-ramp-ac=""></div>
+        </div>
+    </div>
+</form>        <section class="mobile-menu row ">
+    <div class="m-menu-drop-nav">
+        <div class="row">
+            <div class="columns navigation-group">
+                <ul class="show-list-navigation navigation-group no-list-style">
+                                    </ul>
+                            </div>
+        </div>
+    </div>
+    <header class="mobile-menu-section-header hide-for-large-up">
+        <div class="row">
+            <div class="columns">
+                <span
+                    class="text4 dark-grey lowercase navtitle">abc.com</span>
+                <hr/>
+            </div>
+        </div>
+    </header>
+            <div class="m-menu-drop-nav m-menu-show-drop-nav">
+            <div class="row">
+                <div class="columns navigation-group">
+                    <header class="m-menu-drop-nav-header show-for-large-up">
+                        <span class="navigation-group-link text4 grey lowercase navtitle">Shows</span>
+                        <hr/>
+                    </header>
+                    <ul class="show-list-navigation navigation-group no-list-style">
+                        <li class="expandable-list" data-t-id="l0"><a
+                                class="hide-for-large-up extra-light dark-text expanded-list-title"
+                                href="#" tabindex="36">Shows <span
+                                    class="abc-icon-arrow-down icon expand-arrow"></span></a>
+                            <ul class="m-menu-link-list collapsed-list">
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l21">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/american-housewife"
+                                                class="dark-grey" tabindex="37">American Housewife</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l22">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/the-bachelor"
+                                                class="dark-grey" tabindex="38">The Bachelor</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l23">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/blackish"
+                                                class="dark-grey" tabindex="39">black-ish</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l24">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/the-chew"
+                                                class="dark-grey" tabindex="40">The Chew</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l25">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/child-support"
+                                                class="dark-grey" tabindex="41">Child Support</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l26">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/designated-survivor"
+                                                class="dark-grey" tabindex="42">Designated Survivor</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l27">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/general-hospital"
+                                                class="dark-grey" tabindex="43">General Hospital</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l28">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/the-goldbergs"
+                                                class="dark-grey" tabindex="44">The Goldbergs</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l29">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/the-good-doctor"
+                                                class="dark-grey" tabindex="45">The Good Doctor</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l30">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/greys-anatomy"
+                                                class="dark-grey" tabindex="46">Grey's Anatomy</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l31">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/how-to-get-away-with-murder"
+                                                class="dark-grey" tabindex="47">How to Get Away with Murder</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l32">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/jimmy-kimmel-live"
+                                                class="dark-grey" tabindex="48">Jimmy Kimmel Live!</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l33">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/kevin-probably-saves-the-world"
+                                                class="dark-grey" tabindex="49">Kevin (Probably) Saves the World</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l34">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/marvels-agents-of-shield"
+                                                class="dark-grey" tabindex="50">Marvel's Agents of S.H.I.E.L.D.</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l35">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/the-middle"
+                                                class="dark-grey" tabindex="51">The Middle</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l36">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/modern-family"
+                                                class="dark-grey" tabindex="52">Modern Family</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l37">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/once-upon-a-time"
+                                                class="dark-grey" tabindex="53">Once Upon A Time</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l38">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/scandal"
+                                                class="dark-grey" tabindex="54">Scandal</a></span>
+                                        </li>
+
+                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l39">
+                                        <span class="navigation-group-link text4 extra-light"><a
+                                                href="/shows/speechless"
+                                                class="dark-grey" tabindex="55">Speechless</a></span>
+                                        </li>
+
+                                                                    <li class="m-menu-link-list-item" data-t-id="l40">
+                                <span class="navigation-group-link text5 subtitle m-menu-shows-all-link lowercase"><a
+                                        href="/shows" tabindex="56">View All Shows <span
+                                            class="abc-icon-arrow-right"></span></a></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="m-menu-drop-nav m-menu-global-drop-nav">
+            <div class="row">
+                <div class="columns navigation-group">
+                    <header class="m-menu-drop-nav-header show-for-large-up">
+                    <span class="navigation-group-link text4 grey lowercase navtitle">
+                        abc.com</span>
+                        <hr/>
+                    </header>
+                    <ul class="show-list-navigation navigation-group m-menu-link-list">
+                                                                                                                                                                                                                                                                                                                        
+                                        <li class="m-menu-link-list-item" data-t-id="l1">
+                                        <span class="navigation-group-link text4 extra-light lowercase"><a
+                                                href="/schedule"
+                                                class="dark-grey" tabindex="57">schedule</a></span>
+                                        </li>
+
+                                                                                                                                                                                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l2">
+                                        <span class="navigation-group-link text4 extra-light lowercase"><a
+                                                href="/watch-live"
+                                                class="dark-grey" tabindex="58">live tv</a></span>
+                                        </li>
+
+                                                                                                                                                                                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l3">
+                                        <span class="navigation-group-link text4 extra-light lowercase"><a
+                                                href="/my-profile"
+                                                class="dark-grey" tabindex="59">continue watching</a></span>
+                                        </li>
+
+                                                                                                                                                                                                    
+                                        <li class="m-menu-link-list-item" data-t-id="l4">
+                                        <span class="navigation-group-link text4 extra-light lowercase"><a
+                                                href="/apps"
+                                                class="dark-grey" tabindex="60">apps</a></span>
+                                        </li>
+
+                                                                                                                                                                                                                                                                                                                
+                                <li class="m-menu-link-list-item" data-t-id="l41">
+                                <span class="navigation-group-link text4 extra-light lowercase"><a
+                                        href="http://oscar.go.com"
+                                        target="_self"
+                                        class="dark-grey" tabindex="61">oscar.com</a></span>
+                                </li>
+
+                            
+                                <li class="m-menu-link-list-item" data-t-id="l42">
+                                <span class="navigation-group-link text4 extra-light lowercase"><a
+                                        href="/music-lounge"
+                                        target="_self"
+                                        class="dark-grey" tabindex="62">music</a></span>
+                                </li>
+
+                            
+                                <li class="m-menu-link-list-item" data-t-id="l43">
+                                <span class="navigation-group-link text4 extra-light lowercase"><a
+                                        href="http://abcnews.go.com"
+                                        target="_self"
+                                        class="dark-grey" tabindex="63">abc news</a></span>
+                                </li>
+
+                            
+                                <li class="m-menu-link-list-item" data-t-id="l44">
+                                <span class="navigation-group-link text4 extra-light lowercase"><a
+                                        href="http://freeform.go.com"
+                                        target="_self"
+                                        class="dark-grey" tabindex="64">freeform</a></span>
+                                </li>
+
+                            
+                                <li class="m-menu-link-list-item" data-t-id="l45">
+                                <span class="navigation-group-link text4 extra-light lowercase"><a
+                                        href="/faq"
+                                        target="_self"
+                                        class="dark-grey" tabindex="65">faq</a></span>
+                                </li>
+
+                            
+                        <li class="m-menu-link-list-item mvpd-sign-out" data-t-id="l48" data-tabindex-mvpd="66" data-tabindex-sign-out="67">
+                            <span class="navigation-group-link text4 extra-light lowercase hi"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="m-menu-drop-nav m-menu-show-drop-nav show-for-large-up">
+    <div class="row">
+        <div class="columns navigation-group">
+            <header class="m-menu-drop-nav-header show-for-large-up">
+                <span class="navigation-group-link text4 grey lowercase navtitle">Shows</span>
+                <hr/>
+            </header>
+            <ul class="show-list-navigation navigation-group no-list-style">
+                <li class="expandable-list"><!--
+                 --><a class="hide-for-large-up extra-light dark-text expanded-list-title"
+                       href="#">Shows <!--
+                    --><span class="abc-icon-arrow-down icon expand-arrow"></span><!--
+                --></a>
+                    <ul class="m-menu-link-list collapsed-list">
+                                                        <li class="m-menu-link-list-item" data-t-id="l21">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/american-housewife" tabindex="3"
+                                           class="faded-grey">American Housewife</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l22">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/the-bachelor" tabindex="4"
+                                           class="faded-grey">The Bachelor</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l23">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/blackish" tabindex="5"
+                                           class="faded-grey">black-ish</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l24">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/the-chew" tabindex="6"
+                                           class="faded-grey">The Chew</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l25">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/child-support" tabindex="7"
+                                           class="faded-grey">Child Support</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l26">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/designated-survivor" tabindex="8"
+                                           class="faded-grey">Designated Survivor</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l27">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/general-hospital" tabindex="9"
+                                           class="faded-grey">General Hospital</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l28">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/the-goldbergs" tabindex="10"
+                                           class="faded-grey">The Goldbergs</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l29">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/the-good-doctor" tabindex="11"
+                                           class="faded-grey">The Good Doctor</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l30">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/greys-anatomy" tabindex="12"
+                                           class="faded-grey">Grey's Anatomy</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l31">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/how-to-get-away-with-murder" tabindex="13"
+                                           class="faded-grey">How to Get Away with Murder</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l32">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/jimmy-kimmel-live" tabindex="14"
+                                           class="faded-grey">Jimmy Kimmel Live!</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l33">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/kevin-probably-saves-the-world" tabindex="15"
+                                           class="faded-grey">Kevin (Probably) Saves the World</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l34">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/marvels-agents-of-shield" tabindex="16"
+                                           class="faded-grey">Marvel's Agents of S.H.I.E.L.D.</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l35">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/the-middle" tabindex="17"
+                                           class="faded-grey">The Middle</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l36">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/modern-family" tabindex="18"
+                                           class="faded-grey">Modern Family</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l37">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/once-upon-a-time" tabindex="19"
+                                           class="faded-grey">Once Upon A Time</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l38">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/scandal" tabindex="20"
+                                           class="faded-grey">Scandal</a><!--
+                                 --></span>
+                                </li>
+                                                            <li class="m-menu-link-list-item" data-t-id="l39">
+                                    <span class="navigation-group-link text-header-nav extra-light"><!--
+                                     --><a href="/shows/speechless" tabindex="21"
+                                           class="faded-grey">Speechless</a><!--
+                                 --></span>
+                                </li>
+                                                    <li class="m-menu-link-list-item" data-t-id="l40">
+                            <a tabindex="22" class="button navigation-group-link subtitle m-menu-shows-all-link lowercase" href="/shows">view all shows</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="m-menu-drop-nav m-menu-global-drop-nav show-for-large-up">
+    <div class="row">
+        <div class="columns navigation-group">
+            <header class="m-menu-drop-nav-header show-for-large-up">
+                <span
+                    class="navigation-group-link text4 grey lowercase navtitle">abc.com</span>
+                <hr/>
+            </header>
+            <ul class="show-list-navigation navigation-group m-menu-link-list">
+                
+                        <li class="m-menu-link-list-item" data-t-id="l41">
+                            <span class="navigation-group-link text-header-nav extra-light lowercase"><a
+                                    href="http://oscar.go.com"
+                                    target="_self"
+                                    class="faded-grey" tabindex="28">oscar.com</a></span>
+                        </li>
+
+                    
+                        <li class="m-menu-link-list-item" data-t-id="l42">
+                            <span class="navigation-group-link text-header-nav extra-light lowercase"><a
+                                    href="/music-lounge"
+                                    target="_self"
+                                    class="faded-grey" tabindex="29">music</a></span>
+                        </li>
+
+                    
+                        <li class="m-menu-link-list-item" data-t-id="l43">
+                            <span class="navigation-group-link text-header-nav extra-light lowercase"><a
+                                    href="http://abcnews.go.com"
+                                    target="_self"
+                                    class="faded-grey" tabindex="30">abc news</a></span>
+                        </li>
+
+                    
+                        <li class="m-menu-link-list-item" data-t-id="l44">
+                            <span class="navigation-group-link text-header-nav extra-light lowercase"><a
+                                    href="http://freeform.go.com"
+                                    target="_self"
+                                    class="faded-grey" tabindex="31">freeform</a></span>
+                        </li>
+
+                    
+                        <li class="m-menu-link-list-item" data-t-id="l45">
+                            <span class="navigation-group-link text-header-nav extra-light lowercase"><a
+                                    href="/faq"
+                                    target="_self"
+                                    class="faded-grey" tabindex="32">faq</a></span>
+                        </li>
+
+                                    <li class="m-menu-link-list-item mvpd-sign-out" data-t-id="l48" data-tabindex-mvpd="33" data-tabindex-sign-out="34">
+                    <span class="navigation-group-link text4 extra-light lowercase hi"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+  </header>
+        <section
+     data-m-id="2027566" data-m-name="show_menu" data-m-type="submenu"         class="module m-submenu showheader ">
+    <section class="m-submenu-show-branding"
+             style="background-image : url('https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/showimages/5679207d44b3236db8af0f2751c2a867/3200x180-Q90_5679207d44b3236db8af0f2751c2a867.jpg'); background-color : #c3d2d0;">
+        <div class="m-submenu-show-branding-wrapper row">
+            <h1 class="m-submenu-logo-h1">
+                <a href="/shows/american-idol" class="m-submenu-logo text-center">
+                    <img class="m-submenu-logo" src="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/showimages/3dcaccff935b514d9a201547c1e3db20/640x180-Q100_3dcaccff935b514d9a201547c1e3db20.png" alt="American Idol"/>
+                </a>
+            </h1>
+            <span class="m-submenu-tunein text5 light text-center"><span class="bold">THE JOURNEY BEGINS SUNDAY MARCH 11 8|7c</span></span>
+        </div>
+    </section>
+            <div class="row nogutter">
+            <section class="columns show-subnav hide-arrows">
+                <div class="row wrapper">
+                    <ul class="show-list-navigation slick-slider">
+                        <li class="show-list-nav-item selected" data-t-id="l7" data-slick-index="0"><a class="extra-light text7 dark-text"
+                                  target="_self"
+                                  href="/shows/american-idol">Home</a></li><li class="show-list-nav-item" data-t-id="l8" data-slick-index="1"><a class="extra-light text7 dark-text"
+                                  target="_self"
+                                  href="/shows/american-idol/video">Videos</a></li><li class="show-list-nav-item" data-t-id="l9" data-slick-index="2"><a class="extra-light text7 dark-text"
+                                  target="_self"
+                                  href="/shows/american-idol/news">News</a></li><li class="show-list-nav-item" data-t-id="l10" data-slick-index="3"><a class="extra-light text7 dark-text"
+                                  target="_self"
+                                  href="http://americanidol.com/vote">VOTE</a></li><li class="show-list-nav-item" data-t-id="l11" data-slick-index="4"><a class="extra-light text7 dark-text"
+                                  target="_self"
+                                  href="/shows/american-idol/about-the-show">About</a></li>                    </ul>
+                    <div class="m-show-subnav-nav prev" aria-label="previous">
+                        <span class="abc-icon-arrow-left icon"></span>
+                    </div>
+                    <div class="m-show-subnav-nav next" aria-label="next">
+                        <span class="abc-icon-arrow-right icon"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="m-submenu-drawer">
+        <div class="row">
+            <div class="columns">
+                <ul class="large-block-grid-5">
+                                    </ul>
+            </div>
+        </div>
+    </section>
+</section>
+    </div>
+
+    <main class="content region">
+        <div class="modules">
+            <section
+     data-m-id="801981" data-m-name="messages" data-m-type="messages"     class="module m-message module-static row ">
+    <div class="columns large-3 m-message-alert-icon">
+        <span class="icon abc-icon-alert"></span>
+    </div>
+    <div class="columns large-8 messages-wrapper"></div>
+    <div class="close columns large-1">
+        <div class="abc-icon-close iconfont"></div>
+    </div>
+</section>                <div  data-m-id="2027564" data-m-name="slideshow_2027564" data-m-type="slideshow"         class="m-slideshow module "
+        data-m-pos="3"
+                data-img-config="{&quot;web&quot;:{&quot;width&quot;:&quot;1000&quot;,&quot;ratio&quot;:&quot;5x2&quot;},&quot;web-retina&quot;:{&quot;width&quot;:&quot;1600&quot;,&quot;ratio&quot;:&quot;5x2&quot;},&quot;tablet&quot;:{&quot;width&quot;:&quot;768&quot;,&quot;ratio&quot;:&quot;5x2&quot;},&quot;tablet-retina&quot;:{&quot;width&quot;:&quot;1227&quot;,&quot;ratio&quot;:&quot;5x2&quot;},&quot;mobile&quot;:{&quot;width&quot;:&quot;320&quot;,&quot;ratio&quot;:&quot;16x9&quot;},&quot;mobile-retina&quot;:{&quot;width&quot;:&quot;512&quot;,&quot;ratio&quot;:&quot;16x9&quot;},&quot;default&quot;:{&quot;width&quot;:&quot;1&quot;,&quot;ratio&quot;:&quot;16x9&quot;}}"
+                data-logo-config="{&quot;web&quot;:{&quot;width&quot;:&quot;500&quot;},&quot;web-retina&quot;:{&quot;width&quot;:&quot;500&quot;},&quot;tablet&quot;:{&quot;width&quot;:&quot;400&quot;},&quot;tablet-retina&quot;:{&quot;width&quot;:&quot;400&quot;},&quot;mobile&quot;:{&quot;width&quot;:&quot;300&quot;},&quot;mobile-retina&quot;:{&quot;width&quot;:&quot;300&quot;},&quot;default&quot;:{&quot;width&quot;:&quot;1&quot;}}"
+        >
+        <div class="m-slideshow-expandable-wrapper">
+            <div class="">
+                                <div class="m-slideshow-spacer-aspectratio row"></div>
+            </div>
+            <div class="m-slideshow-slides">
+                    <article  data-sm-id="2076082" data-sm-name="" data-sm-type="video"         class="m-slideshow-slide default"
+         data-video-id="VDKA4236268" data-t-id="l6">
+                <div class="m-slideshow-content">
+            <div class="m-slideshow-slide-thumb-wrapper row">
+        <a href="/shows/american-idol/video/vdka4236268"
+       target="_self">
+                <picture class="lazyload m-slideshow-slide-thumb m-slideshow-shadows">
+                <source class="mobile-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/slide/2076082/bb371f84d29cb33a54207a0a8aadd046/512x288-Q100_bb371f84d29cb33a54207a0a8aadd046.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/slide/2076082/bb371f84d29cb33a54207a0a8aadd046/320x180-Q100_bb371f84d29cb33a54207a0a8aadd046.jpg 1x"
+                media="(max-width: 671px)"/>
+                        <source class="tablet-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/slide/2076082/9ae7f486daf10c682213d1ef2b574c44/1227x493-Q90_9ae7f486daf10c682213d1ef2b574c44.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/slide/2076082/9ae7f486daf10c682213d1ef2b574c44/768x307-Q90_9ae7f486daf10c682213d1ef2b574c44.jpg 1x"
+                media="(max-width: 999px)"/>
+                        <source class="web-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/slide/2076082/9ae7f486daf10c682213d1ef2b574c44/1600x640-Q90_9ae7f486daf10c682213d1ef2b574c44.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/slide/2076082/9ae7f486daf10c682213d1ef2b574c44/1227x493-Q90_9ae7f486daf10c682213d1ef2b574c44.jpg 1x"
+                media="(min-width: 1000px)"/>
+                        <img
+            src="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/slide/2076082/bb371f84d29cb33a54207a0a8aadd046/320x180-Q100_bb371f84d29cb33a54207a0a8aadd046.jpg"
+            class="lazyload m-slideshow-background"
+            alt=""/>
+            </picture>
+            </a></div>                <a class="m-slideshow-details row"
+    href="/shows/american-idol/video/vdka4236268"
+    target="_self">
+    <div class="columns small-12 large-5 m-slideshow-slide-left">
+        <div class="align-bottom">
+                                                                <h2 class="text1 white m-slideshow-title truncate">
+                    Get Ready to Feel Every Emotion!                </h2>
+                                        <button title="Get Ready to Feel Every Emotion! watch a preview now"
+                        class="light m-slideshow-cta show-for-large-up">
+                    watch a preview now                </button>
+                    </div>
+    </div>
+    <div class="columns show-for-large-up large-4 m-slideshow-slide-right">
+        <div class="align-bottom"></div>
+    </div>
+</a>        </div>
+    </article>
+            </div>
+                    </div>
+                    </div>
+    <section  data-m-id="2027581" data-m-name="top_picks" data-m-type="tilegroup"          class="module m-tilegroup tile-grid module-row row m-top-picks notitle"
+                            data-add-class-on-load="visible"
+                        data-img-config="{&quot;web&quot;:{&quot;width&quot;:&quot;330&quot;},&quot;web-retina&quot;:{&quot;width&quot;:&quot;528&quot;},&quot;tablet&quot;:{&quot;width&quot;:&quot;330&quot;},&quot;tablet-retina&quot;:{&quot;width&quot;:&quot;528&quot;},&quot;mobile&quot;:{&quot;width&quot;:&quot;300&quot;},&quot;mobile-retina&quot;:{&quot;width&quot;:&quot;512&quot;},&quot;default&quot;:{&quot;width&quot;:&quot;1&quot;}}"
+                >
+                <div class="columns">
+            <ul class="tiles  small-block-grid-1 medium-block-grid-2 xlarge-block-grid-3 slider-strip row nogutter
+            "
+                data-sliderstrip-settings=""><li  data-sm-id="" data-sm-name="" data-sm-type="video"     class="tile tile-content-overlay video-tile"
+    data-t-id="videovideo.VDKA4236268"    data-video-id="VDKA4236268" data-title="American Idol Preview: Get Ready!" data-video-type="sf" data-duration="101034" data-description="Watch now and get ready to feel every emotion when Idol premieres in March!" data-long-description="Watch now and get ready to feel every emotion when American Idol premieres on America's Network, Sunday, March 11!" >
+    <a href="/shows/american-idol/video/vdka4236268"
+       target="_self"
+       class="background-link aspect-ratio-buffer bg-gradient aspect-16x9">
+            <picture class="background fluid-img lazyload">
+                <source class="mobile-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4236268/9b717fe16b65f604b74b8409dd2c6010/579x325-Q100_9b717fe16b65f604b74b8409dd2c6010.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4236268/9b717fe16b65f604b74b8409dd2c6010/300x169-Q100_9b717fe16b65f604b74b8409dd2c6010.jpg 1x"
+                media="(max-width: 671px)"/>
+                        <source class="tablet-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4236268/9b717fe16b65f604b74b8409dd2c6010/579x325-Q100_9b717fe16b65f604b74b8409dd2c6010.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4236268/9b717fe16b65f604b74b8409dd2c6010/362x204-Q100_9b717fe16b65f604b74b8409dd2c6010.jpg 1x"
+                media="(max-width: 999px)"/>
+                        <source class="web-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4236268/9b717fe16b65f604b74b8409dd2c6010/579x325-Q100_9b717fe16b65f604b74b8409dd2c6010.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4236268/9b717fe16b65f604b74b8409dd2c6010/362x204-Q100_9b717fe16b65f604b74b8409dd2c6010.jpg 1x"
+                media="(min-width: 1000px)"/>
+                        <img
+            src="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4236268/9b717fe16b65f604b74b8409dd2c6010/300x169-Q100_9b717fe16b65f604b74b8409dd2c6010.jpg"
+            class="lazyload fluid-img"
+            alt=""/>
+            </picture>
+    </a>
+    <a href="/shows/american-idol/video/vdka4236268"
+       target="_self">
+                    <section class="top-right-details">
+                
+<section class="icon left">
+    <div class="abc-icon-play-solid iconfont"></div>
+</section>
+            </section>
+                <section class="details">
+                            <span class="text4 subheader capitalize tile-type">
+                    Clip                </span>
+                        <span class="text3 title season-episode-info truncate-one-line">
+                <span class="season-episode-numbers">S16 EP1</span> - American Idol Preview: Get Ready!            </span>
+            <span class="text3 title">American Idol Preview: Get Ready!</span>
+                                    <span class="text5 meta-air-date-duration">01/08/18 | 01:41</span>
+                    </section>
+            </a>
+</li><li  data-sm-id="" data-sm-name="" data-sm-type="video"     class="tile tile-content-overlay video-tile"
+    data-t-id="videovideo.VDKA4212127"    data-video-id="VDKA4212127" data-title="BB-8's Accidental American Idol Audition" data-video-type="sf" data-duration="30063" data-description="See what happens when BB-8 faces the judges!" data-long-description="See what happens when BB-8 accidentally faces the American Idol judges! Star Wars: The Last Jedi is in theaters now! And get ready for American Idol, premiering SUNDAY MARCH 11 2018 on ABC!" >
+    <a href="/shows/american-idol/video/vdka4212127"
+       target="_self"
+       class="background-link aspect-ratio-buffer bg-gradient aspect-16x9">
+            <picture class="background fluid-img lazyload">
+                <source class="mobile-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4212127/c56e4e092421e0c3566b51337b99d5fd/579x325-Q100_c56e4e092421e0c3566b51337b99d5fd.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4212127/c56e4e092421e0c3566b51337b99d5fd/300x169-Q100_c56e4e092421e0c3566b51337b99d5fd.jpg 1x"
+                media="(max-width: 671px)"/>
+                        <source class="tablet-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4212127/c56e4e092421e0c3566b51337b99d5fd/579x325-Q100_c56e4e092421e0c3566b51337b99d5fd.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4212127/c56e4e092421e0c3566b51337b99d5fd/362x204-Q100_c56e4e092421e0c3566b51337b99d5fd.jpg 1x"
+                media="(max-width: 999px)"/>
+                        <source class="web-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4212127/c56e4e092421e0c3566b51337b99d5fd/579x325-Q100_c56e4e092421e0c3566b51337b99d5fd.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4212127/c56e4e092421e0c3566b51337b99d5fd/362x204-Q100_c56e4e092421e0c3566b51337b99d5fd.jpg 1x"
+                media="(min-width: 1000px)"/>
+                        <img
+            src="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4212127/c56e4e092421e0c3566b51337b99d5fd/300x169-Q100_c56e4e092421e0c3566b51337b99d5fd.jpg"
+            class="lazyload fluid-img"
+            alt=""/>
+            </picture>
+    </a>
+    <a href="/shows/american-idol/video/vdka4212127"
+       target="_self">
+                    <section class="top-right-details">
+                
+<section class="icon left">
+    <div class="abc-icon-play-solid iconfont"></div>
+</section>
+            </section>
+                <section class="details">
+                            <span class="text4 subheader capitalize tile-type">
+                    Clip                </span>
+                        <span class="text3 title season-episode-info truncate-one-line">
+                <span class="season-episode-numbers">S16 EP1</span> - BB-8's Accidental American Idol Audition            </span>
+            <span class="text3 title">BB-8's Accidental American Idol Audition</span>
+                                    <span class="text5 meta-air-date-duration">12/15/17 | 00:30</span>
+                    </section>
+            </a>
+</li><li  data-sm-id="" data-sm-name="" data-sm-type="video"     class="tile tile-content-overlay video-tile"
+    data-t-id="videovideo.VDKA4179847"    data-video-id="VDKA4179847" data-title="The American Idol Judges on Thanksgiving" data-video-type="sf" data-duration="66833" data-description="Talking turkey and what they're thankful for." data-long-description="American Idol judges Katy Perry, Luke Bryan and Lionel Richie share their favorite things about Thanksgiving and what they're thankful for. Watch now and get ready for American Idol, premiering SUNDAY MARCH 11 2018 on ABC!" >
+    <a href="/shows/american-idol/video/vdka4179847"
+       target="_self"
+       class="background-link aspect-ratio-buffer bg-gradient aspect-16x9">
+            <picture class="background fluid-img lazyload">
+                <source class="mobile-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4179847/b0b95bca6dcc330988e2e151d8ba0189/579x325-Q100_b0b95bca6dcc330988e2e151d8ba0189.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4179847/b0b95bca6dcc330988e2e151d8ba0189/300x169-Q100_b0b95bca6dcc330988e2e151d8ba0189.jpg 1x"
+                media="(max-width: 671px)"/>
+                        <source class="tablet-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4179847/b0b95bca6dcc330988e2e151d8ba0189/579x325-Q100_b0b95bca6dcc330988e2e151d8ba0189.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4179847/b0b95bca6dcc330988e2e151d8ba0189/362x204-Q100_b0b95bca6dcc330988e2e151d8ba0189.jpg 1x"
+                media="(max-width: 999px)"/>
+                        <source class="web-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4179847/b0b95bca6dcc330988e2e151d8ba0189/579x325-Q100_b0b95bca6dcc330988e2e151d8ba0189.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4179847/b0b95bca6dcc330988e2e151d8ba0189/362x204-Q100_b0b95bca6dcc330988e2e151d8ba0189.jpg 1x"
+                media="(min-width: 1000px)"/>
+                        <img
+            src="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4179847/b0b95bca6dcc330988e2e151d8ba0189/300x169-Q100_b0b95bca6dcc330988e2e151d8ba0189.jpg"
+            class="lazyload fluid-img"
+            alt=""/>
+            </picture>
+    </a>
+    <a href="/shows/american-idol/video/vdka4179847"
+       target="_self">
+                    <section class="top-right-details">
+                
+<section class="icon left">
+    <div class="abc-icon-play-solid iconfont"></div>
+</section>
+            </section>
+                <section class="details">
+                            <span class="text4 subheader capitalize tile-type">
+                    Clip                </span>
+                        <span class="text3 title season-episode-info truncate-one-line">
+                <span class="season-episode-numbers">S16 EP1</span> - The American Idol Judges on Thanksgiving            </span>
+            <span class="text3 title">The American Idol Judges on Thanksgiving</span>
+                                    <span class="text5 meta-air-date-duration">11/22/17 | 01:06</span>
+                    </section>
+            </a>
+</li><li  data-sm-id="" data-sm-name="" data-sm-type="video"     class="tile tile-content-overlay video-tile"
+    data-t-id="videovideo.VDKA4175555"    data-video-id="VDKA4175555" data-title="Britney Holmes's American Idol Audition" data-video-type="sf" data-duration="100434" data-description="Watch Britney Holmes's American Idol audition and vote!" data-long-description="American Idol judge Katy Perry chose to bring back Britney Holmes for a second chance at the competition! Watch Britney's full audition here and vote for your favorite singer at americanidol.com/vote. The singer who receives the most votes will receive a Golden Ticket to Hollywood! Watch Lionel Richie reveal the winner live on Dancing with the Stars, Monday, November 20 at 8|7c!" >
+    <a href="/shows/american-idol/video/vdka4175555"
+       target="_self"
+       class="background-link aspect-ratio-buffer bg-gradient aspect-16x9">
+            <picture class="background fluid-img lazyload">
+                <source class="mobile-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175555/ef9f39f3646fa1d2fb1d13e55ed7e7e5/579x325-Q100_ef9f39f3646fa1d2fb1d13e55ed7e7e5.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175555/ef9f39f3646fa1d2fb1d13e55ed7e7e5/300x169-Q100_ef9f39f3646fa1d2fb1d13e55ed7e7e5.jpg 1x"
+                media="(max-width: 671px)"/>
+                        <source class="tablet-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175555/ef9f39f3646fa1d2fb1d13e55ed7e7e5/579x325-Q100_ef9f39f3646fa1d2fb1d13e55ed7e7e5.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175555/ef9f39f3646fa1d2fb1d13e55ed7e7e5/362x204-Q100_ef9f39f3646fa1d2fb1d13e55ed7e7e5.jpg 1x"
+                media="(max-width: 999px)"/>
+                        <source class="web-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175555/ef9f39f3646fa1d2fb1d13e55ed7e7e5/579x325-Q100_ef9f39f3646fa1d2fb1d13e55ed7e7e5.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175555/ef9f39f3646fa1d2fb1d13e55ed7e7e5/362x204-Q100_ef9f39f3646fa1d2fb1d13e55ed7e7e5.jpg 1x"
+                media="(min-width: 1000px)"/>
+                        <img
+            src="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175555/ef9f39f3646fa1d2fb1d13e55ed7e7e5/300x169-Q100_ef9f39f3646fa1d2fb1d13e55ed7e7e5.jpg"
+            class="lazyload fluid-img"
+            alt=""/>
+            </picture>
+    </a>
+    <a href="/shows/american-idol/video/vdka4175555"
+       target="_self">
+                    <section class="top-right-details">
+                
+<section class="icon left">
+    <div class="abc-icon-play-solid iconfont"></div>
+</section>
+            </section>
+                <section class="details">
+                            <span class="text4 subheader capitalize tile-type">
+                    Clip                </span>
+                        <span class="text3 title season-episode-info truncate-one-line">
+                <span class="season-episode-numbers">S16 EP1</span> - Britney Holmes's American Idol Audition            </span>
+            <span class="text3 title">Britney Holmes's American Idol Audition</span>
+                                    <span class="text5 meta-air-date-duration">11/20/17 | 01:40</span>
+                    </section>
+            </a>
+</li><li  data-sm-id="" data-sm-name="" data-sm-type="video"     class="tile tile-content-overlay video-tile"
+    data-t-id="videovideo.VDKA4175582"    data-video-id="VDKA4175582" data-title="Maris's American Idol Audition" data-video-type="sf" data-duration="73073" data-description="Watch Maris's American Idol audition and vote!" data-long-description="American Idol judge Luke Bryan chose to bring back Maris for a second chance at the competition! Watch Maris's full audition here and vote for your favorite singer at americanidol.com/vote. The singer who receives the most votes will receive a Golden Ticket to Hollywood! Watch Lionel Richie reveal the winner live on Dancing with the Stars, Monday, November 20 at 8|7c!" >
+    <a href="/shows/american-idol/video/vdka4175582"
+       target="_self"
+       class="background-link aspect-ratio-buffer bg-gradient aspect-16x9">
+            <picture class="background fluid-img lazyload">
+                <source class="mobile-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175582/83d5b6b01ac5e6ab677a96eaf605ccc3/579x325-Q100_83d5b6b01ac5e6ab677a96eaf605ccc3.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175582/83d5b6b01ac5e6ab677a96eaf605ccc3/300x169-Q100_83d5b6b01ac5e6ab677a96eaf605ccc3.jpg 1x"
+                media="(max-width: 671px)"/>
+                        <source class="tablet-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175582/83d5b6b01ac5e6ab677a96eaf605ccc3/579x325-Q100_83d5b6b01ac5e6ab677a96eaf605ccc3.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175582/83d5b6b01ac5e6ab677a96eaf605ccc3/362x204-Q100_83d5b6b01ac5e6ab677a96eaf605ccc3.jpg 1x"
+                media="(max-width: 999px)"/>
+                        <source class="web-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175582/83d5b6b01ac5e6ab677a96eaf605ccc3/579x325-Q100_83d5b6b01ac5e6ab677a96eaf605ccc3.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175582/83d5b6b01ac5e6ab677a96eaf605ccc3/362x204-Q100_83d5b6b01ac5e6ab677a96eaf605ccc3.jpg 1x"
+                media="(min-width: 1000px)"/>
+                        <img
+            src="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175582/83d5b6b01ac5e6ab677a96eaf605ccc3/300x169-Q100_83d5b6b01ac5e6ab677a96eaf605ccc3.jpg"
+            class="lazyload fluid-img"
+            alt=""/>
+            </picture>
+    </a>
+    <a href="/shows/american-idol/video/vdka4175582"
+       target="_self">
+                    <section class="top-right-details">
+                
+<section class="icon left">
+    <div class="abc-icon-play-solid iconfont"></div>
+</section>
+            </section>
+                <section class="details">
+                            <span class="text4 subheader capitalize tile-type">
+                    Clip                </span>
+                        <span class="text3 title season-episode-info truncate-one-line">
+                <span class="season-episode-numbers">S16 EP2</span> - Maris's American Idol Audition            </span>
+            <span class="text3 title">Maris's American Idol Audition</span>
+                                    <span class="text5 meta-air-date-duration">11/20/17 | 01:13</span>
+                    </section>
+            </a>
+</li><li  data-sm-id="" data-sm-name="" data-sm-type="video"     class="tile tile-content-overlay video-tile"
+    data-t-id="videovideo.VDKA4175609"    data-video-id="VDKA4175609" data-title="Dominique Smith's American Idol Audition" data-video-type="sf" data-duration="100152" data-description="Watch Dominique Smith's American Idol audition video and vote!" data-long-description="American Idol judge Lionel Richie chose to bring back Dominique Smith for a second chance at the competition! Watch Dominique's full audition here and vote for your favorite singer at americanidol.com/vote. The singer who receives the most votes will receive a Golden Ticket to Hollywood! Watch Lionel Richie reveal the winner live on Dancing with the Stars, Monday, November 20 at 8|7c!" >
+    <a href="/shows/american-idol/video/vdka4175609"
+       target="_self"
+       class="background-link aspect-ratio-buffer bg-gradient aspect-16x9">
+            <picture class="background fluid-img lazyload">
+                <source class="mobile-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175609/07a9eba525b16b0f24f16f92224961e0/579x325-Q100_07a9eba525b16b0f24f16f92224961e0.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175609/07a9eba525b16b0f24f16f92224961e0/300x169-Q100_07a9eba525b16b0f24f16f92224961e0.jpg 1x"
+                media="(max-width: 671px)"/>
+                        <source class="tablet-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175609/07a9eba525b16b0f24f16f92224961e0/579x325-Q100_07a9eba525b16b0f24f16f92224961e0.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175609/07a9eba525b16b0f24f16f92224961e0/362x204-Q100_07a9eba525b16b0f24f16f92224961e0.jpg 1x"
+                media="(max-width: 999px)"/>
+                        <source class="web-source"
+                srcset="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175609/07a9eba525b16b0f24f16f92224961e0/579x325-Q100_07a9eba525b16b0f24f16f92224961e0.jpg 2x, https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175609/07a9eba525b16b0f24f16f92224961e0/362x204-Q100_07a9eba525b16b0f24f16f92224961e0.jpg 1x"
+                media="(min-width: 1000px)"/>
+                        <img
+            src="https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/video/4175609/07a9eba525b16b0f24f16f92224961e0/300x169-Q100_07a9eba525b16b0f24f16f92224961e0.jpg"
+            class="lazyload fluid-img"
+            alt=""/>
+            </picture>
+    </a>
+    <a href="/shows/american-idol/video/vdka4175609"
+       target="_self">
+                    <section class="top-right-details">
+                
+<section class="icon left">
+    <div class="abc-icon-play-solid iconfont"></div>
+</section>
+            </section>
+                <section class="details">
+                            <span class="text4 subheader capitalize tile-type">
+                    Clip                </span>
+                        <span class="text3 title season-episode-info truncate-one-line">
+                <span class="season-episode-numbers">S16 EP3</span> - Dominique Smith's American Idol Audition            </span>
+            <span class="text3 title">Dominique Smith's American Idol Audition</span>
+                                    <span class="text5 meta-air-date-duration">11/20/17 | 01:40</span>
+                    </section>
+            </a>
+</li>            </ul>
+            <div class="m-tilegroup-arrow m-tilegroup-arrow-prev">
+    <span class="abc-icon-arrow-left icon dark-grey"></span>
+</div>
+<div class="m-tilegroup-arrow m-tilegroup-arrow-next">
+    <span class="abc-icon-arrow-right icon dark-grey"></span>
+</div>
+                    </div>
+    </section>
+<section
+     data-m-id="2027576" data-m-name="abouttheshow" data-m-type="abouttext" class="module m-abouttext m-text show-homepage withad"
+    style="background-image: url(https://cdn1.edgedatg.com/aws/v2/abc/AmericanIdol/c97f604df08e4c52d38b9b96f2b61cde/2800x570-Q80_c97f604df08e4c52d38b9b96f2b61cde.jpg)"    data-module-id="2027576"
+    data-module-type="abouttext"
+>
+    <div class="row m-abouttext-row">
+        <div class="m-abouttext-wrapper m-text-wrapper">
+            <section class="columns m-abouttext-content m-text-content" 
+                style="color:#eeeeee">
+                                    <a href="/shows/american-idol/about-the-show">
+                        <h2 class="module-title lowercase text2"
+                            style="color:#eeeeee">
+                            about American Idol</h2>
+                    </a>
+                                <div class="extra-light m-abouttext-copy m-text-copy m-expandable-text copy-content">
+                    <div class="expandable-section">
+                        <p>  <strong><em>American Idol </em></strong>returns Sunday, March 11 at 8|7c on ABC! The groundbreaking series launched the careers of superstars Carrie Underwood, Kelly Clarkson, Jennifer Hudson, Katharine McPhee, Jordin Sparks, Adam Lambert and Chris Daughtry among many others. <em>Idol</em> alumni are responsible for 13 Grammys, over 61 million album sales, 47 Platinum records, 95 Gold records, 444 Billboard No. 1 hits, 257 million digital downloads, two Golden Globes and an Academy Award. Now, the search is on for the next <em>American Idol</em>.</p>                    </div>
+                    <a href="#" class="continue-reading"
+                        style="color:#eeeeee">Continue Reading <span
+                            class="abc-icon-arrow-down icon"></span></a>
+                </div>
+            </section>
+            <div class="ad-unit-wrapper medium-12">
+                <div class="ad-unit vertical-center">
+                    <div class="vertical-center-wrapper">
+                        <div class="aspect-ratio-buffer aspect-59x50 m-ad ">
+    <div class="ad-wrapper overflow">
+        <div class="center-box m-adblock adblock320x250 cast-ad-unit columns medium-12">
+            <div class="centered">
+                <span class="_fwph" id="rectangle">
+    <form style="display:none" id="_fw_form_rectangle">
+        <input type="hidden" value="ptgt=s&envp=g_js&slid=rectangle&slau=Rectangle 300x250&w=300&h=250&cd=300,250" id="_fw_input_rectangle" name="_fw_input_rectangle">
+    </form>
+    <span class="_fwac" id="_fw_container_rectangle"></span>
+</span>            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>        </div>
+    </main>
+
+    <div class="footer-modules">
+                        <footer  data-m-id="589244" data-m-name="footer_menu" data-m-type="menu" class="module m-footer "
+>
+    <div class="row">
+        <section class="columns">
+                            <ul class="m-footer-links no-list-style">
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="/info"
+                                 title="company info"
+                                 target="_self">company info</a>
+    </li>
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="/feedback"
+                                 title="contact"
+                                 target="_self">contact</a>
+    </li>
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="http://preferences-mgr.truste.com/?type=abc&affiliateId=115"
+                                 title="interest-based ads"
+                                 target="_blank">interest-based ads</a>
+    </li>
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="http://disneytermsofuse.com/"
+                                 title="terms of use"
+                                 target="_blank">terms of use</a>
+    </li>
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="http://disneyprivacycenter.com/"
+                                 title="privacy policy"
+                                 target="_blank">privacy policy</a>
+    </li>
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="https://disneyprivacycenter.com/notice-to-california-residents/"
+                                 title="your california privacy rights"
+                                 target="_blank">your california privacy rights</a>
+    </li>
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="https://disneyprivacycenter.com/kids-privacy-policy/english/"
+                                 title="children's online privacy policy"
+                                 target="_blank">children's online privacy policy</a>
+    </li>
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="/closed-captioning"
+                                 title="closed captioning"
+                                 target="_self">closed captioning</a>
+    </li>
+                                                <li class="m-footer-link"><a class="extra-light grey lowercase"
+                                 href="http://www.nielsen.com/digitalprivacy"
+                                 title="about Nielsen measurement"
+                                 target="_blank">about Nielsen measurement</a>
+    </li>
+                                                        </ul>
+                        <div class="m-footer-social-links">
+                                    <a class="icon light-grey abc-icon-twitter" href="http://twitter.com/ABCNetwork"
+                       target="_blank"
+                       title="Twitter"></a>
+                                                    <a class="icon light-grey abc-icon-facebook" href="http://www.facebook.com/ABCNetwork?ref=ts"
+                       target="_blank" title="Facebook"></a>
+                                                    <a class="icon light-grey abc-icon-googleplus" href="https://plus.google.com/+ABCNetwork"
+                       target="_blank" title="Google+"></a>
+                            </div>
+        </section>
+    </div>
+</footer>    </div>
+
+</div>
+
+    <section  data-m-id="81604" data-m-name="admarker_81604" data-m-type="admarker" data-m-slid="rectangle" data-m-slau="Rectangle 300x250"         class="module m-admarker module-marker ">
+    </section>
+    <section  data-m-id="273793" data-m-name="admarker_273793" data-m-type="admarker" data-m-slid="SponsoredByLogo" data-m-slau="SponsoredByLogo%201000x90"         class="module m-admarker module-marker ">
+    </section>
+<script type="text/javascript">
+    (function () {
+                var fwmrmRandomNumber = Math.floor(Math.random() * 100000) + 10000;
+        window._fw_linktag_params = {
+            scan_delay: 0,
+            allow_rescan_after: 15000,
+                        server: "2912a.v.fwmrm.net",
+            network_id: "168234",
+            profile: "abc_bc_linktag2_live",
+            other_global_params: "csid=abc_shows_american-idol&caid=&sfid=109036&pvrn=" + fwmrmRandomNumber,
+            key_values: ""
+        };
+
+                var e = function () {
+            if (document.addEventListener) document.removeEventListener('DOMContentLoaded', e, false);
+            else window.detachEvent('onload', e);
+            window._fw_page_ready = true;
+        };
+        if (document.addEventListener) document.addEventListener('DOMContentLoaded', e, false);
+        else if (window.attachEvent) window.attachEvent('onload', e);
+                var lt = document.createElement('script');
+        lt.type = 'text/javascript';
+        lt.async = true;
+
+                lt.src = "https://mssl.fwmrm.net/p/abc_live/LinkTag2.js";
+
+                var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(lt, s);
+            })();
+</script>
+<script type="text/javascript">
+    var clientConfig = {"freeWheel":{"siteSectionFallbackId":"109036","siteSectionId":"abc_shows_american-idol","collection":"","networkId":"168234","serverUrl":"2912a.v.fwmrm.net"},"omnitureConfig":{"pageName":"abc:shows:american-idol","channel":"abc:shows","server":"10.179.182.24","language":"en","optimizelyEnabled":"true","account":"wdgabcsite,wdgabcrollup,wdgwatchsitesroll,wdgwabcdesktop,wdgwabcsecondary,wdgasec,wdgabccom,wdgdatgabc,wdgdatgabcdisneyrollup","contextData":{"swid":"[getSWID]","device_type":"[getDeviceType]","mvpd":"[getAuthNStatus]","mvpd_user_id":"[getMvpdUserId]","platform":"[getOsAndBrowser]","connection_type":"","device_version":"[getOS]","flash_version":"[getFlashVersion]","os_version":"[getOsVersion]","device":"[getDeviceName]","orientation":"[getInterfaceOrientation]","registered_user_flag":"[checkIfUserRegistered]","media_display_outlet":"native","authenticated_user_flag":"false","content_language":"en","app_version":"3.4.2.2","event":"","page_url":"[getPageUrl]","site_differentiator":"abc:site","site_section_level2":"abc:shows","site_section_level3":"abc:shows:show detail","site_section_level4":"abc:shows:show detail","video_network":"abc","video_show_name":"american-idol","page_name_custom":"abc:shows:american-idol"}},"embedPlayerParams":{"siteSectionLevel2":"abc:shows","siteSectionLevel3":"abc:shows:show detail","siteSectionLevel4":"abc:shows:show detail","startSource":"abc:shows:show detail:manual"},"messages":{"downloadApp":{"ios_msg":{"linkHref":"abcplayer:\/\/show\/SH553869731","storeHref":"https:\/\/control.kochava.com\/v1\/cpi\/click?campaign_id=kowatch-abc----ios54248de49c329a305fe22e358a&network_id=1971&device_id=device_id&site_id=1"},"android_msg":{"linkHref":"intent:\/\/abcplayer\/show\/SH553869731\/#Intent;scheme=http;package=com.disney.datg.videoplatforms.android.abc;S.browser_fallback_url=https:\/\/control.kochava.com\/v1\/cpi\/click?campaign_id=kowatch-abc----android54248bfb86df3ca932505993ae&network_id=1971&device_id=device_id&site_id=1;end","storeHref":"https:\/\/control.kochava.com\/v1\/cpi\/click?campaign_id=kowatch-abc----android54248bfb86df3ca932505993ae&network_id=1971&device_id=device_id&site_id=1"},"kindle_msg":{"linkHref":"amzn:\/\/apps\/android?p=com.disney.datg.videoplatforms.android.amazon.kindle.abc","storeHref":"amzn:\/\/apps\/android?p=com.disney.datg.videoplatforms.android.amazon.kindle.abc"}}},"environment":"production","telemetryConfig":{"brand_id":"001","device_id":"001","show_id":"SH553869731","collection_id":"2027581","site_section_level2":"abc:shows","site_section_level3":"abc:shows:show detail","site_section_level4":"abc:shows:show detail","network":"abc","app_name":"ABC","app_build_number":"3.4.2.2","environment":"production","layout_type":"show","page_name":"abc:shows:american-idol","modules":{"801981":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/801981.json?brand=001&device=001&authlevel=0&show=SH553869731","module-name":"messages","module-type":"messages","module-id":"801981","module-position":-1},"2022943":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/2022943.json?brand=001&device=001&authlevel=0&show=SH553869731","module-name":"flyout","module-type":"livetvalert","module-id":"2022943","module-position":0},"52087":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/52087.json?brand=001&device=001&authlevel=0&show=SH553869731","module-name":"main_menu","module-type":"menu","module-id":"52087","module-position":1},"2027566":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/2027566.json?brand=001&device=001&authlevel=0&show=SH553869731","module-name":"show_menu","module-type":"submenu","module-id":"2027566","module-position":2},"2027564":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/2027564.json?brand=001&device=001&authlevel=0&show=SH553869731","module-name":"slideshow_2027564","module-type":"slideshow","module-id":"2027564","module-position":3},"2027581":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/2027581.json?brand=001&device=001&authlevel=0&show=SH553869731&size=12&start=0","module-name":"top_picks","module-type":"tilegroup","module-id":"2027581","module-position":4},"2102159":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/2102159.json?brand=001&device=001&authlevel=0&show=SH553869731&size=50&start=0","module-name":"episodeguide-home","module-type":"episodeguide","module-id":"2102159","module-position":5},"2027576":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/2027576.json?brand=001&device=001&authlevel=0&show=SH553869731","module-name":"abouttheshow","module-type":"abouttext","module-id":"2027576","module-position":6},"589244":{"uri":"https:\/\/api.presentation.abc.go.com\/api\/ws\/presentation\/v2\/module\/589244.json?brand=001&device=001&authlevel=0&show=SH553869731","module-name":"footer_menu","module-type":"menu","module-id":"589244","module-position":7}},"modules_list":[801981,2022943,52087,2027566,2027564,2027581,2102159,2027576,589244]},"appVersion":"3.4.2.2","layout":{"name":"aluminum","type":"show"},"trackingConfig":{"modules":{"m52087":{"mp":1,"id":"52087","o":{"t":"main_menu"}},"m2022943":{"mp":0,"id":"2022943","o":{"t":"flyout"}},"m2027564":{"mp":3,"id":"2027564","o":{"t":"Slideshow - American Idol","vg":"reality","cl":"en","vsn":"American Idol","vp":"AMI"}},"m2027581":{"mp":4,"id":"2027581","o":{"t":"top_picks","vg":"reality","cl":"en","vsn":"American Idol","vp":"AMI"}},"m2102159":{"mp":4,"id":"2102159","o":{"t":"American Idol episode guide","vg":"reality","cl":"en","vsn":"American Idol","vp":"AMI"}},"m2027576":{"mp":5,"id":"2027576","o":{"t":"about American Idol"}},"m2027566":{"mp":1,"id":"2027566","o":{"t":"show_menu","vg":"reality","cl":"en","vsn":"American Idol","vp":"AMI"}},"m589244":{"mp":6,"id":"589244","o":{"t":"footer_menu"}}},"items":{"l0":{"tp":"cl1","pId":"52087","cta":"shows"},"l1":{"tp":"cl1","pId":"52087","cta":"schedule"},"l2":{"tp":"cl1","pId":"52087","cta":"live tv"},"l3":{"tp":"cl1","pId":"52087","cta":"continue watching"},"l4":{"tp":"cl1","pId":"52087","cta":"apps"},"l5":{"tp":"cl1","pId":"52087","cta":"more"},"l21":{"tp":"cl1","pId":"52087","cta":"American Housewife"},"l22":{"tp":"cl1","pId":"52087","cta":"The Bachelor"},"l23":{"tp":"cl1","pId":"52087","cta":"black-ish"},"l24":{"tp":"cl1","pId":"52087","cta":"The Chew"},"l25":{"tp":"cl1","pId":"52087","cta":"Child Support"},"l26":{"tp":"cl1","pId":"52087","cta":"Designated Survivor"},"l27":{"tp":"cl1","pId":"52087","cta":"General Hospital"},"l28":{"tp":"cl1","pId":"52087","cta":"The Goldbergs"},"l29":{"tp":"cl1","pId":"52087","cta":"The Good Doctor"},"l30":{"tp":"cl1","pId":"52087","cta":"Grey's Anatomy"},"l31":{"tp":"cl1","pId":"52087","cta":"How to Get Away with Murder"},"l32":{"tp":"cl1","pId":"52087","cta":"Jimmy Kimmel Live!"},"l33":{"tp":"cl1","pId":"52087","cta":"Kevin (Probably) Saves the World"},"l34":{"tp":"cl1","pId":"52087","cta":"Marvel's Agents of S.H.I.E.L.D."},"l35":{"tp":"cl1","pId":"52087","cta":"The Middle"},"l36":{"tp":"cl1","pId":"52087","cta":"Modern Family"},"l37":{"tp":"cl1","pId":"52087","cta":"Once Upon A Time"},"l38":{"tp":"cl1","pId":"52087","cta":"Scandal"},"l39":{"tp":"cl1","pId":"52087","cta":"Speechless"},"l40":{"tp":"cl1","pId":"52087","cta":"view all shows"},"l41":{"tp":"cl1","pId":"52087","cta":"oscar.com"},"l42":{"tp":"cl1","pId":"52087","cta":"music"},"l43":{"tp":"cl1","pId":"52087","cta":"abc news"},"l44":{"tp":"cl1","pId":"52087","cta":"freeform"},"l45":{"tp":"cl1","pId":"52087","cta":"faq"},"l46":{"tp":"cl1","pId":"52087","cta":"menu"},"l47":{"tp":"cl1","pId":"52087","cta":"search"},"l48":{"tp":"cl1","pId":"52087","cta":"sign out"},"l7":{"tp":"cl3","pId":"2027566","cta":"Home"},"l8":{"tp":"cl3","pId":"2027566","cta":"Videos"},"l9":{"tp":"cl3","pId":"2027566","cta":"News"},"l10":{"tp":"cl3","pId":"2027566","cta":"VOTE"},"l11":{"tp":"cl3","pId":"2027566","cta":"About"},"l49":{"tp":"cl3","pId":"2027566","cta":"more"},"l6":{"pId":"2027564","tp":"cl4","clf":"0","vic":"VDKA4236268","ilf":false,"df":false,"vct":"sf","vad":"Mon, 08 Jan 2018 00:00:00 PST","verd":"Mon, 8 Jan 2018 20:00:00 -0800","vel":"101034","vsn":"American Idol","vp":"AMI","cl":"en","cta":"watch a preview now","pn":"0"},"videovideo.VDKA4236268":{"pId":"2027581","cta":"American Idol Preview: Get Ready!","tp":"cl4","clf":"0","vic":"VDKA4236268","ilf":false,"df":false,"vct":"sf","vad":"Mon, 08 Jan 2018 00:00:00 PST","verd":"Mon, 8 Jan 2018 20:00:00 -0800","vel":"101034"},"videovideo.VDKA4212127":{"pId":"2027581","cta":"BB-8's Accidental American Idol Audition","tp":"cl4","clf":"0","vic":"VDKA4212127","ilf":false,"df":false,"vct":"sf","vad":"Fri, 15 Dec 2017 00:00:00 PST","verd":"Fri, 15 Dec 2017 00:00:00 -0800","vel":"30063"},"videovideo.VDKA4179847":{"pId":"2027581","cta":"The American Idol Judges on Thanksgiving","tp":"cl4","clf":"0","vic":"VDKA4179847","ilf":false,"df":false,"vct":"sf","vad":"Wed, 22 Nov 2017 00:00:00 PST","verd":"Wed, 22 Nov 2017 00:00:00 -0800","vel":"66833"},"videovideo.VDKA4175555":{"pId":"2027581","cta":"Britney Holmes's American Idol Audition","tp":"cl4","clf":"0","vic":"VDKA4175555","ilf":false,"df":false,"vct":"sf","vad":"Mon, 20 Nov 2017 00:00:00 PST","verd":"Sun, 19 Nov 2017 00:00:00 -0800","vel":"100434"},"videovideo.VDKA4175582":{"pId":"2027581","cta":"Maris's American Idol Audition","tp":"cl4","clf":"0","vic":"VDKA4175582","ilf":false,"df":false,"vct":"sf","vad":"Mon, 20 Nov 2017 00:00:00 PST","verd":"Sun, 19 Nov 2017 00:00:00 -0800","vel":"73073"},"videovideo.VDKA4175609":{"pId":"2027581","cta":"Dominique Smith's American Idol Audition","tp":"cl4","clf":"0","vic":"VDKA4175609","ilf":false,"df":false,"vct":"sf","vad":"Mon, 20 Nov 2017 00:00:00 PST","verd":"Sun, 19 Nov 2017 00:00:00 -0800","vel":"100152"}}}};
+</script>
+
+
+<!-- Google Tag Manager --> <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NFKTSR"height="0" width="0"style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NFKTSR');</script> <!-- End Google Tag Manager -->
+<script type="text/javascript" src="https://cdn.unid.go.com/js/unid.min.js" data-client="DATG-ABCDOTCOM.WEB"></script>
+<script type="text/javascript" src="//cdn1.edgedatg.com/aws/site/3.4.2.2/js/production/001/001/datg.js"></script>
+    <!-- SITE BUILD NUMBER: 3.4.2.2 -->
+<!-- CORE BUILD NUMBER: 2.5.2.2 -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8d01ff17d1","applicationID":"7645344","transactionName":"NVNRYRdWV0tQWxcIXQwZcEAWQ1ZVHksLDkU=","queueTime":0,"applicationTime":245,"atts":"GRRGF19MRBQTWUFbSR9L","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

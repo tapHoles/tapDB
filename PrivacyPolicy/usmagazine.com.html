@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Privacy Policy - Us Weekly</title>
+<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="FM3U8Tf3K0sD7N-PDfpCNb9_qa1a8dYOlnEZyhQnNsE" />
+<script type="text/javascript">
+    var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+		window.pb_host = "usmagazine";
+        pbjs = window.pbjs || { que: [] }; // if prebid is not already defined, define it
+          (function() { var gads = document.createElement("script");
+            gads.async = true;
+            gads.type = "text/javascript";
+            var useSSL = "https:" == document.location.protocol;
+            gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+            var node =document.getElementsByTagName("script")[0];
+            node.parentNode.insertBefore(gads, node);
+            })();
+
+			window.gptAdsWindowWidth = function() {
+				var w = window,
+					d = document,
+					e = d.documentElement,
+					x = Math.max(e.scrollWidth,e.offsetWidth,e.clientWidth);
+				return x;
+			}
+    </script>
+<script>var utag_data = {"canonical_url":"\/services-privacypolicy\/","page_category":"page","comments":"off","page_title":"Privacy Policy","content_updated_date":"2015\/11\/16","content_publish_date":"2015\/11\/16","sponsorship_name":"none","page_id":"24"};
+function parseUrlParams(val) {
+					var result = "none",
+						tmp = [];
+					var items = location.search.substr(1).split("&");
+					for (var index = 0; index < items.length; index++) {
+						tmp = items[index].split("=");
+						if (tmp[0] === val) result = decodeURIComponent(tmp[1]);
+					}
+					return result;
+				}
+		if(window.innerWidth < 768) {
+			utag_data.site_display_format = 'mobile';
+		} else if(window.innerWidth >= 768 && window.innerWidth <= 1024) {
+			utag_data.site_display_format = 'tablet';
+		} else {
+			utag_data.site_display_format = 'desktop';
+		}
+		
+		utag_data.referrer = document.referrer;
+		utag_data.utm_source = parseUrlParams('utm_source');
+		utag_data.utm_medium = parseUrlParams('utm_medium');
+		utag_data.utm_campaign = parseUrlParams('utm_campaign');
+		
+			if(parseUrlParams("test") !== "none") {
+				console.log(utag_data);
+			}function tealiumOnLoad() {
+			utag_data.event_name = 'onLoad';
+			utag.view(utag_data);
+			if(parseUrlParams("test") !== "none") {
+				console.log("tealium onload");
+			}
+			}window.addEventListener("load", tealiumOnLoad);</script>
+<!-- This site is optimized with the Yoast SEO plugin v6.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Privacy PolicyEffective Date: February 20, 2015To learn more on what types of information we collect, click hereTo understand how location tracking is used"/>
+<link rel="canonical" href="https://www.usmagazine.com/services-privacypolicy/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Privacy Policy - Us Weekly" />
+<meta property="og:description" content="Privacy PolicyEffective Date: February 20, 2015To learn more on what types of information we collect, click hereTo understand how location tracking is used" />
+<meta property="og:url" content="https://www.usmagazine.com/services-privacypolicy/" />
+<meta property="og:site_name" content="Us Weekly" />
+<meta property="article:publisher" content="https://www.facebook.com/UsWeekly" />
+<meta property="fb:app_id" content="1785612128341436" />
+<meta property="og:image" content="https://www.usmagazine.com/wp-content/uploads/2017/10/cropped-Us-512x512.png" />
+<meta property="og:image:secure_url" content="https://www.usmagazine.com/wp-content/uploads/2017/10/cropped-Us-512x512.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Privacy PolicyEffective Date: February 20, 2015To learn more on what types of information we collect, click hereTo understand how location tracking is used" />
+<meta name="twitter:title" content="Privacy Policy - Us Weekly" />
+<meta name="twitter:site" content="@usweekly" />
+<meta name="twitter:image" content="https://www.usmagazine.com/wp-content/uploads/2017/10/cropped-Us-512x512.png" />
+<meta name="twitter:creator" content="@usweekly" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.usmagazine.com\/","name":"Us Weekly","publisher":{"@id":"https:\/\/www.usmagazine.com\/services-privacypolicy\/#organization"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/www.usmagazine.com\/","sameAs":["https:\/\/www.facebook.com\/UsWeekly","https:\/\/instagram.com\/usweekly\/","https:\/\/www.youtube.com\/user\/UsWeekly","https:\/\/www.pinterest.com\/usweekly\/","https:\/\/twitter.com\/usweekly","http:\/\/usweekly.tumblr.com\/","http:\/\/www.stumbleupon.com\/channel\/UsWeekly","https:\/\/en.wikipedia.org\/wiki\/Us_Weekly"],"@id":"#organization","name":"Us Weekly","logo":{"@type":"ImageObject","url":"https:\/\/www.usmagazine.com\/wp-content\/uploads\/heidi-montag-spencer-pratt-gunner-cover-9a33ae39-7cf3-49ae-b311-e6d98b570712.jpg","width":1329,"height":1800},"telephone":"212-545-4800","address":{"@type":"PostalAddress","streetAddress":"4 New York Plaza","addressLocality":"New York","addressRegion":"NY","addressCountry":"US","postalCode":"10004"}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebPage","@id":"https:\/\/www.usmagazine.com\/services-privacypolicy\/#webpage","publisher":{"@id":"https:\/\/www.usmagazine.com\/services-privacypolicy\/#organization"},"isPartOf":{"@id":"https:\/\/www.usmagazine.com\/services-privacypolicy\/#website"}}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//acdn.adnxs.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="text/xml" title="Us Weekly &raquo; Feed" href="https://www.usmagazine.com/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.usmagazine.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56794,8205,9794,65039],[55358,56794,8203,9794,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='all-css-0' href='https://www.usmagazine.com/_static/??-eJyVjs0KgzAQhF+ocRFRvJQ+StkmS9y6+aGbIL69WnopvdjbfDDfMLBkY1MsFAuUiQIpVDUL0SwroCoVBasKjrWAl/RAaXa+wD9eRk/6o4VqslTPUeFJJaOdISRXZZ/SCV/k0Ln1HTn6M/adowVNllGMJJ/0C5rA8czK8fqTj/otXNu+Hbp+HLthA7oVcJU=' type='text/css' media='all' />
+<script type='text/javascript' src='//acdn.adnxs.com/prebid/c/1287.usmag/pb.js.2018_01_18_16_00_38'></script>
+<script type='text/javascript' src='https://www.usmagazine.com/_static/??-eJx9jEEOgzAMBD/UxA0qqBfUtwCxwCExLXZE+X2jCq5IK81lZmF7G+IhZo8CoeyTcd0P2CA3uBJMonHtFG0iPuVhYUVW0AlTSbKYDXGOO3QiqP8PT6IQaZy0X76V7TP7iKV/pdbVrqnurn4+wg/VGjjB'></script>
+<link rel='https://api.w.org/' href='https://www.usmagazine.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.usmagazine.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.usmagazine.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.2" />
+<link rel='shortlink' href='https://www.usmagazine.com/?p=24' />
+<link rel="alternate" type="application/json+oembed" href="https://www.usmagazine.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.usmagazine.com%2Fservices-privacypolicy%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.usmagazine.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.usmagazine.com%2Fservices-privacypolicy%2F&#038;format=xml" />
+<style type='text/css'>img#wpstats{display:none}</style>
+	<!-- DFP Slots -->
+	<script>
+	var dfpSlots   = {},
+		gpt   = gpt || {},
+		mapping    = [];
+	gpt.slotsToRefresh = [],
+	gpt.slotsFired = [];
+	gpt.initialLoadSlots = [];
+
+	window.gptIsMobile = function() {
+		if ( window.gptAdsWindowWidth() < 1024 ) {
+			return true;
+		}
+		return false;
+	};
+
+	window.gptIsTablet = function() {
+		if ( window.gptAdsWindowWidth() >= 768 && window.gptAdsWindowWidth() < 1024 ) {
+			return true;
+		}
+		return false;
+	};
+
+	googletag.cmd.push( function() {
+		mapping["topLeaderMapping"] = googletag.sizeMapping().addSize([0, 0], [[320, 50],[320,100], [320, 150]]).addSize([768, 200], [728, 90]).addSize([1050, 200], [[728, 90],[970, 250],[970, 90], [970, 66], [970, 125]]).build();
+		
+		mapping["inlineLeaderMapping"] = googletag.sizeMapping().addSize([0, 0], [[300, 250],[320, 50],[320,100], [320, 150]]).addSize([768, 200], [[728, 90]]).addSize([1050, 200], [[728, 90],[970, 250],[970, 90], [970, 66], [970, 125]]).build();
+		
+		mapping["bottomLeaderMapping"] = googletag.sizeMapping().addSize([0, 0], [[300, 250]]).addSize([768, 200], [[728, 90]]).addSize([1050, 200], [[728, 90]]).build();
+		
+		mapping["stickyLeaderMapping"] = googletag.sizeMapping().addSize([0, 0], [[320, 50], [320, 100]]).build();
+		
+		mapping["boxMapping"] = googletag.sizeMapping().addSize([0, 0], [[300, 250], [320, 50], [320,100], [320, 150]]).addSize([768, 200], [[300, 250]]).addSize([1050, 200], [[300, 250], [300, 600]]).build();
+		
+		mapping["boxWidgetMapping"] = googletag.sizeMapping().addSize([0, 0], [[0, 0]]).addSize([768, 200], [[0, 0]]).addSize([1024, 200], [[300, 250], [300, 600]]).build();
+		
+		mapping["postBoxMapping"] = googletag.sizeMapping().addSize([0, 0], [[300, 250], [320, 50], [320,100], [320, 150]]).addSize([768, 200], [[300, 250]]).addSize([1050, 200], [[300, 250], [300, 600], [300, 1050]]).build();
+		
+				if ( window.innerWidth <= 480 ) {
+			dfpSlots["mobile-sticky"] = googletag.defineSlot("/4216/usweekly/mobile_sticky", [[320, 50], [320, 100]], "mobile-sticky").defineSizeMapping(mapping["stickyLeaderMapping"]).addService(googletag.pubads()).setTargeting( "pos", "bottom" );
+				gpt.slotsFired["mobile-sticky"] = dfpSlots["mobile-sticky"];
+		
+					gpt.initialLoadSlots.push("mobile-sticky");
+				}
+			
+				if ( window.gptIsMobile() ) {
+			dfpSlots["sled"] = googletag.defineOutOfPageSlot("/4216/usweekly/sled", "sled").addService(googletag.pubads());
+				gpt.slotsFired["sled"] = dfpSlots["sled"];
+		
+					gpt.initialLoadSlots.push("sled");
+				}
+			
+			googletag.pubads().setTargeting( "pid", "24" );
+			googletag.pubads().setTargeting( "env", "production" );
+		googletag.pubads().enableSingleRequest();
+		googletag.pubads().disableInitialLoad();
+		googletag.pubads().enableAsyncRendering();
+		googletag.pubads().collapseEmptyDivs();
+		googletag.enableServices();
+		googletag.pubads().refresh([], { changeCorrelator: false } );
+		} );
+			if( window.pbjs ) {
+				pbjs.que.push( function () {
+					pbjs.refreshAds( gpt.initialLoadSlots );
+				} );
+			} else {
+				googletag.cmd.push( function() {
+					googletag.pubads().refresh( [gpt.slotsFired], { changeCorrelator: false } );
+				} );
+			}
+		
+	</script><link rel="icon" href="https://www.usmagazine.com/wp-content/uploads/2017/10/cropped-Us-512x512.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://www.usmagazine.com/wp-content/uploads/2017/10/cropped-Us-512x512.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.usmagazine.com/wp-content/uploads/2017/10/cropped-Us-512x512.png?w=180" />
+<meta name="msapplication-TileImage" content="https://www.usmagazine.com/wp-content/uploads/2017/10/cropped-Us-512x512.png?w=270" />
+		<style type="text/css" id="wp-custom-css">
+			@media screen and (min-width: 1024px) {
+	.hub-theme-food .module-featured-wrapper .module-single-content, .hub.hub-theme-food .module-featured-wrapper .module-single-content {
+	padding: 30px 0;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.hub-theme-food .module-featured-wrapper .module-single-content-title-card, .hub.hub-theme-food .module-featured-wrapper .module-single-content-title-card {
+		margin-top: 0;
+	}
+}
+
+.hub-theme-food .module-featured-wrapper .module-single-content-title-card h2, .hub.hub-theme-food .module-featured-wrapper .module-single-content-title-card h2 {
+	font-weight: 900;
+}
+
+.hub-theme-food .module-featured-wrapper .module-single-content-title-card-content header h2, .hub.hub-theme-food .module-featured-wrapper .module-single-content-title-card-content header h2 {
+	font-weight: 700;
+}		</style>
+		</head>
+
+	<body class="page-template-default page page-id-24" >
+
+	
+		<div id="sled" class="sled">
+			<script>
+				if ( window.gptIsMobile() ) {
+			googletag.cmd.push(function() {
+				googletag.display('sled');
+			});
+			}
+			</script>
+		</div><!-- Loading script asynchronously -->
+<script type="text/javascript">
+ (function(a,b,c,d){
+ a='https://tags.tiqcdn.com/utag/ami/usmagazine/prod/utag.js';
+ b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+ a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+ })();
+</script>
+<!-- END: T-WP -->
+
+	<header id="header" class="header">
+
+		<div class="container-full">
+
+			<a
+				href="https://www.usmagazine.com/"
+				class="header-logo"
+				data-track-category="Global Nav"
+				data-track-action="Go to HP"
+			>
+								<svg class="us-logo" viewBox="34 70 470 395">
+					<defs xmlns="http://www.w3.org/2000/svg">
+						<filter id="dropshadow-u" height="130%">
+							<feGaussianBlur in="SourceAlpha" stdDeviation="5"></feGaussianBlur>
+							<feOffset dx="1" dy="1" result="offsetblur"></feOffset>
+							<feComponentTransfer>
+								<feFuncA type="linear" slope="0.5"></feFuncA>
+							</feComponentTransfer>
+							<feMerge>
+								<feMergeNode></feMergeNode>
+								<feMergeNode in="SourceGraphic"></feMergeNode>
+							</feMerge>
+						</filter>
+						<filter id="dropshadow-s" height="130%">
+							<feGaussianBlur in="SourceAlpha" stdDeviation="13"></feGaussianBlur>
+							<feOffset dx="-15" dy="2" result="offsetblur"></feOffset>
+							<feComponentTransfer>
+								<feFuncA type="linear" slope="0.5"></feFuncA>
+							</feComponentTransfer>
+							<feMerge>
+								<feMergeNode></feMergeNode>
+								<feMergeNode in="SourceGraphic"></feMergeNode>
+							</feMerge>
+						</filter>
+					</defs>
+					<path class="letter-u color-theme-logo" filter="url(#dropshadow-u)" d="M227.7 74v198.6c0 42.6-15.8 68.8-53.5 68.8-37.6 0-54.5-26.2-54.5-68.8V74h-98v198.6c0 109.9 63.9 153.5 151 153.5s153-43.6 153-153.5V74h-98z"></path>
+					<path fill="#001722" d="M283.1 112.8h179.1v42.5H283.1z"></path>
+					<path fill="#FFFFFF" d="M313.6 144.4H308l-1-4.7c-.7-3.4-1.4-7.4-1.5-9-.1 1.6-.8 5.7-1.5 9l-1 4.7h-5.5l-5.2-21.8h6.2l.6 3.6c.5 3.1 1.1 6.9 1.3 9.4.2-2.6.9-6.3 1.6-9.4l.7-3.7h5.5l.7 3.7c.7 3.1 1.4 6.9 1.6 9.4.2-2.6.8-6.4 1.3-9.4l.6-3.6h6.2l-5 21.8zM328.4 144.4v-21.8H345v5.1h-10.6v2.9h6.4v5h-6.4v3.7h10.9v5.1M355.3 144.4v-21.8H372v5.1h-10.7v2.9h6.4v5h-6.4v3.7h10.9v5.1M395.2 144.4l-4.5-9.3-2.2 2.7v6.6h-6.1v-21.8h6.1v2.5c0 1.8 0 3.8-.1 5.4.9-1.4 2.8-3.9 4.2-5.7l1.7-2.2h7.3l-6.6 7.7 7.3 14.1h-7.1zM411.3 144.4v-21.8h6.1v16.5h9.6v5.3M444.7 136.3v8.1h-6.1v-8l-8.1-13.7h7l1.7 3.3c1.2 2.3 2.1 4.4 2.5 5.6.4-1.3 1.3-3.4 2.5-5.6l1.7-3.3h6.9l-8.1 13.6z"></path>
+					<path class="letter-s color-theme-logo" filter="url(#dropshadow-s)" d="M375.3 250.2c-22.8-6.9-25.8-9.9-25.8-17.8S354 221 371.3 221c22.8 0 48.5 6.9 82.7 21.8l19.8-68.8c-34.7-12.4-60.9-18.8-100-18.8-70.8 0-106 31.7-106 85.2 0 54 27.7 70.3 107.9 91.6 16.8 4.5 20.8 7.9 20.8 16.3 0 7.9-6.4 11.9-23.8 11.9-22.8 0-58.4-8.9-89.6-22.8l-20.8 67.3c33.2 12.9 70.3 21.3 108.4 21.3 66.3 0 107.4-27.7 107.4-87.6.2-51.5-29.5-68.8-102.8-88.2"></path>
+				</svg>
+				
+				<span>Us Weekly Magazine</span>
+
+			</a>
+
+			<nav class="header-nav-primary">
+
+				<div class="header-nav-primary"><ul id="header-nav-primary-list" class="nav"><li id="menu-item-47871" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-47871"><a href="https://www.usmagazine.com/celebrity-news/">News</a></li>
+<li id="menu-item-48016" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-48016"><a href="https://www.usmagazine.com/stylish/">Stylish</a></li>
+<li id="menu-item-1153208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1153208"><a href="https://www.usmagazine.com/royal-family/">Royals</a></li>
+<li id="menu-item-48382" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-48382"><a href="https://www.usmagazine.com/entertainment/">Entertainment</a></li>
+<li id="menu-item-48211" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-48211"><a href="https://www.usmagazine.com/celebrity-moms/">Moms</a></li>
+<li id="menu-item-48524" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-48524"><a href="https://www.usmagazine.com/celebrity-pets/">Pets</a></li>
+<li id="menu-item-1156184" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1156184"><a href="https://www.usmagazine.com/olympics">Olympics</a></li>
+</ul></div>
+				<div class="header-nav-more show-more mouseover" id="header-nav-more">
+
+					<a href="#">More</a>
+
+					<div class="header-nav-sub"><ul id="menu-full-menu" class="nav"><li id="menu-item-50955" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-50955"><a href="https://www.usmagazine.com/celebrity-news/">News</a></li>
+<li id="menu-item-51062" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-51062"><a href="https://www.usmagazine.com/stylish/">Stylish</a></li>
+<li id="menu-item-53813" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-53813"><a href="https://www.usmagazine.com/royal-family/">Royals</a></li>
+<li id="menu-item-51329" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-51329"><a href="https://www.usmagazine.com/entertainment/">Entertainment</a></li>
+<li id="menu-item-51216" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-51216"><a href="https://www.usmagazine.com/celebrity-moms/">Moms</a></li>
+<li id="menu-item-51451" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-51451"><a href="https://www.usmagazine.com/celebrity-pets/">Pets</a></li>
+<li id="menu-item-54456" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-54456"><a href="https://www.usmagazine.com/olympics/">Olympics</a></li>
+<li id="menu-item-51545" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-51545"><a href="https://www.usmagazine.com/celebrity-video/">Video</a></li>
+<li id="menu-item-1155635" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1155635"><a href="https://www.usmagazine.com/golden-globes">Golden Globes</a></li>
+<li id="menu-item-51980" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-51980"><a href="https://www.usmagazine.com/celebrity-body/">Celebrity Body</a></li>
+<li id="menu-item-52319" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-52319"><a href="https://www.usmagazine.com/celebrities/a/">Celebrity Directory</a></li>
+<li id="menu-item-52539" class="menu-item menu-item-type-post_type menu-item-object-hub menu-item-52539"><a href="https://www.usmagazine.com/celebrity-pictures/">Photos</a></li>
+<li id="menu-item-731177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731177"><a href="https://www.usmagazine.com/hot-pics/">Hot Pics</a></li>
+<li id="menu-item-59561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59561"><a href="https://www.usmagazine.com/newsletter-signup/">Newsletter Signup</a></li>
+<li id="menu-item-55050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55050"><a href="https://www.usmagazine.com/subscribe">Subscribe</a></li>
+<li id="menu-item-51741" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51741"><a href="/givegift">Give a Gift</a></li>
+<li id="menu-item-733565" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-733565"><a href="https://w1.buysub.com/pubs/SR/STA/eCare_Login.jsp?cds_page_id=204577&#038;cds_mag_code=STA&#038;id=1506973345502&#038;lsid=72751437176042431&#038;vid=2">Subscriber Service</a></li>
+</ul></div>
+				</div>
+
+			</nav>
+
+			
+			<a href="https://www.usmagazine.com/sub-circ-spot-a" class="header-subscribe ">
+
+								<img src="https://www.usmagazine.com/wp-content/themes/us-weekly/assets/img/bg-subscribe.png" alt="Subscribe Now">
+
+				<span>Subscribe Now</span>
+				
+			</a>
+
+		</div>
+
+	</header>
+
+	<main id="main" class="main">
+
+<div class="page-static">
+			<article class="page-static-main">
+			<header class="hub-header" data-page-title="Privacy Policy">
+				<div class="hub-header-text container-center">
+					<h1>Privacy Policy</h1>				</div>
+			</header>
+			<div class="grid content">
+				<div class="page-static-main-content">
+					<div class="page-stat-main-content-inner">
+						<div class="body-inner services">
+<h2 class="relay has-date">Privacy Policy</h2>
+<p class="effective-date">Effective Date: February 20, 2015</p>
+<ul>
+<li>To learn more on what types of information we collect, click <a href="#info-collected">here</a></li>
+<li>To understand how location tracking is used when you access Us Applications through a mobile device, click <a href="#info-collected-geolocation">here</a></li>
+<li>To learn how we use and share information collected, click <a href="#use-and-share">here</a></li>
+<li>To opt out of email newsletters, click <a href="#opt-out-email">here</a></li>
+<li>To opt-out of email promotions, click <a href="#email-promotions">here</a></li>
+<li>To opt-out of direct mail promotions, click <a href="#mail-promotions">here</a></li>
+<li>To understand how we use third party analytic tracking technologies (e.g., cookies) and how you can opt-out, click <a href="#third-party">here</a></li>
+<li>To learn how we respond to browser Do Not Track signals, click <a href="#do-not-track">here</a></li>
+<li>Your California Privacy Rights: Note to California Users, click <a href="#california-policy">here</a></li>
+<li>To learn how to contact us about your magazine subscription or change your subscription information, click <a href="#magazine-subscription">here</a></li>
+<li>To learn how to contact Us Weekly regarding this Privacy Policy, click <a href="#contact">here</a></li>
+</ul>
+<h3><u>Introduction</u></h3>
+<p>The website usmagazine.com is owned and operated by Us Weekly LLC and its affiliates (collectively, “<strong>we,</strong>” “<strong>our</strong>” or “<strong>us</strong>”).  This privacy policy (“<strong>Privacy Policy</strong>”) explains our information collection practices at usmagazine.com, other websites owned by us and our other interactive properties, including but not limited to our mobile websites and applications (each, an “<strong>Us Application</strong>”) and through offline means.  It explains the types of information we collect regarding users of the Us Application and subscribers to our magazine and how we may use that information so you can make an informed decision about whether to view the content and/or use our services (&#8220;<strong>Services</strong>&#8220;).  Thus this Privacy Policy applies to information we collect via (1) the Us Application (however accessed and/or used, whether via personal computers, mobile devices or otherwise); (2) email or electronic newsletters; (3) offline means such as telephone and traditional mail; and (4) any other means or applications in which you connect with us.</p>
+<p>This Privacy Policy is incorporated into and subject to the Us Application&#8217;s <a href="terms">Terms of Use</a>. Each time that you access or use the Us Application you signify that you have read, understand, and agree to be bound by the <a href="terms">Terms of Use</a>, and this Privacy Policy. If you do not agree to the <a href="terms">Terms of Use</a> and this Privacy Policy, you must discontinue using our Services.</p>
+<h3 id="info-collected">1.  Information That Is Collected</h3>
+<p>When you provide us with contact or other information in connection with a particular activity, product or service, including your email address or telephone number, you expressly consent to our communicating with you about our products or services using the information you provided to us.  You also attest that you have the legal authority over any telephone number you provide to us and can provide us with the authorization to contact you.  This means we may contact you, in person or by recorded message, by e-mail, telephone and/or mobile telephone number (including use of automated dialing equipment), text (SMS) message, or any other means of communication that your wireless or other telecommunications device may be capable of receiving.</p>
+<h4>(a) Information You Provide To Us</h4>
+<p><em><strong>Personal Information</strong></em>.  We may ask you to provide us with certain categories of information, including information that could reasonably be used to identify you personally, such as your name, gender, e-mail address, date of birth, physical address (or elements thereof such as zip code and state).  We may collect this information through various forms and in various places on the Us Application, including magazine subscription forms, account registration forms, contact us forms or when you otherwise interact with us.</p>
+<p><em><strong>Billing and Credit Card Information</strong></em>.  To enable payment for subscriptions, we collect and store billing and credit card information.  This information will only be shared with third parties who perform tasks required to complete the purchase transaction.  Examples of this include fulfilling orders and processing credit cards.</p>
+<p><em><strong>Social Networking Services</strong></em>.  You may be given the option to link your account on a third party social networking service. In that case, the authentication of your login credentials are conducted through that third party service provider.  When you link your social networking accounts with Us Applications or engage with Us Applications through third party social media platforms. In addition, as you interact with the Us Applications, you may also be providing information about your activities to the third party social networking services. You should make sure that you are comfortable with the information your third party social networking services may make available to us by visiting those services’ privacy policies and/or modifying your privacy settings directly with those services.  We reserve the right to use, transfer, assign, sell, share and provide access to all information that we receive through third party social networking services in the same ways described in this Privacy Policy. You agree that we shall not be liable for the use by social networking services of any information.</p>
+<p><em><strong>Job Applications</strong></em>. When applying for select job postings via the Us Application, you may elect to send us your resume or other relevant information online.  Personal information collected in association with job postings will be used for the purpose of accepting and evaluating candidate submissions for job postings.</p>
+<h4>(b) Information Collected As You Access and Use the Us Application</h4>
+<p>In addition to any personal information or other information that you choose to submit to us, we and our third-party service providers and advertisers on the Us Application may use a variety of technologies (including cookies, flash cookies, web beacons/GIFs, embedded scripts) (“<strong>Tracking Technologies</strong>”) that automatically (or passively) collect certain information whenever you visit or interact with the Us Application (“<strong>Usage Information</strong>”).  This Usage Information may include the browser that you are using, the URL that referred you to our Us Application and all of the areas within our Us Application that you visit, among other information.   We may use Usage Information for a variety of purposes.  In addition, we collect your IP address or other unique identifier (“<strong>Device Identifier</strong>”) for your computer or other device used to access the Us Application (any, a “<strong>Device</strong>”).  A Device Identifier is a number that is automatically assigned to your Device used to access the Us Application, and our computers identify your Device by its Device Identifier.  If you accessed content through an email account, a third party provider may make a “hash” of your email address, which is a bit of text that uniquely identifies the email address but is designed to prevent reverse engineering so that the email address is not revealed (“<strong>Hash</strong>”).</p>
+<p>Information gathered from your use of the Us Application may be combined with information from third party sources to identify your location by state and region (“<strong>Region Location</strong>”).  More specific information about your geographic location may be collected for certain Us Applications (&#8220;<strong>Geolocation</strong>&#8220;), as more clearly spelled out in this policy.</p>
+<p>A few of the Tracking Technologies that may be used to collect Usage Information include, without limitation, the following:</p>
+<p><em><strong>Cookies</strong></em>.  A cookie is a data file placed on a Device when it is used to visit the Us Application. We use cookies to collect information for record keeping purposes, to make it easier to navigate the Us Application and for other purposes, as described further in this Privacy Policy. Cookies are stored on users’ hard drives.  We use both “session ID cookies” and “persistent cookies.”  Session ID cookies are used to store information while a user is logged into the Us Application and expire when the user closes his/her browser.  Persistent cookies are used to make tasks like logging into the Us Application easier for returning users by remembering a user’s login information.  Persistent cookies stay on a user’s hard drive from one session to the next.  “Flash cookies,” known as local shared objects, are data files placed on a Device via the Adobe Flash plug-in that may be built-in to or downloaded by you to your Device to personalize your visit.  Our third-party service providers also may use Flash cookies to collect and store information.  Flash cookies are different from standard browser cookies because of the amount of, type of, and how data is stored. Cookies may be used for many purposes, including, without limitation, remembering you and your preferences and tracking your visits to our web pages.  You can choose to have your computer warn you each time a persistent or session cookie is being sent, or you can choose to turn off such cookies through your browser settings. Each browser is a little different, so look at your browser Help menu to learn the correct way to modify your cookies.  However, cookie management tools provided by your browser will not remove Flash cookies. To learn how to manage privacy and storage settings for Flash cookies, please click <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager.html" target="_blank">www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager.html</a>.  If you choose to disable cookies on your Device, some features of the Us Application may not function properly.</p>
+<p><em><strong>Web Beacons</strong></em>.  Small graphic images or other web programming code called web beacons (also known as “1&#215;1 GIFs” or “clear GIFs”) may be included in our web pages and messages.  Web beacons may be invisible to you, but any electronic image or other web programming code inserted into a web page or e-mail can act as a web beacon.  Web beacons or similar technologies may be used for a number of purposes, including, without limitation, to count visitors to the Us Application, to monitor how users navigate the Us Application, to count how many e-mails that were sent were actually opened or to count how many particular articles or links were actually viewed.</p>
+<p><em><strong>Embedded Scripts</strong></em>.  An embedded script is programming code that is designed to collect information about your interactions with the Us Application, such as the links you click on.  The code is temporarily downloaded onto your Device from our web server or a third party service provider, is active only while you are connected to the Us Application, and is deactivated or deleted thereafter.</p>
+<p id="html5"><em><strong>HTML5</strong></em>. We use HTML5 in the Us Weekly mobile website and certain mobile applications for the iphone or ipad (and any other Apple iOS device). HTML5 has browser web storage that does not rely on traditional browser cookies.  Like Flash cookies, HTML5 cookies are not stored in a browser “cookies” file and, like Flash cookies, can be used to track users across websites.  To our knowledge there is currently no known way for a user of a mobile device to remove HTML5 tracking and storage.</p>
+<p id="info-collected-geolocation"><em><strong>Geolocation Us Applications</strong></em>. For certain of the mobile Us Applications, we may, and may enable a third party such as an advertiser to, ask you if you wish us to collect your geolocation in order provide you with information about goods and services within your geographic location. If you agree to have your geolocation collected, we and the third party, if applicable, will maintain information about your geolocation to facilitate your searching or implement other functionality in the Us Application, such as to serve targeted advertising. In addition, when you have geolocation software running on your mobile phone, computer or other Device, we may collect that information as controlled by your privacy settings on those Devices.</p>
+<h4>(c) Information You Provide About a Third Party</h4>
+<p>If you send someone else a communication from the Us Application, such as sending an invitation to a friend, the information you provide (names, e-mail addresses, etc.) is used to facilitate the communication and is not used for any other marketing purpose unless we obtain consent from that person or we explicitly say otherwise.  If that person becomes a subscriber to our magazine or newsletter, his/her information will be treated in the same manner as all other subscribers.  Please be aware that when you use any send-to-a-friend functionality on our Us Application, your e-mail address may be included in the communication sent to your friend.</p>
+<h4>(d) Information We Collect from Third Parties</h4>
+<p>We may acquire information from other trusted sources to update or supplement the information that you provided or we collected automatically, such as information to validate or update your address or other demographic information and lifestyle information.  We use this information to help us maintain the accuracy of the information we collect, to target our communications so that we can inform you of products, services and offers that may be of interest, and for internal business analysis or other business purposes. We may also acquire information from other sources about your visits over time and across other third party web sites, in order to serve more targeted advertising to you on the Us Application.</p>
+<h3 id="use-and-share">2. How We Use and Share the Information Collected</h3>
+<p></p>
+<h4>(a) Provide, Manage and Improve our Service</h4>
+<p>We use the information that we collect and obtain to provide our goods and services, to administer the Us Applications and Services and for other lawful business purposes.</p>
+<p>We may provide access to information, including personal information, to certain vendors that are performing services on our behalf, including fulfilling magazine subscriptions, managing our email lists and sending email messages on our behalf, processing payments, providing customer support and performing other administrative services. These service providers are provided access to this information only for the purpose of carrying out the services on our behalf.</p>
+<p>We may also use the information that we collect and obtain about you to measure and improve our Services, to customize certain features of the Us Application, to deliver relevant content and to provide you with an enhanced experience based on the type of device you are using. We also use the information collected to serve advertising on the Us Applications that we believe is most likely to be of interest to you.</p>
+<h4>(b) Transactional Communications</h4>
+<p>We may send you notices from time to time relating to your account, your subscriptions and other products and services you have requested or in which you are currently enrolled.  These may include order confirmations, renewal notices, invoices or customer service notifications. We may also send you service-related announcements when it is necessary to do so; for instance, if our service is temporarily suspended for maintenance, or the delivery of a product is delayed or there is some service issue with something you may have ordered.  If you are a print subscriber to our magazine and do not wish to receive email bills, renewal notices and other communications regarding your magazine subscription by email, you can click <a href="https://secure.customersvc.com/wes/servlet/Show?WESPAGE=am/Services/wes_email.jsp&amp;MSRSMAG=US" target="_blank">here</a> and select this option on the Us Application’s customer service page. Please note that even if you opt out of receiving subscriber communications by email, we may continue to send you subscriber communications by direct mail.</p>
+<h4 id="opt-out-email">(c)  Email Newsletters</h4>
+<p>We may send you our email newsletter(s).  If you wish to unsubscribe from our email newsletter(s), simply follow the unsubscribe instructions at the bottom of the email newsletter.</p>
+<h4 id="email-promotions">(d) Email Marketing Offers</h4>
+<p>We may send you promotional emails regarding special offers about our products and services or on behalf of third party marketing partners who we think can offer services and products of interest to you. We may also share your name and email address and certain other information, such as when you first subscribed, with reputable companies that provide marketing offers through email.  . If you do not want us to send you emails regarding special promotions or offers or share your Personal Information with other companies so that they can send you email offers, simply follow the unsubscribe instructions that are located at the bottom of those emails.   Please note that even if you opt out of receiving promotional e-mails, we may continue to send you electronic service notifications that are related to your account(s) and other products and services you have requested or in which you are currently enrolled.</p>
+<h4 id="mail-promotions">(e)  Direct Mail Marketing Offers</h4>
+<p>If you subscribed to our print magazine either by mail, online or other method, we may send you offers through direct mail that we feel might be of interest to you and/or share your name and mailing address and certain other information, such as when you first subscribed, with reputable companies that provide marketing offers through direct mail. If you do not want us to send you any offers from third parties through direct mail or share your Personal Information with other companies so that they can send you direct mail offers about their products and services, please write to us at the street address set forth at the end of this document or click <a href="https://secure.customersvc.com/wes/servlet/Show?WESPAGE=am/Services/wes_email.jsp&amp;MSRSMAG=US" target="_blank">here</a>.     Please note that even if you opt out of receiving promotional direct mail offers, we may continue to send you service notifications by direct mail that are related to your account(s) and other products and services you have requested or in which you are currently enrolled.</p>
+<h4>(f) Reader Surveys</h4>
+<p>We may collect Personal Information from you in connection with voluntary surveys about your readership of our publication, your household/personal characteristics and your purchase behavior.  The information you provide in response to optional survey questions will only be shared in the aggregate with advertisers and partners unless we notify you otherwise at the time of collection. You may always elect not to receive any surveys from us by following the unsubscribe instructions located at the bottom of any survey.</p>
+<h4 id="third-party">(g)  Use of Tracking Technologies (e.g., Cookies) by Third Party Service Providers; Advertising</h4>
+<p>We may work with third parties to provide services on the Us Applications.  For example, we use analytics services supported by third party companies to perform analytics and track trends. We work with other third parties to provide certain functionalities on the Us Applications and to improve the effectiveness of the Us Application and its content. Those third party companies may use Tracking Technologies to collect and store information about you and your usage of the Us Applications and may combine this information with information they collect from other sources.</p>
+<p>If you access the Us Applications through a mobile device or app, we may also share your information with mobile carriers, operating systems and platforms.</p>
+<p>We may use Tracking Technologies to collect information about your usage of the Us Applications to deliver ads that are relevant to you.  We may use information about your visits over time and across the Us Application and other third party web sites, as well as information received from other sources, in order to serve more targeted advertising to you on the Us Applications.</p>
+<p>To provide ads on the Us Applications, we use a variety of third party advertising service providers, including networks, data exchanges, ad servers, analytics providers and others. These third parties may use technology to send, directly to your Device, the advertisements and links that appear on the Us Application. They automatically receive your Device Identifier when this happens. Their tools may also limit the number of times you see the same ad on an Us Application and help measure the effectiveness of advertising campaigns. The third party service providers, as well as the advertisers themselves, may collect and use information about your visits over time and across the Us Application and other third party web sites, as well as information received from other sources, in order to serve more targeted advertising to you on the Us Application. Third parties may also use information gathered from your usage of the Us Application to serve targeted advertisements to you on third party websites and applications.  Google is one of the companies that we use to serve advertising and perform analytics on some of the Us Applications.  We and third party vendors, including Google, use first-party cookies (such as the Google Analytics cookie) and third-party cookies (such as the DoubleClick cookie) together to help implement the above uses of your information.  We also use Google Analytics along with audience data (such as age, gender and interests of users) to help understand users’ visits to the Us Applications and to optimize the content that we serve to users.</p>
+<p>To learn about Google Analytics’ currently available opt-outs for the Web, click <a href="https://tools.google.com/dlpage/gaoptout/" target="_blank">here</a>. To learn more about how Google use cookies in advertising, you can visit the Google ad and content network privacy policy located <a href="http://www.google.com/policies/technologies/ads/" target="_blank">here</a>. You can opt out of receiving interest-based Google Ads, or customize the Ads Google shows you, by clicking <a href="https://www.google.com/settings/ads" target="_blank">here</a>.</p>
+<p>We do not control Tracking Technologies used by third parties, and their use may be governed by the privacy policies of the third parties employing the Tracking Technologies.  You should consult the respective privacy policies of these third parties to see your options for opting out of their use of such devices.  If you would like more information regarding which third party companies we use to provide advertising and other services and who may be serving cookies or using other Tracking Technologies on the Us Applications, please click <a href="/services/thirdpartytechnologies">here</a>.</p>
+<p>Some of the advertising service providers may be members of the Network Advertising Initiative, which offers a single location to opt out of ad targeting from member companies. If you opt-out of receiving targeted ads in this manner, you will continue to receive advertising messages after you opt-out, but they will not be customized to you based on your use of the Us Application and/or third party websites. If you would like more information about advertisers&#8217; use of tracking technologies and about your option not to accept these cookies, you can go to <a href="http://www.networkadvertising.org" target="_blank">http://www.networkadvertising.org</a>. If you would like to learn more about how interest-based information is collected, whether the companies we use are part of an industry network regarding behavioral advertising and to know your choices about not having information used in this manner, you can go to <a href="http://www.aboutads.info" target="_blank">http://www.aboutads.info</a>. Please note that the-opt out is cookie-based and will only affect the specific computer and browser on which the opt-out is applied.</p>
+<h4 id="do-not-track">(h) Browser Do Not Track Signals</h4>
+<p>Some third party browsers provide “do not track” machine readable signals for websites which are automatically applied by default and therefore do not necessarily reflect our visitor’s choice as to whether they wish to receive advertisements tailored to their interests.  As a result we do not respond to these signals.  Go to <a href="http://www.networkadvertising.org" target="_blank">http://www.networkadvertising.org</a> or <a href="http://www.aboutads.info" target="_blank">http://www.aboutads.info</a> if you wish to learn more about your options to not accept tracking cookies for the purpose of receiving targeted interest-based advertisements.</p>
+<h4>(i) Co-branded Areas</h4>
+<p>Certain areas of the Us Application may be provided to you in association with third parties, such as retailers, sponsors or advertisers (“<strong>Co-Branded Areas</strong>”), and may request that you disclose Personal Information.  Such Co-Branded Areas will identify the third party.  If you elect to register for or purchase products and/or services at Co-Branded Areas, you may be providing your information to both us and the third party. Your personal information will be subject to this Privacy Policy as well as the privacy policy and practices of such third party.  We are not responsible for the privacy policy or practices of such third party.  You should consult the respective privacy policies of those third parties to learn more about their privacy practices.</p>
+<h4>(j) Sweepstakes, Contests and Promotions</h4>
+<p>We may offer sweepstakes, contests, and other promotions (any, a “Promotion”) that may require registration.  By participating in a Promotion, you are agreeing to official rules that govern that Promotion.  If you choose to enter a Promotion, Personal Information may be used and disclosed as set forth in this Privacy Policy, as well as in connection with the administration of such Promotion and as required by law or permitted by the Promotion’s official rules.</p>
+<h4>(k) Administrative and Legal Reasons</h4>
+<p>We may access, use, preserve, transfer and disclose your information (including Personal Information), including disclosure to third parties: (i) to satisfy any applicable law, regulation, subpoenas, governmental requests or legal process if in our good faith opinion such is required or permitted by law; (ii) to protect and/or defend the Us Application’s Terms of Use or other policies applicable to the our Services, including investigation of potential violations thereof; (iii) to protect the safety, rights, property or security of the Us Application or any third party; and/or (iv) to detect, prevent or otherwise address fraud, security or technical issues.  Further, we may use Device Identifiers and other information to identify users, and may do so in cooperation with third parties such as copyright owners, internet service providers, wireless service providers and/or law enforcement agencies, including disclosing such information to third parties, all in our discretion.  Such disclosures may be carried out without notice to you.</p>
+<h4>(l) Sale or Transfer of Business or Assets</h4>
+<p>We may share your information, including your Personal Information and Usage Information with our parent, subsidiaries and affiliates for internal business purposes.  In addition, in the event that we, or any of our businesses, are sold or disposed of as a going concern, whether by merger, sale of assets or otherwise, or in the event of an insolvency, bankruptcy or receivership, Personal Information may be one of the assets sold or merged in connection with that transaction.  Information about our visitors and registered users may also need to be disclosed in connection with a commercial transaction where we or any one of our businesses are seeking financing, investment, support or funding.  In such transactions, use of such information will be subject to the rights and obligations as described in this Privacy Policy.</p>
+<h3>3.  Information You Disclose Publicly</h3>
+<p>The Us Application may permit you to submit photographs, user profiles, writings, music, video, questions, comments or other content, which may include Personal Information (collectively, “<strong>User Content</strong>”).  We or others may reproduce, publish, distribute or otherwise use User Content in any media or format (currently existing or hereafter developed).  Others may have access to this User Content and may have the ability to share it with third parties.  Please think carefully before deciding what information you share, including Personal Information, in connection with your User Content.  Please note that we do not control who will have access to the information that you choose to make public, and cannot ensure that parties who have access to such publicly available information will respect your privacy or keep it secure.  This Privacy Policy does not apply to any information that you disclose publicly, share with others or otherwise upload onto the Us Application.  We are not responsible for the accuracy, use or misuse of any content or information that you disclose or receive through the Us Application.  For the full terms and conditions regarding User Content you submit to the Us Application, please review our <a href="terms">Terms of Use</a>.</p>
+<h3>4.  Third Party Content and Links To Third Party Sites</h3>
+<p>The Us Application may contain content that is supplied by a third party, and those third parties may collect Us Application usage information and your Device Identifier when web pages from the Us Application are served to your browser.  In addition, when you are on the Us Application you may be directed to other web sites that are operated and controlled by third parties that we do not control.  We are not responsible for the privacy practices employed by any of these third parties or third party web sites.  For example, if you “click” on a banner advertisement, the “click” may take you off the Us Application onto a different web site.  These other web sites may send their own cookies to you, independently collect data or solicit Personal Information and may or may not have their own published privacy policies.  We encourage you to note when you leave our Us Application and to read the privacy statements of all third party web sites before submitting any Personal Information to those sites.</p>
+<h3>5.  Consent to Transfer Information To The United States</h3>
+<p>The Us Application is operated in the United States and is intended for users located in the United States.  If you are located anywhere outside of the United States, please be aware that information we collect, including Personal Information, will be transferred to, processed and stored in the United States.  The data protection laws in the United States may differ from those of the country in which you are located, and your Personal Information may be subject to access requests from governments, courts, or law enforcement in the United States according to the laws of the United States. By using the Us Application or providing us with any information, you consent to the transfer, processing and storage of your information in the United States.  You are also consenting to the application of United States federal and New York state law in all matters concerning the Us Application and this Privacy Policy.</p>
+<h3>6. Children&#8217;s Privacy</h3>
+<p>The Us Application is for general audiences and is not intended for use by children.  We do not knowingly collect any Personal Information from children younger than the age of thirteen (13), and we will delete any Personal Information collected that we later determine to be from a user younger than the age of thirteen (13).  If you believe a child under the age of thirteen (13) has disclosed Personal Information to us, please write to us at the street address provided in the “Contact Us” section set forth at the end of this Privacy Policy.</p>
+<h3>7.  Security</h3>
+<p>We have incorporated safeguards to help prevent the loss, misuse and alteration of information under our control.  However, no data transmission over the Internet, wireless transmission or electronic storage of information can be guaranteed to be 100% secure and we cannot anticipate all potential misuse of data over the Internet.  Please note that we cannot ensure the security of any information you transmit to us, and your use of the Us Application indicates that you are willing to assume this risk.</p>
+<h3>8.  Changes to the Privacy Policy</h3>
+<p><a id="california-policy"></a></p>
+<p>We reserve the right to change this Privacy Policy at any time without notice to you.  Any changes will be effective immediately upon the posting of the revised Privacy Policy.</p>
+<h3>9. Your California Privacy Rights: A Notice to California Users <span class="paren">(California Civil Code Section 1798.83)</span></h3>
+<p>California&#8217;s &#8220;Shine the Light&#8221; law, Civil Code section 1798.83, requires certain businesses to respond to requests from California customers asking about the business&#8217; practices related to disclosing personal information to third parties for the third parties&#8217; direct marketing purposes. Alternately, such businesses may have in place a policy not to disclose personal information of customers to third parties for the third parties’ direct marketing purposes if the customer has exercised an option to opt-out of such information-sharing. We have such a policy in place.</p>
+<p><strong>Opting out of Direct Mail Marketing</strong>:  If you do not want us to send you any offers from third parties through direct mail or share your Personal Information with other companies so that they can send you direct mail offers about their products and services, please write to us at the street address set forth at the end of this document or click <a href="https://secure.customersvc.com/wes/servlet/Show?WESPAGE=am/Services/wes_email.jsp&amp;MSRSMAG=US" target="_blank">here</a>. If you write to us, please include your account number, name and mailing address in the body of your letter, and please include “Direct Mail Opt-Out” in the subject line.</p>
+<p><strong>Opting out of Email Marketing</strong>:  If you do not want us to send you emails regarding special promotions or offers or share your Personal Information with other companies so that they can send you emails about their products and services, simply follow the unsubscribe instructions that are located at the bottom of those emails.</p>
+<p>California customers may request further information about our approach to this law by writing to us at the address provided in the “Contact Us” section located at the end of this document.</p>
+<h3>10. Disputes; No Rights of Third Parties</h3>
+<p>If you choose to access the Us Application, subscribe to our magazine or use any of our Services, any dispute over privacy is subject to our Terms of Use, including limitations on damages, resolution of disputes, and application of the laws of the United States, and the State of New York.  This Privacy Policy does not create rights enforceable by third parties.</p>
+<h3 id="magazine-subscription">11.  How Do I Contact You about My Magazine Subscription? How do I Change My Subscription Information?</h3>
+<p>If you have a question or issue relating to your Us Weekly magazine subscription, such as wanting to change your mailing address, cancel a subscription or report a missing issue, please click <a href="https://secure.customersvc.com/wes/servlet/Show?WESPAGE=am/Services/wes_email.jsp&amp;MSRSMAG=US" target="_blank">here</a> to go to the Us Application’s customer service page.</p>
+<h3>12. Contact Us: Privacy Policy Coordinator</h3>
+<p>If you have any questions or concerns about any aspect of this policy, please contact our privacy policy coordinator at the address set forth below.</p>
+<p id="contact" class="addr">Privacy Coordinator<br />Us Weekly<br />1290 Avenue of the Americas<br />New York, NY 10104</p>
+</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+
+	</main>
+
+	<footer class="footer">
+
+		<nav class="menu-footer-container"><ul id="menu-footer" class="nav"><li>© American Media, Inc. 2017</li><li id="menu-item-60486" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-24 current_page_item menu-item-60486"><a href="https://www.usmagazine.com/services-privacypolicy/">Privacy Policy</a></li>
+<li id="menu-item-60642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60642"><a href="https://www.usmagazine.com/services-adchoices/">Ad Choices</a></li>
+<li id="menu-item-60788" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60788"><a href="https://www.usmagazine.com/services-datapolicy/">Data Policy</a></li>
+<li id="menu-item-61056" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61056"><a href="http://www.americanmediainc.com/terms-and-conditions">Terms of Use</a></li>
+<li id="menu-item-723110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723110"><a href="https://www.usmagazine.com/services-contactus/">Contact Us</a></li>
+<li id="menu-item-723109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-723109"><a href="http://www.americanmediainc.com/brands/us-weekly">Media Kits</a></li>
+<li id="menu-item-61992" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61992"><a href="https://www.usmagazine.com/services-faq/">FAQ</a></li>
+<li id="menu-item-62285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62285"><a href="https://www.usmagazine.com/subscribe">Subscribe</a></li>
+<li id="menu-item-731181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731181"><a href="https://www.usmagazine.com/sitemap/">Sitemap</a></li>
+<li id="menu-item-723108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723108"><a href="https://www.usmagazine.com/digital-access/">Digital Access</a></li>
+<li id="menu-item-62893" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62893"><a href="/givegift">Give a Gift</a></li>
+</ul></nav>
+		<p>Part of the American Media Inc. Celebrity News Network.<br>Powered by <a href="https://vip.wordpress.com/?utm_source=vip_powered_wpcom&#038;utm_medium=web&#038;utm_campaign=VIP%20Footer%20Credit&#038;utm_term=www.usmagazine.com" rel="generator nofollow" class="powered-by-wpcom">WordPress.com VIP</a></p>
+
+	</footer>
+	<div id="lightbox-comments" class="lightbox-comments">
+		<div class="lightbox-close"></div>
+	</div>
+
+	<div class="mobile-footer-ad closed">
+		<button class="close"><span aria-hidden="true">Close</span></button>
+
+		
+		<div id="mobile-sticky" class="advertisement js-leader-sticky">
+			<script>
+				if ( window.innerWidth <= 480 ) {
+			googletag.cmd.push(function() {
+				googletag.display('mobile-sticky');
+			});
+			}
+			</script>
+		</div>	</div>
+
+		<script type="text/html" id="tmpl-global-alert">
+		<div class="alert {{ data.theme }}" data-alert="{{ data.id }}" id="alert">
+			<# if( data.url ) {  #>
+			<a href="{{ data.url }}" class="alert-link">
+			<#  } #>
+				<p class="alert-hed">
+				  <span class="alert-hed-title">{{ data.text }}</span>
+				  <span class="time-ago">{{ data.timeAgo }} Ago</span>
+				</p>
+			<# if( data.url ) { #>
+			</a>
+			<# } #>
+			<a href="#" id="alert-close" class="alert-close"></a>
+		</div>
+	</script>
+	
+<script type="text/html" id="tmpl-posts">
+
+	<article class="celebrity-news-article article-box">
+		<a
+			class="celebrity-news-article-link"
+			href="{{ data.link }}"
+			data-track-category="Celebrities"
+			data-track-action="Go to News Article"
+			data-track-label="{{ data.category_name }} News Page | {{ data.link }}"
+		>
+
+			<div class="article-box-image">
+
+					<figure class="celebrity-image--rect img-fit" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+						<div class="img-fit__image-contain">
+							<# if ( data.image && data.image.landscape.fallback ) { #>
+								<img
+									src="{{ data.image.landscape.fallback }}"
+									srcset="{{ data.image.landscape.srcset }}"
+									sizes="100vw"
+									alt="{{ data.title.rendered }}"
+									data-fallback-img="{{ data.image.landscape.fallback }}">
+							<# } #>
+						</div>
+					</figure>
+
+			</div>
+
+			<div class="article-box-content">
+				<div class="article-box-content-inner">
+					<span class="article-box-tag">{{ data.category_name }}</span>
+					<h3 class="article-box-title">{{ data.title.rendered }}</h3>
+				</div>
+			</div>
+		</a>
+	</article>
+
+</script>
+<script type="text/html" id="tmpl-photos">
+
+	<article class="celebrity-photos-article article-box">
+		<a
+			class="celebrity-news-article-link"
+			href="{{ data.link }}"
+			data-track-category="Celebrities"
+			data-track-action="Go to Photos Article"
+			data-track-label="{{ data.category_name }} Photos Page | {{ data.link }}"
+		>
+
+			<div class="article-box-image">
+
+					<figure class="celebrity-image--rect img-fit" itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+						<div class="img-fit__image-contain">
+							<# if ( data.image && data.image.landscape.fallback ) { #>
+								<img
+									src="{{ data.image.landscape.fallback }}"
+									srcset="{{ data.image.landscape.srcset }}"
+									sizes="100vw"
+									alt="{{ data.title.rendered }}"
+									data-fallback-img="{{ data.image.landscape.fallback }}">
+							<# } #>
+						</div>
+					</figure>
+
+			</div>
+
+			<div class="article-box-content">
+				<div class="article-box-content-inner">
+					<span class="article-box-tag">Photos</span>
+					<h3 class="article-box-title">{{ data.title.rendered }}</h3>
+				</div>
+			</div>
+		</a>
+	</article>
+
+</script>
+<script type="text/html" id="tmpl-video-overlay">
+		<header class="video-overlay-header">
+			<h1>
+				<a
+					class="tracked-offpage"
+					data-track-category="Video Overlay"
+					data-track-action="Go To Content"
+					data-track-label="{{ data.link }}"
+					href="{{ data.link }}"
+				>
+					{{ data.title }}
+				</a>
+			</h1>
+		</header>
+		<ul class="video-overlay-social nav">
+			<li>
+				<a
+					class="social-icon social-icon-facebook tracked-onpage"
+					href="{{ data.link }}"
+					data-track-category="HP"
+					data-track-action="Share Facebook"
+					data-track-label="Video Overlay"
+					data-share-type="facebook"
+				>
+					Share
+				</a>
+			</li>
+			<li>
+				<a
+					class="social-icon social-icon-twitter tracked-onpage"
+					href="{{ data.link }}"
+					data-tweet-text="{{ data.title }}"
+					data-tweet-via="UsWeekly"
+					data-share-type="twitter"
+					data-track-category="HP"
+					data-track-action="Share Twitter"
+					data-track-label="Video Overlay"
+				>
+					Tweet
+				</a>
+			</li>
+
+			<li>
+				<a
+					class="social-icon social-icon-email tracked-onpage"
+					data-track-category="HP"
+					data-track-action="Share Email"
+					data-track-label="Video Overlay"
+					href="mailto:?to=&amp;subject=Us Weekly: {{ data.title }}&amp;body=Hey, I saw this on Us Weekly and thought you’d be interested in it: {{ data.link }}?utm_source%3Demail%26utm_medium%3Dsocial%26utm_campaign%3Demailshare"
+				>
+					Email
+				</a>
+			</li>
+		</ul>
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201803'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var uswl10n = {"rest_endpoint":"https:\/\/www.usmagazine.com\/wp-json\/wp\/v2\/","category":"","limit_recirculation":"","text_Top5":"Top 5","text_Stories":"Stories","current_post_id":"24","server_timezone":"-5","time_increments":{"second":"second","minute":"minute","hour":"hour","day":"day","week":"week","month":"month","year":"year","pluralizer":"s"}};
+var gptNetwork = {"ID":"\/4216\/usweekly\/"};
+var recirculationSettings = {"zergnet_id":"49505","zergnet_wrap":"","has_ads":"1","sharethrough":"1","sharethrough_repeat":"1","box_inline":"1","teads":"1"};
+var iframeURL = "https:\/\/www.usmagazine.com\/iframe\/";
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var recircl10n = {"rest_endpoint":"https:\/\/www.usmagazine.com\/wp-json\/wp\/v2\/","category":"","limit_recirculation":"","text_Top5":"Top 5","text_Stories":"Stories","current_post_id":"24"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var agal10n = {"rest_endpoint_alerts":"https:\/\/www.usmagazine.com\/wp-json\/ami\/v1\/global-alerts","server_timezone":"-5","time_increments":{"second":"second","minute":"minute","hour":"hour","day":"day","week":"week","month":"month","year":"year","pluralizer":"s"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.usmagazine.com/_static/??-eJylj0EOwjAMBD9Eaooo4oIQT0kTq3Vxkip2VPX3RMAB5crJsrw73oVtNRQdF48Ci0CJHrO4lLELFLtFDtAo6lqU+PfsUlSMCjpjqKIiZkN88g5WBPXt8iQKE6fRcjfWJ4yt2THVYUIxK5eJooDMNqNvIRkdZVfYKqX4J+sT6MGYVRpUUxnDiP7b+R5u/dBfTsd+uJ6XF0l4dyY='></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201803.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.7.1',blog:'135406237',post:'24',tz:'-5',srv:'www.usmagazine.com'} ]);
+	_stq.push([ 'clickTrackerInit', '135406237', '24' ]);
+</script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6f7d4f2036","applicationID":"62887297","transactionName":"Zl1bZUYFC0cCBUxdX18XeFJADQpaTBZZU1U=","queueTime":0,"applicationTime":101,"atts":"ShpMEw4fGBhBBxoOS0xF","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

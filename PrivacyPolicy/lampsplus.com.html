@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#"><head><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c32e13f77b","applicationID":"9389191","transactionName":"NAZXZhZTV0BZVUULWw1MdGE0HU4cQ2FYCV0iE0VPS0luWlNfYQNTBipxT0tJblpTX2EDUwYoUEsZ","queueTime":0,"applicationTime":80,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><title>Your Privacy and Security - Lamps Plus</title>
+<meta name="GENERATOR" content="Telligent Community 9" /><meta name="robots" content="index,follow" /><link rel="alternate" href="http://m.lampsplus.com/info-center/w/help-and-policies/19/your-privacy-and-security/"   />
+<meta property="og:site_name" content="Lamps Plus" /><link rel="alternate" type="application/rss+xml" title=" (RSS 2.0)" href="http://www.lampsplus.com/info-center/rss"  /><link rel="alternate" type="application/rss+xml" title=" Wikis (RSS 2.0)" href="http://www.lampsplus.com/info-center/w/rss"  /><link rel="alternate" type="application/rss+xml" title="Your Privacy and Security (RSS 2.0)" href="http://www.lampsplus.com/info-center/w/help-and-policies/19/your-privacy-and-security/rss"  /><script type="text/javascript" src="/info-center/utility/jquery/jquery.min.js?LastChanged=636209776820000000"></script><script type="text/javascript" src="/info-center/utility/jquery/telligent.glow.min.js?LastChanged=636209776820000000"></script><script type="text/javascript" src="/info-center/utility/jquery/jquery.validate.min.js?LastChanged=636209776820000000"></script><script type="text/javascript">
+// <![CDATA[
+try { jQuery.extend(jQuery.validator.messages,{required:'This field is required.',remote:'Please fix this field.',date:'Please enter a valid date.',dateISO:'Please enter a valid date (ISO).',number:'Please enter a valid number.',digits:'Please enter only digits.',creditcard:'Please enter a valid credit card number.',equalTo:'Please enter the same value again.',accept:'Please enter a value with a valid extension.',maxlength:jQuery.validator.format('Please enter no more than {0} characters.'),minlength:jQuery.validator.format('Please enter at least {0} characters.'),rangelength:jQuery.validator.format('Please enter a value between {0} and {1} characters long.'),range:jQuery.validator.format('Please enter a value between {0} and {1}.'),max:jQuery.validator.format('Please enter a value less than or equal to {0}.'),min:jQuery.validator.format('Please enter a value greater than or equal to {0}.')}); } catch(e) { };
+// ]]>
+</script><script type="text/javascript" src="/info-center/utility/jquery/telligent.evolution.min.js?LastChanged=636209776820000000"></script><script type="text/javascript">
+// <![CDATA[
+try { jQuery.telligent.evolution.site.configure({baseUrl:'\/info-center\/',isRemote:false,remoteUrlEncodePattern:'',datePattern:{
+	pattern: '<Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec> <1-31>, <0001-9999>',
+    yearIndex: 2,
+    monthIndex: 0,
+    dayIndex: 1,
+    hourIndex: -1,
+    minuteIndex: -1,
+    amPmIndex: -1,
+    parseDateOnLoad: true
+},dateTimePattern:{
+	pattern: '<Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec> <1-31>, <0001-9999> <1-12>:<00-59> <AM,PM>',
+    yearIndex: 2,
+    monthIndex: 0,
+    dayIndex: 1,
+    hourIndex: 3,
+    minuteIndex: 4,
+    amPmIndex: 5,
+    parseDateOnLoad: true
+},timePattern:{
+	pattern: '<1-12>:<00-59> <AM,PM>',
+    yearIndex: -1,
+    monthIndex: -1,
+    dayIndex: -1,
+    hourIndex: 0,
+    minuteIndex: 1,
+    amPmIndex: 2,
+    parseDateOnLoad: true
+},monthNames:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],dayNames:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],authorizationCookieName:'AuthorizationCookie',defaultErrorMessage:'An error occurred.  Please try again or contact your administrator.',defaultMultiErrorMessagePrefix:'The following errors occurred:  ',silverlightFileUploadEnabled:true,accessingUserId:2101,accessingUserIsSystemAccount:true});
+jQuery.extend($.fn.evolutionUserFileTextBox.defaults,{removeText:'Remove',selectText:'Select\/Upload...',noFileText:'No File Selected'});
+jQuery.telligent.evolution.navigationConfirmation.configure({message:'Unless you save before leaving this page, you will lose any changes you have made.'});
+jQuery.telligent.evolution.validation.registerExtensions({passwordInvalidMessage:'Password contains invalid chars ...',passwordRegex:'^.*$',emailInvalidMessage:'Your email address is invalid.',emailRegex:'^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$',usernameInvalidMessage:'Your sign in name does not meet the requirements for this site.',usernameRegex:'^[a-zA-Z0-9_\\- @\\.]+$',emailsInvalidMessage:'One or more emails is invalid',urlInvalidMessage:'URL not in correct format',urlRegex:'^((http|https|mailto|mms):|\/|#|~\/)'});
+jQuery.extend(jQuery.fn.evolutionLike.defaults,{likeText:'Like',unlikeText:'Unlike',modalTitleText:'People who like this',modalShowMoreText:'Show More',whoLikesOtherText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> likes this',whoLikesOtherTwoText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> and <span class=\"who-likes\">1 other<\/span> like this',whoLikesOtherMultipleText:'<a href=\"{user_profile_url}\" class=\"internal-link view-user-profile\">{user_display_name}<\/a> and <span class=\"who-likes\">{count} others<\/span> like this',whoLikesAccessingText:'You like this',whoLikesAccessingTwoText:'You and <span class=\"who-likes\">1 other<\/span> like this',whoLikesAccessingMultipleText:'You and <span class=\"who-likes\">{count} others<\/span> like this'});
+jQuery.extend(jQuery.fn.evolutionInlineTagEditor.defaults,{editButtonText:'Edit tags',selectTagsText:'Select tags',saveTagsText:'Save',cancelText:'Cancel'});
+jQuery.extend(jQuery.fn.evolutionStarRating.defaults,{titles:['Terrible','Poor','Fair','Average','Good','Excellent'],ratingMessageFormat:'Average rating: {rating} out of {count} ratings.'});
+jQuery.extend(jQuery.fn.evolutionModerate.defaults,{moderateLinkText:'moderate',reportLinkText:'Report as abusive',reportedLinkText:'Reported as abusive',reportedNotificationMessageText:'{NAME}\'s post has been reported. <strong>Thank you for your feedback.<\/strong>'});
+jQuery.extend(jQuery.fn.evolutionBookmark.defaults,{deleteBookmarkText:'Unbookmark {content_type_name}',addBookmarkText:'Bookmark this {content_type_name}',processingText:'...'});
+jQuery.extend($.fn.evolutionCodeEditor.defaults,{editorUrl:'\/info-center\/cfs-file\/__key\/system\/h-0000000013a4e0a3-http-wwwlampspluscom-80-ace\/ace.js'});
+jQuery.extend(jQuery.telligent.evolution.ui.components.forumvotes.defaults,{modalTitleTextThread:'People who had this question',modalTitleTextReply:'People helped by this answer',modalShowMoreText:'People helped by this answer'});
+jQuery.extend(jQuery.fn.evolutionFeature.defaults,{editFeatureText:'Edit Feature',addFeatureText:'Feature ',processingText:'...'});
+} catch(e) { };
+// ]]>
+</script><script type="text/javascript">jQuery(function($) {
+	$.telligent.evolution.messaging.subscribe('userActionFollowToggle', function(data) {
+		var e = $(data.target);
+		var userId = e.data('userid'), accessingUserId = e.data('accessinguserid'), v = e.data('follow');
+		e.html('...');
+		if (v) {
+			$.telligent.evolution.post({
+				url: $.telligent.evolution.site.getBaseUrl() + 'api.ashx/v2/users/{FollowerId}/following.json',
+				data: { FollowerId: accessingUserId, FollowingId: userId },
+				dataType: 'json',
+				success: function(response) { e.html('Unfollow').data('follow', false); },
+				error: function(response) {  e.html('Follow').data('follow', true); }
+			});
+		} else {
+			$.telligent.evolution.del({
+				url: $.telligent.evolution.site.getBaseUrl() + 'api.ashx/v2/users/{FollowerId}/following/{FollowingId}.json',
+				data: { FollowerId: accessingUserId, FollowingId: userId },
+				dataType: 'json',
+				success: function(response) { e.html('Follow').data('follow', true); },
+				error: function(response) {  e.html('Unfollow').data('follow', false); }
+			});
+		}
+	});
+});</script><script type="text/javascript">jQuery(function($) {
+	$.telligent.evolution.messaging.subscribe('userActionFriendshipToggle', function(data) {
+		var e = $(data.target);
+		var userId = e.data('userid'), accessingUserId = e.data('accessinguserid'), v = parseInt(e.data('friendship'));
+		var t = e.html();
+		e.html('...');
+		if (v == 0) {
+				e.html(t);
+				$.glowModal('/info-center/user/requestfriend?UserId=' + userId + '', {width:670,height:390});
+		} else if (v == 3) {
+				$.telligent.evolution.post({
+					url: $.telligent.evolution.site.getBaseUrl() + 'api.ashx/v2/users/{RequestorId}/friends.json',
+					data: { RequestorId: accessingUserId, RequesteeId: userId, RequestMessage: ' '},
+					dataType: 'json',
+					success: function(response) { window.location = window.location; },
+					error: function(response) {  e.html(t); }
+				});
+		} else if (v == 1 || v == 2 || v == 4) {
+			if (v == 4 || (v == 1 && window.confirm('Are you sure you want to cancel this friendship request?')) || (v == 2 && window.confirm('Are you sure you want to unfriend this person?'))) {
+				$.telligent.evolution.del({
+					url: $.telligent.evolution.site.getBaseUrl() + 'api.ashx/v2/users/{RequestorId}/friends/{RequesteeId}.json',
+					data: { RequestorId: accessingUserId, RequesteeId: userId },
+					dataType: 'json',
+					success: function(response) { window.location = window.location; },
+					error: function(response) {  e.html(t); }
+				});
+			} else { e.html(t); }
+		}
+	});
+});</script><script type="text/javascript">
+(function($){
+$.extend($.fn.evolutionUpDownVoting.defaults,{voteDownMessage:'Vote against this idea',voteUpMessage:'Vote for this idea',loginMessage:'Sign in to vote on ideas',noPermissionMessage:'You do not have permission to vote for this idea',notGroupMemberMessage:'Join this group to vote on this idea',deleteMessage:'Remove your vote for this idea',readOnlyMessage: 'Voting on this idea has been disabled',switchToDownVoteMessage: 'Vote against this idea instead of for it',switchToUpVoteMessage: 'Vote for this idea instead of against it' });}(jQuery));
+</script>
+<script type="text/javascript">(function($){ $.telligent.evolution.media.defaults.endpoint = 'http://www.lampsplus.com/info-center/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.FileViewerEndpoint%2C%20Telligent.Evolution.Api'; }(jQuery));</script><script type="text/javascript">(function($){ $.telligent.evolution.preview.defaults.endpoint = 'http://www.lampsplus.com/info-center/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.WebPreviewEndpoint%2C%20Telligent.Evolution.Api'; }(jQuery));</script><script type="text/javascript">(function($){ $.fn.evolutionComposer.plugins.mentions.defaults.mentionablesEndpoint = 'http://www.lampsplus.com/info-center/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.MentionablesEndpoint%2C%20Telligent.Evolution.Api'; }(jQuery));</script><script type="text/javascript">(function($){ $.telligent.evolution.language.defaults.dateEndpoint = 'http://www.lampsplus.com/info-center/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.DateFormattingEndpoint%2C%20Telligent.Evolution.Api'; }(jQuery));</script><script type="text/javascript">(function($){ $.fn.evolutionUserFileTextBox.defaults.endpoint = 'http://www.lampsplus.com/info-center/callback.ashx?__type=Telligent.Evolution.Api.Plugins.Endpoints.UserFileTextBoxEndpoint%2C%20Telligent.Evolution.Api'; }(jQuery));</script>
+<style>
+.contextual-administration-handle::after {
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;
+	background-image: url('/info-center/cfs-file/__key/defaultwidgets/fd266454714b4b3c9b7194d8b1bf9741-63df45f4dd4647c7821531bc63994672/edit.svg');
+}
+#_tc_ap.contextual-administration-panel-container .contextual-administration-panel-wrapper .contextual-panel .contextual-panel-heading .navigation-list .search a {
+	background-image: url('/info-center/cfs-file/__key/defaultwidgets/fd266454714b4b3c9b7194d8b1bf9741-63df45f4dd4647c7821531bc63994672/glass.svg');
+	background-repeat: no-repeat;
+}
+#_tc_ap.contextual-administration-panel-container .contextual-administration-panel-wrapper .contextual-panel .contextual-panel-heading .navigation-list .close a {
+	background-image: url('/info-center/cfs-file/__key/defaultwidgets/fd266454714b4b3c9b7194d8b1bf9741-63df45f4dd4647c7821531bc63994672/cross.svg');
+	background-repeat: no-repeat;
+}
+#_tc_ap.contextual-administration-panel-container .contextual-administration-panel-wrapper .contextual-panel .contextual-panel-heading .navigation-list .back a .icon {
+	background-image: url('/info-center/cfs-file/__key/defaultwidgets/fd266454714b4b3c9b7194d8b1bf9741-63df45f4dd4647c7821531bc63994672/back.svg');
+	background-repeat: no-repeat;
+}
+</style>
+
+
+
+<script type="text/html" id="fragment-63df45f4dd4647c7821531bc639946721798448334_categoriesTemplate">
+						<a href="#"  class="ui-tourtip contextual-administration-handle" data-tourtipkey="t;9EXfY0bdx0eCFTG8Y5lGcg;NNHKj3l4Be8gRk6QmqXpyA" data-tourtipmessage="Manage your community"  data-tourtipindex="100" >
+			<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>
+		</a>
+	</script>
+
+<script type="text/html" id="fragment-63df45f4dd4647c7821531bc639946721798448334_panelContainerTemplate">
+	<div id="_tc_ap" class="contextual-administration-panel-container">
+	</div>
+</script>
+
+<script type="text/html" id="fragment-63df45f4dd4647c7821531bc639946721798448334_panelLoadingIndicatorTemplate">
+	<div class="contextual-administration-panel-loading">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+</script>
+
+<script type="text/html" id="fragment-63df45f4dd4647c7821531bc639946721798448334_panelTemplate">
+	<div class="contextual-administration-panel-wrapper" data-panelid="<%= panelId %>" data-namespace="<%: namespace %>">
+		<div class="contextual-panel <%= type %> <%= cssClass %>">
+			<div class="contextual-panel-heading">
+				<ul class="navigation-list">
+					<% if(backUrl && backLabel) { %>
+						<li class="navigation-list-item <%= (backUrl == '#_cptype=root' ? type : type) %> back">
+							<a href="<%: backUrl %>" class="ui-tip" data-tip="Back">
+								<span class="icon">&lt;</span> <span class="label ui-squeezetext" data-minsize="11"><%= backLabel %></span>
+							</a>
+						</li>
+					<% } else if (backLabel) { %>
+						<li class="navigation-list-item <%= (backUrl == '#_cptype=root' ? type : type) %> back">
+							<a href="#" class="ui-tip" data-tip="Back" onclick="window.history.back(); return false;">
+								<span class="icon">&lt;</span> <span class="label ui-squeezetext" data-minsize="11"><%= backLabel %></span>
+							</a>
+						</li>
+					<% } %>
+					<li class="navigation-list-item search"><a href="#" class="ui-tip" data-tip="Search">Search</a></li>
+					<li class="navigation-list-item close"><a href="#" data-messagename="contextual.shell.close" class="ui-tip" data-tip="Close">&times;</a></li>
+				</ul>
+				<h3 class="name ui-squeezetext ui-tip" data-minsize="11"><%= (name || '') %></h3>
+				<div class="custom-panel-heading-content"></div>
+				<div class="contextual-panel-heading-search">
+					<input type="text" placeholder="Search" />
+					<a href="#" class="exit-search ui-tip" data-tip="Close Search">&times;</a>
+				</div>
+			</div>
+			<div class="contextual-panel-content <%= contentClass %>">
+				<%= (typeof content === "string" ? content : "") %>
+			</div>
+			<div class="contextual-panel-content-search-results">
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/html" id="fragment-63df45f4dd4647c7821531bc639946721798448334_customPanelTemplate">
+	<div class="contextual-administration-panel-wrapper" data-panelid="<%= panelId %>" data-namespace="<%: namespace %>" data-rootpanelid="<%= (rootPanelId || '') %>">
+		<div class="contextual-panel <%= cssClass %>">
+			<div class="contextual-panel-heading">
+				<ul class="navigation-list">
+					<% if(backUrl && backLabel) { %>
+						<li class="navigation-list-item back">
+							<a href="<%: backUrl %>" class="ui-tip" data-tip="Back">
+								<span class="icon">&lt;</span> <span class="label ui-squeezetext" data-minsize="11"><%= backLabel %></span>
+							</a>
+						</li>
+					<% } %>
+					<li class="navigation-list-item close"><a href="#" data-messagename="contextual.shell.close" class="ui-tip" data-tip="Close">&times;</a></li>
+				</ul>
+				<h3 class="name ui-squeezetext ui-tip" data-minsize="11"><%= (name || '') %></h3>
+				<div class="custom-panel-heading-content"></div>
+			</div>
+			<div class="contextual-panel-content <%= contentClass %>">
+				<%= (typeof content === "string" ? content : "") %>
+			</div>
+		</div>
+	</div>
+</script>
+
+<script type="text/html" id="fragment-63df45f4dd4647c7821531bc639946721798448334_loadingIndicatorTemplate">
+	<div class="scrollable-loading-indicator">Loading</div>
+</script>
+
+<script type="text/javascript" src="/info-center/cfs-file/__key/defaultwidgets/fd266454714b4b3c9b7194d8b1bf9741-63df45f4dd4647c7821531bc63994672/ui.js"></script>
+<script type="text/javascript">
+// only show contextual shell in top-most window
+if (window === window.top) {
+	jQuery(document).ready(function(j){
+		jQuery.telligent.evolution.widgets.contextualPanelShell.register({
+			categoriesHandleTemplateId: '$core_v2_encoding.JavascriptEncode($categoriesHandleTemplateId)',
+			rootCategoriesTemplateId: 'fragment-63df45f4dd4647c7821531bc639946721798448334_categoriesTemplate',
+			panelContainerTemplateId: 'fragment-63df45f4dd4647c7821531bc639946721798448334_panelContainerTemplate',
+			panelTemplateId: 'fragment-63df45f4dd4647c7821531bc639946721798448334_panelTemplate',
+			loadingIndicatorTemplateId: 'fragment-63df45f4dd4647c7821531bc639946721798448334_loadingIndicatorTemplate',
+			panelLoadingIndicatorTemplateId: 'fragment-63df45f4dd4647c7821531bc639946721798448334_panelLoadingIndicatorTemplate',
+			loadUrl: '/info-center/utility/scripted-file.ashx?_cf=load.vm\u0026_fid=63df45f4dd4647c7821531bc639946721798448334\u0026_ct=plugin\u0026_cp=wikis-page\u0026_ctt=c6108064af6511ddb074de1a56d89593\u0026_ctc=8b26f1cbdeea468eabe636e430026433\u0026_ctn=3d6e61d4437d4c44b12f85e7b2044ebe\u0026_cc=0\u0026_pt=Telligent.Evolution.CoreServices.Administration.Plugins.ContextualPanelServicePlugin%2C%20Telligent.Evolution.Api\u0026_p=administrationUrl%3D%252Finfo-center%252Fadministration%253FreturnUrl%253Dhttp%25253A%25252F%25252Fwww.lampsplus.com%25252Finfo-center%25252Fw%25252Fhelp-and-policies%25252F19%25252Fyour-privacy-and-security%25252F\u0026_pcurl=~%2Fw%2Fhelp-and-policies%2F19%2Fyour-privacy-and-security%2F',
+			searchUrl: '/info-center/utility/scripted-file.ashx?_cf=search.vm\u0026_fid=63df45f4dd4647c7821531bc639946721798448334\u0026_ct=plugin\u0026_cp=wikis-page\u0026_ctt=c6108064af6511ddb074de1a56d89593\u0026_ctc=8b26f1cbdeea468eabe636e430026433\u0026_ctn=3d6e61d4437d4c44b12f85e7b2044ebe\u0026_cc=0\u0026_pt=Telligent.Evolution.CoreServices.Administration.Plugins.ContextualPanelServicePlugin%2C%20Telligent.Evolution.Api\u0026_p=administrationUrl%3D%252Finfo-center%252Fadministration%253FreturnUrl%253Dhttp%25253A%25252F%25252Fwww.lampsplus.com%25252Finfo-center%25252Fw%25252Fhelp-and-policies%25252F19%25252Fyour-privacy-and-security%25252F\u0026_pcurl=~%2Fw%2Fhelp-and-policies%2F19%2Fyour-privacy-and-security%2F',
+			rootPanelUrl: '#_cptype=root',
+			previewPanelUrl: '#_cptype=panel\u0026_cpcontexttype=Theme\u0026_cppanelid=a81369a5-aa60-4034-8a25-07df22cd9c42',
+			customPanelTemplateId: 'fragment-63df45f4dd4647c7821531bc639946721798448334_customPanelTemplate',
+			hasCategories:  true ,
+			supportsExplicitOnly:  false 		});
+	});
+}
+</script>
+	<link rel="stylesheet" href="/info-center/cfs-file/__key/system/h-0000000013a4e0a3-http-wwwlampspluscom-80-css/platform.less" media="screen" />
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="fragment" content="!">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <![if gte IE 9]><link type="text/css" rel="stylesheet" href="http://www.lampsplus.com/info-center/cfs-filesystemfile/__key/themefiles/h-00000000145d4d5f-s-3d6e61d4437d4c44b12f85e7b2044ebe-stylesheetfiles-http-wwwlampspluscom-80/print.css" media="print" /><![endif]><![if gte IE 9]><link type="text/css" rel="stylesheet" href="http://www.lampsplus.com/info-center/cfs-filesystemfile/__key/themefiles/h-00000000145d4d5f-s-3d6e61d4437d4c44b12f85e7b2044ebe-stylesheetfiles-http-wwwlampspluscom-80/handheld.less" media="only screen and (max-width: 570px)" /><![endif]><![if gte IE 9]><link type="text/css" rel="stylesheet" href="http://www.lampsplus.com/info-center/cfs-filesystemfile/__key/themefiles/h-00000000145d4d5f-s-3d6e61d4437d4c44b12f85e7b2044ebe-stylesheetfiles-http-wwwlampspluscom-80/tablet.less" media="only screen and (min-device-width: 571px) and (max-device-width: 1024px) and (orientation: landscape), only screen and (min-device-width: 571px) and (max-device-width: 1024px) and (orientation: portrait)" /><![endif]><link type="text/css" rel="stylesheet" href="http://www.lampsplus.com/info-center/cfs-filesystemfile/__key/themefiles/h-00000000145d4d5f-s-3d6e61d4437d4c44b12f85e7b2044ebe-stylesheetfiles-http-wwwlampspluscom-80/global.css" /><link type="text/css" rel="stylesheet" href="http://www.lampsplus.com/info-center/cfs-filesystemfile/__key/themefiles/h-00000000145d4d5f-s-3d6e61d4437d4c44b12f85e7b2044ebe-stylesheetfiles-http-wwwlampspluscom-80/overrides.less" /><script type="text/javascript" src="http://www.lampsplus.com/info-center/cfs-filesystemfile/__key/themefiles/h-00000000145d4d5f-s-3d6e61d4437d4c44b12f85e7b2044ebe-jsfiles-http-wwwlampspluscom-80/theme.js"></script>
+          <link type="text/css" rel="stylesheet" href="/info-center/dynamic-style?ThemeTypeId=0c647246-6735-42f9-875d-c8b991fe739b&amp;ThemeContextId=00000000-0000-0000-0000-000000000000&amp;PreviewKey=0&amp;Theme=3d6e61d4437d4c44b12f85e7b2044ebe" media="screen,print" />
+        
+          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+          <link type="text/css" rel="stylesheet" href="/info-center/dynamic-style?ThemeTypeId=c6108064-af65-11dd-b074-de1a56d89593&amp;ThemeContextId=8b26f1cb-deea-468e-abe6-36e430026433&amp;PreviewKey=0&amp;Theme=3d6e61d4437d4c44b12f85e7b2044ebe" media="screen,print" />
+        </head>
+<body spellcheck="true"><form name="ctl01" method="post" action="./" id="ctl01">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="bdBftawOTH0CgFmc1XAVmg7h3qTvl09+W5RuFqZnfTD+XS0UpRH+J+46/Yb1e7sGkFKJ8Q==" />
+
+
+<script src="/info-center/WebResource.axd?d=bCZMXRCjkQkUxVb8jh7nUHOCNAOZjdQuM_GB6KxMDFOXmnUbbVTLJnDhQmpPXYSv_XdBpkgls13HuGVbLJeVBOYyollLn4QzgHqzjNeni3BRNQjcdxN-AovxtfW558QDJaeCsTo64cQwMtPOgmOSgFmvu-3HkfLu9MGMnVqXMmV3Hf05FZpcyNRUlBcGPCrXbYC7Jg2&amp;t=636209488720000000" type="text/javascript"></script>
+<script src="/info-center/WebResource.axd?d=3KNc1qD2td3njStYBL12vOkqxTloqll9tClCDv7ATa3GiWpCbEUuo-NccGjuknHI0jr3UvbsbLRF1u8gQk-ni9CQ6hdx29P2x_gJ-Xd56hmLKT9umPg5wEPcOt_ERE-XKFqL9phATO7RtWn7Wq3JR-Azi981&amp;t=636209488740000000" type="text/javascript"></script>
+<script src="/info-center/WebResource.axd?d=XZtWz8xG5Xixtjrd1JSvSd0eEp9gBAdwx0jKHoeyQRARGsv_amGyP-bkkoufKzWNBjyjHdvAevffxdNKeaOndLn1tZj23q7HKADWu0UdfLCt60Vav7xtDXygNCV4ctUZ9BVMoBr7WnKOVrQVtWAwxnqZEDDeKfaMMEhQc9y_j6UrF1t40&amp;t=636209488740000000" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C21772F6" /><div class="header-fragments-header"></div>
+<div class="header-fragments evolution-reflow-container" id="ctl02_ctl01_page"><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content header-top-split-content-footer" id="ctl02_ctl01_layout">
+<div class="layout-region header" id="ctl02_ctl01_header">
+<div class="layout-region-inner header"><div class="content-fragment scripted-content-fragment no-wrapper" id="header-464464144">
+<div class="content-fragment-inner fiji-content-fragment-inner"><div class="content-fragment-content">
+<!-- Process header-footer template -->
+<script>
+// Initially hide the pencil icon and show if user isCustomerService
+document.addEventListener('DOMContentLoaded', function () {
+
+	var pencil = this.querySelector('.ui-tourtip.contextual-administration-handle'),
+		pencilTime = 250,
+		totalWaitTime = 0,
+		maxWaitTime = 60000, // 1 minute
+		pencilInterval = window.setInterval(function () {
+			if (window.lp && window.lp.globals && window.lp.globals.isCustomerService) {
+
+				pencil.style.display = 'block';
+				window.clearInterval(pencilInterval);
+			
+			} else if (window.lp && window.lp.globals && !window.lp.globals.isCustomerService) {
+
+				window.clearInterval(pencilInterval);
+
+			} else {
+
+				totalWaitTime += pencilTime;
+
+			}
+			if (totalWaitTime >= maxWaitTime) {
+
+				window.clearInterval(pencilInterval);
+
+			}
+		}, pencilTime);
+	
+	// hide the pencil by default
+	pencil.style.display = 'none';
+	// Move pencil into black bar...
+	pencil.style.marginTop = "-3px";
+
+});
+/*
+	Use a dollar sign character at your peril
+	It conflicts with Velocity template syntax, use 'jQuery' instead
+*/
+jQuery(function () {
+
+    // Copy telligent jquery to a value, to restore namespaced props into injected jQuery
+    var telligentJQuery = {};
+    for (key in jQuery) {
+        telligentJQuery[key] = jQuery[key];
+    }
+    window.telligentJQuery = telligentJQuery;
+    var injectedjQuery = false;
+    
+    function chainScripts (scripts, n, promise, head) {
+
+        // Patch for global namespace transition
+        if (window.lp !== undefined) { window.lp.blog = window.lp.blog || {}; window.lp.blog.isPatched = true; }
+
+
+		// Load the script at obj[n]
+		if (n < scripts.length) {
+
+			var script = jQuery(scripts[n]),
+				src = script.attr('src');
+
+			if (src) {
+
+				src = src.indexOf('/') == 0 || src.indexOf('http') == 0 ? src : '/' + src;
+				// Modify google conversion js for async version
+				// See: https://developers.google.com/adwords-remarketing-tag/asynchronous/
+				if (src.indexOf('www.googleadservices.com/pagead/conversion.js') > -1) {
+					src = '//www.googleadservices.com/pagead/conversion_async.js';
+				}
+
+				jQuery.ajax({
+					url: src,
+					dataType: 'script',
+					success: function () {
+
+						chainScripts(scripts, ++n, promise);
+						if (jQuery().jquery !== "1.11.3" && !injectedjQuery) {
+	
+						    // Inject telligentJQuery props into injected jQuery that don't exist
+                            for (key in telligentJQuery) {
+                                if (!jQuery.hasOwnProperty(key)) {
+                                    // console.log('new jQuery didn\'t have', key);
+                                    jQuery[key] = telligentJQuery[key];
+                                }
+                            }
+                            // and for telligentJQuery.fn
+                            for (key in telligentJQuery.fn) {
+                                if (!jQuery.fn.hasOwnProperty(key)) {
+                                    // console.log('new jQuery fn didn\'t have', key);
+                                    jQuery.fn[key] = telligentJQuery.fn[key];
+                                } else {
+                                    // console.log('new jQuery fn does have', key);
+                                }
+                            }
+
+                            injectedjQuery = true;
+                        }
+						jQuery('head').append("<!-- script src " + src + " loaded dynamically -->");
+
+					},
+					error: function (xhr, ajaxOptions, thrownError) {
+						chainScripts(scripts, ++n, promise);
+					}
+				});
+
+			} else {
+
+				var inlineScript = jQuery('<script />');
+				inlineScript.text(script.text());
+				if (head) {
+
+					jQuery('head').append(inlineScript);
+					chainScripts(scripts, ++n, promise, true);
+
+				} else {
+
+					jQuery('body').append(inlineScript);
+					chainScripts(scripts, ++n, promise, false);
+
+				}
+
+			}
+
+		} else if (promise) {
+			promise.resolve();
+		}
+	}
+
+	function parseHeaderFooter (response) {
+
+		// Parse string of HTML page
+		// head prep
+		var htmlString = response.split('<head>')[1],
+			split = htmlString.split('/head>'),
+			head = document.createElement('div');
+		head.innerHTML = split[0];
+		var	headArray = jQuery(head),
+			// div containing non script elements and non OG meta and title from head
+			hNonScriptContainer = headArray.find(':not(script, title, meta:not([property=og\\:url]), link[rel=canonical])');
+
+		// array of <script> elements from head
+		if (window.location.hostname === 'localhost') {
+			// exclude render blocking script on localhost
+			var hScripts = headArray.find('script:not([src*=mmcore])');
+		} else {
+			var hScripts = headArray.find('script');
+		}
+
+		// body prep
+		var body = split[1],
+			split = body.split('<body'),
+			formattedBodyHTML = split[split.length - 1].slice(1).replace('</body>', '').replace('</html>', '');
+			body = document.createElement('div');
+		body.innerHTML = formattedBodyHTML;
+		var bodyArray = jQuery(body),
+			// <div> containing content of body, no <script>
+			bContent = jQuery(bodyArray[0]),
+			bScripts = bodyArray.find('script').each(function () {
+				jQuery(this).detach();
+			});
+
+		// Append CSS, append HTML after global CSS is loaded
+		var globalCSS = hNonScriptContainer.filter('link[rel=stylesheet]'),
+			globalCSSCount = globalCSS.length || 0,
+			globalCSSPromise = new jQuery.Deferred();
+
+		// append global bundle css
+		globalCSS.each(function () {
+
+			var href = jQuery(this).attr('href');
+			var link = jQuery('<link rel="stylesheet" href="' + href + '" />');
+			link.on('load error', function () {
+
+				globalCSSCount--;
+				if (globalCSSCount == 0) {
+					globalCSSPromise.resolve();
+				}
+
+			})
+			jQuery('head').append(link);
+
+		});
+
+		// All other non script, non link head
+		hNonScriptContainer.not('link[rel=stylesheet]').each(function () {
+			jQuery('head').append(this);
+		});
+
+		// in case there is no global CSS for some reason
+		if (globalCSSCount == 0) {
+			globalCSSPromise.resolve();
+		}
+
+		// ASYNC: Append JavaScript from head
+		// Let body scripts know head scripts are done loading
+		var hScriptPromise = new jQuery.Deferred();
+		chainScripts(hScripts, 0, hScriptPromise, true);
+		// ASYNC: Append JavaScript from body when head scripts are done
+		var bScriptPromise = new jQuery.Deferred();
+		hScriptPromise.done(function () {
+			chainScripts(bScripts, 0, bScriptPromise, false);
+		});
+
+		// Trigger Google AdWords Remarketing Tag after body scripts
+		bScriptPromise.done(function () {
+
+			if (window.google_trackConversion) {
+				window.google_trackConversion( {
+					google_conversion_id: window.google_conversion_id,
+					google_custom_params: window.google_custom_params,
+					google_remarketing_only: window.google_remarketing_only
+				});
+			}
+
+		});
+
+        // Initialize Global Elements
+		function initGlobalElements () {
+			// Ensure all these have been loaded in memory
+			if (jQuery.fn.devbridgeAutocomplete
+				&& window.lp.utils
+				&& window.lp.utils.initGlobalElements
+				&& window.lp.utils.getAssetCounts
+				&& window.lp.certona
+				&& window.lp.certona.getRecommendedItems
+				&& window.lp.globals.isCustomerConnected !== undefined) {
+
+				window.lp.utils.initGlobalElements();
+				if (window.lp.certona
+                    && window.lp.globals.canShowCertona ) {
+                        window.lp.certona.getRecommendedItems();
+                }
+                
+                // Autosuggest for Blog Search Telligent.Evolution.VelocityExtensions.Widget
+                if (window.registerLampsPlusBlogSearch) {
+                    window.registerLampsPlusBlogSearch();
+                }
+                
+                // Patch HTML
+        		// Prevent DropDownSplash floats from hanging
+        		jQuery('.CategoryDropDowns').each(function () {
+        			jQuery('.DropDownSplash', this).eq(0).addClass('first');
+        		});
+        
+        		// Sign In: Correct embedded return url
+        		var signInLink = jQuery('#hdrSignIn');
+        		if (signInLink.length) {
+        
+        			var originalLinkArray = signInLink.attr('href').split('?'),
+        				originalLink = originalLinkArray[0],
+        				originalQueryArray = originalLinkArray[1].split('&');
+        			for (var i = 0; i < originalQueryArray.length; i++) {
+        				if (originalQueryArray[i].indexOf('ReturnUrl=') + 1) {
+        					originalQueryArray[i] = 'ReturnUrl=' + encodeURIComponent(window.location.pathname + '?' + new Date().getTime());
+        				}
+        			}
+        			var newLink = originalLink + '?' + originalQueryArray.join('&');
+        			signInLink.attr('href', newLink);
+        
+        		}
+        
+        		// fix hospitality header layout
+        		if (window.lp.globals && window.lp.globals.isHospitality) {
+        			jQuery('body').addClass('isHospitality');
+        		}
+                
+                return true;
+			}
+			// Did not init global elements
+			return false;
+		}
+
+          // Load HTML when global CSS has loaded
+		globalCSSPromise.done(function () {
+			
+			// Append HTML and load body JavaScript
+    		var coreMetricsSupport = bContent.find('.coreMetricsSupport'),
+    			lpHeaderHTML = bContent.find('.lpHeader').html(),
+    			lpFooterHTML = bContent.find('.lpFooter').html(),
+    			lpHeader = jQuery('.lpHeader'),
+    			lpFooter = jQuery('.lpFooter');
+    
+    		if (coreMetricsSupport.length) {
+    			lpFooterHTML += coreMetricsSupport.html();
+    		}
+    		
+        	// Load HTML
+			lpHeader.html(lpHeaderHTML).height('auto');
+			lpFooter.html(lpFooterHTML).height('auto');
+	
+	        // Initialize Global Elements
+    		if (!initGlobalElements()) {
+    
+    			var igeElapsedTime = 0,
+    				igeDelay = 250;
+    			
+    			window.igeInterval = setInterval(function () {
+    
+    				var initialized = initGlobalElements();
+    				if (initialized) {
+    					clearInterval(window.igeInterval);
+    				} else {
+    					igeElapsedTime += igeDelay;
+    				}
+    
+    				if (igeElapsedTime >= 60000) {
+    					clearInterval(window.igeInterval)
+    				}
+    
+    			}, igeDelay);
+    		}
+
+	    });
+	}
+
+	function parseError () {
+		console.log('Header and Footer template request failed.');
+		// Autosuggest for Blog Search Telligent.Evolution.VelocityExtensions.Widget
+        if (window.registerLampsPlusBlogSearch) {
+            window.registerLampsPlusBlogSearch();
+        }
+	}
+
+	// Prepare Header and Footer Containers
+	var lpHeader = jQuery('<div class="lpHeader" />').height(162),
+		lpFooter = jQuery('<div class="lpFooter" />').height(343);
+
+	// Conditionally place lpHeader after Telligent Admin Bar
+	if (jQuery('.admin-bar').length) {
+		jQuery('.header-fragments-footer').after(lpHeader);
+	} else {
+		jQuery('body').prepend(lpHeader);
+	}
+	jQuery('body').append(lpFooter);
+
+	// Load Header and Footer
+	if (!jQuery('.lpHeader').children().length && !jQuery('.lpFooter').children().length) {
+		jQuery.ajax({
+			url: '/templates/blog/header-footer.aspx?currenturl=' + encodeURIComponent(location.href) + '&' + new Date().getTime(),
+			success: parseHeaderFooter,
+			error: parseError
+		});
+	}
+
+});
+</script>
+<style type="text/css">
+/* fix "SALE" dropdown caret position */
+#siteShortcuts .sale.hasSubmenu { height: 22px; }
+</style></div>
+<div class="content-fragment-footer"></div>
+</div></div>
+<div id="header-721579043"></div>
+</div>
+</div>
+<div class="layout-region right-sidebar empty" id="ctl02_ctl01_right-sidebar">
+<div class="layout-region-inner right-sidebar"></div>
+</div>
+<div class="layout-region content empty" id="ctl02_ctl01_content">
+<div class="layout-region-inner content"></div>
+</div>
+<div class="layout-region footer empty" id="ctl02_ctl01_footer">
+<div class="layout-region-inner footer"></div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div><div class="header-fragments-footer"></div><div class="content-fragment-page wikis-page evolution-reflow-container" id="ctl02_ctl02_page"><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content header-top-content-left-sidebar-right" id="ctl02_ctl02_layout">
+<div class="layout-region header" id="ctl02_ctl02_header">
+<div class="layout-region-inner header"><div class="content-fragment wiki-bread-crumbs no-wrapper" id="fragment-2063373633">
+<div class="content-fragment-inner fiji-content-fragment-inner"><div class="content-fragment-content">
+
+
+<div class="breadcrumb-list-header"></div>
+<div class="breadcrumb-list">
+  <span class="breadcrumb-item"><a href="http://www.lampsplus.com/">LAMPS PLUS</a></span>
+  <span class="separator"> | </span>
+  <span class="breadcrumb-item"> <a href="http://www.lampsplus.com/info-center/">Info Center</a></span>
+
+        <span class="separator"> | </span>
+    <span class="breadcrumb-item"><a href="http://www.lampsplus.com/info-center/w/help-and-policies">Help, Policies &amp; FAQ</a></span>
+  
+      <span class="separator"> | </span>
+    <span class="breadcrumb-item"><a href="http://www.lampsplus.com/info-center/w/help-and-policies/19/your-privacy-and-security">Your Privacy and Security</a></span>
+  
+  </div>
+<div class="breadcrumb-list-footer"></div>
+      </div>
+<div class="content-fragment-footer"></div>
+</div></div>
+<div id="fragment-2063373634"></div>
+</div>
+</div>
+<div class="layout-region right-sidebar" id="ctl02_ctl02_right-sidebar">
+<div class="layout-region-inner right-sidebar"><div class="content-fragment wiki-page-hierarchy full-border with-header" id="fragment-2063373635">
+<div class="content-fragment-inner fiji-content-fragment-inner"><div class="content-fragment-header"><div>
+HELP, POLICIES & FAQ TOPICS
+      </div></div>
+<div class="content-fragment-content">
+
+
+
+
+
+
+
+
+<div id="fragment-2063373635_hierarchy">
+  
+                                            <div class="hierarchy-children">
+            <ul class="hierarchy-list">
+                      <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies">Help, Policies &amp; FAQs </a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/61/disclosure-on-transparency-in-supply-chains">Disclosure on Transparency in Supply Chains</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/17/frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item with-children">
+                              <a href="#" class="internal-link expand-collapse"><img src="/info-center/cfs-file/__key/defaultwidgets/0117e2efa5ac4456a839b7885237dcbd-6a13c927171a45d2aa83662a1429a93e/collapsed.gif" alt="+" style="border-width:0;" /></a>
+            <a href="/info-center/w/help-and-policies/28/glossary-of-lighting-terms">Glossary of Lighting Terms</a>
+            <input type="hidden" value="28" />
+                        </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/26/how-to-shop-lampsplus-com">How to Shop LampsPlus.com</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/58/lamps-plus-professionals-info">Lamps Plus Professionals Info</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/62/lamps-plus-rewards">Lamps Plus Rewards</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/27/our-120-price-protection-policy">Our 120% Price Protection Policy</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/72/pricing-product-information">Pricing &amp; Product Information</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/18/return-policy">Return Policy</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/69/sale-terms-conditions">Sale Terms &amp; Conditions</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item with-children">
+                              <a href="#" class="internal-link expand-collapse"><img src="/info-center/cfs-file/__key/defaultwidgets/0117e2efa5ac4456a839b7885237dcbd-6a13c927171a45d2aa83662a1429a93e/collapsed.gif" alt="+" style="border-width:0;" /></a>
+            <a href="/info-center/w/help-and-policies/21/shipping-and-delivery">Shipping and Delivery</a>
+            <input type="hidden" value="21" />
+                        </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item without-children">
+                  <a href="/info-center/w/help-and-policies/25/terms-of-use">Terms of Use</a>
+              </div>
+   
+                  </li>
+        <li>
+      <div class="hierarchy-item selected without-children">
+                  <a href="/info-center/w/help-and-policies/19/your-privacy-and-security">Your Privacy and Security</a>
+              </div>
+   
+        
+                </li>
+        </ul>
+      </div>
+      </div>
+
+
+      </div>
+<div class="content-fragment-footer"></div>
+</div></div>
+<div id="fragment-2063373636"></div>
+</div>
+</div>
+<div class="layout-region content" id="ctl02_ctl02_content">
+<div class="layout-region-inner content"><div class="content-fragment page no-wrapper" id="fragment-2063373637">
+<div class="content-fragment-inner fiji-content-fragment-inner"><div class="content-fragment-content">
+
+
+
+
+
+<div class="full-post-header"></div>
+<div class="full-post">
+  <h1 class="title">Your Privacy and Security</h1>
+    
+  
+      <div class="post-content user-defined-markup"><p id="__mce"><a name="Top"></a></p>
+<h2><strong>Our Privacy and Security Policies</strong></h2>
+<p>1. <a href="#policy">Our Privacy Policy</a><br />2. <a href="#email">Privacy and Email Referrals</a><br />3. <a href="#marketing">Marketing Partnerships</a><br />4. <a href="#california">Your California Privacy Rights</a><br />5. <a href="#canadian">Canadian Anti-Spam Law</a><br />6. <a href="#contests">Contests and Promotions</a><br />7. <a href="#product">Product and Store Reviews</a><br />8. <a href="#security">Security</a><br />9. <a href="#fraud">Fraudulent Charge Protection</a><br />10. <a href="#cookies">Cookies </a><br />11. <a href="#optoutemail">Opting Out of Our Email List</a><br />12. <a href="#optoutcatalog">Opting Out of Our Catalog Mailing List </a><br />13. <a href="#children">Protecting Children </a><br />14. <a href="#links">Links to Third Party Sites </a><br />15. <a href="#changes">Policy Changes</a></p>
+<p><a name="policy"></a></p>
+<h2><strong>Our Privacy Policy</strong></h2>
+<p>Lamps Plus, Inc. (&ldquo;Lamps Plus&rdquo; or &ldquo;we&rdquo; or &ldquo;us&rdquo;) has created this privacy policy (this &quot;Privacy Policy&quot;) in order to demonstrate its commitment to user, visitor, subscriber and customer privacy with regard to the Lamps Plus web site located at <a title="Link to the Lamps Plus Website" href="/">LampsPlus.com</a> (the &ldquo;Website&rdquo;). Privacy on the Website is of great importance to us. Because we gather important information from our users, visitors and customers (collectively &ldquo;Subscribers&rdquo; or &ldquo;you&rdquo; or &ldquo;your&rdquo;), we have established this Privacy Policy as a means to communicate our information gathering and dissemination practices. By accessing the Website, you acknowledge and agree to this Privacy Policy and also agree to the <a title="Link to the Lamps Plus Terms of Use Web Page" href="/info-center/w/help-and-policies/terms-of-use.aspx">Terms of Use of the Website located here</a>.</p>
+<p>You can visit most of the pages on Lamps Plus&nbsp;without ever telling us who you are, as we do not ask users to register or establish an account with us in order to browse our site. We may track the Internet domain address from which people visit us and look at this data for user trends and statistics, but individual site visitors remain anonymous, unless, at some point, you tell us who you are.</p>
+<p>However, when you use our online services like joining Lamps Plus&nbsp;Rewards or our email list, saving viewed products in an online Wish List, leaving a product review, entering a sweepstakes, or purchasing a product from us online, you agree to tell us something about yourself.</p>
+<p>When you join Lamps Plus&nbsp;Rewards or our email list, enter a sweepstakes, or use online services such as our Wish List, you are asked for your email address, name and zip code. You may also be asked for a street address and other information. When placing an order on our site, we ask you for contact information like name and shipping address, and payment information like credit card number, expiration date, and customer card identification number. Without providing information like this you will be unable to order products on our site or use certain online services.</p>
+<p>We use the personal information that you provide about yourself for a number of internal purposes, such as confirming your order and maintaining a record of your online product purchases. We also use your personal information to provide you with certain benefits if you enroll in our Lamps Plus&nbsp;Rewards program, and to send you catalogs and information about special promotions. In addition, we may use your personal information to contact you if we have trouble processing your order.</p>
+<p>We also may combine the information you give us online, in our stores, or through our catalogs, including personal information about you and your order. We use that combined information to enhance and personalize your online shopping experience with us, to communicate with you both on and offline about our products and events that may be of interest to you.</p>
+<p>We do not sell, share or rent email addresses to any third parties. Furthermore, we do not share the credit card information you provide to us with anyone other than your credit card provider. However, other information about you may be combined with publicly available information, as well as information we receive from reputable companies we have selected to analyze the data we collect.</p>
+<p>We do reserve the right to disclose your personal information when we have reason to believe that it is necessary to identify, contact or bring legal action against persons or entities that may be causing injury to you, Lamps Plus, or to others. We may also disclose personal information when we believe the law requires it.</p>
+<p><a name="marketing"></a></p>
+<h2><strong>Marketing Partnerships</strong></h2>
+<p>We maintain relationships with select business partners whom we have deemed to be trustworthy and responsible and whose privacy policies are aligned with ours. We may share or cross-reference data, including personal information (name, street address and transactional information), about you and your order with our business partners, allowing them to contact you regarding products and/or services that may be of interest to you. We may also share your personal information with any of our subsidiaries, including our flash sales website.</p>
+<p>In addition, when we join with another company to offer or provide services, products, sweepstakes, contests, or promotions, we and the other company may cross-reference our customer databases to identify common customers. We and the other company may use that existing information to identify future promotional opportunities and to fulfill promotional or contractual obligations.</p>
+<p>If you prefer that we do not share your name and address with other marketers, please email us at <a  target='_blank'  href="mailto:customerservice@LampsPlus.com">CustomerService@LampsPlus.com</a>.</p>
+<p><a name="california"></a></p>
+<h2><strong>Your California Privacy Rights</strong></h2>
+<p>Lamps Plus&nbsp;complies with Section 1798.83 of the California Civil Code &ndash; the &quot;Shine the Light Law&quot;.</p>
+<p>Under Section 1798.83 of the California Civil Code, residents of California that have an established business relationship with Lamps Plus&nbsp;and that have provided certain personal information to Lamps Plus&nbsp;(&ldquo;California Consumer&rdquo;) have the right to request certain information from Lamps Plus. California Consumers may request that Lamps Plus&nbsp;disclose (i) the types of personal information shared with third parties for those third parties&rsquo; direct marketing purposes, if any and (ii) the identity of any such third party with whom Lamps Plus&nbsp;has shared personal information, if any, during the previous calendar year.</p>
+<p>California Consumers may make one such request each year.</p>
+<p>To submit a request for information please email Lamps Plus&nbsp;at <a  target='_blank'  href="mailto:customerservice@LampsPlus.com">CustomerService@LampsPlus.com</a>. Please include &quot;Request for California Privacy Information&quot; in the subject line and in the body of your email. Lamps Plus&nbsp;will respond with the requested information, if any, to the email.</p>
+<p><a name="canadian"></a></p>
+<h2><strong>Canadian Anti-Spam Law (CASL)</strong></h2>
+<p>CASL applies to commercial electronic messages (CEMs) of all types (i.e. email, texts). Its key feature requires organizations that send CEMs within, from, or to Canada to receive consent from you the consumer before sending messages. Consent can be obtained either explicitly or implicitly. Examples of explicit consent include but are not limited to signing up for our mailing list online, entering sweepstakes and contests, and information requests made via one of our online services. Implied consent stems from either the purchase of a product or inquiry about a product; implied consent is considered valid for 24 months following the purchase of a product, and 6 months following an inquiry about a product.</p>
+<p>If you are on our commercial electronic messages mailing list, you may unsubscribe from it at any time. Unsubscribe instructions are included with each our emails. You may also visit our online email page and unsubscribe. If you choose to unsubscribe your address will be removed in no more than 10 business days. In most cases, we will be able to remove your address within 5 business days, and you will receive no further mailings from us. Please note that should you order from us in the future, you will still receive order and shipping confirmations from us via email.</p>
+<p><a name="contests"></a></p>
+<h2><strong>Contests and Promotions</strong></h2>
+<p>When we offer contests and promotions, or join with other companies to do so, customers who choose to participate in those contests and promotions may be asked to provide personal information to participate. That information may then be used by us and any company offering the contest or promotion to notify winners or to fulfill promotional obligations.</p>
+<p><a name="product"></a></p>
+<h2><strong>Product and Store Reviews</strong></h2>
+<p>When you leave a product review on our site, the information you provide about yourself, including your email address, is collected for us by a third party vendor. Customer comments are reviewed both by our third party vendor and by Lamps Plus. Any personal information collected in the product review process, including email addresses, is covered by our&nbsp;Lamps Plus&nbsp; privacy policy as outlined here and by our Terms of Use policy. Reviews are posted on LampsPlus.com at our discretion. When a product review is submitted on this web site, you grant&nbsp;Lamps Plus&nbsp;and its affiliates a nonexclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media.</p>
+<p>When you leave a store review on our site, the review may be posted on LampsPlus.com or shared on social media sites at our discretion. You grant Lamps Plus&nbsp;and its affiliates a nonexclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media.</p>
+<p>This policy covers information collected on visitors to the LampsPlus.com site through the process of ordering products, joining our email lists, submitting product reviews and using our online services, as well as information collected through Lamps Plus&nbsp;retail stores.</p>
+<h3><a name="email"></a></h3>
+<h2><strong>Privacy and Email Referrals</strong></h2>
+<p>The above rules and code of conduct applies to emails that you provide us in the course of using one of our &quot;email to a friend&quot; utilities or &quot;refer a friend&quot; promotions. We will send the requested information to the specified third party, who then has the option of not receiving further communications from us.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<h3><a name="security"></a></h3>
+<h2><strong>Security</strong></h2>
+<p>At Lamps Plus, we understand your concerns about security and privacy. We protect the sensitive information you give us, such as credit card numbers, by using Secure Sockets Layer (SSL) software, which encrypts the information you share with us. This process makes it statistically much safer to shop with us than to use your card in a restaurant or store. This encryption applies to users viewing our site using up-to-date, modern browsers such as Microsoft Internet Explorer, Firefox, Safari or Chrome.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<p><a name="fraud"></a></p>
+<h2><strong>Fraudulent Charge Protection</strong></h2>
+<p>Lamps Plus&nbsp;offers a &quot;Safe Shopping Guarantee.&quot; If a third party obtains your personal information from a purchase made with Lamps Plus&nbsp;and uses that information to perpetrate credit card fraud, you are protected. Under the Fair Credit Billing Act, your bank may hold you liable for up to $50 of fraudulent charges. If your bank holds you liable for any portion of the $50, Lamps Plus&nbsp;will cover up to the entire $50.</p>
+<p>Lamps Plus&nbsp;will cover this liability if the unauthorized use resulted through no fault of yours from a purchase made on the Lamps Plus&nbsp;secure server. In the event of unauthorized use of your credit card, you must notify your credit card company in accordance with its reporting rules and procedures.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<p><a name="cookies"></a></p>
+<h2><strong>Cookies</strong></h2>
+<p>Like many other online retailers, Lamps Plus&nbsp;uses a technology called &quot;cookies&quot;. A cookie is a small bit of data that is sent to your browser and stored on your computer&#39;s hard drive that we use to help us retrieve data you may have stored with us. For example, in our &quot;Wish List&quot; section, we use cookies to help us retrieve the lighting products that you have saved in these areas. The &quot;Help&quot; portion on the toolbar of most browsers will tell you how to delete your computer&#39;s cookies or how to prevent your browser from accepting new cookies. However, cookies allow you to take full advantage of the Lamps Plus&nbsp;website, and we recommend that you leave the feature turned on.</p>
+<p>Lamps Plus&nbsp;may occasionally use third-party advertising companies to serve ads on our behalf. These companies may employ cookies and action tags (also known as single pixel gifs or web beacons) to measure advertising effectiveness. Any information that these third parties collect via cookies and action tags is completely anonymous and is not relatable to you. These third parties are prohibited by our contract with them from sharing that information with anyone other than us or our advertising service providers. However, Lamps Plus&nbsp;respects your privacy and your right to choose whether to be included in such services. If you would like more information or would like to learn about your ability to unsubscribe of this type of practice, please visit the Network Advertising Initiative by <a  target='_blank'  title="Network Advertising Initiative Page Link" href="http://www.networkadvertising.org/managing/opt_out.asp">clicking here</a>. If you choose to unsubscribe, an &quot;unsubscribe cookie&quot; will be placed on your computer. If the cookie is removed or deleted, if you upgrade your browser or if you visit us from a different computer, you will need to return to the link above to re-select your preferences.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<p><a name="optoutemail"></a></p>
+<h2><strong>Unsubscribing From Our Email List</strong></h2>
+<p>If you&#39;ve joined our email list, you may unsubscribe of it at any time. Please visit the <a  target='_blank'  href="https://secure.lampsplus.com/secure/email/index.aspx" title="Lamps Plus Email Page">Lamps Plus&nbsp;Email page</a> and follow the on-screen directions, or you may call 800-782-1967. Unsubscribe instructions are also included with each Lamps Plus&nbsp;email.</p>
+<p>If you choose to unsubscribe from one of our email Lists, CAN-SPAM legislation stipulates that your address be removed within 10 business days. In most cases, Lamps Plus will remove your address within 5 business days, and you will receive no further mailings from us.</p>
+<p>Please note that should you order from us in the future, you will receive order and shipping confirmations via email.</p>
+<p>If you choose to remove your email address from our mailing list, Lamps Plus, in compliance with the CAN-SPAM legislation, may occasionally supply a list of removed email addresses to our advertising partners. This is done to ensure that those email addresses do not receive new advertising offers from us through our advertising partners.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<p><a name="optoutcatalog"></a></p>
+<h2><strong>Unsubscribing From Our Catalog Mailing List</strong></h2>
+<p>If you purchase something from us, we may occasionally send you a printed catalog through the mail. If you prefer not to receive our catalog, cancel at any time by emailing us at <a  target='_blank'  href="mailto:catalogservice@LampsPlus.com">CatalogService@LampsPlus.com</a> with &quot;remove&quot; as the subject line and your name and address in the body of the message, or you may call 800-782-1967. Your name will be removed from our mailing list within two weeks of your request. Due to the nature of catalog mailing preparation, however, you may receive mailed catalogs up to 90 days after your request.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<h2><strong>Unsubscribing From Marketing Partnerships</strong></h2>
+<p>If you prefer that we do not share your name and address with other marketers, please email us at <a  target='_blank'  href="mailto:customerservice@LampsPlus.com">CustomerService@LampsPlus.com</a>.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<p><a name="children"></a></p>
+<h2><strong>Protecting Children</strong></h2>
+<p>We take special care to protect the safety and privacy of children. Our site is for general audiences and we do not permit children under the age of 18 to purchase products. If you are under 18 you may purchase from LampsPlus.com only with the involvement of a parent or guardian. However, Lamps Plus does not wish to collect any personal information (or any information at all) from any persons under 13 years old. If you are under 13 years old, you may not use the Website.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<p><a name="links"></a></p>
+<h2><strong>Links to Third Party Sites</strong></h2>
+<p>The LampsPlus.com site may contain links or frames to other web sites owned and operated by different companies over which we have no control. Privacy policies on these sites may be different from our own. We advise you to read the posted privacy policy of these sites before divulging any personal information.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p>
+<p><a name="changes"></a></p>
+<h2><strong>Policy Changes</strong></h2>
+<p>If we decide to change our policy in whole or in part, we will inform you by posting a notice on our web site. The new policy will apply to all current and past users of our web site and will replace any prior policies. This policy was posted in May of 2007 and last updated in July of 2014.</p>
+<h2><strong>Additional Information</strong></h2>
+<p>This Policy is part of the Terms of Use of the Website and any use of the Website is governed by those Terms of Use. Questions regarding this Policy or the practices of the Website should be directed to Lamps Plus&rsquo; Administrator by emailing us or by certified mail addressed to the following: Lamps Plus Customer Relations, 20250 Plummer Street, Chatsworth, CA 91311.</p>
+<p><a href="#Top">back to top</a> | <a class="ExistingPageLink" href="/info-center/w/help-and-policies/16/default" title="Click to view the page titled: Help, Policies &amp; FAQs ">main help</a></p></div>
+  
+  <div class="post-actions">
+    <div class="navigation-list-header"></div>
+
+    <ul class="navigation-list">
+          </ul>
+
+    <div class="navigation-list-footer"></div>
+  </div>
+  <div class="post-moderate">
+      </div>
+</div>
+<div class="full-post-footer"></div>
+
+
+      </div>
+<div class="content-fragment-footer"></div>
+</div></div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div><div class="footer-fragments-header"></div>
+<div class="footer-fragments evolution-reflow-container" id="ctl02_ctl03_page"><div class="layout">
+<div class="layout-header"></div>
+<div class="layout-content content" id="ctl02_ctl03_layout">
+<div class="layout-region content" id="ctl02_ctl03_content">
+<div class="layout-region-inner content"><div id="footer-1589779216"></div>
+</div>
+</div>
+</div>
+<div class="layout-footer"></div>
+</div></div><div class="footer-fragments-footer"></div>
+<script type="text/javascript">
+// <![CDATA[
+if (!$.telligent.evolution.contentFragmentContainers) { $.telligent.evolution.contentFragmentContainers = {}; }
+$.telligent.evolution.contentFragmentContainers.header = new ContentFragmentContainerCustomCallback('ctl02_ctl01_page',new Function('mode','parameters','callback','errorCallback','context','authValue','ctl02_ctl01_ctl00._doCallback(mode+\':\'+authValue+\':\'+parameters,callback,context,errorCallback);'),'AuthorizationCookie');
+// ]]>
+</script>  <script type="text/javascript" src="/info-center/cfs-file/__key/defaultwidgets/0117e2efa5ac4456a839b7885237dcbd-6a13c927171a45d2aa83662a1429a93e/ui.js"></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    jQuery(document).ready(function(j) {
+      j.telligent.evolution.widgets.wikiPageHierarchy.register({
+        hierarchy: j('#fragment-2063373635_hierarchy'),
+        pagesUrl: '/info-center/utility/scripted-file.ashx?_cf=pages.vm\u0026_fid=2063373635\u0026_ct=page\u0026_cp=wikis-page\u0026_ctt=c6108064af6511ddb074de1a56d89593\u0026_ctc=8b26f1cbdeea468eabe636e430026433\u0026_ctn=3d6e61d4437d4c44b12f85e7b2044ebe\u0026_cc=0\u0026_pcurl=~%2Fw%2Fhelp-and-policies%2F19%2Fyour-privacy-and-security%2F',
+        expandedUrl: '/info-center/cfs-file/__key/defaultwidgets/0117e2efa5ac4456a839b7885237dcbd-6a13c927171a45d2aa83662a1429a93e/expanded.gif',
+        collapsedUrl:'/info-center/cfs-file/__key/defaultwidgets/0117e2efa5ac4456a839b7885237dcbd-6a13c927171a45d2aa83662a1429a93e/collapsed.gif',
+        wikiId: 9
+      });
+    });
+    //]]>
+  </script>
+  <script type="text/javascript" src=""></script>
+  <script type="text/javascript">
+    /*
+      //<![CDATA[
+      jQuery(document).ready(function(j) {
+        j.telligent.evolution.widgets.page.register({
+          wikiId: 9,
+          wikiPageId: 19,
+          favoriteControl: "#fragment-2063373637_wikiPageFavorite",
+          favoriteUrl: "/info-center/utility/scripted-file.ashx?_cf=favorite.vm\u0026_fid=2063373637\u0026_ct=page\u0026_cp=wikis-page\u0026_ctt=c6108064af6511ddb074de1a56d89593\u0026_ctc=8b26f1cbdeea468eabe636e430026433\u0026_ctn=3d6e61d4437d4c44b12f85e7b2044ebe\u0026_cc=0\u0026_pcurl=~%2Fw%2Fhelp-and-policies%2F19%2Fyour-privacy-and-security%2F",
+          isFavorite:  false,
+          favoriteOnHtml: "<span></span>Unfavorite this page",
+          favoriteOffHtml: "<span></span>Favorite this page",
+          favoriteProcessingHtml: "<span></span>...",
+          favoriteOnClass: 'internal-link favorite-on',
+          favoriteOffClass: 'internal-link favorite-off',
+          favoriteProcessingClass: 'internal-link processing'			
+        });
+      });
+      //]]>
+    */
+  </script>
+<script type="text/javascript">
+// <![CDATA[
+if (!$.telligent.evolution.contentFragmentContainers) { $.telligent.evolution.contentFragmentContainers = {}; }
+$.telligent.evolution.contentFragmentContainers.page = new ContentFragmentContainerCustomCallback('ctl02_ctl02_page',new Function('mode','parameters','callback','errorCallback','context','authValue','ctl02_ctl02_ctl00._doCallback(mode+\':\'+authValue+\':\'+parameters,callback,context,errorCallback);'),'AuthorizationCookie');
+// ]]>
+</script>	<script type="text/javascript" src="/info-center/cfs-file/__key/widgetfiles/212f71d69e37457887f33f32918f6ae2-d/ui.js"></script>
+	<script type="text/javascript">
+		jQuery(function(){
+			jQuery.telligent.evolution.widgets.userHover.register({
+				getUserInformationUrl: '/info-center/utility/scripted-file.ashx?_cf=get-user-information.vm\u0026_fid=1589779216\u0026_ct=footer\u0026_cp=wikis-page\u0026_ctt=c6108064af6511ddb074de1a56d89593\u0026_ctc=8b26f1cbdeea468eabe636e430026433\u0026_ctn=3d6e61d4437d4c44b12f85e7b2044ebe\u0026_cc=0\u0026_pcurl=~%2Fw%2Fhelp-and-policies%2F19%2Fyour-privacy-and-security%2F',
+				getRecentActivityUrl: '/info-center/utility/scripted-file.ashx?_cf=get-recent-activity.vm\u0026_fid=1589779216\u0026_ct=footer\u0026_cp=wikis-page\u0026_ctt=c6108064af6511ddb074de1a56d89593\u0026_ctc=8b26f1cbdeea468eabe636e430026433\u0026_ctn=3d6e61d4437d4c44b12f85e7b2044ebe\u0026_cc=0\u0026_pcurl=~%2Fw%2Fhelp-and-policies%2F19%2Fyour-privacy-and-security%2F'
+			});
+		});
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+if (!$.telligent.evolution.contentFragmentContainers) { $.telligent.evolution.contentFragmentContainers = {}; }
+$.telligent.evolution.contentFragmentContainers.footer = new ContentFragmentContainerCustomCallback('ctl02_ctl03_page',new Function('mode','parameters','callback','errorCallback','context','authValue','ctl02_ctl03_ctl00._doCallback(mode+\':\'+authValue+\':\'+parameters,callback,context,errorCallback);'),'AuthorizationCookie');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl02_ctl01_ctl00 = new Telligent_CallbackManager('ctl02_ctl01_ctl00','ctl02$ctl01$ctl00','ctl01');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl02_ctl02_ctl00 = new Telligent_CallbackManager('ctl02_ctl02_ctl00','ctl02$ctl02$ctl00','ctl01');
+// ]]>
+</script><script type="text/javascript">
+// <![CDATA[
+window.ctl02_ctl03_ctl00 = new Telligent_CallbackManager('ctl02_ctl03_ctl00','ctl02$ctl03$ctl00','ctl01');
+// ]]>
+</script></form></body>
+</html>

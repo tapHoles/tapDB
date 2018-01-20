@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="OSTKMainEKBApp">
+	<head>
+		<base href="/" />
+		<title>Overstock Help Center</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script src="/euf/assets/javascript/ostk_ekb_main.js"></script>
+		<script src="/euf/assets/javascript/angular-recaptcha.min.js"></script>
+		<link rel="shortcut icon" href="https://www.overstock.com/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="/euf/assets/css/ostk_ekb_main.css" />
+	
+
+<style type='text/css'>
+.rn_ScreenReaderOnly{position:absolute; height:1px; left:-10000px; overflow:hidden; top:auto; width:1px;}
+.rn_Hidden{display:none;}
+</style>
+<base href='https://help.overstock.com/euf/rightnow/optimized/1515185962/themes/standard/' />
+<style type="text/css"></style>
+
+</head>
+	
+<body>
+<form class='rn_Hidden'><input id='rn_History_Field' type='hidden'/></form>
+		<div id="header" ng-controller="OSTKMainEKBHeaderController">
+			<div id="header_logo" ng-click="goShop()"></div>
+			<div id="header_banner">
+				<div id="rectangle-4"></div>
+				<div id="rectangle-3"></div>
+			</div>
+			<div id="header_title1">
+				customer
+			</div>
+			<div id="header_title2">
+				care
+			</div>
+			<div id="header_title3">
+				help center
+			</div>
+			<div id="search_box_wrapper">
+				<input id="main_search_box" type="text" class="keyword-text-box form-control" size="30" placeholder="start typing to see suggestions" ng-model="searchTerms" typeahead-on-select="searchIt($model)" uib-typeahead="result as result.Name for result in getSearchResults($viewValue)" typeahead-loading="loadingResults" typeahead-no-results="noResults" typeahead-min-length="3" />
+				<div id="search_icon_wrapper">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+				<div id="typeAheadIcons" ng-cloak>
+					<i ng-show="loadingResults" class="fa fa-spinner fa-spin fa-fw"></i>
+					<div ng-show="noResults">
+						<i class="fa fa-times newAnswer" aria-hidden="true"></i> No Results Found
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="middle">
+			<div id="left_nav" ng-controller="OSTKMainEKBLeftNavController">
+				<div id="left_nav_title">
+					Help Center Contents				</div>
+				<div id="left_nav_content" ng-cloak>
+					<uib-accordion>
+						<div uib-accordion-group class="left-nav-cat" close-others="true" ng-repeat="navcat in navCategories" is-open="navcat.open">
+							<uib-accordion-heading>
+								 <span ng-click="loadCats(navcat.id,$index)">{{navcat.name}}</span>
+							</uib-accordion-heading>
+							<div class="expanded-cat">
+								<div ng-repeat="answer in leftCat[navcat.id] | limitTo : 5">
+									<a ui-sref="answer({answerID: answer.id})">{{answer.name}}</a>
+								</div>
+								<div class="view-all-cat" ng-click="viewCat(navcat.id)">
+									view all {{navcat.name}} articles
+								</div>
+							</div>
+						</div>
+					</uib-accordion>
+				</div>
+				<div id="left_nav_footer">
+					<div id="view_all_articles_wrapper" class="view-all-cat" ng-click="viewCat('0')">
+						Click to view all articles
+					</div>
+					<div id="chat_now_wrapper" ng-if="LeftNavSettings.chat_now_enabled==1">
+						<button id="chat_now_button" class="btn btn-primary" ng-click="goChat()"><i class="fa fa-comments-o" aria-hidden="true"></i> Chat Now</button>
+					</div>
+					<div id="text_now_wrapper" ng-if="LeftNavSettings.text_now_enabled==1">
+						<button id="text_now_button" class="btn btn-primary" ng-click="goText()"><i class="fa fa-mobile" aria-hidden="true"></i> Text Now</button>
+					</div>
+					<div id="shop_now_wrapper">
+						<button id="shop_now_button" class="btn btn-primary" ng-click="goShop()"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Shop Now</button>
+					</div>
+				</div>
+			</div>
+			<div id="page_content">
+				<div ui-view></div>
+			</div>
+		</div>
+	
+<script type="text/javascript" src="/euf/rightnow/js/16.5.0.1.6.254/min/RightNow.js"></script>
+<script type="text/javascript" src="/euf/rightnow/optimized/1515185962/custom/autoload.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+RightNow.Url.setParameterSegment(4);
+RightNow.Interface.Constants = 
+{"ACTION_ADD":1,"ANY_FILTER_VALUE":"~any~","EUF_DT_CHECK":12,"EUF_DT_DATE":1,"EUF_DT_DATETIME":2,"EUF_DT_FATTACH":11,"EUF_DT_HIERMENU":9,"EUF_DT_INT":5,"EUF_DT_MEMO":6,"EUF_DT_PASSWORD":7,"EUF_DT_RADIO":3,"EUF_DT_SELECT":4,"EUF_DT_THREAD":10,"EUF_DT_VARCHAR":8,"INT_NULL":-2147483647,"CAN_USE_ARIA":false,"API_VALIDATION_REGEX_EMAIL":"((([-_!#$%&'*+\/=?^~`{|}\\w]+([.][-_!#$%&'*+\/=?^~`{|}\\w]*)*)|(\"[^\"]+\"))@[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+([\\-]+[0-9A-Za-z]+)*)+[;, ]*)+"};
+RightNow.Interface.setMessagebase(function(){return {"WARNING_LBL":"Warning","INFORMATION_LBL":" ","HELP_LBL":"Help","ERROR_REQUEST_ACTION_COMPLETED_MSG":"There was an error with the request and the action could not be completed.","OK_LBL":"OK","DIALOG_LBL":"dialog","DIALOG_PLEASE_READ_TEXT_DIALOG_MSG_MSG":"dialog, please read above text for dialog message","BEG_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"Beginning of dialog, please dismiss dialog before continuing","END_DIALOG_PLS_DISMISS_DIALOG_BEF_MSG":"End of dialog, please dismiss dialog before continuing","ERR_SUBMITTING_FORM_DUE_INV_INPUT_LBL":"There was an error submitting the form due to invalid input","ERR_SUBMITTING_SEARCH_MSG":"There was a problem with your request.  Please change your search terms and try again.","CLOSE_CMD":"Close","BACK_LBL":"Back"};});
+RightNow.Interface.setConfigbase(function(){return {"DE_VALID_EMAIL_PATTERN":"^(([-!#$%&'*+\/=?^~`{|}\\w\\x80-\\xFF]+(\\.[-!#$%&'*+\/=?^~`{|}\\w\\x80-\\xFF]+)*)|(\"[^\"]+\"))@[0-9A-Za-z]+(-[0-9A-Za-z]+)*(\\.[0-9A-Za-z]+(-[0-9A-Za-z]+)*)+$","CP_HOME_URL":"home","CP_FILE_UPLOAD_MAX_TIME":300,"OE_WEB_SERVER":"help.overstock.com"};});
+YAHOO.util.Event.onDOMReady(function(){this.Dialog.setRenderDiv(); this.prepareVirtualBufferUpdateTrigger(); this.ariaHideFrames();}, null, RightNow.UI);
+YAHOO.util.Event.onDOMReady(function(){
+RightNow.Url.transformLinks();});
+/* ]]> */
+</script>
+<script type="text/javascript">
+var _rnq=_rnq||[];_rnq.push({"s":"6DyqkdDn","uh":"44ab42e9","uc":"help.overstock.com\/app\/home","b":"ca22249","i":"overstock:overstock","f":"rnw","p":"Customer Portal","v":"16.5.0.1-b254-sp6","th":"www.rnengage.com"});
+(function(f){var b,d,a=document.createElement("iframe"),c=document.getElementsByTagName("script");a.src="javascript:false";a.title="";a.role="presentation";(a.frameElement||a).style.cssText="position:absolute;width:0;height:0;border:0";c=c[c.length-1];c.parentNode.insertBefore(a,c);try{b=a.contentWindow.document}catch(g){d=document.domain,a.src="javascript:var d=document.open();d.domain='"+d+"';void(0);",b=a.contentWindow.document}b.open()._l=function(){for(var a;f.length;)a=this.createElement("script"),d&&(this.domain=
+d),a.src=f.pop(),this.body.appendChild(a)};b.write('<body onload="document._l();">');b.close()})(["https://www.rnengage.com/api/e/ca22249/e.js","//www.rnengage.com/api/1/javascript/acs.js"]);
+</script>
+</body>
+</html>

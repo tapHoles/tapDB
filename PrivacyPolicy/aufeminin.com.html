@@ -1,0 +1,981 @@
+
+
+<!DOCTYPE html><html><head><title>auFeminin.com, L'avenir est féminin - aufeminin</title><meta name="description" content="auFeminin.com, L'avenir est féminin"><script type="text/javascript" src="https://static.afcdn.com/relfr/concat.js?Vendor/auf/ads/adsLogger.js=/world/static/ads.js=Vendor/auf/global_common_top.js=Vendor/auf/ga.js=Vendor/auf/afLogger.js=Vendor/auf/afSession.js=Vendor/logmatic-js/src/logmatic.min.js=Vendor/pubsub/pubsub.js=Vendor/dmp/dil_v6.4.js=Vendor/dmp/visitor_api_v1.6.js.201801181652"></script><script type="text/javascript">
+		if (location.hash && location.hash.toLowerCase().substr(0, 5) == '#via=') {
+			var via = location.hash.substr(5).split('::');
+			if (via.length == 3) document.location.hash = 'utm_campaign='+via[0]+'&utm_medium='+via[1]+'&utm_source='+via[2];
+		};
+	</script>
+	<script type="text/javascript">
+		var afSession = new AufSession();
+		var afLogger = new Aflog.Logger();
+	</script>
+	<script type="text/javascript">
+		var af_winSize = af_windowSize();
+		
+		af_dataLayer = [{
+			'vuid': af_guid(),
+			'siteInfo': {
+				'sid': 1,
+				'platform': 'aufeminin',
+				'uaid': 'UA-1901803-1',
+				'lang': 'fr',
+				'isMobile': 0,
+				'gemkey': 'pyabkHsYiGHgoaLAznK6pKQsTDku5B.sBU1AZySiVcj.c7'
+			},
+			'pageInfo': {
+				'rid': 0,
+				'srid': 0,				
+				'sec': 'none / none',
+				'version': 'old',
+				'contentType': 'Old Article',
+				'ops': 'none',
+				'ops_uaid': 'none',
+				'section': 'none',
+                'subsection': 'none',
+				'thematic': '',
+                'tag': '',
+                'tags': '',
+                'category': '',
+				'ads': {
+					'siteId': '1',
+					'pageId': '10435'
+				}
+			},
+			'userInfo': {
+				'du': 'none',
+				'logged': 0,
+                'device': 'desktop',
+                'hashedUserId': '',
+                'referer': '0',
+				'userAgent': 'Wget/1.16.3 (darwin14.1.0)',
+				'screenResolution': af_winSize.w + 'x' + af_winSize.h
+			},
+            'campaignInfo': {
+                'utmSource': afSession.getUtmSource(),
+                'utmMedium': afSession.getUtmMedium(),
+                'utmCampaign': afSession.getUtmCampaign()
+            }
+		}];
+			
+		afLogger.setDataLayer(af_dataLayer[0]);
+	</script>
+	<script type="text/javascript">
+			var af_dmp_crmID = af_dataLayer[0].userInfo.hashedUserId;
+
+            if (af_dmp_crmID) {
+                var af_dmp_partner_dil = DIL.create({
+                    partner : 'aufeminin',
+                    uuidCookie : {
+                        name : 'aam_uuid',
+                        days : 30
+                    },
+
+                    visitorService: {
+                        namespace: '44326DF2572396FB7F000101@AdobeOrg'
+                    }
+                    ,
+                    declaredId : {
+                        dpid : '79945' ,
+                        dpuuid : af_dmp_crmID
+                    }
+                });
+            } else {
+                var af_dmp_partner_dil = DIL.create({
+                    partner : 'aufeminin',
+                    uuidCookie : {
+                        name : 'aam_uuid',
+                        days : 30
+                    },
+                          
+                    visitorService: {
+                        namespace: '44326DF2572396FB7F000101@AdobeOrg'
+                    }
+                });
+            }
+
+            if (af_dmp_partner_dil) {
+                af_dmp_partner_dil.api.signals({
+                    c_platform: af_dataLayer[0].siteInfo.platform,
+                    c_section: af_dataLayer[0].pageInfo.section,
+                    c_subsection: af_dataLayer[0].pageInfo.subsection,
+                    c_logged: af_dataLayer[0].userInfo.logged,
+                    c_device: af_dataLayer[0].userInfo.device,
+                    c_contentType: af_dataLayer[0].pageInfo.contentType.toLowerCase(),
+                    c_ops: af_dataLayer[0].pageInfo.ops.toLowerCase(),
+                    c_referer: af_dataLayer[0].userInfo.referer,
+                    c_tag: af_dataLayer[0].pageInfo.tag,
+                    c_category: af_dataLayer[0].pageInfo.category,
+                    c_thematic: af_dataLayer[0].pageInfo.thematic,
+                    c_utmMedium: af_dataLayer[0].campaignInfo.utmMedium,
+                    c_utmSource: af_dataLayer[0].campaignInfo.utmSource,
+                    c_utmCampaign: af_dataLayer[0].campaignInfo.utmCampaign
+                });
+
+                af_dmp_partner_dil.api.submit();
+            }
+		</script>
+		
+	<script type="text/javascript">
+	function ga_trackOutboundLink(event) {
+		try {
+			var event = event || window.event;
+			if (event.button != 2) {
+				var el = event.srcElement || event.target;
+
+				while (el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href))
+					el = el.parentNode;
+
+				if (el && el.href) {
+					if (el.href.indexOf('aufeminin.com') == -1 && (/^(https?:)?\/\//).test(el.href)) {
+						af_gaqTrackEvent("Outbound Link",el.href,document.location.pathname + document.location.search);
+						if (typeof(OPS_GA_account) != 'undefined')
+							af_gaqTrackEvent("Outbound Link",el.href,document.location.pathname + document.location.search,'',false,'ops');
+						if (!el.target || el.target.match(/^_(self|parent|top)$/i)) {
+							setTimeout(function() {
+								document.location.href = el.href;
+							}.bind(el),100);
+							event.preventDefault ? event.preventDefault() : event.returnValue = false;
+						}
+					}
+				}
+			}
+		} catch(e) { }
+	}
+	try {
+		var d = document;
+		d.addEventListener ? d.addEventListener("click",ga_trackOutboundLink,false) : d.attachEvent && d.attachEvent("onclick",ga_trackOutboundLink);
+	} catch(e) { }
+	</script>
+	<script type="text/javascript">jsdchtml3=function(s) {if (!jsdchtml3.p) {String.prototype.afca=String.prototype['ch'+'ar'+'At'];jsdchtml3.k='243524534235'; jsdchtml3.ra=Array('º<','¹>','¦/');jsdchtml3.u=function(s) { if (!jsdchtml3.u.r) { jsdchtml3.u.r=Array(); for (var i=0,a;i<jsdchtml3.ra.length;i++) { a=jsdchtml3.ra[i].split(''); jsdchtml3.u.r[i]=Array(new RegExp(a[0],'gi'),a[1]); } }for (var i=0;i<jsdchtml3.u.r.length;i++) s=s.replace(jsdchtml3.u.r[i][0],jsdchtml3.u.r[i][1]); return s; };jsdchtml3.r=function(a,b,c) { for (var j=c-1,o='';j>=0;j--) o+=a.afca(b+j); return o; };jsdchtml3.p=function(f,a) {var t=jsdchtml3.u(f),i=0,p=0,n,o=''; while(p<t.length) {n=parseInt(a.afca(i++ % a.length)); o+=jsdchtml3.r(t,p,n); p+=n;} return o; };} document.write(jsdchtml3.p(s,jsdchtml3.k));}; </script><link href="https://static.afcdn.com/relfr/concat.css?Component/seealso/seealso.scss=/edito/af-site-v1.css=Component/cookieInformation/cookieInformation.scss=Vendor/auf/asp/global-aspV2.scss=Layout/fullpage/fullpage.scss=Vendor/icomoon/style.css=Component/header/header.scss=Component/headerMainNav/headerMainNav.scss=Component/headerSubNav/headerSubNav.scss=Component/sButtons/sButtons.scss=Component/footer/footer.scss=Component/searchBar/searchBar.scss=Component/input/input.scss.201801181652" media="screen" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+var af_lazyloading_timeout = null;
+var af_lazyloading_dist = iOS ? 1000 : 200;
+var af_lazyloading_imgs = document.getElementsByTagName("img");
+
+var af_html_lazyloading_dist = iOS ? 1200 : 500;
+var af_html_lazyloading_items = new Array();
+var af_html_lazyloading_callback = new Array();
+
+function af_lazyloading() {
+    if (af_lazyloading_timeout === null) {
+        af_lazyloading_timeout = setTimeout(af_lazyloading_real, 50);
+    }
+}
+function af_lazyloading_real() {
+	var ws;
+	if(typeof af_windowSize === 'function') {
+		ws = af_windowSize();
+	} else {
+		ws = parent.af_windowSize();
+	}
+	
+	var imgs = document.querySelectorAll("img");
+	var len = imgs.length;
+	var img, dataOrigin, visibility;
+	for (var i = 0; i < len; i++) {
+		img = imgs[i];
+		dataOrigin = img.getAttribute("data-origin");
+		// Do not lazy-load hidden images
+		display = (img.currentStyle ? img.currentStyle.display : getComputedStyle(img, null).display);
+		visibility = (img.currentStyle ? img.currentStyle.visibility : getComputedStyle(img, null).visibility);
+		if (dataOrigin 
+				&& visibility !== "hidden" && display !== "none" 
+				&& ws.b + af_lazyloading_dist >= af_findPos(img).t) {
+			img.setAttribute("data-origin", "");
+			af_addEvent(img, "load", (function() {
+					this.classList.add("af-lazyloaded");
+					setTimeout((function() { this.classList.remove("af-lazyload"); }).bind(this), 500);
+				}).bind(img), false);
+			img.src = dataOrigin;
+		}
+	}
+	var len = af_html_lazyloading_items.length;
+	for (var i = 0; i < len; i++) {
+		var item = af_html_lazyloading_items[i];
+		var callback = af_html_lazyloading_callback[i];
+		if (callback !== null) {
+			if (ws.b + af_html_lazyloading_dist >= af_findPos(item).t) {
+				callback(item);
+				af_html_lazyloading_callback[i] = null;
+			}
+		}
+	}
+	af_lazyloading_timeout = null;
+}
+if (typeof(af_addEvent) != "undefined") {
+                af_addEvent(window, "scroll", af_lazyloading, false);
+                af_addEvent(window, "load", af_lazyloading, false);
+}
+</script>
+			<script type="text/javascript">
+			var FOGLIO=window.FOGLIO||{};FOGLIO.queue=FOGLIO.queue||{};FOGLIO.tag_s=new Date().getTime();
+			FOGLIO.app_id="175";FOGLIO.cr=1;FOGLIO.sr=1;FOGLIO.ft="ed5b4ccd61ba43d5e3023f19da60f9870f6a3516";
+			FOGLIO.q=function(a,b){FOGLIO.queue[a]=FOGLIO.queue[a]||[];FOGLIO.queue[a].push(b)};
+			</script>
+		<script type='text/javascript'>
+var crtg_nid = '3126';
+var crtg_cookiename = 'crtg_rta';
+var crtg_varname = 'crtg_content';
+function crtg_getCookie(c_name){ var i,x,y,ARRCookies=document.cookie.split(';');for(i=0;i<ARRCookies.length;i++){x=ARRCookies[i].substr(0,ARRCookies[i].indexOf('='));y=ARRCookies[i].substr(ARRCookies[i].indexOf('=')+1);x=x.replace(/^\s+|\s+$/g,'');if(x==c_name){return unescape(y);} }return'';}
+var crtg_content = crtg_getCookie(crtg_cookiename);
+var crtg_rnd=Math.floor(Math.random()*99999999999);
+(function(){
+var crtg_url=location.protocol+'//rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);
+crtg_url +='&cookieName='+escape(crtg_cookiename);
+crtg_url +='&rnd='+crtg_rnd;
+crtg_url +='&varName=' + escape(crtg_varname);
+var crtg_script=document.createElement('script');crtg_script.type='text/javascript';crtg_script.src=crtg_url;crtg_script.async=true;
+if(document.getElementsByTagName('head').length>0)document.getElementsByTagName('head')[0].appendChild(crtg_script);
+else if(document.getElementsByTagName('body').length>0)document.getElementsByTagName('body')[0].appendChild(crtg_script);
+})();
+</script>
+<script type="text/javascript">
+	var sas_networkId = 1;
+	var sas_siteId = 1;
+	var sas_pageId = '10435';
+	var sas_pageId = 10435;
+</script>
+<script type="text/javascript">
+var sas_target = 'opnew=1;new_page;version=desktop;ajax=0;login=0;ae=0;rwd=0;new_ref;new_visit;';
+</script>
+<script type="text/javascript">
+	var sas_domain = 'https://ww1.smartadserver.com';
+	var sas_formatIds = '3,5,12,117,300,6965,9888,25641';
+</script>
+<script type="text/javascript">
+	if (window.afAd) {
+		afAd.setup();
+		if (!afAd.newOnecall) {
+			afAd.onecall();
+		}
+	}
+</script>
+<script type="text/javascript">
+	if (window.afAd) {
+		afAd.addKeyword('contenttype', af_dataLayer[0].pageInfo.contentType.toLowerCase().replace(' ', '-'));
+	}
+</script>
+
+<script type="text/javascript" src="https://static.afcdn.com/relfr/concat.js?PCM-lVRNb4MwDP01HEGFalMvO3TaetpO1XpFTkhDWkii2Glpf_0C7fox0Q0uJon97Odni5XQhXFRtgC_bm2BwZasO4Il4dp7Hpzz0zXZ4MvqMcavX1XxYaT8FWk9Q88uhztfZWQNpHi8afOg4zdvSa10T0lZGQZVzk1dG52TsX201j08flxLgaiM_qebqwKBdsfnRoWSyGI0nQdvS5s6utwpEibRgsJb109VnOCVwlI4Ajm45inXIN2x2AZrrNBNXLK4CsAHyvWXwhocOWK28jhs0FdsV3U0CKgci1G6EM17w0vQUowFg7VaNHfd3Q8QGCbWmUYhGSeSsFqtLmEGlroFwNhTXDjYn4WNpotdNH3LBu7PJfNY4mh2To8F7VUh0AIfXc15prjRD1XiCdRwNDoO8AOSqM9CATRZ-6mPOg-u4WPpso34t7wJ5uWQwC9SFQ4JXAAPczkMCf0EDfIPnuG83HbbkWSTdDZJ01n6_JR9Aw"></script>
+<script type="text/javascript">
+ var afSession = window.afSession || new AufSession();
+ </script>
+<script type="text/javascript">
+ var afLogger = window.afLogger || new Aflog.Logger();
+ </script>
+<script type="text/javascript">
+ if (window.aufbidjs) {
+ afLogger.logError('HB already initialized', 'HB');
+ } else if (!window.AufBid) {
+ afLogger.logError('AufBid library not defined', 'HB');
+ } else {
+ var aufbidjs = new AufBid.Manager({
+ data: {"formats":{"3":{"name":"midrectangle","asyncOnly":false},"12":{"name":"toprectangle","asyncOnly":false},"117":{"name":"topleaderboard","asyncOnly":false},"3243":{"name":"bottomleaderboard","asyncOnly":false},"5222":{"name":"midrectangle_2","asyncOnly":false},"9888":{"name":"bottomrectangle","asyncOnly":false},"15132":{"name":"left_sitebar","asyncOnly":false},"16863":{"name":"diapo_popup_slideshow","asyncOnly":true},"20442":{"name":"midrectangle_3","asyncOnly":false}},"accounts":[{"name":"auf_rubicon","bidder":"rubicon","accountId":"12982","siteId":"52246","currency":"USD","discount":10,"adjustment":6,"placements":{"3":[{"tag":"237886-15","size":"300x250"}],"12":[{"tag":"237884-10","size":"300x600"},{"tag":"237884-15","size":"300x250"},{"tag":"284956-10","size":"300x600"},{"tag":"237884-9","size":"160x600"},{"tag":"237884-8","size":"120x600"}],"117":[{"tag":"237884-146","size":"980x250"},{"tag":"412946-2","size":"728x90"},{"tag":"237884-2","size":"1000x90"},{"tag":"237884-57","size":"970x250"}],"3243":[{"tag":"238784-58","size":"1000x90"},{"tag":"238784-2","size":"728x90"}],"5222":[{"tag":"801838-15","size":"300x250"}],"9888":[{"tag":"238784-15","size":"300x250"}],"15132":[{"tag":"728138-8","size":"120x600"}],"16863":[{"tag":"738400-10","size":"300x600"},{"tag":"738400-15","size":"300x250"},{"tag":"738400-8","size":"120x600"},{"tag":"738400-9","size":"160x600"}],"20442":[{"tag":"801840-15","size":"300x250"}]}},{"name":"auf_amazon","bidder":"amazon","accountId":"3357","siteId":null,"currency":"USD","discount":0,"adjustment":60,"placements":{"3":[{"tag":"a3x2","size":"300x250"}],"12":[{"tag":"a1x6","size":"160x600"},{"tag":"a3x2","size":"300x250"},{"tag":"a3x6","size":"300x600"}],"117":[{"tag":"a7x9","size":"728x90"},{"tag":"a9x2","size":"970x250"}],"3243":[{"tag":"a7x9","size":"728x90"}],"9888":[{"tag":"a3x2","size":"300x250"}],"16863":[{"tag":"a1x6","size":"160x600"},{"tag":"a3x2","size":"300x250"},{"tag":"a3x6","size":"300x600"}]}},{"name":"auf_proxistore","bidder":"proxistore","accountId":null,"siteId":null,"currency":"EUR","discount":0,"adjustment":0,"placements":{"12":[{"tag":"95565046","size":"300x600"}]}},{"name":"auf_sovrn","bidder":"sovrn","accountId":"13390877","siteId":"aufeminin","currency":"USD","discount":0,"adjustment":0,"placements":{"3":[{"tag":"400439","size":"300x250"}],"12":[{"tag":"400415","size":"300x250"},{"tag":"400421","size":"300x600"}],"117":[{"tag":"400427","size":"728x90"},{"tag":"400433","size":"970x250"}],"9888":[{"tag":"400439","size":"300x250"}],"16863":[{"tag":"400415","size":"300x250"},{"tag":"400421","size":"300x600"}]}},{"name":"auf_indexExchange","bidder":"indexExchange","accountId":"184403","siteId":"185606","currency":"EUR","discount":20,"adjustment":-5,"placements":{"3":[{"tag":"190398","size":"300x250"}],"12":[{"tag":"206793","size":"160x600, 120x600"},{"tag":"187989","size":"300x250,300x600,300x1050"}],"117":[{"tag":"185606","size":"728x90,970x250,1000x90"}],"3243":[{"tag":"187990","size":"728x90,1000x90"}],"5222":[{"tag":"240582","size":"300x250"}],"9888":[{"tag":"187988","size":"300x250"}],"15132":[{"tag":"219016","size":"120x600, 160x600"}],"20442":[{"tag":"240583","size":"300x250"}]}},{"name":"auf_openx","bidder":"openx","accountId":null,"siteId":"aufeminin-e","currency":"USD","discount":20,"adjustment":-40,"placements":{"3":[{"tag":"538775773","size":"300x250"}],"12":[{"tag":"538804709","size":"300x600,300x250,120x600,160x600"}],"117":[{"tag":"538804708","size":"970x250,728x90,1000x90"}],"3243":[{"tag":"538775771","size":"728x90,1000x90"}],"5222":[{"tag":"539636134","size":"300x250"}],"9888":[{"tag":"538775772","size":"300x250"}],"15132":[{"tag":"539301435","size":"120x600,160x600"}],"16863":[{"tag":"539422546","size":"300x600,300x250,120x600,160x600"}],"20442":[{"tag":"539636135","size":"300x250"}]}},{"name":"auf_appnexus_old","bidder":"appnexus","accountId":"7695","siteId":null,"currency":"USD","discount":0,"adjustment":15,"placements":{"3":[{"tag":"11106147","size":"300x250"}],"12":[{"tag":"11106146","size":"300x600,300x250,120x600,160x600"}],"117":[{"tag":"11106145","size":"970x250,728x90,1000x90,1800x1000"}],"3243":[{"tag":"11106149","size":"728x90, 1000x90"}],"5222":[{"tag":"12579812","size":"300x250"}],"9888":[{"tag":"11106148","size":"300x250"}],"15132":[{"tag":"12103667","size":"160x600,120x600"}],"16863":[{"tag":"12222257","size":"300x600,300x250,120x600,160x600"}],"20442":[{"tag":"12579826","size":"300x250"}]}},{"name":"auf_criteo","bidder":"criteo","accountId":null,"siteId":null,"currency":"EUR","discount":null,"adjustment":6,"placements":{"3":[{"tag":"855200","size":"300x250"}],"12":[{"tag":"846823","size":"160x600"},{"tag":"846825","size":"300x600"},{"tag":"846824","size":"300x250"}],"117":[{"tag":"846828","size":"970x250"}],"3243":[{"tag":"855201","size":"728x90"}],"5222":[{"tag":"1121076","size":"300x250"}],"9888":[{"tag":"855200","size":"300x250"}],"16863":[{"tag":"846824","size":"300x250"},{"tag":"846825","size":"300x600"},{"tag":"846823","size":"160x600"}],"20442":[{"tag":"1121077","size":"300x250"}]}},{"name":"auf_oath","bidder":"oath","accountId":"4887.1","siteId":null,"currency":"USD","discount":10,"adjustment":-8,"placements":{"3":[{"tag":"6516993","size":"300x250"}],"12":[{"tag":"6516991","size":"300x600"},{"tag":"6516999","size":"300x250"},{"tag":"6516988","size":"160x600"},{"tag":"6516994","size":"120x600"}],"117":[{"tag":"6516989","size":"970x250"},{"tag":"6516995","size":"1000x90"},{"tag":"6516986","size":"728x90"}],"3243":[{"tag":"6516992","size":"728x90"},{"tag":"6516996","size":"1000x90"}],"5222":[{"tag":"6546152","size":"300x250"}],"9888":[{"tag":"6540117","size":"300x250"}],"15132":[{"tag":"6540112","size":"120x600"},{"tag":"6540116","size":"160x600"}],"16863":[{"tag":"6540118","size":"300x250"},{"tag":"6540113","size":"120x600"},{"tag":"6540114","size":"160x600"},{"tag":"6540115","size":"300x600"}],"20442":[{"tag":"6546153","size":"300x250"}]}},{"name":"auf_criteo_adblock","bidder":"criteo","accountId":null,"siteId":null,"currency":"EUR","discount":null,"adjustment":null,"placements":{"12":[{"tag":"1123266","size":"300x600"}],"117":[{"tag":"1123264","size":"728x90"}],"3243":[{"tag":"1123265","size":"728x90"}]}}]}
+ 
+ });
+ }
+</script>
+<link href="https://static.criteo.net" rel="preconnect">
+<link href="https://static.criteo.net" rel="dns-prefetch">
+<link href="https://static.criteo.com" rel="preconnect">
+<link href="https://static.criteo.com" rel="dns-prefetch">
+<link href="https://bidder.criteo.com" rel="preconnect">
+<link href="https://bidder.criteo.com" rel="dns-prefetch">
+<link href="https://aufeminin-g-e.openx.net" rel="preconnect">
+<link href="https://aufeminin-g-e.openx.net" rel="dns-prefetch">
+<link href="https://aufeminin-g-d.openx.net" rel="preconnect">
+<link href="https://aufeminin-g-d.openx.net" rel="dns-prefetch">
+<link href="https://as-sec.casalemedia.com" rel="preconnect">
+<link href="https://as-sec.casalemedia.com" rel="dns-prefetch">
+<link href="https://ib.adnxs.com" rel="preconnect">
+<link href="https://ib.adnxs.com" rel="dns-prefetch">
+<link href="https://abs.proxistore.com" rel="preconnect">
+<link href="https://abs.proxistore.com" rel="dns-prefetch">
+<link href="https://ap.lijit.com" rel="preconnect">
+<link href="https://ap.lijit.com" rel="dns-prefetch">
+<link href="https://engine.widespace.com" rel="preconnect">
+<link href="https://engine.widespace.com" rel="dns-prefetch">
+<link href="https://c.amazon-adsystem.com" rel="preconnect">
+<link href="https://c.amazon-adsystem.com" rel="dns-prefetch">
+<link href="https://fastlane.rubiconproject.com" rel="preconnect">
+<link href="https://fastlane.rubiconproject.com" rel="dns-prefetch">
+<link href="http://blog.aufeminin.com" rel="preconnect">
+<link href="http://blog.aufeminin.com" rel="dns-prefetch">
+<link href="http://album.aufeminin.com" rel="preconnect">
+<link href="http://album.aufeminin.com" rel="dns-prefetch">
+<link href="http://forum.aufeminin.com" rel="preconnect">
+<link href="http://forum.aufeminin.com" rel="dns-prefetch">
+<link href="http://www.aufeminin.com" rel="preconnect">
+<link href="http://www.aufeminin.com" rel="dns-prefetch">
+<link href="https://static.afcdn.com" rel="preconnect">
+<link href="https://static.afcdn.com" rel="dns-prefetch">
+<link href="https://image.afcdn.com" rel="preconnect">
+<link href="https://image.afcdn.com" rel="dns-prefetch">
+<link href="https://static.afcdn.com/relfr/concat.css?PCM-C0vNS8kv0k8sTdNPTCkG0cHZmXl6xcnFxXpGBoYWBoaGFoZmpkYA" media="all" rel="stylesheet" type="text/css">
+
+
+	<script type="text/javascript">
+    
+
+	af_taggingToReport = true;
+	function checkTagging() {
+	  if (!af_taggingToReport) return;
+	  af_taggingToReport = false;
+	  
+	  if (window.top != window.self) return; // Iframe
+	  if (typeof af_JsElementBlocked != 'undefined' && af_JsElementBlocked === true) return; // Errors when loading page
+	
+	  if (typeof sas_target == 'undefined' && typeof onetAds == 'undefined' && document.location.href.indexOf('/world/communaute/users/') == -1) {
+		var message = 'Smart tagging missing';
+		var d = message.split('').reverse().join('');
+		new Image().src = '/world/errpix.asp?d='+encodeURIComponent(d) + '&c=ads&s=1';
+		if (typeof console != 'undefined' && console.log) { try { console.log('JS Catchall: ' + message) } catch (e) {}}
+	  }
+	  
+	  if (typeof af_dataLayer == 'undefined') {
+		var message = 'GTM data layer missing';
+		var d = message.split('').reverse().join('');
+		new Image().src = '/world/errpix.asp?d='+encodeURIComponent(d) + '&c=GTM&s=1';
+		if (typeof console != 'undefined' && console.log) { try { console.log('JS Catchall: ' + message) } catch (e) {}}
+	  }
+	  
+	}
+	if (window.addEventListener) {
+		window.addEventListener('load', checkTagging, false);
+	} else if (
+		window.attachEvent) { window.attachEvent('onload', checkTagging);
+	}
+</script>
+
+			<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-1901803-1']);
+			</script>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body bgcolor="#FFFFFF">
+
+<link rel="stylesheet" type="text/css" href="/edito/af-global-edito-v1.css?v=1.04tv">
+<link rel="stylesheet" type="text/css" href="/edito/af-rub-v1.css?v=1.09">
+<link href="/communaute/imagescommunaute/4/communaute.css" rel="stylesheet" type="text/css" />
+<div id="SaS_render_6965">
+	<div id="sas_6965">
+		<script type="text/javascript">
+			if (window.afAd) afAd.render('6965');
+		</script>
+	</div>
+</div>
+<script language="javascript">
+	var af_personalHashValue = "-272465920";
+
+	if (document.domain && typeof(sas_ddotpos)=='undefined') {
+		sas_ddotpos = document.domain.indexOf('.');
+		if (sas_ddotpos > 0) document.domain = document.domain.substr(sas_ddotpos+1);
+	}
+	</script><!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="https://static.afcdn.com/relfr/Front/Component/header/header-ie.css?v=201801181652" />
+<link rel="stylesheet" type="text/css" href="https://static.afcdn.com/relfr/Front/Vendor/icomoon/ie7/ie7.css?v=201801181652" />
+<script src="https://static.afcdn.com/relfr/Front/Vendor/icomoon/ie7/ie7.js?v=201801181652"></script>
+<script src="https://static.afcdn.com/relfr/Front/vendor/auf/ie-shim.js?v=201801181652"></script>
+<![endif]-->
+<!--[if IE 9]>
+<script src="https://static.afcdn.com/relfr/Front/vendor/auf/ie-shim.js?v=201801181652"></script>
+<![endif]-->
+<div id="header">
+	<header>
+		<div id="header-content">
+			<div id="hamburger" class="out">
+				<a href="#" id="hamburger-menu" class="af-btn-v2 mini"><i class="icon icon-burger-menu"></i></a>
+			</div>
+			<div id="home-btn">
+				<a id="hamburger-desktop" href="#" class="af-btn-v2 mini">
+					<i class="icon icon-burger-menu"></i>
+				</a><!--
+				White space hack !!
+			--><a href="http://forum.aufeminin.com/forum/" class="af-btn-v2 mini">
+					<i class="icon icon-start-thread"></i><br>
+					<span class="btn-label">Forums</span>
+				</a><!--
+				White space hack !!
+			--><a href="/album/" class="af-btn-v2 mini">
+					<i class="icon icon-news-round last"></i><br>
+					<span class="btn-label">Albums</span>
+				</a>			</div>
+			<p id="logo" class="text-center">
+									<a href="http://www.aufeminin.com" class="image"><img id="auf-logo" src="https://static.afcdn.com/relfr/Front/Component/header/assets/logo.png" alt="aufeminin">
+					</a>
+							</p>
+			<div id="top-right">
+				<div id="header-search">
+					<a href="#" id="search-open-buton" class="open-buton af-btn-v2 mini">
+						<i class="icon icon-search"></i><br>
+						<span class="btn-label">Rechercher</span>
+					</a>
+				</div><!--
+				White space hack !!
+			--><div id="user-zone">
+				<script id="af_jsencrypt_2" type="text/javascript">jsdchtml3('aºerh "=f:ptth¦¦.wwwmefuainioc.n¦mlerdedaou¦sresol¦	"nig						  			alc"=ssfatb- 2v-nalp tskniinim 	"									i  s"=dgii-niº¹"nc ssali"=i nococva-n-rataesuº¹"ri¦bº¹psº¹rnaalc =ss-ntb"al"lebnnoC¹ixe¦ºnops¹na¹a¦º', 'af_jsencrypt_2')</script>				</div>
+			</div>
+		</div>
+	</header>
+	<div class="spacer"></div>
+	<div id="main-nav-container">
+	<nav id="main-nav">
+		<script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('fº mroalca"=ss-fraesab-hc "rdi ""=aesf-hcrroan-m""vitca now¦"=¦dlromocanumtus¦ehcraes¦craea.hm "pste=doh"TEG"º	¹ vidlcssarof"=-mtnoclorº		¹"ni tup=epytet" "txan=em "wk"av=eul ""ecalpohredlceR"=reh ehcp( rauetua,rtit ,ertnoc ne. ,u ")..º¹¦upni tpytih"=edd "neman"t"=ev eula"82"=¹¦ tubºotº¹n napslc=ssaci"ci nonoaes-¹"hcrs¦º¹nap¦ºtub	¹not¦º¹vidf¦º¹mro', 'af_jsencrypt_1')</script>		<ul class="main-menu-items">
+		<li class="item"><a class="item-link" href="http://www.aufeminin.com/">Accueil</a></li><li class="item"><a class="item-link" href="http://www.aufeminin.com/societe/news-societe-ssc156.html">News</a></li><li id="navSection14" class="item"><a data-sid="14" class="item-link" href="http://www.aufeminin.com/mode-sc14.html">Mode</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"eledoM¹¦º¹vidluº		lc =ssas"-bu-unemti"smelº¹alc issus"=eti-bn mus-o"baº¹salc =sbus"ti-il-meknrh "h"=fepttw¦¦:wwua.nimefnimoc.om¦et¦eddnecnacss-sh.1"lmtº¹apsneT¹nadsecnom s¦ºedap¦º¹nl¦º¹aº¹ic ilal=ss-bus"tin mes-oº¹"bu asalcus"=si-b-metil"knferh "=ptth¦¦:a.wwwfunimeoc.nim¦m¦edoom-edihsafnocss-h.4¹"lmtsº¹napsserDgnips¦ºna¦º¹l¦º¹a¹i ilºalcs"=ssbueti--on mbusaº¹"c salus"=s-bmetiil-h "knerh"=f¦:pttww¦ua.wefnimoc.ni¦medomts¦-teerts-ely-edomcss.861th"lmapsº¹¹nertS teelyts¦ºnaps¹a¦º¹l¦ºlº¹i ialcs"=ssbueti-n mbus-o¹"c aº=ssalus"ti-bmeil-h "knerh"=fpttww¦¦:.wefuaninimoc.om¦medom¦ef-edmmte-eom-css-i.5lmthpsº¹"¹naoleRkogniaps¦º¹n¹a¦ºl¦ºilº¹ic ssalbus"=ti-n me-obus aº¹"lc=ssaus"eti-b-mknilerh ""=fptth¦:ww¦fua.wmeninioc.dom¦m¦ekoolats-s-sr6cssh.lmtpsº¹"naooL¹d kts seras¦ºsº¹nap¹a¦il¦ºº¹ ilssalc"=-buseti-on musº¹"balc a=ssbus"i-metknil- "ferhh"=¦:pttw¦a.wwimefuninmoc.m¦edoecca¦sseriom-ss-edocsth.3º¹"lmapscA¹necossºseris¦¹napa¦ºil¦º¹º¹c il=ssalus"ti-bmeon "bus-º¹lc assabus"=i--met"knilrh "=feth:ptwww¦¦a.mefuinimoc.nm¦¦edolifedd-eom-eedss-th.7clmsº¹"napiféD¹éls¦ºsº¹nap¹a¦il¦ºº¹ ilssalc"=-buseti-on musº¹"balc a=ssbus"i-metknil- "ferhh"=¦:pttw¦a.wwimefuninmoc.m¦edosnoc¦ied-slm-es-edocs.961"lmthsº¹¹napoCesnm slidos¦ºenap¹a¦º¹¦ºº¹illc ilssaus"=-beti-on musº¹"bc a=ssals"i-bul-metknirh "feh"=¦:pttw¦a.wwefuninimc.m¦mov¦edoediom-oedss-.811cth¹"lmpsºiV¹naéd¦ºso¹napsa¦ºl¦º¹¹iilºsalc =sbus"ti-on mes-¹"bulc aºssaus"=-betinil-m"kerh "=f:ptth¦¦edomefua.nimc.nimoof¦a¦murllsº¹"napuroF¹smps¦º¦º¹naº¹a¹il¦lºc i=ssals"i-bumets-on buaº¹"salc "=s-busti-me"knilh =ferth"¦¦:ptwwua.wnimef.ni¦mocom¦ed-swents-elycssh.951mtº¹"l¹napsweNs¦ºsapº¹n¦º¹a¦ililº¹lc "=ssausti-bon meus-º¹"b aalcs"=ssbueti-l-m "knirh"=fe:ptthw¦¦a.wwfuimec.ninmoulc¦n¦belswett¦sre34=n?tu&os_mru=ecerrabandomvu&eem_mtidp=mufetalmrotu&e_mmacngiapr=urcelntpsº¹"na eL¹lliemruesed t otups¦ºsnaa¦º¹¦º¹lº¹il isalcus"=si-b metonus-aº¹"bc ssals"=ti-bumenil-rh "k=fetth":pw¦¦ua.wwefinimc.net¦modnecnabla¦ssmuohp-otm-st-edo3p9953th.º¹"lmpsA¹nasmubls¦º¹nap¦ºº¹aº¹il¦ilalc =ss-bus"ti¹"melc aºssaus"=-betinil-m"kerh "=flrow¦¦dtidedni¦o¦xe1__l-41-dlmth.¹"apsºT¹nl suosetra selcis¦º¹nap¦ºº¹aº¹il¦u¦uº¹lc l=ssals"i-bu-smetccaº ¹"il		¹							c aºsalca"=srcehcoerh ""=fptth¦:ww¦fua.wmeninioc.div¦moedom--te¦e-isrtov-emamte-eiiaam-tenn-niuq2n0578mth.4 "llcnoci"=kau_fat_kcarevEM\'(tnne ,\'urccA\'hcoilCekc ,\',llun0 º¹")gmi=crs h"spttts¦¦:itafa.cdcc.now¦molrhs¦d.mi "figado-atnigirh"=sptt¦:mi¦a.egacfc.nd¦moeverb¦s2cca5782_¦401cca521x77a75210_10181w081h01cgpj.tla """=psº¹nalc "=ssalphecadlo	¹"re						º				apslc nsa"=seltit¹"s tEv i ertoam eimtiatéam qenniun&n?;psb¦ºnaps		¹							s¦º		¹nap							º	¹a¦							l¦º	 ¹i	¹ilº						 aº		alc"=sscaorc "ehcrh"=fetthw¦¦:pwwfua.inimec.nn¦mowes-s¦elytenab-wnal-x-ecimeinnsuom-l-eoc-all-baab-edks-sten-asap-em-uqna2s-re074.401th"lmlcno cia"=ku_fart_akcnevEeM\'(t\'unA\' ,cccorilCehkcn ,\'llu")0 ,º¹ gmi"=crstth¦:sps¦tatfa.cidcoc.nw¦m¦dlrohsg.mid "fiatairo-ig"=nsptth¦:ami¦.egndcfac.s¦mo¦yrotcca42_9074011cca¦5221x7a7571222_3081wc081hj.1 "gpla"=tpsº¹"naalc =sscalp"heedlo		¹"r									psºlc nasat"=sltieN¹"e walaBx ecniM einnM suoel ,e sksabste iuq ovf tn eriaarcreuql  se snafedsiD yenohP( ot¦º)s¹naps									¦º	¹naps										¹a¦º						il¦º	¦º¹º¹lud¦¹vi', 'af_jsencrypt_1')</script></li><li id="navSection8" class="item"><a data-sid="8" class="item-link" href="http://www.aufeminin.com/beaute-sc8.html">Beauté</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"eluaeB¹étid¦ºº		¹v lusalc=sus"nem-b-umeti¹"sc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦motuaeb¦euqamgallis-e51csh.lmtpsº¹"naqaM¹liuºegals¦¹napº¹a¦ºil¦ilº¹c salus"=s-bmetion "bus-º¹lc a"=ssabuseti--mnilrh "kfeth"=:ptwww¦¦a.mefu.ninimocaeb¦tus¦e-snioivegasss-.141cth¹"lmnapsºoS¹ sniivgasps¦ºenaa¦º¹¦º¹lº¹il isalcus"=si-b metonus-aº¹"bc ssals"=ti-bumenil-rh "k=fetth":pw¦¦ua.wwefinimc.neb¦mouas¦et-sniorocs-spcs241lmth.¹"apsºS¹n snioocºsprnaps¦¦º¹¦º¹aillº¹alc issus"=i-bn met-o"busc aº¹sals"=sbuti-il-meknrh "=feptth"¦:www¦efua.nimc.nimoeb¦¦etuaosrial-se41css.5lmthpsº¹"¹naaloSriºsenaps¦º¹º¹a¦il¦ ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmocuaeb¦etehc¦-xuevcssh.81mt¹"lnapsºC¹evehºxunaps¦º¹º¹a¦º¹il¦ ilsalc=sus"eti-b ms-on"buc aº¹al"=ssi-busmetnil-"krh h"=fett¦¦:pwwwefua.im.ninb¦mocuaep¦etramufcss-s71mth.¹"lnapsºP¹ufras¦ºsmnapa¦º¹º¹il¦ ilº¹lc=ssaus"eti-b ms-onº¹"buc assal"=busmeti-l-"knirh h"=fett¦¦:pa.wwwefuinim.nmocuaeb¦ethte¦qinss-eu1ch.15¹"lmtpsºE¹nahtqins¦ºeuap¦º¹nº¹aº¹il¦ilalc s"=ss-bumetin s-oº¹"bu asalc"=si-busetil-mh "knferth"=pt¦¦:a.wwwfunime.nib¦mocae¦etus-oib1csh.25mt¹"lnapsºB¹¦ºoiapsa¦º¹nº¹¹il¦c ilºsals"=sbuti-on mes-¹"bu aºssalc"=-bus-metinilh "ker"=f:ptth¦¦.wwwfuainime.n¦moctuaebb¦etuae-e-edsratss-91csth.º¹"lmpsB¹naétuaeed ats srs¦ºº¹napa¦l¦º¹º¹ilc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pwwa.wimefuinoc.nm¦mliuqaala¦egsmublhp-sotot-otasegaut-767p.69 lmth¹"apsºtaT¹nauoºsegs¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:pwww¦a.efuninimc.b¦mouaeer¦etolnikocss-g941mth."lsº¹R¹napleikooºgnnaps¦º¹º¹a¦º¹il¦ ilsalc=sus"eti-b ms-on"buc aº¹al"=ssi-busmetnil-"krh h"=fett¦¦:pwwwefua.im.ninb¦mocuaec¦etihrurs-eigcs.351mthsº¹"laphC¹ngruriºeiaps¦¹na¦ºil¦º¹º¹c ilsalus"=s-bmetis-on "bu aº¹lcssabus"=i--metnilrh "kfeth"=¦¦:ptwwwfua.meinimoc.nb¦tuaev¦e-oediamliuq-egalaeb-etuss11cmth.9"lpsº¹¹naoédiVºsaps¦a¦º¹n¦º¹º¹ilillc "=ssausti-b meus-on"b aº¹ssalcs"=i-buetl-m "knirh"=fetthw¦¦:pwwfua.inimec.nl¦mo-eulcsed-be-repxsetemoh¦h."lmtapsº¹T¹netseºzps¦¦º¹na¹ail¦ºlº¹alc issus"=eti-bn mus-o"baº¹salc =sbus"ti-il-meknrh "h"=fepttw¦¦:wwua.nimefnimoc.am¦lliuqgaeb¦efitua-lu-xobalob-aeb-xtuua-emef-nini1s6856th.65#lm_mtuoscrubeW=eisu&et_mtuidem=msuoserrabnedebvaua&etc_mtumagiapb=nituaeufob-lsº¹"xnapaeB¹tuufixoB l¦ºnaps¦º¹l¦º¹a¹i ilºssalcs"=i-buetn mbus-o¹"c aºsalus"=s-bmetiknil-h "=ferh"ptteb¦¦:uaa.etefuninimc.f¦mo¦murollasº¹"apF¹nsmuro¦ºnaps¦º¹l¦º¹a¹i ilºssalcs"=i-buetn mbus-o¹"c aºsalus"=s-bmetiknil-h "=ferh"pttww¦¦:.wefuanimoc.ni¦mvehca¦xueublp-smohsotuaeb-et3pt-063mth.0"lpsº¹lA¹namubs¦ºsapº¹n¦º¹a¦ililº¹lc "=ssausti-bº¹"mec assal"=busmeti-l-"knirh ¦"=feow¦dlrotideni¦¦xed_l-8_h.1-dmtº¹"lapsuoT¹n s selcitraselps¦ºna¦º¹l¦º¹a¹ilu¦ºuº¹alc lssus"=eti-b-sm"cca ¹ilº				¹		º			c a=ssala"orcc "ehcerhh"=ftt¦:p.www¦uaimefnin¦moc.amliuq¦egaleyenil-reod-ut-erotleir2n-93088h."lmtlcno kcifa"=u_t_aEkcarev\'(tnneM\' ,\'ucAcorcilCeh\'kcun ,ll0 ,iº¹")gmcrs h"=:sptt¦¦tatsfa.cindcmoc.w¦lroihs¦d.m"figad ro-atgi"=nisptth¦¦:gami.ecfaoc.nd¦mverb¦se_2cca8293081cca¦752521xa7078w_4978181h01c0"gpj.a "=tlpsº¹" nasalc=slp"ohecadl¹"re										psº	lc nassait"=lt¹"eçaf 3norv smiaj tnelo seiop edresnos e -eyrenild ºérops¦		¹na						s¦º		nap			¹					¹a¦º							º		 ¹il¦lº		¹i					º		lc asa"=sorccahch "efertth"=:pww¦¦fua.wime.ninocs¦m-sniooc¦sprnobon-envuellenerp-erdenu-d-cuoon-ehsuref-tiadrep-er-26-rolacsei42s-96427lmth. "lcnokci_fa"=auart_evEkc(tnneM\'\'u\' ,orccAhcilCe\'kclun ,,l")0 gmiº¹rs h"=ctt:spats¦¦itfa.cndc¦moc.ow¦dlr.mihsfigad "atro-=nigih"sptt¦¦:egamia.ndcf¦moc.otsa¦yrcc2_927964¦41cca7527521x7a209781w_71h01c08j."gp=tla ""psº¹ nassalc"=calpdlohe"re			¹					sº			aplc nssatit"=eloB¹"n ennvuoelle! rP erdneu d encuoon ehsuref p tiadre6 er 2lacseiro¦ºnaps		¹							s¦º		¹nap							º	¹a¦							l¦º	º¹iº¹lu¦d¦¹vi', 'af_jsencrypt_1')</script></li><li id="navSection7" class="item"><a data-sid="7" class="item-link" href="http://www.aufeminin.com/maman-sc7.html">Maman</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elamaM¹ºnvid¦uº		¹c lssal"=busunem-i-smetº¹"lc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pwwa.wimefuinoc.nm¦m¦namargessos-ess3csth.9lmº¹"¹napsrGessoessaps¦º¹n¹a¦º¹il¦ºilºalc sss"=ti-bume-on bus aº¹"lc=ssa-bus"etiil-mknh ""=ferth¦:ptww¦fua.wmenini¦moc.mama¦nacccuonemeh-t4cssh.0¹"lmtsº¹napuoccAehctnem¦ºapsa¦º¹nº¹¹il¦ilºsalc =sbus"meti-on bus-¹" aºssalc"=-busetinil-m"kerh th"=f:ptww¦¦.wfuainime.n¦mocmampa¦naerrg-ssesso-es4css.1mthsº¹"lapoP¹n-tsuoccahcnemeps¦ºt¹na¹a¦º¦º¹ilc ilºal"=ssbusmeti-n us-oaº¹"blc =ssas"-bu-metiil "knerhth"=fptw¦¦:ua.wwmefninic.¦monamamb¦-ebecssth.34lmsº¹"B¹napébéps¦ºna¦º¹l¦º¹a¹i ilºalcs"=ssbueti--on mbusaº¹"c salus"=s-bmetiil-h "knerh"=f¦:pttww¦ua.wefnimoc.ni¦mamame¦ntnafns-54cslmth.º¹"napsE¹afns¦ºtnap¦º¹nº¹aº¹il¦ilalc s"=ss-bumetin s-oº¹"bu asalc"=si-busetil-mh "knferth"=pt¦¦:a.wwwfunime.nim¦mocmaa¦nas-sod1csh.63mt¹"lnapsºA¹¦ºodapsa¦º¹nº¹¹il¦c ilºsals"=sbuti-on mes-¹"bu aºssalc"=-bus-metinilh "ker"=f:ptth¦¦.wwwfuainime.n¦mocseedirp-moneh.lmtpsº¹"naérP¹monps¦ºsnaa¦º¹il¦º¹lº¹lc isa"=si-buseton mus-aº¹"bc ssalbus"=ti-l-meni "k=ferhh":pttw¦¦ua.wwefinimmoc.nam¦¦namovolunu-rie-nafns-t.83csth¹"lmnapsºoC¹pecnitºnonaps¦º¹º¹a¦il¦ ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmocamam¦¦nedivmam-o-naebebs-1csth.22lmsº¹"napédiV¹sops¦º¦º¹naº¹a¹il¦lºc i=ssals"i-bumets-on buaº¹"salc "=s-busti-me"knilh =ferth"¦¦:ptenrowtfua.kime.ninocc¦mc¦llailmoccnam451¦d50¦514emit[ats?]pm¹"psºeL¹na sit\'P stosérTsrps¦º¦º¹naº¹a¹il¦lºc i=ssals"i-bumets-on buaº¹"salc "=s-busti-me"knilh =ferth"¦¦:ptwwua.wnimef.ni¦mocpasersorg-es¦essiafap-ertrian-cnasss-e854690th.º¹"lmpsF¹nariarap-eºtaps¦a¦º¹n¦º¹º¹ilillc "=ssausti-b meus-on"b aº¹ssalcs"=i-buetl-m "knirh"=fetthw¦¦:pwwfua.inimec.nc¦moiltnekoo¦soo¦oodº¹"¹napsiL etsan edssiecna¦ºapsa¦º¹nº¹¹il¦ilºsalc =sbus"meti-on bus-¹" aºssalc"=-busetinil-m"kerh th"=f:ptww¦¦.wfuainime.n¦moculcwen¦blsetten?¦sr35=mtu&s_ruoab=ecrrvanemam_mtu&emmuidtalp=ofe&emrtuc_miapmangcer=turº¹"lnpsP¹naelorad sfne\'naºstnaps¦º¹º¹a¦il¦ ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦bebua.seefinimc.nof¦mourla¦msº¹"lnaproF¹mu¦ºs¹naps¦º¦º¹a¹ilc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦monafne¦tublahp-smotoam-samt-n0633p.2lmthº¹"¹napslAsmubaps¦ºº¹nº¹a¦l¦º¹ilc ilsas"=s-bu"metiº¹lc a"=ssabuseti--mnilrh "kfew¦"=lroide¦dotdni¦_l¦xe-7_.1-dth"lmapsº¹¹nsuoTel tra sciºselnaps¦¦º¹¦º¹ail¦º¹uº¹lu lsalc"=si-buseta-sm ¹"ccilº			¹					c aº	al"=ssccaehcor "ferhtth"=¦:pwww¦a.efuninimc.v¦moedimam-onabeb--01¦eurtq-sceuel-mef-semne-siec-setnenuev--tnelulpne-setrdn82n-e96h.70lmtcno "il"=kcau_fart_Ekcaev(tnuneM\',\'cA\' orclCehcci ,\'k,llun)0 iº¹"gmrs th"=cpt¦¦:satsa.citcfc.ndow¦modlrihs¦.mfigtad "-agiro=niptth":smi¦¦a.egadcfoc.n¦merba¦sevcc82_2096cca¦7211x758a752492w_37811h0.1c08pja "g=tlsº¹""aplc n"=ssaalpohecdl"re				¹						sº	c napal"=sseltit1¹"rt 0cuq sel eu smmef seiecnetnn seuev enellp tsune rdnetºeaps¦	¹n							¦º		¹naps									a¦º				¹		¦º		¹il¹ilº 						aº			lc =ssaa"rcc"ehcoh =ferth"¦¦:ptwwua.wnimef.ni¦mocrgsso¦esseebs-eberiys-endnemoreris--enerisonlemni-eieddni-neica-enocehcu-tnemorgsessesam-mroflta-noi42s26217h."lmtlcno kcifa"=u_t_aEkcarev\'(tnneM\' ,\'ucAcorcilCeh\'kcun ,ll0 ,iº¹")gmcrs h"=:sptt¦¦tatsfa.cindcmoc.w¦lroihs¦d.m"figad ro-atgi"=nisptth¦¦:gami.ecfaoc.nd¦mrotsa¦y2_9cc7426211cca¦752521xa7294w_9008181h01c0"gpj.a "=tlpsº¹" nasalc=slp"ohecadl¹"re										psº	lc nassait"=lt¹"e ellEcacuoc eh nu\'db" ébénèris "eI nedn ,eetuafd os esniarud tn as ssorgsses¦ºeap	¹n							¦º		aps			¹n							¹a¦º							¦º¹il¹lu¦º¦º¹vid', 'af_jsencrypt_1')</script></li><li id="navSection2" class="item"><a data-sid="2" class="item-link" href="http://www.aufeminin.com/psycho-sc2.html">Psycho</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elcysP¹ohid¦ºº		¹v lusalc=sus"nem-b-umeti¹"sc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦mohcysp¦op-amohcysgols-eics.65"lmthº¹napsoM¹ps¦ºinaa¦º¹il¦º¹lº¹lc isa"=si-buseton mus-aº¹"bc ssalbus"=ti-l-meni "k=ferhh":pttw¦¦ua.wwefinimmoc.nsp¦ohcyr¦alesnoita-a-xurtuss-se5cth.7º¹"lmapsoM¹n il &ua sert¦ºseapsa¦º¹nº¹¹il¦c ilºsals"=sbuti-on mes-¹"bu aºssalc"=-bus-metinilh "ker"=f:ptth¦¦.wwwfuainime.n¦mochcyspt¦oarehip-se81css.1lmthº¹"¹napshTparé¦ºseiaps¦º¹n¹al¦ºilº¹ic ssals"=ti-bume-on ¹"bus aºsalc=sus"eti-b-mknilh ""=ferth¦:pt.www¦fuanimenioc.ysp¦mhcez¦os-nsserts-81csmth.2¹"lapsº¹nneZs te rtºsseps¦¦º¹na¹ail¦º ilº¹alc"=ssusi-bn met-o"busaº¹salc =sbus"meti-il- "knrh=feptth"¦:www¦ua.nimefnimoc.cysp¦¦oh-eivedoc--elpuss381cth.º¹"lmpsA¹na ruomC &lpuoºeps¦¦º¹na¹ail¦ºlº¹alc issus"=eti-bn mus-o"baº¹salc =sbus"ti-il-meknrh "h"=fepttw¦¦:wwua.nimefnimoc.sp¦¦ohcyojss-bh.95clmtsº¹"apJ¹ns¦ºboap¦º¹nº¹aº¹il¦ilalc s"=ss-bumetin s-oº¹"bu asalc"=si-busetil-mh "knferth"=pt¦¦:a.wwwfunime.nip¦mocys¦ohcseverss-481ch.lmtpsº¹"navêR¹ºsenaps¦º¹º¹a¦º¹il¦ ilsalc=sus"eti-b ms-on"buc aº¹al"=ssi-busmetnil-"krh h"=fett¦¦:pwwwefua.im.ninr¦mocalenoit-sxuartua-seleb¦selatic-it-sno62mos.24lmth" sº¹C¹naptioitaºsnnaps¦º¹º¹a¦º¹il¦ ilsalc=sus"eti-b ms-on"buc aº¹al"=ssi-busmetnil-"krh h"=fett¦¦:pwwwefua.im.ninp¦moccyst¦ohse-st-ziuqss.26cmthsº¹"lapeT¹n& stsuQ ¦ºzips¹naº¹a¦ºl¦lº¹ic i=ssals"i-bun mets-o¹"buaºlc "=ssausti-b-me"knilh =ferptth"¦¦:cyspohgolua.eiefinimc.nof¦mourla¦msº¹"lnaproF¹mu¦ºs¹naps¦º¦º¹a¹ilc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦mohcysp¦oedivysp-oohccss-21h.5¹"lmtsº¹napdiV¦ºsoépsº¹na¦º¹a¦¹il ilºlcssabus"=i- met-on¹"busaºalc s"=ss-bumetil-knierh "=ftth"¦:p.www¦uaimefc.nin¦moxuejs-73clmth.¹"apsºJ¹n¦ºxuepsº¹na¦º¹a¦¹il ilºlcssabus"=i- met-on¹"busaºalc s"=ss-bumetil-knierh "=ftth"¦:p.www¦uaimefc.nin¦moubla¦m-ami-eivedtitna-e1p-31h."lmtapsº¹A¹nmublºsps¦¦º¹na¹ail¦ºlº¹alc issus"=eti-b¹"mc aºal=ss-bus"til-meknierh "=fow¦"e¦dlrtidni¦oedl¦xd-2__1-mth.¹"lnapsºT¹ suoa selitrselc¦ºapsa¦º¹nº¹¹il¦u¦ºluº¹lc ssalbus"=ti--smeca¹"c¹ilº 									lc aºsaa"=scorcc"eherh =fth"¦¦:ptwwua.wmef.niniociv¦mp-oedcysl¦oh-aeivceva-o-as-u-snneihcn-3782th.60"lmcno il=kcu_fa"_acartvEk\'(tneeM,\'unccA\' corlCehci,\'kllun  ,¹")0miºcrs g"=ptths¦¦:stata.cicf.ndw¦mocros¦dlmih"fig.d -ataigiro"=nptth:si¦¦.egamfa.ndcmocverb¦secca¦782_2603cca¦21x75a75212846931w_81h08c0pj.1la "g"=tsº¹"apc n=ssalp"ecalloh¹"red											psºc naal=ssltit""e aL¹eivceva o as uhc snneips¦ºna		¹							s¦º	nap				¹		º					¹a¦			º			l¦ ¹i	¹ilº						º		alc assca"=hcorc "eferh"=tthw¦¦:pwwfua.imec.ninmoeiv¦c-ed-puo2¦el-1ediaf-seic-seluopoob-rtss-reoc-nolpune-e2-610711s-96h.01lmtcno "il"=kcau_fart_Ekcaev(tnuneM\',\'cA\' orclCehcci ,\'k,llun)0 iº¹"gmrs th"=cpt¦¦:satsa.citcfc.ndow¦modlrihs¦.mfigtad "-agiro=niptth":smi¦¦a.egadcfoc.n¦motsca¦yr9c711_196cca¦0211x752a752429w_04811h0.1c08pja "g=tlsº¹""aplc n"=ssaalpohecdl"re				¹						sº	c napal"=sseltit2¹"di 0eép sb ruoooretsom uoc nlpne e8102 s¦º¹nap										¦ºnaps		¹							¹a¦º								il¦ºº¹lu¦id¦º¹¹v', 'af_jsencrypt_1')</script></li><li id="navSection3" class="item"><a data-sid="3" class="item-link" href="http://www.aufeminin.com/couple-sc3.html">Sexo</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"eloxeS¹¦º¹vidluº		lc =ssas"-bu-unemti"smelº¹alc issus"=eti-bn mus-o"baº¹salc =sbus"ti-il-meknrh "h"=fepttw¦¦:wwua.nimefnimoc.oc¦¦elpued-riseuxess-l66csh.lmtpsº¹"naséD¹ rieuxesºlaps¦a¦º¹n¦º¹º¹ilillc "=ssausti-b meus-on"b aº¹ssalcs"=i-buetl-m "knirh"=fetthw¦¦:pwwfua.inimec.nc¦mouoelpriaf¦-ema-lruo1css-17mth.sº¹"lnapiaF¹er\'l ruoma¦ºnaps¦º¹l¦º¹a¹i ilºssalcs"=i-buetn mbus-o¹"c aºsalus"=s-bmetiknil-h "=ferh"pttww¦¦:.wefuanimoc.ni¦mpuocoh¦elsomauxeil-et71css.2lmthº¹"¹napsoHesomilauxºétaps¦¹na¦ºil¦º¹º¹c ilsalus"=s-bmetis-on "bu aº¹lcssabus"=i--metnilrh "kfeth"=¦¦:ptwwwfua.meinimoc.nc¦lpuos¦elauxetite-etnas-s-e07csh.lmtpsº¹"nanaS¹ºétnaps¦º¹º¹a¦º¹il¦ ilsalc=sus"eti-b ms-on"buc aº¹al"=ssi-busmetnil-"krh h"=fett¦¦:pwwwefua.im.ninc¦mocpuoc¦elnoartitpecnocss-371lmth.¹"apsºnoC¹narttpecoi¦ºn¹naps¦º¦º¹a¹ilc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦molpuoc¦e-xes-syotcss.471th"lmapsº¹¹n xeSyoTps¦ºsnaa¦º¹il¦º¹lº¹lc isa"=si-buseton mus-aº¹"bc ssalbus"=ti-l-meni "k=ferhh":pttw¦¦ua.wwefinimmoc.noc¦elpuk¦amaartuss-71csh.5¹"lmtsº¹napsamaKrtus¦ºaapº¹n¦º¹a¦ililº¹lc "=ssausti-bon meus-º¹"b aalcs"=ssbueti-l-m "knirh"=fe:ptthw¦¦a.wwfuimec.ninmouoc¦elpexes¦s-56cslmth.º¹"napsS¹exeaps¦º¹n¹a¦ºl¦ºilº¹ic ssalbus"=ti-n me-obus aº¹"lc=ssaus"eti-b-mknilerh ""=fptth¦:ww¦fua.wmeninioc.uoc¦mlpiv¦ec-oedpuos-elcs621lmth.¹"apsºV¹nsoédi¦ºnaps¹a¦º¹l¦ºlº¹i ialcs"=ssbueti-n mbus-o¹"c aº=ssalus"ti-bmeil-h "knerh"=fpttww¦¦:.wefuaninimoc.oc¦mpu¦elmubla587326ak¦tusamarh.0-¹"lmtpsº1¹na00op oitissnps¦º¹naº¹a¦ºl¦lº¹ialc i=ssbus"i-mets-on buaº¹"lc "=ssausti-bil-me"knerh =fth"¦¦:ptma-ruouoca.elpfunimeoc.nif¦mmuroa¦"llapsº¹¹nuroF smruomA¦ºnaps¹a¦º¹l¦ºlº¹i ialcs"=ssbueti-n mbus-o¹"c aº=ssalus"ti-bmeil-h "knerh"=fpttes¦¦:uxtilafua.eime.ninocf¦m¦murolaº¹"lapsroF¹nmups¦º¦º¹naº¹a¹il¦lºc i=ssals"i-bumets-on buaº¹"salc "=s-busti-me"knilh =ferth"¦¦:ptwwua.wnimef.ni¦mocaferima-l-uola¦rmubohp-sotes-spt-ox633h.50mt¹"lnapsºA¹mubl¦ºs¹naps¦º¦º¹alº¹ilc issal"=busmeti-¹"c aºsalus"=s-bmetiknil-h "=fer¦"rowde¦dltini¦oxed3__l¦d-h.1-¹"lmtpsºT¹nauol sra seitselcs¦ºº¹napa¦l¦º¹u¦º¹iº¹lc lual=ss-bus"ti-smeccalº ¹"¹i									 aºsalc=sca"hcorc"eerh "=f:ptth¦¦.wwwmefuainioc.n¦mdivoc-oepul¦els-eliretterim-r-aneimene-sc-suarap-es-u-selitrtasicin-se00482h.0"lmto lcn"=kcifa_au_artevEkctneM\'( ,\'uncA\'corcehilC ,\'kcun ,ll")0gmiº¹s "=crsptth¦¦:tatscifa.c.ndcmorow¦¦dl.mihsigd "fo-atagir"=nithsptmi¦¦:gafa.endc¦moc.rbseve2cca¦82_0004a¦1cc1x7525282a793481w_8h0c081gpj.1a ""=tl¹"psºlc nasap"=scaldlohere		¹"								psº	nalc "=ssait"elteL¹réts liM teanerier  simneac p esurases tu asilirtseciaps¦º	¹n									aps¦º¹n							a¦º			¹				¦º			¹ililº 	¹								aºalc =ssrcca"co "eh=ferhth"¦:ptw¦.wwmefuanic.ni¦mo¦exeseslauxs-etiexenob-enr-suloseit-sno11s81867h."lmtlcno kcifa"=u_t_aEkcarev\'(tnneM\' ,\'ucAcorcilCeh\'kcun ,ll0 ,iº¹")gmcrs h"=:sptt¦¦tatsfa.cindcmoc.w¦lroihs¦d.m"figad ro-atgi"=nisptth¦¦:gami.ecfaoc.nd¦mrotsa¦y1_9cc7181861cca¦752521xa7368w_6518181h01c0"gpj.a "=tlpsº¹" nasalc=slp"ohecadl¹"re										psº	lc nassait"=lt¹"e oxeS : sem 92ennob soséroitul snruop2 810s¦º! ap		¹n								¦ºnaps				¹			¦º		¹a								¦ºº¹illu¦id¦º¹¹v', 'af_jsencrypt_1')</script></li><li id="navSection4" class="item"><a data-sid="4" class="item-link" href="http://www.aufeminin.com/cuisine-sc4.html">Cuisine</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elsiuC¹nid¦ºe		¹viluºalc sss"=em-buuneti-"sm ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmocsiuc¦nier¦eettecs-s91cs.4mthsº¹"lapeR¹ntec¦ºsetpsº¹na¦º¹a¦¹il ilºlcssabus"=i- met-on¹"busaºalc s"=ss-bumetil-knierh "=ftth"¦:p.www¦uaimefc.nin¦mosiucnit¦enadneeccss-.92"lmthº¹naps soV¹alcqisseu¦ºs¹naps¦º¦º¹a¹ilc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦moisiuceniuc¦-enis-edetef-scssth.03lmsº¹"naps eD¹iaºnosnaps¦¦º¹¦º¹aillº¹alc issus"=i-bn met-o"busc aº¹sals"=sbuti-il-meknrh "=feptth"¦:www¦efua.nimc.nimouc¦enisii¦ergneids-stncsh.53¹"lmtpsºI¹nagndérstnei¦ºnaps¦º¹l¦º¹a¹i ilºssalcs"=i-buetn mbus-o¹"c aºsalus"=s-bmetiknil-h "=ferh"pttww¦¦:.wefuanimoc.ni¦msiucc¦enisiu-eniafliccss-e33mth.¹"lnapsºR¹tecef seticaºsels¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:pwww¦a.efuninimc.c¦mosiuc¦eniiuenisdnom-s-e73csh.lmtpsº¹"naiuC¹nis ud eomºednnaps¦¦º¹¦º¹aillº¹alc issus"=i-bn met-o"busc aº¹sals"=sbuti-il-meknrh "=feptth"¦:www¦efua.nimc.nimouc¦enisip¦itareuq3css-.1lmthpsº¹"¹nasnoCieºslnaps¦º¹º¹a¦il¦ ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmocsiuc¦nier¦eettecim-uecn-rcssh.391mtº¹"lapsniM¹nec¦ºru¹napsa¦ºl¦º¹¹iilºsalc =sbus"ti-on mes-¹"bulc aºssaus"=-betinil-m"kerh "=f:ptth¦¦.wwwmefuainioc.n¦miuc¦enisrgsdnahc-s-sfecsh.23¹"lmtpsºC¹naehºsfnaps¦º¹º¹a¦il¦ ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmocsiuc¦niiv¦er-oedece-ettucisiss-en1ch.71lmtpsº¹"nadiV¹¦ºsoéaps¦º¹n¹al¦ºilº¹ic ssals"=ti-bume-on ¹"bus aºsalc=sus"eti-b-mknilh ""=ferth¦:pt.www¦fuanimenioc.ulc¦m¦bswentel¦sretn?u&4=os_mtcruab=errane&iucvtuem_muidalp=metmrofmtu&eac_iapmnger=nturc"lpsº¹¹naer aLec ettoj udºruaps¦¹na¦ºil¦º¹º¹c ilsalus"=s-bmetis-on "bu aº¹lcssabus"=i--metnilrh "kfeth"=¦¦:pttenkrowa.efuninimc.c¦mollacilc¦ocnamm861¦d896[¦80itsem]pmat"?psº¹¹nahc eJre ehcrt nutiaºrues¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:piuc¦is.enmefuanic.ni¦momurofa¦¹"llnapsºoF¹smur¦ºapsa¦º¹nº¹¹il¦ilºsalc =sbus"meti-on bus-¹" aºssalc"=-busetinil-m"kerh th"=f:ptww¦¦.wfuainime.n¦moccersettea¦mublohp-ssotiuc-is-en633pt40mth.¹"lnapsºA¹mublps¦ºs¹na¹a¦º¦º¹ilc ilºal"=ssbusmeti-¹"c aº=ssalus"ti-bmeil-h "kner¦"=frowde¦dltini¦ol¦xed4__1-d-h.lmtpsº¹"nauoT¹l sra seitselcaps¦ºº¹nº¹a¦l¦º¹iº¹lu¦lualc =ss-bus"ti-sme¹"ccalº 		¹i					 aº		lc=ssaca"hcorc"eerh th"=f:ptww¦¦.wfuainime.n¦mocdiver-oeec-ettisiuc¦en-enuosepual-a-p-tatad-e-ecuotel-a-rac-attoop-eruva-b-rionom-eneni672n-48th.3o "lmlcn=kcia"u_fart_akcnevE\'(t\'uneM ,ccA\'ehcorilC,\'kcn llu")0 ,º¹ gmicrstth"=sps¦¦:citatfa..ndcocw¦m¦dlrohsg.mi"fiatad o-igirth"=nspti¦¦:am.egndcfac.b¦moverca¦se2c672_a¦3481ccx75221a7594597_2081w81hj.1c0gpla "¹""=tpsºc naal=sscalp"heedlo¹"r											napsºlc =ssat"ltinU¹"e epuosp eetatad ecuoac - torp etuoa r riovob ennnimsbn&e;ps¦º!	¹nap									s¦º	¹nap						º				¹a¦						¹il¦ºlº 		¹i					 aº		lc=ssaca"hcorc"eerh th"=f:ptww¦¦.wfuainime.n¦mociuc¦enisla1mub77813f¦2eriau-p-negato-rth.0"lmlcno cia"=k_au_fartvEkcne\'(t\'uneM ,ccA\'corilCehkcn ,\' ,llu")0miº¹ gcrstth"=sps¦¦:tatfa.cidcoc.nrow¦m¦dlmihsg."fiatad o-igir"=nsptth¦:ami¦fa.egndcmoc.i¦isma¦1etcc1_11813a¦277cc75217521x37a0676w_081c081h.1"gpjla ¹""=tsº napssalcp"=ecalohedl		¹"r									napsºc ssaltit"="el 05¹laemiq stneuo\'l p nf tueiap eressuof rlicametnezehc s ¦ºioaps			¹n						ps¦º	¹na										¹a¦º						¦º	¦º¹illud¦º¹¹vi', 'af_jsencrypt_1')</script></li><li id="navSection26" class="item"><a data-sid="26" class="item-link" href="http://www.aufeminin.com/societe-sc26.html">Société</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elicoS¹téd¦ºé		¹viluºalc sss"=em-buuneti-"sm ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmocicos¦teca¦eilautsetcss-81h.8¹"lmtsº¹napa\'L¦ºutcpsº¹na¦º¹a¦¹il ilºlcssabus"=i- met-on¹"busaºalc s"=ss-bumetil-knierh "=ftth"¦:p.www¦uaimefc.nin¦moicostep¦eartrotied-sef--semmss.39c"lmthsº¹¹napoPrtr stiaedmef semaps¦º¹n¹a¦º¹il¦ºilºalc sss"=ti-bume-on bus aº¹"lc=ssa-bus"etiil-mknh ""=ferth¦:ptww¦fua.wmenini¦moc.coseteid¦abeed-sts-eicoset9css-.2lmthpsº¹"¹na soVrdtiops¦ºsnaa¦º¹¦º¹lº¹il isalcus"=si-b metonus-aº¹"bc ssals"=ti-bumenil-rh "k=fetth":pw¦¦ua.wwefinimc.nos¦moic¦eteissodsrecss-19th.º¹"lmpsV¹na eiitarpuqs¦ºeº¹nap¹a¦il¦ºº¹ ilssalc"=-buseti-on musº¹"balc a=ssbus"i-metknil- "ferhh"=¦:pttw¦a.wwimefuninmoc.s¦icot¦etemengioega-ed-sefsemm8css-h.9"lmtº¹apsneT¹nadsecns¦ºº¹napa¦l¦º¹ilº¹ilc =ssas"-bu metionbus-º¹"alc assus"=eti-bl-m"knih fertth"=:pww¦¦a.wimefuinoc.ncos¦mteias¦etnf-e-emmess291cth.º¹"lmpsS¹naºétnaps¦º¹naa¦¦º¹lº¹il isalc"=si-buseton m"bus-aº¹alc sss"=ti-bumenil- "k=ferhh":pttwww¦¦ua.imefinc.nos¦moic¦etegihcet-h-h1cssth.98"lmpsº¹naiH¹et hghcps¦º¹naº¹a¦ºl¦lº¹ialc i=ssbus"i-mets-on buaº¹"lc "=ssausti-bil-me"knerh =fth"¦¦:ptwwua.wmef.niniocos¦meteiciv¦-oedoseicss-et1ch.03lmtpsº¹"nadiV¹¦ºsoéaps¦º¹n¹al¦ºilº¹ic ssals"=ti-bume-on ¹"bus aºsalc=sus"eti-b-mknilh ""=ferth¦:pticos¦etefua.meinimoc.nf¦murola¦sº¹"lapoF¹nºsmurps¦º¹naa¦¦º¹lº¹il isalc"=si-buseton m"bus-aº¹alc sss"=ti-bumenil- "k=ferhh":pttwww¦¦ua.imefinc.nlc¦mobuwen¦elssrett?¦&1=ns_mturuob=ecranercosvau&m_mtidelp=mutarofetu&emc_mapmagir=nturcelnsº¹"napb aÇ¹zu! ezaps¦ºº¹nº¹a¦l¦º¹ilc ilsas"=s-bu metionbus- aº¹"alc"=ssusi-bl-metnih "kfertth"=:pww¦¦fua.wime.ninocs¦mteico¦eswenos-eteics-51csmth.6¹"lapsº¹nweNps¦ºsnaa¦º¹¦º¹lº¹il isalcus"=si-b metonus-aº¹"bc ssals"=ti-bumenil-rh "k=fetth":pw¦¦ua.wwefinimc.nen¦moswcos-¦eteibla-smuhpotocos-seit-et33ph.136mtº¹"l¹napsblAºsmus¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus"metiaº¹alc sss"=ti-bumenil- "k=ferh¦"lrowide¦d¦otedni¦x__l-d-62.1lmthº¹"¹napsoTl sura secitºsels¦nap¹a¦º¹¦ºº¹illu¦ luº¹lc=ssa-bus"etia-smcc ¹"	¹ilº						º		alc assca"=hcorc "eferh"=tthw¦¦:pwwfua.imec.ninmodiv¦os-oeeicu¦et-ntra-etsiminigal-eeiv-as-erceud-etol-d-og-eatskcubr-sc-tese-lih-tra-tna5782n.25lmth "cno=kcila"au_frt_vEkcaneM\'(t,\'uneA\' orcchclCe,\'kcin ,llu)0 miº¹" g=crsptth"¦:sats¦ita.c.ndcfocow¦mdlrmihs¦g. "fi-atadiro=nigh"ptti¦¦:sama.egdcfmoc.nb¦everdiv¦s¦oe102D171108635¦12571_110081w_1h1c08"gpj.la ""=tº¹apsalc nsslp"=ecaedloh"r			¹								apsº nalct"=ssti¹"el nUsitraetami  enig al eivesèrcud etl  ogo edbratScu ,sk’c tetselih ratnaaps¦º¹n							¦º			ps	¹na								¹a¦º					¦º			illº ¹	¹i							 aº	ssalca"=orcchc "e=ferhh":pttw¦¦ua.wwefinimmoc.nen¦s-swcoteivad¦edirut-nipiuol-esrut-p-niprree-siat-st-sinuonoc-napu1-elb-3afnes-stnuqertsese2s-89074.6lmtho "cilcn=k_fa"rt_aukcanevE(teM\' ,\'unA\'orccehckcilC,\'lun )0 ,lº¹" gmirs"=csptth¦:ats¦citdcfa..n¦mocdlrowhs¦g.mifid "o-atair=nigth"¦:spti¦egamdcfa.c.ns¦moot¦yr_9cca428907a¦6521ccx775218099aw_0h081811c0"gpj.a "=tlº¹" napslc=ssacalp"oheredl¹"										psº	 nassalc"=ltiteL¹"ep snerasted  31 snetnafs sseuqértp séedial tn nonocapuºselbs¦¹nap										ps¦º		¹na							¦º	¹a							il¦º¦º¹¦º¹luid¹v', 'af_jsencrypt_1')</script></li><li class="item"><a class="item-link" href="http://www.aufeminin.com/le-club-des-expertes/home.html">Tests Produits</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"eltseT¹ sdorPºstiuid¦		¹vuºc l=ssals"m-buunemeti-"silº¹salc "=s-busti meus-on"b aº¹alcs"=ssbueti-nil-m "kferh"=tthw¦¦:pwwfua.imec.ninmo-el¦-bulcsedpxe-resetamam¦sntac-ogec-eir51th.5º¹"lmapsaM¹nam¦ºn¹naps¦º¦º¹a¹ilc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦molc-elbused-epxe-etram¦ssi-nogetacroc-ei252mth.8"lpsº¹aM¹naosis¦ºnapº¹n¦º¹a¦ililº¹lc "=ssausti-bon meus-º¹"b aalcs"=ssbueti-l-m "knirh"=fe:ptthw¦¦a.wwfuimec.ninmo-el¦ulcsed-be-repxh¦sethgicet--htaciroge-e911cth.º¹"lmpsH¹nat hgihceps¦ºna¦º¹l¦º¹a¹i ilºalcs"=ssbueti--on mbusaº¹"c salus"=s-bmetiil-h "knerh"=f¦:pttww¦ua.wefnimoc.ni¦mc-elbul-sed-xetrepeb¦setuaac-eetrog4c-ei.7lmthº¹"¹napseBétuaaps¦ºº¹nº¹a¦l¦º¹ilc ilsas"=s-bu metionbus- aº¹"alc"=ssusi-bl-metnih "kfertth"=:pww¦¦fua.wime.ninocl¦mulc-e-b-sedpxesetrem¦-edogetaciro1c-e65th.º¹"lmpsM¹naedoaps¦º¹n¹a¦º¹il¦ºilºalc sss"=ti-bume-on bus aº¹"lc=ssa-bus"etiil-mknh ""=ferth¦:ptww¦fua.wmenini¦moc.-elbulcd--serepxeetes¦s-oxgetacroc-ei.3552mthº¹"lps¹naºoxeSs¦¹napa¦ºil¦º¹º¹c il=ssalus"ti-bmeon "bus-º¹lc assabus"=i--met"knilrh "=feth:ptwww¦¦a.mefuinimoc.nl¦lc-eed-bue-srepxeta¦snemilat-eritaciroge-e301cmth.1¹"lapsº¹nilAatnemris¦ºenap¹a¦º¹¦ºº¹illc ilssaus"=-beti-on musº¹"bc a=ssals"i-bul-metknirh "feh"=¦:pttw¦a.wwefuninimc.l¦moulc-ed-be-sepxtreib¦senerte-c-eogetair2c-eh.555lmtsº¹"apB¹nê-neirts¦ºenap¹a¦º¹¦ºº¹illc ilssaus"=-beti-on musº¹"bc a=ssals"i-bul-metknirh "feh"=¦:pttw¦a.wwefuninimc.c¦mocatno"¦tpsº¹naoC¹tcatn¦ºnaps¦º¹l¦º¹a¹i ilºssalcs"=i-buetn mbus-o¹"c aºsalus"=s-bmetiknil-h "=ferh"pttww¦¦:.wefuanimoc.ni¦mediasº¹"¦napdiA¹ºeps¦¦º¹na¹ail¦ºlº¹alc issus"=eti-bn mus-o"baº¹salc =sbus"ti-il-meknrh "h"=fepttw¦¦:wwua.nimefnimoc.lc¦en¦buswttel?¦sre4=ntu#8_muosb=ecrraaneretvtu&ts_midemlp=muetamrof&emtupmac_iar=ngrce"lntuº¹napssweN¹telºrets¦nap¹a¦º¹¦ºº¹illu¦id¦º¹¹v', 'af_jsencrypt_1')</script></li><li id="navSection6" class="item"><a data-sid="6" class="item-link" href="http://www.aufeminin.com/forme-sc6.html">Forme</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elmroF¹ºevid¦uº		¹c lssal"=busunem-i-smetº¹"lc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pwwa.wimefuinoc.nf¦m¦emroociesnam-slrgis-rics461lmth.¹"apsºC¹niesnosluop iam rirgs¦ºrapº¹n¦º¹a¦ililº¹lc "=ssausti-bon meus-º¹"b aalcs"=ssbueti-l-m "knirh"=fe:ptthw¦¦a.wwfuimec.ninmorof¦¦emicnim-r8cssmth.4¹"lapsº¹ngéR¦ºemipsº¹na¹a¦¹il¦ºlºlc i"=ssabuseti- m-on¹"busaºalc =ss-bus"til-me "knierhh"=ftt¦:p.www¦uaimefnin¦moc.of¦emregname-rliuqbi-er68cssh."lmtsº¹N¹naptuitirs¦ºnonapa¦º¹º¹il¦ ilº¹lc=ssaus"eti-b ms-onº¹"buc assal"=busmeti-l-"knirh h"=fett¦¦:pa.wwwefuinim.nmocmrof¦¦erops-stemmefs-78cslmth.º¹"napsS¹rops¦ºstap¦º¹nº¹aº¹il¦ilalc s"=ss-bumetin s-oº¹"bu asalc"=si-busetil-mh "knferth"=pt¦¦:a.wwwfunime.nif¦mocroa¦emsseccrios-seop-tr61css.6lmthº¹"¹napscAssecseriops ºtros¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:pwww¦a.efuninimc.f¦momroeib¦een-ert38cssth.¹"lmsºnapneiB¹ê-ºertps¦¦º¹na¹ail¦º ilº¹alc"=ssusi-bn met-o"busaº¹salc =sbus"meti-il- "knrh=feptth"¦:www¦ua.nimefnimoc.mrof¦s¦eetnaf-mmecss-e61th.7"lmapsº¹¹ntnaSps¦ºé¹na¹a¦º¦º¹ilc ilºal"=ssbusmeti-n us-oaº¹"blc =ssas"-bu-metiil "knerhth"=fptw¦¦:ua.wwmefninic.¦mo¦bulcenelswettn?¦sr4==v&3mtu#2os_ecrub=rrafvanerotu&mm_mmuidep=etalemroftu&ac_mpmgiacer=nur"lntsº¹L¹nap eliem ruelsedtut sos¦ºº¹napa¦l¦º¹º¹ilc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pwwa.wimefuinoc.nf¦m¦emroiv-oedentif-ss1css02th.º¹"lmpsV¹naédis¦ºsoap¦º¹nl¦º¹aº¹ic ilal=ss-bus"tin mes-oº¹"bu asalcus"=si-b-metil"knferh "=ptth¦¦:rgiamrifua.inimec.nf¦moro¦mu¹"llasº¹naproF¦ºsmupsº¹na¦º¹a¦¹il ilºlcssabus"=i- met-on¹"busaºalc s"=ss-bumetil-knierh "=ftth"¦:p.www¦uaimefc.nin¦moneibte¦ermubla-stohp-soemroft-633pth.60"lmpsº¹nalA¹ºsmubs¦¹napa¦ºil¦º¹º¹c il=ssalus"ti-bmeº¹"alc assus"=i-bl-metnih "k"=ferow¦¦dlrdeotiedni¦¦x6__l-d-mth.1"lpsº¹oT¹na su selracit¦ºselpsº¹na¹a¦¹il¦º¦ºº¹lulc lussaus"=-betica-sm"clº ¹	¹i							 aº	ssalca"=orcchc "e=ferhh":pttw¦¦ua.wwefinimmoc.nib¦teneeroy¦ud-agm-nita2n-87038h."lmtlcno kcifa"=u_t_aEkcarev\'(tnneM\' ,\'ucAcorcilCeh\'kcun ,ll0 ,iº¹")gmcrs h"=:sptt¦¦tatsfa.cindcmoc.w¦lroihs¦d.m"figad ro-atgi"=nisptth¦¦:gami.ecfaoc.nd¦mverb¦seoedivD¦7102¦8230035_3566139481w_7h0c081j.1a "gptl¹""=napsºlc =ssap"caldlohere		¹"								º	napssalc "=sltit"eeC¹sop sut ser ed agoyoft tnmelletne ed ib neam elitbn&n;psps¦º!na			¹					º		aps¦¹n								º		¹a¦			º				l¦º ¹i		¹il							aºlc "=ssacacorc"ehferh "=ptthww¦¦:a.wmefuni.nis¦mocnaf-etmmenac¦eecer-rcrehc-eheicstnifit-euqseas-tugnhc-nireuehc-l-srinusrevtij-e-snhoohnikpa-stlab-mi-ero1742s001mth."lno kcilc"=u_fat_aEkcarev\'(tn\'uneM\' ,rccAcoCeh\'kcil ,llun0 ,iº¹")gmcrs tth"=:spts¦¦ta.cindcfac.w¦molroihs¦d.m"figatad ro-nigi"=tth¦¦:spmi.egacfaoc.nd¦mrotscca¦y2_9117400ca¦7521c1xa752826w_9878181h0j.1c0"gptla "=º¹" napslc=ssalp"ohecadl¹"re								º			ps nassalc"=ltit¹"eet nUtsnas  niuguopiarr ttédretcel ac eecnava rtna’l irappoited n serpsreims tpmyemôps¦ºsna			¹					º		aps¦¹n								º		¹a¦			º				l¦¦º¹i¦º¹luvid¹', 'af_jsencrypt_1')</script></li><li id="navSection10" class="item"><a data-sid="10" class="item-link" href="http://www.aufeminin.com/culture-sc10.html">Culture</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"eltluC¹rud¦ºe		¹viluºalc sss"=em-buuneti-"sm ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmoctluc¦ruos¦e-ritrcssh.17mt¹"lnapsºS¹itroºsenaps¦º¹º¹a¦º¹il¦ ilsalc=sus"eti-b ms-on"buc aº¹al"=ssi-busmetnil-"krh h"=fett¦¦:pwwwefua.im.ninc¦moctlu¦eruositric-seens-am7csmth.2"lpsº¹iC¹naméns¦ºaapº¹n¦º¹a¦ililº¹lc "=ssausti-bon meus-º¹"b aalcs"=ssbueti-l-m "knirh"=fe:ptthw¦¦a.wwfuimec.ninmoluc¦rutlet¦e-e-dvd37cssth.¹"lmsºnapéléT¹¦ºnaps¦º¹l¦º¹a¹i ilºssalcs"=i-buetn mbus-o¹"c aºsalus"=s-bmetiknil-h "=ferh"pttww¦¦:.wefuanimoc.ni¦mtluca¦eruutctila-esumelacis-57csth.º¹"lmpsM¹nauqisu¦ºenapsº¹¹a¦¹il¦ºlºlc issabus"=i- metus-on¹"bc aºal=ss-bus"til-meknierh "=ftth"w¦¦:p.wwefuaimnin¦moc.ucrutll¦eservia-ril-css-e.47lmth¹"psºiL¹narv¦ºseapsa¦º¹nº¹¹il¦c ilºsals"=sbuti-on mes-¹"bu aºssalc"=-bus-metinilh "ker"=f:ptth¦¦.wwwfuainime.n¦mocutluc¦erswens-ratcss-s61th.3"lmapsº¹¹nratSps¦ºs¹na¹a¦º¦º¹ilc ilºal"=ssbusmeti-n us-oaº¹"blc =ssas"-bu-metiil "knerhth"=fptw¦¦:ua.wwmefninic.¦moutluceruot¦sirss-em1ch.26¹"lmtpsºT¹nauosirs¦ºemap¦º¹nº¹aº¹il¦ilalc s"=ss-bumetin s-oº¹"bu asalc"=si-busetil-mh "knferth"=pt¦¦:a.wwwfunime.nic¦mocluerutediv¦c-outluerss-.121cth¹"lmpsºiV¹naéd¦ºso¹napsa¦ºl¦º¹¹iilºsalc =sbus"ti-on mes-¹"bulc aºssaus"=-betinil-m"kerh "=f:ptth¦¦.wwwmefuainioc.n¦mluc¦erutenl-swsios-srics.851"lmthsº¹¹napeNºswnaps¦º¹º¹a¦il¦ ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmocswen¦l-isioej¦sr-xutargiu-st81mos90mth.¹"lnapsºJ¹ºxuenaps¦¦º¹¦º¹aillº¹alc issus"=i-bn met-o"busc aº¹sals"=sbuti-il-meknrh "=feptth"¦:www¦efua.nimc.nimove¦emenetnrce¦eriefua-im¦ninpsº¹"¹naxirPl ttiriaré e7102s¦ºº¹napa¦l¦º¹ilº¹ilc =ssas"-bu metionbus-º¹"alc assus"=eti-bl-m"knih fertth"=:pww¦¦a.wimefuinoc.nulc¦mn¦blsweteret=n?¦s&1_mtuuosb=ecrraanertlucvtu&em_mid=muetalpof&emrmtupmac_iar=ngturce"lnpsº¹naaÇ¹zzub  es¦º!nap¹a¦º¹¦ºº¹illc ilssaus"=-beti-on musº¹"bc a=ssals"i-bul-metknirh "feh"=¦:pttl¦isio.srmefuanic.niof¦momurlla¦¹"psºoF¹naur¦ºsmapsa¦º¹nº¹¹il¦c ilºsals"=sbuti-on mes-¹"bu aºssalc"=-bus-metinilh "ker"=f:ptth¦¦.wwwfuainime.n¦moc-sweniolsrisa¦ublhp-smtoc-sotlut-eru1p1412mth.5¹"lapsº¹nblA¦ºsmupsº¹na¹a¦¹il¦ºlºlc i"=ssabuseti-"maº¹salc =sbus"ti-il-meknrh "¦"=ferowe¦dlid¦otxednil¦01__-d-mth.1"lpsº¹oT¹na su selracit¦ºselpsº¹na¹a¦¹il¦º¦ºº¹lulc lussaus"=-betica-sm"clº ¹	¹i							 aº	ssalca"=orcchc "e=ferhh":pttw¦¦ua.wwefinimmoc.niv¦-oeducutloc¦erbm-neih-dseruea-ut-sssap-d-enave-tsetires-seerp-refn-see820318lmth.o "ilcnkca"=_au_frtEkcaneveM\'(tun\' ,\'orccAehccilC\'kn , ,llu)0iº¹" gm"=crsth:sptats¦¦citcfa.ndoc.row¦mdlihs¦g.md "fitaro-a=nigith":spt¦¦amifa.egdcoc.nb¦msevera¦_2cc31882a¦021cc7521x22a7513w_91081c081h.1"gpj=tla ¹""apsº nalcp"=ssalohecedl		¹"r						sº			napalc sst"="eltiC¹ibmo neueh\'dersa sp ut-ssaed éav tns setré seiérpeéréf&spsbns¦º?;nap			¹					s¦º		ap		¹n			º				a¦			¹					l¦ºº ¹iil		¹							c aºsalca"=srcehcoerh ""=fptth¦:ww¦fua.wmeninioc.tca¦mauetilisum-lacfa¦eetm-rnairaen-el-orgs-epuronu-tvuon-uaeilc--p42s50317h."lmtno kcilc"=u_faart_aEkctnev\'(neM\' ,\'ucAcorcCeh\'kcil ,llun")0 ,iº¹s gmcrh"=:sptt¦¦tats.cindcfac.w¦mo¦dlroihsig.m"fad ro-atgi"=nitth¦¦:spmi.egandcfaoc.ts¦mroa¦y2_9cc745031ca¦7521c1xa75210908w_1h081811c0"gpj.a "=tlº¹" napslc=ssacalp"oheredl¹"										psº	 nassalc"=ltitaS¹"euov zeralod ruecud rg upuotfA ereraM ennaiva l ce eilcoP" prunet "ridiv( oés¦º)	¹nap									s¦º	¹nap						º				¹a¦						¹il¦ºu¦º¦º¹lid¹v', 'af_jsencrypt_1')</script></li><li id="navSection41" class="item"><a data-sid="41" class="item-link" href="http://www.aufeminin.com/voyage-sc41.html">Voyage</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elayoV¹egid¦ºº		¹v lusalc=sus"nem-b-umeti¹"sc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦mogayov¦ediugyov-eegacss-02h.2¹"lmtsº¹napsoVayov egob slp snsnaps¦ºna¦º¹l¦º¹a¹i ilºalcs"=ssbueti--on mbusaº¹"c salus"=s-bmetiil-h "knerh"=f¦:ptten¦rowt.kfuainime.n¦moclacilc¦lccammo61¦dn507¦882t[emipmats?]sº¹"napetôH¹slps¦º¦º¹naº¹a¹il¦lºc i=ssals"i-bumets-on buaº¹"salc "=s-busti-me"knilh =ferth"¦¦:ptavcnaces.segolc.remoap¦anetrri1¦seº¹"¹napsoLitacv snoacasecn¦ºapsa¦º¹nº¹¹il¦ilºsalc =sbus"meti-on bus-¹" aºssalc"=-busetinil-m"kerh th"=f:ptww¦¦.wfuainime.n¦mocblaov¦muay-seg1p-3ath.¹"lmsºnapublA¹smps¦º¹naº¹a¦ºl¦lº¹ialc i=ssbus"i-met aº¹"lc=ssaus"eti-b-mknilerh ""=frow¦dlde¦i¦otidnl¦xe4__1-d-1h."lmtapsº¹T¹n suoela slcitrseps¦º¹naº¹a¦ºl¦¦º¹iuº¹luc lssal"=busmeti--s"ccaº ¹		¹il						c aº	sala"=scccorh "eherh"=fpttww¦¦:.wefuaninimoc.ov¦may¦egmubla313551d¦7vuoceerel-zulp-sb-sxuaem-crad-seh-eleon.0-"lmtho ilcna"=kcu_frt_acavEk\'(tneeM,\'unA\' corccehcilCn ,\'kllu)0 ,¹"miºcrs g"=ptth¦:stats¦cicfa.oc.ndw¦mdlros¦mih"fig.d -atairo"=nigth:sptami¦¦.egdcfa.nmocismi¦etca¦111c5131_35ca¦77521c21x9a7534715081w_1h1c08pj.la "g=tº¹"" napsalc"=sslpecaedloh"r			¹								sº napssalct"=elti¹"céDervuo z selulpaeb sxuram  séhc edlëoN¦ºaps			¹n						¦º	¹naps						¦º				¹a						¦º	º ¹ilil			¹			aº			c ssalcca"=cor "ehrh=feptth"¦:www¦ua.nimefnimoc.ayov¦¦egubla1m703c¦878se-11-tsa-secuovv-tns-suovuas-re-iuoveva-s-zruepne-oiva--nth.0o "lmlcn=kcia"u_fart_akcnevE\'(t\'uneM ,ccA\'ehcorilC,\'kcn llu")0 ,º¹ gmicrstth"=sps¦¦:citatfa..ndcocw¦m¦dlrohsg.mi"fiatad o-igirth"=nspti¦¦:am.egndcfac.i¦moisma¦1etcc1_1178703a¦821cc7521x41a7557w_88081c081h.1"gpj=tla ¹""apsº nalcp"=ssalohecedl		¹"r						sº			napalc sst"="eltiC¹1 sea 1ecuts stnovsuov as revus v ia suoevep z ruva neois¦ºn	¹nap									s¦º	¹nap						º				¹a¦						¹il¦ºu¦º¦º¹lid¹v', 'af_jsencrypt_1')</script></li><li id="navSection43" class="item"><a data-sid="43" class="item-link" href="http://www.aufeminin.com/petites-mains-diy-do-it-yourself-sc43.html">DIY</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elºYID¹d¦	¹vi luº	alc"=ssusm-bi-uneet¹"smilºsalc =sbus"meti-on bus-¹" aºssalc"=-busetinil-m"kerh th"=f:ptww¦¦.wfuainime.n¦moctep-setiam-snid-yidi-ooy-trulestut¦fsoyid-od-y-ti-uolesrcss-f702mth."lsº¹T¹naptu¦ºsoapsa¦º¹nº¹¹il¦c ilºsals"=sbuti-on mes-¹"bu aºssalc"=-bus-metinilh "ker"=f:ptth¦¦.wwwfuainime.n¦moctitep-seniam-syidi-od--truoyleseta¦fil-sred-yidi-ooy-trulescss-f02th.5"lmapsº¹¹nletAºsreips¦º¹naa¦¦º¹lº¹il isalc"=si-buseton m"bus-aº¹alc sss"=ti-bumenil- "k=ferhh":pttwww¦¦ta.eiledrlyitepsetiamsesni"¦rf.º¹napsb aL¹tuoeuqi¦ºapsa¦º¹nº¹¹il¦ilºsalc =sbus"meti-º¹"lc asa"=si-busetil-m"knferh "=row¦de¦dlotidni¦xe_l¦d-34_1-mth.¹"lnapsºT¹ suoa selitrselc¦ºapsa¦º¹nº¹¹il¦u¦ºluº¹lc ssalbus"=ti--smeca¹"c¹ilº 									lc aºsaa"=scorcc"eherh =fth"¦¦:ptwwua.wmef.niniocut¦md-sot-yii-od-tuoyflesrc¦reerov-p-ertor-erpepsusisnv-nogeateiv-eled2n-o638th.31lmno "kcilca"=au_ft_carnevEk(tneM\',\'uccA\' orCehc\'kciln ,,llu0 ¹") gmiºrsh"=cptts¦¦:sat.citndcfaoc.ow¦mlrs¦dg.mihfiad "-atigiro=ntth"¦¦:spamia.egcf.ndb¦mocer¦sevdiv2D¦oe100507135¦3985361_24w_31h08108j.1c"gp=tla ""psº¹lc nassalp"=caohe"redl	¹							sº			aplc n"=ssatit¹"elrCzeértov  eporp erepsussn noitégévelaiV( édº)onaps¦	¹							s¦º		ap		¹n					º			¹a¦					l¦º		¹iilº 		¹							c aº=ssalca"corcehh ""=ferth¦:ptww¦fua.wmenini¦moc.tutd-soyiod-y-ti-uolesrd¦faf-yirinu-erret-iras-mu41495th.56lmno "ilca"=kc_ft_auEkcarnevM\'(tne,\'uccA\' orCehcciln ,\'klu0 ,liº¹") gm=crsh"ptts¦¦:sat.citcfaoc.nd¦mlrowihs¦dg.m "fiad-atigiro=ntth":spami¦¦egcfa.oc.nds¦myrota¦9cc9541_64ca¦521c21x7575432aw_905081081h1cpj.la "g=tº¹""apsalc nsslp"=ohecaedl	¹"r										sº napalct"=ssti¹"elemmoC tnriaf enosporp erret rar? mui¦ºnaps				¹			º			s¦nap				¹		º			¹a¦							l¦º	u¦º¹iº¹lvid¦¹', 'af_jsencrypt_1')</script></li><li id="navSection9" class="item"><a data-sid="9" class="item-link" href="http://www.aufeminin.com/mariage-sc9.html">Mariage</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"eliraM¹gad¦ºe		¹viluºalc sss"=em-buuneti-"sm ilº¹lc=ssa-bus"etion ms-"buc aº¹al"=ssbusmeti-l-"kniferh h"=:ptt¦¦wwwefua.im.ninmociram¦gaor¦es-seb5csth.1lmº¹"¹napsoR seb edéiramºeaps¦a¦º¹n¦º¹º¹ilillc "=ssausti-b meus-on"b aº¹ssalcs"=i-buetl-m "knirh"=fetthw¦¦:pwwfua.inimec.nm¦moragaicca¦eserios-seairamegcss-h.781lmtsº¹"apA¹nsseccioºserps¦¦º¹na¹ail¦º ilº¹alc"=ssusi-bn met-o"busaº¹salc =sbus"meti-il- "knrh=feptth"¦:www¦ua.nimefnimoc.iram¦egajib¦uom-xgaira-e5cssh.3¹"lmtsº¹napeugaB & illanasecaps¦º¹n¹a¦ºl¦ºilº¹ic ssalbus"=ti-n me-obus aº¹"lc=ssaus"eti-b-mknilerh ""=fptth¦:ww¦fua.wmeninioc.ram¦maib¦egetuaeam-gair-ecssth.25lmsº¹"napfioC¹uf& eruqam lliºegas¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:pwww¦a.efuninimc.m¦moirao¦egagrsinanoitaam-gair-ecssth.94lmsº¹"napagrO¹initass¦ºnonapa¦º¹º¹il¦ ilº¹lc=ssaus"eti-b ms-onº¹"buc assal"=busmeti-l-"knirh h"=fett¦¦:pa.wwwefuinim.nmociram¦gate¦eeparam-sais-eg.84csmthº¹"lps¹naamroFilºsétps¦¦º¹na¹ail¦º ilº¹alc"=ssusi-bn met-o"busaº¹salc =sbus"meti-il- "knrh=feptth"¦:www¦ua.nimefnimoc.iram¦egauoj¦-rm-jgaira-e1css.58"lmthº¹napsruoJ¹ºJ aps¦¹na¦ºil¦º¹º¹c ilsalus"=s-bmetis-on "bu aº¹lcssabus"=i--metnilrh "kfeth"=¦¦:ptwwwfua.meinimoc.nm¦aira¦egtivnisemet--snioramegais-1csth.68lmsº¹"napivnI¹éts¦ºsº¹nap¹a¦il¦ºº¹ ilssalc"=-buseti-on musº¹"balc a=ssbus"i-metknil- "ferhh"=¦:pttn¦owteua.krmefninic.¦mo¦llaclcocciamm61¦dn680189mit[¦tse]pma"?sº¹J¹nap erehcehc enu asºellnaps¦¦º¹¦º¹aillº¹alc issus"=i-bn met-o"busc aº¹sals"=sbuti-il-meknrh "=feptth"¦:ten¦.krowfuanimenioc.lac¦m¦lcilcmoc¦dnam618968t[¦90emimats]p¹"?napsºJ¹hc ecrenu eht tiar¦ºrueaps¦º¹n¹al¦ºilº¹ic ssals"=ti-bume-on ¹"bus aºsalc=sus"eti-b-mknilh ""=ferth¦:ptiram¦egafua.meinimoc.nf¦murola¦sº¹"lapoF¹nºsmurps¦º¹naa¦¦º¹lº¹il isalc"=si-buseton m"bus-aº¹alc sss"=ti-bumenil- "k=ferhh":pttwww¦¦ua.imefinc.nro¦moagasinoitram-naia¦egsmublhp-sotom-irat-ega3p1063th.º¹"lmpsA¹nasmubls¦º¹nap¦ºº¹aº¹il¦ilalc =ss-bus"tin mebus-oº¹"lc asa"=si-busetil-m"knferh "=ptthww¦¦:a.wmefuni.nim¦mocraegaiiv¦m-oedraegai1css-.92lmth¹"psºiV¹naéd¦ºsoapsa¦º¹nº¹¹il¦c ilºsals"=sbuti-º¹"me asalc"=si-busetil-mh "knferw¦"=ro¦dlotidei¦xedn_l¦-d-9_.1lmthpsº¹"¹nasuoTl  secitraels¦ºsnap¹a¦º¹¦ºº¹ilº¹lu¦ lusalc=sus"eti-bsmcca- ¹"	¹ilº						 aº		alc"=sscaorc "ehcrh"=fetthw¦¦:pwwfua.inimec.nv¦modi-oeairameg-al¦ulpleb-selsed-amed-ednua-ss-mmo-d-tenulov-nac182n-68th.0o "lmlcn=kcia"u_fart_akcnevE\'(t\'uneM ,ccA\'ehcorilC,\'kcn llu")0 ,º¹ gmicrstth"=sps¦¦:citatfa..ndcocw¦m¦dlrohsg.mi"fiatad o-igirth"=nspti¦¦:am.egndcfac.b¦moveriv¦seed2D¦o21610¦0378257511__40131w1h08c08gpj.1 "=tlasº¹""napalc ssp"=hecallo"red		¹							sº		c napsalt"=sti"elp aL¹uleb sell sed eddnamua seos temmd nu\'clov naps¦º¹na							º			naps¦		¹						¦º				¹a		º			il¦ilº ¹	¹				º				c assal"=ccaehcor "ferhh"=¦:pttw¦a.wwimefuninmoc.r¦ebopot¦s8-sed-oc-selpuq-v-ius-tnod-e-eriuoe-i102-n-8542s209mth.5"lcno =kcilfa"_au_rtkcatnevE\'(uneM ,\'rccA\'colCeh,\'kciun  ,ll)0º¹"s gmicrth"=sptts¦¦:taa.ci.ndcfmocrow¦dlhs¦ig.mi"ftad o-anigir"=ptthi¦¦:sgamfa.edcc.nts¦moroca¦y_9c0954252cca¦x752152141a723_93h081w81.1c0gpjtla ""=sº¹"c napsalp"=salhecredlo¹"							º				psc na=ssalit""eltT¹ posed 9c lpuo sev iuqnoes terid o"  "iune02 s¦º81ap		¹n								¦ºnaps				¹			¦º		¹a								¦ºº¹illu¦id¦º¹¹v', 'af_jsencrypt_1')</script></li><li id="navSection13" class="item"><a data-sid="13" class="item-link" href="http://www.aufeminin.com/deco-sc13.html">Déco</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elocéD¹¦º¹vidluº		lc =ssas"-bu-unemti"smelº¹alc issus"=eti-bn mus-o"baº¹salc =sbus"ti-il-meknrh "h"=fepttw¦¦:wwua.nimefnimoc.ed¦ed¦ococitaram-noosiss-n2ch.4¹"lmtsº¹napcéDrap op ecèips¦ºs¹na¹a¦º¦º¹ilc ilºal"=ssbusmeti-n us-oaº¹"blc =ssas"-bu-metiil "knerhth"=fptw¦¦:ua.wwmefninic.¦mo¦ocedcassecrioed-seoccss-h.671lmtsº¹"apA¹nsseccioºserps¦¦º¹na¹ail¦º ilº¹alc"=ssusi-bn met-o"busaº¹salc =sbus"meti-il- "knrh=feptth"¦:www¦ua.nimefnimoc.oced¦ul¦animri-se71css.7lmthº¹"¹napsuLanimºserips¦º¹naa¦¦º¹lº¹il isalc"=si-buseton m"bus-aº¹alc sss"=ti-bumenil- "k=ferhh":pttwww¦¦ua.imefinc.ned¦moocnar¦meg-stneeds-oc871csth.¹"lmsºnapgnaR¹mestnes¦ºº¹napa¦l¦º¹ilº¹ilc =ssas"-bu metionbus-º¹"alc assus"=eti-bl-m"knih fertth"=:pww¦¦a.wimefuinoc.nced¦mj¦oidrasnss-h.82cmtº¹"lapsraJ¹nids¦ºnº¹nap¹a¦il¦ºº¹ ilssalc"=-buseti-on musº¹"balc a=ssbus"i-metknil- "ferhh"=¦:pttw¦a.wwimefuninmoc.d¦ocecirb¦lo-egacssh.971mtº¹"l¹napsirBalocegs¦ºº¹napa¦l¦º¹º¹ilc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pwwa.wimefuinoc.nd¦mv¦ocesi-eti-ocedcssh.22mt¹"lnapsºV¹tisiºsenaps¦º¹º¹a¦º¹il¦ ilsalc=sus"eti-b ms-on"buc aº¹al"=ssi-busmetnil-"krh h"=fett¦¦:pwwwefua.im.nind¦mococeced¦-oorp2css-.3lmthº¹"¹napsoCiesns¦ºslnapa¦º¹º¹il¦ ilº¹lc=ssaus"eti-b ms-onº¹"buc assal"=busmeti-l-"knirh h"=fett¦¦:pa.wwwefuinim.nmococed¦e¦tcelmoregane-r1cssth.08"lmpsº¹nalE¹ortceémegan¦ºr¹naps¦º¦º¹alº¹ilc issal"=busmeti-n us-o¹"blc aºsas"=sti-bu-meknil "erhth"=fptm¦¦:siaua.noefinimmoc.nof¦¦murla¹"lnapsºF¹muro¦ºs¹naps¦º¦º¹alº¹ilc issal"=busmeti-n us-o¹"blc aºsas"=sti-bu-meknil "erhth"=fptw¦¦:.wwmefuanic.nied¦mo¦ocediv-ocedcss-o21th.7"lmapsº¹¹nédiVs¦ºsonapa¦º¹º¹il¦ ilº¹lc=ssaus"eti-b ms-onº¹"buc assal"=busmeti-l-"knirh h"=fett¦¦:pa.wwwefuinim.nmococed¦arnoitam-¦nosilasmubtohp--soocedt-33ph.306mtº¹"lapsblA¹nmus¦ºsº¹nap¹a¦il¦ºº¹ ilssalc"=-busetiaº¹"mc ssalbus"=ti-l-meni "k=ferh¦"lrowe¦d¦otidni¦xed31__l-d-th.1lmº¹"¹napsoTl su secitraels¦ºsº¹nap¹a¦il¦ºº¹lu¦ luº¹lc=ssaus"eti-bsmcca-lº ¹"	¹i						º		alc assca"=orc "ehcrh"=fe:ptthw¦¦a.wwfuimec.ninmodiv¦-oe¦ocedrblocis-egaipaed-nn-leoarum--l882n230lmth. "lcno"=kci_fat_auarEkc(tnevM\'\'une\' ,orccAhcilCe ,\'kclun0 ,l")iº¹rs gm=ctth":spats¦¦itfa.cc.ndc¦molrow¦dihsfig.m "atadro-=nigih"spttmi¦¦:egacfa.ndoc.erb¦mevca¦s_2c30882¦21cca1x752752278a70w_51h08108j.1c"gp=tla ""psº¹lc nassalp"=caohe"redl	¹							sº			aplc n"=ssatit¹"eléRilau zes nipasd nëoN e larumeva ld cam uksgni epatD(P YItnitsereº)aps¦			¹n							¦ºaps			¹n						a¦º				¹		¦º		º ¹il¹il									lc aºsaa"=srcc"ehcoh =ferptth"¦¦:.wwwuamef.ninioced¦m¦ocmubla314201uov¦8p-sevuo-znerv-erdtoi-eretnrueirm-qigava-eu-ce-enued-och-001rap-yrtto.0-reth "lmilcno=kc_fa"aurt_vEkcaneM\'(tuneA\' ,\'cchcorcilCe,\'klun ,l)0 miº¹" g=crsth"¦:spts¦itatcfa.c.nd¦mocowdlrmihs¦g. "fitadiro-aigh"=n:sptti¦¦egama.dcfmoc.ni¦tism¦1e11cca1_2013ca¦8421c1x75521a735890w_h081081pj.1c"gtla º¹""=apslc nsa"=secalpohredl	¹"							º			 napsalc"=ssiteltuoV¹" svuop zerdner ertovtni eiré rueamqigva euceenu éd 01 oc%0raH oP yretts¦ºrap	¹n							¦º		aps			¹n							¹a¦º							¦º¹il¹lu¦º¦º¹vid', 'af_jsencrypt_1')</script></li><li id="navSection12" class="item"><a data-sid="12" class="item-link" href="http://www.aufeminin.com/astro-sc12.html">Astro</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elrtsA¹ºovid¦uº		¹c lssal"=busunem-i-smetº¹"lc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pwwa.wimefuinoc.na¦m¦ortsomoh-nocsor-ep7css.8mthsº¹"lapoH¹nsorºepocs¦¹napº¹a¦ºil¦ilº¹c salus"=s-bmetion "bus-º¹lc a"=ssabuseti--mnilrh "kfeth"=:ptwww¦¦a.mefu.ninimoctsa¦oris¦-sengsalortigo-seuqss071clmth.º¹"napsS¹ngisa sertgolouqis¦ºseap¦º¹nl¦º¹aº¹ic ilal=ss-bus"tin mes-oº¹"bu asalcus"=si-b-metil"knferh "=ptth¦¦:a.wwwfunimeoc.nia¦mortsn¦emugoloreicss-.97"lmthº¹napsémuN¹loreigo¦ºapsa¦º¹nº¹¹il¦ilºsalc =sbus"meti-on bus-¹" aºssalc"=-busetinil-m"kerh th"=f:ptww¦¦.wfuainime.n¦moctsaat¦ororne-tngil-s-e08csh.lmtpsº¹"naraT¹stoit & arºsegnaps¦¦º¹¦º¹aillº¹alc issus"=i-bn met-o"busc aº¹sals"=sbuti-il-meknrh "=feptth"¦:www¦efua.nimc.nimosa¦o¦ortar-elccssth.18lmsº¹"O¹napcarºsels¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:pwww¦a.efuninimc.a¦mortsyov¦onas-ec.28csmthº¹"lps¹nanayoVecps¦º¹naº¹a¦ºl¦lº¹ialc i=ssbus"i-mets-on buaº¹"lc "=ssausti-bil-me"knerh =fth"¦¦:ptsalortigofua.emenini¦moc.rofa¦mullº¹"¹napsoFsmurs¦ºº¹napa¦l¦º¹ilº¹ilc =ssas"-bu metionbus-º¹"alc assus"=eti-bl-m"knih fertth"=:pww¦¦a.wimefuinoc.nulc¦mn¦blsweteret=n?¦s&3_mtuuosb=ecrraanerrtsavtu&em_mid=muetalpof&emrmtupmac_iar=ngturce"lnpsº¹naaM¹swen elrettsa ¦ºortpsº¹na¦º¹a¦¹il ilºlcssabus"=i- met-on¹"busaºalc s"=ss-bumetil-knierh "=ftth"¦:p.www¦uaimefc.nin¦moubla¦mº¹"¹napslAsmubs¦ºº¹napa¦l¦º¹ilº¹ilc =ssas"-bu"metiº¹lc assabus"=i--met"knilrh "=few¦lroide¦dotdni¦¦xe21__ld-h.1-¹"lmtpsºT¹nauol sra seitselcs¦ºº¹napa¦l¦º¹u¦º¹iº¹lc lual=ss-bus"ti-smeccalº ¹"¹i									 aºsalc=sca"hcorc"eerh "=f:ptth¦¦.wwwmefuainioc.n¦mgisa-sentsolorqigl¦seuseleb-s-reitnosel-m-liesruell-rp-avue82n-e03h.86 "lmtcnokcil"=_fart_aucaevEk(tnuneM\',\'cA\' hcorclCe\'kci ,lun)0 ,l¹"gmiºrs th"=cpt¦¦:sitatsa.cndcfc.¦modlrows¦.mihfigtad "-agiroh"=niptt¦¦:smiegadcfa..n¦mocerbv¦sevdiD¦oe07102723035¦461_061222w_h081081pj.1c"gtla º¹""=apslc nsa"=secalpohredl	¹"							º			 napsalc"=ssiteltseL¹"B eilés rl tnoseiem ruell ,sp alerevuaps¦º¹n							¦º			ps	¹na								¹a¦º					¦º			illº ¹	¹i							 aº	ssalca"=orcchc "e=ferhh":pttw¦¦ua.wwefinimmoc.nom¦oh-norocsoh¦eporpocse-e02-et7132s-05341th. "lmnoilca"=kc_ft_aucarnevEk(tneM\'\' ,\'uccAhcorCeciln ,\'klu0 ,l¹") gmiºrsh"=c:sptts¦¦itat.ccfaoc.nd¦mlrows¦dg.mihfiad "ro-atigih"=ntt:spami¦¦egcfa..nds¦mocota¦yr2_9cc413¦053ca21c21x7575287a300081w_1h1c08"gpj.la ""=tº¹apsalc nsslp"=ecaedloh"r			¹								apsº nalct"=ssti¹"eltoVoh erorpocs ed eé\'l2 ét10! 7aps¦º¹n							¦º			ps	¹na								¹a¦º					¦º			ilu¦º¹º¹l¹vid¦', 'af_jsencrypt_1')</script></li><li class="item"><a class="item-link" href="http://forum.aufeminin.com/forum/">Forum</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"eluroF¹ºmvid¦uº		¹c lssal"=busunem-i-smetº¹"lc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pofmurefua.im.ninmocurof¦¦msº¹"T¹napsuops¦ºna¦º¹l¦º¹a¹i ilºalcs"=ssbueti--on mbusaº¹"c salus"=s-bmetiil-h "knerh"=f¦:pttrg¦essossa.eimefuinoc.nf¦m¦murolaº¹"l¹napsorGsessess¦ºº¹napa¦l¦º¹º¹ilc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pebsebefua.im.ninmocurof¦¦m"llaapsº¹B¹nsébé¦ºapsa¦º¹nº¹¹il¦ilºsalc =sbus"meti-on bus-¹" aºssalc"=-busetinil-m"kerh th"=f:ptma¦¦uoc-relpuoa.mefuinimoc.nf¦muro"lla¦sº¹¹napmAruouoC ,lps¦ºenap¹a¦º¹¦ºº¹illc ilssaus"=-beti-on musº¹"bc a=ssals"i-bul-metknirh "feh"=¦:ptta¦ortsgolua.eiefinimmoc.nof¦¦murla¹"lnapsºA¹ortsgols¦ºeiap¦º¹nl¦º¹aº¹ic ilal=ss-bus"tin mes-oº¹"bu asalcus"=si-b-metil"knferh "=ptth¦¦:rgiamrifua.inimec.nf¦moro¦mu¹"llasº¹napiaMºrirgs¦¹napº¹a¦ºil¦ilº¹c salus"=s-bmetion "bus-º¹lc a"=ssabuseti--mnilrh "kfeth"=:ptiol¦¦isa.srimefuninmoc.f¦urolla¦m¹"apsºL¹nrisioºsaps¦a¦º¹n¦º¹º¹ilillc "=ssausti-b meus-on"b aº¹ssalcs"=i-buetl-m "knirh"=fetthm¦¦:praegaiefua.nimc.nimoof¦a¦murllsº¹"napiraM¹gas¦ºeº¹nap¹a¦il¦ºº¹ ilssalc"=-buseti-on musº¹"balc a=ssbus"i-metknil- "ferhh"=¦:pttp¦hcysigoloa.emefuni.nif¦mocroa¦mu"llapsº¹¹ncysPgolohºeiaps¦¹na¦ºil¦º¹º¹c ilsalus"=s-bmetis-on "bu aº¹lcssabus"=i--metnilrh "kfeth"=¦¦:ptxesilauetua.nimefnimoc.of¦a¦murllsº¹"S¹napuxetilaºéps¦¦º¹na¹ail¦ºlº¹alc issus"=eti-bn mus-o"baº¹salc =sbus"ti-il-meknrh "h"=feptts¦¦:coteifua.emeninioc.rof¦mmulla¦psº¹"¹naicoSté¦ºé¹naps¦º¦º¹a¹ilc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptm¦edoefua.im.ninmocurof¦¦m"llaapsº¹M¹nºedos¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:paeb¦tua.eimefuinoc.nf¦m¦murolaº¹"l¹napsaeBºétus¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:piuc¦is.enmefuanic.ni¦momurofa¦¹"llnapsºuC¹nisiºeps¦¦º¹na¹ail¦º¦º¹¦º¹luid¹v', 'af_jsencrypt_1')</script></li><li class="item"><a class="item-link" href="http://www.aufeminin.com/album/">Albums</a><script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('dºc visalus"=s-bunemº		¹"vidalc sss"=em-buuntit-"elublA¹smid¦ºº		¹v lusalc=sus"nem-b-umeti¹"sc ilºal"=ssi-busmet-on us¹"blc aºsas"=s-bu-metiil "kn=ferhth"¦:ptw¦.wwmefuanic.ni¦momublam¦aira2a-eg1p-mth."lsº¹M¹napraegais¦ºº¹napa¦l¦º¹ilº¹ilc =ssas"-bu metionbus-º¹"alc assus"=eti-bl-m"knih fertth"=:pww¦¦a.wimefuinoc.nbla¦m¦musorgesess-53a-1pmth.¹"lnapsºG¹ssorºesseps¦º¹naa¦¦º¹lº¹il isalc"=si-buseton m"bus-aº¹alc sss"=ti-bumenil- "k=ferhh":pttwww¦¦ua.imefinc.nla¦moubeb¦m-eb1p-1ah."lmtapsº¹B¹nºébés¦nap¹a¦º¹¦ºº¹il ilssalc"=-bus meti-on"busº¹c a=ssals"i-bumetknil- "ferhtth"=¦:pwww¦a.efuninimc.a¦moublmaf¦mlia-el.1p-5mthº¹"lps¹nalimaFelps¦º¹naº¹a¦ºl¦lº¹ialc i=ssbus"i-mets-on buaº¹"lc "=ssausti-bil-me"knerh =fth"¦¦:ptwwua.wmef.niniocla¦ma¦mubmin-xua7a1p-lmth.¹"apsºA¹nuaminºxaps¦a¦º¹n¦º¹º¹ilillc "=ssausti-b meus-on"b aº¹ssalcs"=i-buetl-m "knirh"=fetthw¦¦:pwwfua.inimec.na¦mobl¦musratsp-lpoea-e1p-81h."lmtapsº¹S¹nsrate P telpoe¦ºnaps¦º¹l¦º¹a¹i ilºssalcs"=i-buetn mbus-o¹"c aºsalus"=s-bmetiknil-h "=ferh"pttww¦¦:.wefuanimoc.ni¦mubladom¦ma-ep-93.1mthsº¹"lapoM¹nºednaps¦º¹º¹a¦º¹il¦ ilsalc=sus"eti-b ms-on"buc aº¹al"=ssi-busmetnil-"krh h"=fett¦¦:pwwwefua.im.nina¦mocubleb¦mua-etp-03a.1lmthº¹"¹napseBétuaaps¦ºº¹nº¹a¦l¦º¹ilc ilsas"=s-bu metionbus- aº¹"alc"=ssusi-bl-metnih "kfertth"=:pww¦¦fua.wime.ninoca¦m¦mublucnisia-e1p-33h."lmtapsº¹C¹nisiuens¦ºº¹napa¦l¦º¹º¹ilc ilsas"=sti-bu mes-onbuº¹"alc assus"=i-bl-metnih "k"=fertth¦¦:pwwa.wimefuinoc.na¦m¦mublovegay-3a-s.1plmth¹"psºoV¹naayºsegps¦¦º¹na¹ail¦º ilº¹alc"=ssusi-bn met-o"busaº¹salc =sbus"meti-il- "knrh=feptth"¦:www¦ua.nimefnimoc.ubla¦d¦mrevi-s41ah.1p-mtº¹"lapsviD¹nres¦ºsº¹nap¹a¦il¦ºº¹lu¦id¦º¹¹v', 'af_jsencrypt_1')</script></li>		</ul>
+				<div id="menu-more">
+			<span class="icon icon-arrow-right"></span>
+		</div>
+	</nav>
+</div>
+<div class="sas_FormatID_15134 ">
+				
+					<div id="sas_15134"></div><script type="text/javascript">
+			if (window.afAd) {
+				afAd.showPlaceholder("15134", []);
+				afAd.render("15134");
+			}
+ 		</script></div><div class="sas_FormatID_15134_2 ">
+				
+					<div id="sas_15134_2"></div><script type="text/javascript">
+			if (window.afAd) {
+				afAd.showPlaceholder("15134_2", []);
+				afAd.render("15134_2");
+			}
+ 		</script></div><div class="sas_FormatID_15135 ">
+				
+					<div id="sas_15135"></div><script type="text/javascript">
+			if (window.afAd) {
+				afAd.showPlaceholder("15135", []);
+				afAd.render("15135");
+			}
+ 		</script></div><script type="text/javascript">	var af_navDdPageID = 318518; var af_navDdFormatID = 15135;</script>	</div>
+<script type="text/javascript">
+	var userId = 0;
+	var initLocalStorage = false;
+	var avatarSprite;
+	(function () {
+		var usernameC = null;
+		var c = document.cookie.split(';');
+		for (var i = 0; i < c.length; i++) {
+			var x = c[i].substr(0, c[i].indexOf('='));
+			var y = c[i].substr(c[i].indexOf('=') + 1);
+			x = x.replace(/^\s+|\s+$/g, '');
+			if (x == 'afperso' || x === 'afpperso') {
+				var t = y.split('&');
+				for (var j = 0; j < t.length; j++) {
+					var a = t[j].substr(0, t[j].indexOf('='));
+					if (a === 'cu') userId = unescape(t[j].substr(t[j].indexOf('=') + 1));
+					if (a === 'un') usernameC = unescape(t[j].substr(t[j].indexOf('=') + 1));
+				}
+			}
+		}
+		if (userId > 0) {
+			var username = usernameC;
+			var avatarUrl = 'https://static.afcdn.com/world/shim.gif';
+			avatarSprite = 'af-avatar avatar-letter avatar-letter-' + usernameC.substring(0, 1);
+			var nbUnreadPM = 0;
+			try {
+				username = localStorage.getItem('username') || usernameC;
+				avatarUrl = localStorage.getItem('avatarUrl') || avatarUrl;
+				nbUnreadPM = localStorage.getItem('nbUnreadPM');
+				nbUnreadFavorites = localStorage.getItem('nbUnreadFavorites');
+			} catch(e) {}
+			if (username && avatarUrl) {
+				buildconnectedHeader(userId, username, avatarUrl, nbUnreadPM, nbUnreadFavorites);
+			} else {
+				initLocalStorage = true;
+			}
+		}
+	})();
+	//TODO : change to an object
+	function buildconnectedHeader(userId, username, avatarUrl, nbUnreadPM, nbUnreadFavorites) {
+		var e = document.getElementById('user-zone');
+		var sum = parseInt(nbUnreadPM) + parseInt(nbUnreadFavorites);
+		if (!e.classList.contains('logged')) {
+			var classLetter = avatarUrl === 'https://static.afcdn.com/world/shim.gif' ? ' class="' + avatarSprite + '"' : '';
+			e.classList.add('logged');
+			e.innerHTML = '<span class="avatar">'
+							+ '<img id="avatar-img"' + classLetter + ' src="' + avatarUrl + '" alt="">'
+							+ '<span id="unreadMessages" title="Notifications"  style="display:' + ((sum > 0) ? 'block' : 'none') + '">' + sum + '</span>'
+						+ '</span>';
+						// + '<span id="username">' + username + '</span>';
+						// + '<a href="#" id="dropdown-user-btn"><i class="icon icon-arrow-round-bottom"></i></a>';
+		}
+		if(!document.getElementById('dropdown-user')) {
+						var dropdownNav = '<ul><li><a href="http://www.aufeminin.com/forum/favorites"'
+											+ ((nbUnreadFavorites > 0) ? ' class="unreadMessages"' : '') + '>Discussions favorites sur le forum' + ((nbUnreadFavorites > 0) ? ' (' + nbUnreadFavorites + ')' : '') + '</a></li>'
+								+ '<li><a href="http://www.aufeminin.com/world/communaute/message/messlist__l=received.html"'
+									+ ((nbUnreadPM > 0) ? ' class="unreadMessages"' : '') + '>Messages privés' + ((nbUnreadPM > 0) ? ' (' + nbUnreadPM + ')' : '') + '</a></li>'
+								+ '<li><a href="http://www.aufeminin.com/album/">Albums</a></li>'
+								+ '<li><a href="http://www.aufeminin.com/mon-espace/">Mon profil</a></li>'
+								+ '<li><a href="http://www.aufeminin.com/world/communaute/users/modification.asp">Modifier mes informations personnelles</a></li>'
+								+ '<li><a href="http://www.aufeminin.com/world/communaute/mailing/newslet.asp">Gérer mes newsletters</a></li>'
+								+ '<li><a href="/reloaded/users/logout">Se déconnecter</a></li>'
+								+ '</ul>';
+			var header = document.getElementById('header-content');
+			header.innerHTML += '<nav id="dropdown-user">' + dropdownNav + '</nav>';
+		}
+	}
+</script>
+
+
+<script type="text/javascript">
+activateNewRedesign = true;
+</script>
+	
+<div class="af_contentBack" align="center">
+	<div class="af_contentDiv" style="width:1001px;" align="left">
+	
+		<div class="af_colCentre" id="af_tdContenu" style="width:1001px; margin-right:0px;" align="left">
+			
+			<table cellpadding=0 cellspacing=0 align=center border=0><tr><td align=center>
+			
+			<!-- ContentBegin //-->
+			
+
+<table width="701" cellspacing="0" cellpadding="0" border="0">
+<tr><td valign="top">
+<br>
+<center>
+<a href="/communaute/support/support1.asp?cadre=club"><img src="/communaute/support/imsupport/titre.gif" height="32" width="247" border="0"></a> 
+</center>
+<br>
+<font face="Arial, Helvetica, sans-serif" size="-1"> 
+<center>
+<font color="#B81818" size="3"><b>Protection et modification<br>de mes données personnelles</b></font> 
+</center>
+<br>
+La soci&eacute;t&eacute; auFeminin.com accorde la plus grande importance à la 
+protection des informations que vous lui fournissez en ligne, ainsi qu'au respect 
+de votre vie priv&eacute;e. Depuis son origine, le site auFeminin.com est d&eacute;clar&eacute; 
+&agrave; la CNIL sous le num&eacute;ro 669631, et respecte l'ensemble des lois 
+sur la protection des donn&eacute;es individuelles.<br>
+Vous trouverez ci-dessous les questions les plus fr&eacute;quentes. Cliquez sur 
+une question pour voir imm&eacute;diatement la r&eacute;ponse :<br>
+<br>
+1. <a href="#Q1"><font color="#000000">Quelles sont les donn&eacute;es personnelles 
+collect&eacute;es sur moi</font></a> ?<br>
+<br>
+2. <a href="#Q2"><font color="#000000">Comment puis-je avoir le contr&ocirc;le 
+de mes donn&eacute;es personnelles</font></a>&nbsp;?<br>
+<br>
+3. <a href="#Q3"><font color="#000000">auFeminin.com communique-t-elle mes informations 
+personnelles &agrave; des tiers</font></a>&nbsp;?<br>
+<br>
+4. <a href="#Q4"><font color="#000000">Comment la confidentialit&eacute; des informations 
+personnelles me concernant est-elle assur&eacute;e par auFeminin.com</font></a>&nbsp;?<br>
+<br>
+5. <a href="#Q5"><font color="#000000">Comment m'abonner ou me d&eacute;sabonner 
+aux newsletters et aux offres promotionnelles</font></a>&nbsp;?<br>
+<br>
+        6. <a href="#Q6"><font color="#000000">Comment auFeminin.com lutte contre 
+        les utilisations malveillantes ou illicites de ses services</font></a>&nbsp;?<br>
+<br>
+<center>
+<img src="/communaute/support/imsupport/ptred.gif" width="150" height="2">
+</center><br>
+<b><a name="Q1"></a><br>
+<br>
+<font color="#B81818">1. Quelles sont les informations personnelles collect&eacute;es 
+sur moi ?</font></b><br>
+<br>
+Nous ne collectons que les informations personnelles que vous nous donnez volontairement. 
+Les donn&eacute;es requises lors de l'inscription sont r&eacute;duites au strict 
+minimum permettant d'utiliser les outils interactifs du Club (e-cartes, dialogue 
+en direct...) : pseudo, mot de passe, nom, pr&eacute;nom, email, &acirc;ge et 
+département de r&eacute;sidence.<br>
+Par ailleurs, vous pouvez remplir &agrave; titre facultatif des donn&eacute;es 
+optionnelles qui nous permettront de vous offrir des contenus, des informations, 
+des offres ou des services plus proches de vos centres d'int&eacute;r&ecirc;ts. 
+Afin de mieux vous servir encore, nous pouvons &eacute;ventuellement vous proposer 
+occasionnellement et &agrave; titre enti&egrave;rement facultatif des questionnaires 
+ou sondages en ligne, et nous pouvons vous proposer des contenus, des informations, 
+des offres ou des services bas&eacute;s sur vos centres d'int&eacute;r&ecirc;t 
+constat&eacute;s durant votre navigation.<br>
+Dans tous les cas, nous nous engageons &agrave; totalement respecter votre vie 
+priv&eacute;e et &agrave; ne <b>jamais</b> enregistrer les adresses successives 
+des pages que vous visualisez. Ainsi, vous pouvez naviguer librement sur auFeminin.com 
+en ayant l'assurance de ne pas &ecirc;tre &quot;pist&eacute;(e)&quot; par auFeminin.com 
+!<br>
+<div align="right"><a href="#"><font size="-2" color="#B81818"><img src="/communaute/support/imsupport/triangle.gif" width="12" height="10" border="0" align="texttop">Haut de page</font></a></div>
+<br>
+<b><a name="Q2"></a><br>
+</b> <b><font color="#B81818">2. Comment puis-je avoir le contrôle de mes informations 
+personnelles&nbsp;?</font></b><br>
+<br>
+auFeminin.com vous offre le moyen de contrôler &agrave; tout moment les informations 
+personnelles que vous nous communiquez. En cliquant sur la rubrique "Changez vos 
+infos d'inscription&quot; accessible depuis le Club, vous pouvez, après vous être 
+identifié grâce à votre pseudo et votre mot de passe :<br>
+- consulter vos informations personnelles,<br>
+- les corriger ou les modifier totalement. <br>
+Les changements seront pris en compte instantanément.<br>
+<div align="right"><a href="#"><font size="-2" color="#B81818"><img src="/communaute/support/imsupport/triangle.gif" width="12" height="10" border="0" align="texttop">Haut de page</font></a></div>
+<br>
+<b><a name="Q3"></a><br>
+</b> <b><font color="#B81818">3. auFeminin.com communique-t-elle mes informations 
+personnelles à des tiers ?</font></b><br>
+<br>
+Non. Contrairement &agrave; de nombreux sites Internet, et pour respecter au maximum 
+vos donn&eacute;es personnelles, auFeminin.com s'interdit de divulguer vos informations 
+personnelles à d'autres sociétés à des fins d'utilisation par celles-ci. Dans 
+le cas o&ugrave; d'autres soci&eacute;t&eacute;s souhaiteraient vous contacter 
+afin de vous faire parvenir des offres sur leurs produits et services, et dans 
+le cas o&ugrave; vous n'auriez pas refus&eacute; les offres de tiers, nous pourrions 
+&eacute;ventuellement vous transmettre leur message en leur nom, mais <b>en aucun 
+cas</b>, vos donn&eacute;es personnelles ne seraient transmises &agrave; ces soci&eacute;t&eacute;s. 
+Ceci permet de s'assurer que vos donn&eacute;es ne se retrouveront pas &quot;diss&eacute;min&eacute;e&quot; 
+sur Internet par notre interm&eacute;diaire.<br>
+<div align="right"><a href="#"><font size="-2" color="#B81818"><img src="/communaute/support/imsupport/triangle.gif" width="12" height="10" border="0" align="texttop">Haut de page</font></a></div>
+<br>
+<a name="Q4"></a><br>
+<font color="#B81818"> <b>4. Comment la confidentialité des informations 
+personnelles me concernant est-elle assur&eacute;e par auFeminin&nbsp;?</b></font><br>
+<br>
+L'accès à vos informations personnelles est protégé par la double saisie d'un 
+pseudo et d'un mot de passe que vous êtes seul(e) à connaître. Nous vous demandons 
+de ne communiquer à personne votre mot de passe. Par ailleurs, nous vous recommandons 
+de choisir un mot de passe suffisamment difficile &agrave; retrouver. auFeminin.com 
+ne vous sollicitera jamais pour vous demander votre votre mot de passe, lors d'un 
+appel téléphonique ou lors d'un contact avec vous à son initiative. Vous êtes 
+seul(e) responsable de la préservation de la confidentialité de votre mot de passe 
+et/ou de toute information personnelle que vous nous avez transmise. Si votre 
+poste est susceptible d'être utilisé par d'autres personnes, nous vous recommandons 
+de quitter votre navigateur apr&egrave;s avoir surf&eacute; sur auFeminin.com 
+afin de vous d&eacute;connecter du Club.<br>
+<div align="right"><a href="#"><font size="-2" color="#B81818"><img src="/communaute/support/imsupport/triangle.gif" width="12" height="10" border="0" align="texttop">Haut de page</font></a></div>
+<br>
+<b><a name="Q5"></a><br>
+</b> <b><font color="#B81818">5. Comment m'abonner ou me d&eacute;sabonner aux 
+newsletters ou aux offres promotionnelles&nbsp;?</font></b><br>
+<br>
+auFeminin.com vous offre le moyen de modifier &agrave; tout moment vos choix d'abonnement 
+&agrave; la newsletter et aux offres promotionnelles. En cliquant sur la rubrique 
+"Changez vos infos d'inscription&quot; accessible depuis le Club, vous pouvez, 
+après vous être identifié grâce à votre pseudo et votre mot de passe, cocher ou 
+d&eacute;cocher les cases indiquant votre abonnement &agrave; la newsletter et 
+votre souhait ou non de recevoir des offres promotionnelles.<br>
+Les changements seront pris en compte instantanément.<br>
+<div align="right"><a href="#"><font size="-2" color="#B81818"><img src="/communaute/support/imsupport/triangle.gif" width="12" height="10" border="0" align="texttop">Haut de page</font></a></div>
+<br>
+<a name="Q6"></a><br>
+<b><font color="#B81818">6. Comment auFeminin.com lutte contre les malveillances 
+et les utilisations illicites de ses services&nbsp;?</font></b><br>
+<br>
+Afin de pouvoir r&eacute;pondre aux questions des autorit&eacute;s comp&eacute;tentes 
+en cas de fraude ou d'acte illicite commis par des personnes malveillantes, nous 
+collectons &agrave; certaines occasions les adressses IP : lors de l'inscription, 
+lors de l'envoi de messages ou de photos destin&eacute;s &agrave; &ecirc;tre publi&eacute;s 
+sur le site. En aucun cas, ces informations ne seront utilis&eacute;es &agrave; 
+d'autres fins qu'&agrave; la requ&ecirc;te des autorit&eacute;s comp&eacute;tentes.<br>
+<div align="right"><a href="#"><font size="-2" color="#B81818"><img src="/communaute/support/imsupport/triangle.gif" width="12" height="10" border="0" align="texttop">Haut de page</font></a></div>
+</font>
+<br></td>
+</tr></table>
+
+<p><br>
+  <br>
+  <a href="/communaute/support/support1.asp?cadre=club"><font face=arial size=2 color="#B81818"><b>Retour 
+    à l'accueil de l'aide en ligne</b></font></a><br>
+  <br>
+  <font face=arial size=2>
+  <font color="#B81818"><b>Ces informations répondent-elles à votre question ?</b></font><br>
+  <a href="/default2.asp"><font color=#000000>Oui</font></a> : cliquez ici pour retourner à la page d'accueil<br>
+  Non</a> : <a href="http://www.aufeminin.com/communaute/contact/reclamation.asp?reclamation=1"><font color="#000000">cliquez ici</font></a> si vous rencontrez un problème ou une difficulté d'ordre technique / lié à l'utilisation du site...<br />
+  <a href="http://www.aufeminin.com/communaute/contact/contact_moderation.asp"><font color="#000000">Cliquer ici</font></a> pour une autre problème ou une autre question sur la modération.</font><br />
+  </font><font face=arial size=2><br>
+  </font></p>
+			<!-- ContentEnd //-->
+			
+			</td></tr></table>
+			
+		</div>
+	
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<footer>
+	<a href="http://www.aufeminin.com" class="image">
+		<span class="icon icon-logo-aufeminin"></span>
+	</a>
+		<div id="social-icons-wrapper">
+		<hr/>
+		<div class="social-icon first"><a href="https://www.facebook.com/pages/Aufeminin/22036796848" target="_blank"><i class="icon icon-fb"></i></a><p><span class="af-nb-follower">3M</span></p></div><div class="social-icon"><a href="http://twitter.com/#!/aufeminin" target="_blank"><i class="icon icon-twitter"></i></a><p><span class="af-nb-follower">45k</span></p></div><div class="social-icon"><a href="https://plus.google.com/112979638123944175199" target="_blank"><i class="icon icon-googleplus"></i></a><p><span class="af-nb-follower">64k</span></p></div><div class="social-icon"><a href="http://fr.pinterest.com/aufeminin/" target="_blank"><i class="icon icon-pinterest"></i></a><p><span class="af-nb-follower">71k</span></p></div><div class="social-icon"><a href="https://www.instagram.com/aufeminin/" target="_blank"><i class="icon icon-instagram"></i></a><p><span class="af-nb-follower">102k</span></p></div>		<hr/>
+	</div>
+		<div id="bottom">
+				
+		
+		<p id="final-line" class="text-center">
+        	Copyright &copy; 1999-2018        	<script id="af_jsencrypt_1" type="text/javascript">jsdchtml3('-  aº erhth"=fptc¦¦:roproetafua.meinimoc.n "grat=tepot_"¹"ew Aetisbua imefinc.neN mowtºkro¹a¦aº - h =fernem¦"oitl-sngeelanem¦sit-snogel.selasat "ptegra_"="potL¹agetoN lcia¦ºe- ¹h aº erh"=f¦:pttoc¦roprtaa.eimefuinoc.n "megrat=tot_"iS¹"p etprocroeta ¹a¦º -h aºfertth"=:poj¦¦ua.sbmefninic.¦morat "eg_"=tpotceR¹"uremeta¦ºtn- ¹ aº rh=feptth"¦:roc¦ropa.etafunimeoc.nif¦moc¦rtntcarat "eg_"=tpotnoC¹"at¦ºtc¹a', 'af_jsencrypt_1')</script>        </p>
+        
+        
+				
+		
+		        
+	</div>
+</footer>
+
+	<script type="text/javascript">
+		var af_globals = {};
+		var backLabel = "Retour",
+			menuLabel = "Menu",
+			searchLabel = "Recherche",
+			okLabel = "OK",
+			homeLabel = "Accueil",
+			isRolloverUserDropDown = 1;
+		
+		
+		var sButtonsDatas = [];
+		sButtonsDatas["info"] = [];
+		sButtonsDatas["info"]["social-info"] = [
+			{
+						name: "Facebook", 
+						url: "https://www.facebook.com/sharer/sharer.php?u=", 
+						classCSS: "fb", 
+						title: "",
+						refererDomaine: "facebook.com",
+						extraClass: ""
+					},{
+						name: "Twitter", 
+						url: "https://twitter.com/share?url=", 
+						classCSS: "twitter", 
+						title: document.title,
+						refererDomaine: "t.co/", 
+						extraClass: ""
+					},{
+						name: "Pinterest", 
+						url: "http://pinterest.com/pin/create/button/?url=", 
+						classCSS: "pinterest", 
+						title: document.title,
+						refererDomaine: "pinterest.com", 
+						extraClass: " marge-bottom"
+					},{
+						name: "Google +",
+						url: "https://plus.google.com/share?url=", 
+						classCSS: "googleplus", 
+						title: "",
+						refererDomaine: "plus.url.google.com",
+						extraClass: ""
+					},];
+	</script>
+	
+	<script>
+	var messageCookieInformation = 'Bonjour et bienvenue sur <a href="www.aufeminin.com" target="_blank">aufeminin</a>. Pour mieux vous connaître et améliorer votre navigation dans nos pages, nous utilisons des cookies.En continuant votre visite, vous acceptez notre <a href="http://www.aufeminin.com/mentions-legales/mentions-legales.asp" target="_blank">politique de cookies</a>.',
+		acceptCookie             = 'Accepter';
+	</script>
+	<script type="text/javascript" src="https://static.afcdn.com/relfr/concat.js?Vendor/auf/global_desktop.js=Vendor/auf/global_common.js=Vendor/jquery/jquery.documentReady.min.js=/world/static/js/global_common.js=/world/static/js/global_desktop.js=Component/cookieInformation/cookieInformation.js=Component/header/header.js=Component/headerAds/header-ads.js=Component/header/header-initLocalStorage.js=Component/sButtons/sButtons.js=Component/headerMainNav/headerMainNav.js=Component/headerSubNav/headerSubNav.js=Component/headerSubNav/headerSubNav-init.js.201801181652"></script><script>jquery$(function() {	if (window.AufHeader) {		var appAufHeader = new AufHeader();		appAufHeader.init({ searchPlaceholder: 'Recherche' });	}});</script><script>var label_share = 'Partager sur';jquery$(function() {	if (window.AufSButtons) {		var afSButtons = new AufSButtons();		afSButtons.init('af-socials-btn','header', sButtonsDatas['info']);	}});</script>
+<script type="text/javascript">
+	if (typeof(af_addEvent) != "undefined") {
+		af_addEvent(window, "scroll", af_lazyloading, false);
+		af_addEvent(window, "load", af_lazyloading, false);
+		
+	}
+	
+	function af_newsletterSubmit() {
+		var af_em=document.getElementById('newsletterEmail').value;
+			
+		if (!af_em.match(/^[a-z0-9-_\.]{2,}@([a-z0-9-]{2,}\.)+[a-z]{2,3}$/i)) {
+			alert('Please correct your email in order to receive the aufeminin newsletter!');
+			document.getElementById('newsletterEmail').focus();
+			return false;
+		} else {
+			af_requestGet('/world/communaute/users/newsletter_inscription.asp','ajax=1&EmailActuel=' + af_em + '&NLID='+document.getElementById('newsletterID').value, function(data){
+				if (data.error == ''){
+					document.getElementById('newsletterContainer').innerHTML = '<p id=\"text-full-line\">'+data.message + '<br/><strong>'+data.messageDesc+'</strong></p>';
+				} else {
+					console.log(data);
+				}
+			}, true);
+			return false;
+		}
+	}
+</script><!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WVM77R"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','af_dataLayer','GTM-WVM77R');</script>
+	<!-- End Google Tag Manager -->
+<SCRIPT LANGUAGE=Javascript>
+function pconspage() {window.open
+("/communaute/conspage/conspage1.asp?d="+escape(this.document.location),"conseil",'toolbar=0,location=0,directories=0,status=0,menubar=0,resizable=1,copyhistory=0,scrollbars=0,width=430,height=300,left=120,top=120');}
+</SCRIPT>
+
+	
+	<script type="text/javascript">
+		try{
+			if(document.webkitVisibilityState&&document.webkitVisibilityState=="prerender"){
+				var vv_img=new Image();vv_img.src="/visibility-log.asp?r="+escape(document.referrer);
+			};
+		}catch(e){};
+	</script>
+	
+<script type="text/javascript">
+function setAfXperso(cName,name,value,expires,path,domain,secure){
+	var c='', i=0, nv=name+'='+escape(value), ckt=document.cookie.split(';');
+	for (i=0;i<ckt.length;i++) { var ck=ckt[i]; while (ck.charAt(0)==' ') ck=ck.substring(1,ck.length); if (ck.substr(0,cName.length+1)==cName+'=') { c=ck.substring(cName.length+1,ck.length); break; } }
+	if (c.length==0) c=nv; else { var cvt=c.split('&'),vi=-1; for (i=0;i<cvt.length;i++) if (cvt[i].substr(0,name.length+1)==name+'=') { vi=i; break; } if (vi<0) c=c+'&'+nv; else { cvt[vi]=nv; c=cvt.join('&'); }}
+	setAfXperso.setExp=function(d) { if (!d) return; var n=new Date(); n.setDate(n.getDate()+d); expires=n; }
+	if (!expires || isNaN(new Date(expires))) { if (cName=='afpperso') setAfXperso.setExp(3650); else if (cName=='afdperso') setAfXperso.setExp(1); }
+	document.cookie=cName+'='+c+'; path='+(path || '/')+'; domain='+(domain || '.aufeminin.com')+(expires?'; expires='+expires.toGMTString():'')+(secure?'; secure':'');
+}
+</script>
+
+<script>
+PubSub.subscribe('ad.block.detect', function(msg, data) {
+	af_dataLayer[0].userInfo.adblocker = data.status ? 1 : 0;
+	PubSub.publish('datalayer.ready', { datalayer: af_dataLayer[0] });
+});
+af_hasAdblocker();
+</script>
+
+<script type="text/javascript">
+if (window.location.hostname.indexOf('.aufeminin.com') === -1){
+	af_ua_trackEvent('AF_ContentScrapingRedir', 'Content scraping', window.location.href, null, true);
+	//setTimeout(window.top.location = 'http://www.aufeminin.com', 100);
+}
+
+</script>
+<div id="SaS_render_5">
+	<div id="sas_5">
+		<script type="text/javascript">
+			if (window.afAd) afAd.render('5');
+		</script>
+	</div>
+</div>
+
+<script type="text/javascript">
+if (typeof(crtg_content)!='undefined' && crtg_content) sas_target+=';'+crtg_content;
+
+</script>
+<script type="text/javascript">
+	if (window.afAd) {
+		af_utils.addEvent(window, 'load', function() { afAd.render(); });
+	}
+</script>
+	<!-- Begin comScore Tag -->
+	<script type="text/javascript"> 
+	 var _comscore = _comscore || []; 
+	 _comscore.push({ c1: "2", c2: "6034949" }); 
+	 (function() { 
+	 var s = document.createElement("script"), el = 
+	document.getElementsByTagName("script")[0]; s.async = true; 
+	 s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + 
+	".scorecardresearch.com/beacon.js"; 
+	 el.parentNode.insertBefore(s, el); 
+	 })(); 
+	</script>
+
+	<noscript>
+	  <img src="https://sb.scorecardresearch.com/p?c1=2&c2=6034949&c3=&c4=&c5=&c6=&c15=&cj=1" />
+	</noscript>
+	<!-- End comScore Tag -->
+	
+	<script type="text/javascript">
+	var heatmap_ext = {
+		getAuthor: function() { return ''; },
+		isActive:  function(elt) {
+			var t = elt.tagName, c = elt.className || '';
+			if (elt.id && t=='DIV' && c.match(/(af-block-editorial-big|af-block-editorial-small)/g)) return true; // home
+			if (t=='A' && c.match(/(swipe-next|swipe-prev)/g)) return true; // home
+			if (t=='I' && c.match(/(icon-burger-menu|icon-search)/g)) return true; // header
+			if (t=='DIV' && c.match(/(gig-composebox-rating-value|gig-composebox-textarea)/g)) return true; // club-expert
+			if (t=='SPAN' && c.match(/(gig-composebox-post)/g)) return true; // club-expert
+			if (elt.id && elt.id.match) {
+				if (elt.id.match(/(head-buzz|avatar)/g)) return true; // header
+				if (elt.id.match(/(^af_diapo_\d+_|af_diapo_nextNav|af_diapo_prevNav)/)) return true; // diaporama
+			}
+		},
+		getURL: function(elt) {
+			var t = elt.tagName, c = elt.className || '';
+			if (elt.id && t=='DIV' && c.match(/(af-block-editorial-big|af-block-editorial-small)/g)) { // home
+				var a = elt.getElementsByTagName('A');
+				if (a) return a[0].href;
+			}
+			if (t=='A' && c.match(/(swipe-next|swipe-prev)/g)) return c.match(/(swipe-next|swipe-prev)/g); // home
+			if (t=='I' && c.match(/(icon-burger-menu|icon-search)/g)) return c.match(/(icon-burger-menu|icon-search)/g); // header
+			if (t=='DIV' && c.match(/(gig-composebox-rating-value|gig-composebox-textarea)/g)) return c.match(/(gig-composebox-rating-value|gig-composebox-textarea)/g); // club-expert
+			if (t=='SPAN' && c.match(/(gig-composebox-post)/g)) return c.match(/(gig-composebox-post)/g); // club-expert
+			if (elt.id && elt.id.match) {
+				if (elt.id.match(/(head-buzz|avatar)/g)) return elt.id; // header
+				if (elt.id.match(/(^af_diapo_\d+_|af_diapo_nextNav|af_diapo_prevNav)/)) return elt.id; // diaporama
+			}
+		},
+		getCurrentURL: function() { 
+		  if (typeof afalbDisplayer != 'undefined' && afalbDisplayer.getCleanPermalink) return afalbDisplayer.getCleanPermalink();
+		  if (typeof af_GBounce != 'undefined' && af_GBounce.open) return 'http://'+window.location.host+'/#google_bouncer';
+		}
+	};
+	(function() {
+	var hm = document.createElement('script'); hm.type ='text/javascript'; hm.async = true;
+	hm.src = ('++u-heatmap-it+log-js').replace(/[+]/g,'/').replace(/-/g,'.');
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+	
+	<script type="text/javascript">
+      window._taboola = window._taboola || [];
+      _taboola.push({flush:true});
+	</script>
+	
+	<script type="text/javascript">
+	  (function(){var f,d,a,b=document.createElement("iframe");b.src="javascript:false";(b.frameElement||b).style.cssText="width: 0; height: 0; border: 0; display: none;";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);try{d=b.contentWindow.document}catch(c){f=document.domain;b.src="javascript:var d=document.open();d.domain='"+f+"';void(0);";d=b.contentWindow.document}d.open()._l=function(){var e=this.createElement("script");if(f){this.domain=f}e.id="boomr-if-as";e.src=window.location.protocol=="https:"?"https://d3phbp7p78bdk9.cloudfront.net/175/foglio.js":"http://foglio.basilic.io/175/foglio.js";this.body.appendChild(e)};d.write('<body onload="document._l();">');d.close()})();
+	</script>
+
+<script type="text/javascript">af_resizeColDroite=function() { return; };</script>
+
+<div style="display:none;">
+<!-- Google Code for pageview Conversion Page -->
+<script language="JavaScript" type="text/javascript">
+<!--
+var google_conversion_id = 1068733537;
+var google_conversion_language = "fr";
+var google_conversion_format = "1";
+var google_conversion_color = "FFFFFF";
+if (1) {
+  var google_conversion_value = 1;
+}
+var google_conversion_label = "pageview";
+//-->
+</script>
+<script language="JavaScript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+<noscript><img height=1 width=1 border=0 src="https://www.googleadservices.com/pagead/conversion/1068733537/imp.gif?value=1&label=pageview&script=0"></noscript>
+</div>
+
+
+<!-- eStat -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var _eStat_Whap_loaded=0;
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" SRC="https://w.estat.com/js/whap.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if(_eStat_Whap_loaded){ eStatWhap.serial("800000206973"); eStatWhap.send(); }
+//-->
+</SCRIPT>
+<!-- /eStat -->
+
+
+<!-- ALERT COOKIE READ -->
+
+<script type="text/javascript">
+var detectCookieAlert = true;
+(function() {
+	var alertCookie = document.createElement('script'); alertCookie.type ='text/javascript'; alertCookie.async = true;
+	alertCookie.src = ('https://static.afcdn.com/fr/js/edito/edito.js?v=20140603');
+	var sAlertCookie = document.getElementsByTagName('script')[0]; sAlertCookie.parentNode.insertBefore(alertCookie, sAlertCookie);
+})();
+</script>
+
+<script type="text/javascript">
+	document.body.className = document.body.className + " body-newdesign";
+</script>
+
+
+</body></html>

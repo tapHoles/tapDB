@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html  >
+<head id="head"><title>
+	Privacy Policy
+</title><meta charset="UTF-8" /> 
+<link href="/CMSPages/GetResource.ashx?stylesheetname=WS-Res-Main" type="text/css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Lato:700,900|Roboto:400,400i,700" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="eq_Jp_Z0KdVtDlZa5qd2FQAWLJi5Gei5EvyiGBjwWo8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3e2cbb898e","applicationID":"77572682","transactionName":"ZVZbbUJUD0dWWkZeVlwceGpgGgJZRElTUFxBHElWQkEAWENcX0dVU0dcF1FGEUw=","queueTime":0,"applicationTime":671,"agent":"","atts":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta charset="utf-8"> 
+<link href="/Windstream-smb/media/smb/Icons/favicon.png" type="image/png" rel="shortcut icon"/>
+<link href="/Windstream-smb/media/smb/Icons/favicon.png" type="image/png" rel="icon"/>
+<script>
+ var siteContext = {
+   pageTitle: "Windstream-residential",
+}
+     
+</script>
+ 
+
+
+<script src="//assets.adobedtm.com/1042a583bc9f2c10d13db023cf98d7270b5c33ba/satelliteLib-658fc6648999e14ebc48f90a6fea6bb6de9dc974.js"></script>
+<script data-siteid="k5BWYlpK" src="https://api.cartstack.com/js/customer-tracking/www.windstream.com_db7380e5f08aae43b7adc771f7b38b2d.js" type="text/javascript"></script>
+
+<!-- Begin Monetate ExpressTag Sync v8.1. Place at start of document head. DO NOT ALTER. -->
+<script type="text/javascript">var monetateT = new Date().getTime();</script>
+<script type="text/javascript" src="//se.monetate.net/js/2/a-715ccac6/p/windstream.com/entry.js"></script>
+<!-- End Monetate tag. --><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-THS7L57');</script>
+<!-- End Google Tag Manager --><script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fCustom%2fjquery-2.2.4.min.js" type="text/javascript"></script></head>
+<body class="LTR ENUS ContentBody" >
+    
+    <form method="post" action="/about/legal/Privacy-Policy" id="form">
+<input type="hidden" name="__CMSCsrfToken" id="__CMSCsrfToken" value="7jJUqo31Mj06lkQnnWTHhERdhe1H/KAIdct8Auga6FszZb8p85AsiqRLApw38jQ/IfdS2+H9HgDnG6YG5txHObKHg60MoJDPwGoiRBQAT8k=" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="CdjJqnyMRaDIfQVliFOzaFRtjOg8KA4HpEeiz8t/hQkYhSQc25P5o4mcalI46POnSAAb2Dgg9mytxPHFKaX7EbPJzDC+ist6VHBp4ntzdpLPmRl2IgYeVUcVfvlGdG7ggPi41EUVt4RdxDvvFzuzyaY6VGd81NML+v87afSl5GPpZm3lRk6yVq7fo9h1N+Tnj0/TUAoQxXfFDboHSkNOs03QfAFLnKSaNso67XsHxdKevkIgQSoz5J+8NJ2Cje1b4ZP8ytwbhvHZPMHYz24uQV/hiILHvkKRbiy9ztZP11cmUXtWA93MknWL3BqqdICpecVRb/OcZkZ4zflOLW0FuOnmJpZjC2shnNjGNkHPK0gpcRzWtS7AGr3IADl5Yk6zQ8H4XndJ7gkebxiLYT/pUKTuV1s1DRcQAO6cCfuzZF64R44IuVtDt8mLR/QiwMCrOLGCmOB7jWZhcnGzgJ2mVivXBrnmy78O7Sb/vTobsA6YlQnOziAK+Qo6NWuGhzP0cY9F78XuzVRYMjixutHt137fcIySugW90OHSbUIwbro1UTPX1lQj97mLooMger48gcLuUP0E4tKYLUvU8QHQQRCMD0i41b704qRwC1/A87jkBfIzpilHjsjzeX7iPMoruCbLtrVlgLHvt/DQHqeD94vI74gt+a5yEkfUhtDcVQMIzy9+yXG5rdcFK+sDKcBF3uCbGxMsOgpC6th7PA1FFm5MzqWV7EWAQZiTO8eWKjfB1bkJG3yvEuT14uD1PUJnoztcyzyx9em12Xdi7QCIjysmCENIdTKmYBapI6Ca/E4RYCaQHBUM69PCORw9RRJpyBFf2uw/LC4fKcugrEY/1mo9wxHxVTN6ylbVkI4Vbx6M6WwNmXauukoLb298MKJlMS43V1rHm4+pQYOwi5b3l7Y5hfczbXnIg0QwtMqlYDkvaCQFZxeMqqxEyrMQmu3ak+D58yfWi0zS18Q9dsN0t7x8rsIQGpk8NAN+45YD8V0w7p+2IqOKLARcPUocpyJxuy5pf+oq2DGI7Ada6ojFoBxtn67ly9JzZXCzCJ92OrIYlhEvI6JTqS8diJQ6LP4FFF0qE8Kfq8Gf4ztaOxQFIKkxJWEv6e7SZizOuADNATo9eSdbuy+5eDhSDNz31Kr4s18Pm94cmAsh4pNVPPUNFrMB/oRlyAY2HqsGocw4qMXiC/pZVk8CuWbYFpGHL71VV8yTke4P9WKLhmwSSUgwwhi3THomgIJioVyeyGyao63JHYDpRg0T6aIkU5OOCSsTzvO8gl3gtvTekz3PjobkMjQ99/grSZ2veCjouDJqL44nujA/quzN9RSWxcf1CkjP2wJTTGx7ZPJp/cdy2y0znG8VG/x6aL762Acwl7Bdf3jSOSOUJePWow9N1QhicplBgGD0Um93BlcnfAOeUIrMJlGXLUFqDIs6pF5jRUduKeSnFCuBgN8HR7fdHoPFUQHwyUM4JYizzJtizrejwyvSfZZeLn6LOA4a7FRAyThorqLZDUmPzlPixcdg+ulwI2vu57LRay8xrXGsdzm7cQgsMwX8BCV3Gdpd+TaZLjz0e8yTfE/C/GLAzBl0L4SxfNqggufkJ1IGbuHxacIrXk8neE/yfz1Nel/AtASmtMV7Yp1jAgl+isD5pbSGJJaHHCjpWCIs0kbIjDf2FPENKD7PM/G9niUfVJT/4JfC3CFV31a47MXJAo+WNealLx625pT3s77vjFmiMCitpr6/0NVsQQ7cw9uN4ZgJhZQ1687zzs2XFvjsdxzOVUOuT2FGnhl5ddQO/ScYaPgXa326ynQMAEtTAiE9VO3h6H8TSwqY5rYQ7pBuhqg4wTyk6HrErzHDN3/oL7kqq4b/IzO9tXLm0CRjzN9tJEX2mxixQDE/DCqp3w55qMbPYD3w+cHA5IY5fcdk7naEPsJJ6j76ihj9myTq9W394/Qk2tO6u9EL0jTMjrIAYSQSnCt/sTusvMYxmMxDBBcpgDLaGL2v0rMJIKoc1g73G8WhBoLi2A6P6kaNQ30+0fMG4iK/pfVbwDeH/ty/UpuTk+2qbNet3vUKRq6FBFO6HuAehN5hr2lZaQY3KfYHWSoaB3Rjn5ET8IdqxNLxmdp5R8lA09NEBDX0Y/KxtnXc0LWkuebXCc1P1TGuP4E/0xeQhYO0WPqINRdx59yI6CGQDzNftCu6avLFk4epRkV989KSTbSl+SBHG7sXLTyW8jrKbTFIYO6fTP3YSy2x5v/10SGyf8DInXz0a1ThEIDukcdy0s8a//OGma60KDSk7Met1uFhRg6O5VrO4WAkoNCqkT9OZTdJGF4B+Ze/4MIQmHIIBRMX3ScWgmcOBe7NDdGAKcWFVITUt3UKT3hHNI224/OjeQ2ruUQjlHpjdY0vZlYOhQE76FiblaYq3T+vVFF7fQSbjvVusTLtyhpmf60iWWP3ZvBT60ucVDogPwpc+e8OnwOKms3ruPZO/FTk8A1rRKUXi1ScHdI+1ZVcWgqTIqrOdASPYdzBkMwdCHKxhCUqXiKJFmtY1ZiAxCqw9wYVvIkitqApRwlvITDfHNyButI50acTvj2LIBxPSaC5BprM00KK5f/sIRc8ODkOvqg8lDXVOz9m4YJ+E5VgMhGi/4g0/DS6+6MTVKYG+V5WUpXslW6vAKZk3Yh49HtOY2flZq2HkyAO4aD9GnEmtKPiLkOOBC68DbLO9eBEYbPcK5sTVkbZDLSnga2MACENzumV0HRu9Xffqj9bdwyAHM2rIYCp2drN9Rw4SyMxh5VLnUFB/pX5YNzDAtg8ccJTwC5hZenruvU2refMrLT+p6k5mfpEb4/bbs9eokJvH+//9RX5LtisvMMF/CXz4bFAQ6QwR7bO8V4EwN36E/yGsEsRkd+eZ/OyJAEKZWOyjO4MQdnYHkRI5DUhlwXfOm7AIpDirMU7XvYy8qhw9FLWoWnynU+z42lBOATZiE8mRAmqpi9Rmvn1xqSpIkBG4SF7Hf67G/FBrWqx2LjU3cXVClinFB1hQeHzK6Awiimotq1MSHwdt0s48u+yuAdB4sqtfcBBJxqKw0Lgpv7PCajm/42xSypRjWB1ZZxx+MTYE8an8qelHZHyNAfcuGN3eC6Y+eDVdSRkpDZKO+pDsqJAr+k0vALwa68tWURZmjgpHL1K4qcuDFN0Jv7MRgXhRtcTWX44FosqlyfhAt5vQf55ephbmwZwkicjN1y3kwLXcAKvc+cErfYWh+d6fE3n+Dm6R5x4sEQey6GLnXjSnFhuMcjoVTRwj3tLWEucTYVmvL6PFxbXvLN97lx0BthaIeV3064YqqDVzotp5Ln+BEe1e+5HrSYVspucrkCgkadelPNv2MYVj2zdABjxlLdE355Icw/MQQBrt71DLIMZWQGBHTDUd5VW64g2lnf8NcbGAB/KjziO04u+kbNDABQqSUwk38taSiDMqgybIR0Gu4lqDE9DLe0t46mGmgCteDGBsVWzdEsRNsj2jtCPghMP7OqzmMOwi7BCvOu5CyEU5ajmwsMgoMuoHLs/FPTrG7Qt4DIY+nKnuWTmQlscoE7T7m/g+5EzX/0jYlqNMfUv40tllwDOe1cdqScNbhbtZ3jh71kJrIIgeE+ejhU1OfRjq0gv0XwC2VuLziXduKwBdfCHeO0PToMOfxuRkzJVUKGuLTmP8qdNL9A9APKBsiAV6gC+BnJ6dtm7reRjhEvQ7Vuz0Y7Y+7IL9wq2OBjiZtgXknIto5XhvUOjdW7jee0ccHNgMpK0BmR/8JHe/T/oziMWr7ZZbQ5ydtMuB4r7xJbHCV2iSo7buN5nQoqo/TW8ot5+h9rw2FbnVKCTYUVIqkAayyUdD0sKo0w2GJZKoEVqIfJXX2pdXFD1wVSl1g1U1oS7iB1QO8doEfdJn7wwOgYmxPWFzXgNy2yJGvuCUzZjUsblrX3GwBBTBHsaPjneZiEsK/D7DcYqLq81YHu6GwuEFXgZM/a/wUVULaIDQZzSWYOENacLJi9IFdGPGbcveR9/6ELjOxyuHP+ImVdSJZ66n5Psx7F9xAdMOGSLzdCKAQFTA32IAvFazxp0WcRdPVc3Rh87Prlpv10Nd2dIrOF5aucCGo87xPuVDv1M2N1K8DU7WNfHpO4RVXGRMWmNzs0jwWfvR0LFAaBLmYZP82NXvLdVTPj44TcvcK6cDvbAL/5kzYhHJbOoM4D204M2qUIMbZO5pEz6Vb3yZ5wbSeIrhQqg93Qebre9hQR8zF17OKTZPeZBzviEC7IGxx8wS0th3CA4W68XXPADIuyKN0Ols1K9b5ej9SjrFAuYZ2HfdJUSeI433/QmFqe4R+DLWtvCfTx+WTaPe9WSQUwGLrRLuSC7MzKjgC9MRnj3siRdDuwu9kePe/3UMYd6LPYjNkWp3OHKls1xbihfBr4gB5turVqRl7rqELxVGr112ENQ61kRRRawKTwXJIM5Q2pcSPgAUQxRCwuGNV7A/CG6FWshKG//3G8rnbNmTKHn7yNOE6a4R5bhIFZ7kqPcjXBB4o3YnQ6T3juLK4A4tXSVLVDhx3HhAutenw7I5tc7YG+wX1UZeiEJE18yINf+rFpdii8+gfVhynfdQHsARsriT02beBKsNPV8esJ8bUXcEKgDw+zfo4U4ZLltX8eI+ScUBFrkNYUqverFBNoqodVGjT6ZJPPHhm29gBwH0qQOS1iCoatXJXLBqQOBQEpyGZYN+RNPFivsHT2FMQJ8xdzwwFwRkXe7nbbDfT0zKOCKYCJ48Eahi1+zodSwolfbPAUQIfuuPL0BKviS5dACTQ1XCXM7MMacrxWhmWKOxXRWB1tOxX4Oira2/k3a02cNxu0K1AIUkJznMCL35tMJM6inhnpMQ3yOmJy0Tu6c2erKnGOHoi8OEayKpuw9vnoEXODFbMx3LW6KjEocvcMufR+cZAYGEte846ep2agp+evSnBQesxtTCXkdwOhDxu5ykQkuDElHXd+U9q7riyTjT8C+xhIzyjqiF48bpRT/ZXkJZ6QLUeFuIqArwyTezVVI42PNBaSv/dQJmUfZd4uvV5K/zhf2ry8rs38eChQ1QI1mprZxEo6BynOb0/F/NmKiMLOtS0MGtxCAKIDTDqDGBNcX1b7H+e/O1409KiZWZmJpvTZr35w12s6HgNw6X86RqlP9bwzLq2+c0DEYHyHSRehDEKVXaSx4CFnaKuW4cnUllXADPLf5n4aTptZH63LAwkF3Y9GOeIyMwzXPL+7ALCxyqlFxzCFQBgfPkqHEb4zMsC4De7lWLs19U2QSQlIDa6W+Tw/ahvnv46fwerwWXowRPsD9nf6+35Mp5qQIL8c+YaMgUze5/bEVM1kLpcsGCTUKovTKQrtHLkXQHiiIH1Fe/lt3xB5w6Qtk/AzhnhubNkno2pCV10SDOxt/9Xxcda+m9OBMoXslE4nsBQ+cWZXP76Cxkmt6Qi/mn25B62iIzVIWBBg00QllCTPFRMGVOSRoM+LCKzi22NpimrKpSps8Sy7uu/7mVAwhgiaSZ53hnP2UO+8Dh1Q+jGxf2YWvYBji2QakxOlnT4HCh5wqjGNGPcXoBPQEW3rqS7TiLUks1KDuIXpdjqhGlZ21dUoFxaZ3gGgUsIVrXuG8F/UQdG2JjHy4ExCG09C7wnnLPXpyzHVSGfJ9GupszQ9L0ErjdVfBI7KvxnwLtYJTOPM90g95MIlLHkbeUh/ECc7wK4qtODhBNyTlmoVwgtvahw0a0V5WAOzouWWvFNlmPFrNnCgiV+/ZCIdSEok8Krg6MCSOtbj4ljhlwJgbH/CuAZp7cxbAkG9LNzLHzleRjnAnkIrSUz/mifYbahORtx7cSGNASmLLVC9L/2KGlZBg46aVSIgpkidRer25Zk6jGqSwMQ59rON0nHXqEYhh875yVk00UrHKzMtgTJ2T1OqSP7KixnUQfZUe/2Ta4YkR0nRzyNxS2MizY72Iu8HLmXBS3z095AYwcFp3XYNNN5ousPOWsI9uDhM9i21xQHQsK4uPi1WpjZEt6lb8DIKnrjYdmZJW6TYUoTJM/mJhbZDsnPFtkElhCCYoGTYmSqnlUKI73RwulXWIdHzgAvOgzdj/Y3u2CIB+FLXE2eCUU0bEgV9QjdMddlow2A0bNkdi3jd9LpKxD8+8z2kALQnL6/cedJ8tSlUetKmsrD6YjeeAV4/DVQJ0mcKHV5lxiYr2BdeJQGbIqCplZbka8/sALsnX5IrHRcCXKYzHavSJG9bIhF5vuggiazEIEwpby9FWnNi4g4PAnhvi7/GoPM4lH8nEHp6wnMEiTjeiArZNKoeFJolrcb48Z0+3XEH6jtAZe0L+5minQxXBRSi+9pSsqB62kLkTS+scuXG6XS4Hb2xEws+tEziUn94MuflWd8J76Q25lkIIMRnrSgUt+cRnTgieGnO7v8McTTHH2gypJvqAdCjyEB+CsgqmJVr9BFBqrXxujLjSUSdVF/e2wsZSxFaNhvGhMqA5Bg0kWjjOOAMwn4AexxGaYoSly/fItzWbd3rLTL3BRbVx5AGg4CCv9qB2jegfcTJYzqlAtU8Nj5vc2m7ycssAqIjcFGGswXSMG3Arn5Ag99YrZy8LXVCM+4LnAqb7dD2JPjldR0/46InTuEmgjd32wKUx8U9gNDDG4w03xuqGLmP8GOvl8BoNZ5mnVcSUC83P/1c+qr0cRQx9gD72jwvX/yHml6tWCutcyOFmIcGpGCkmJn5hQ9FIQLv99v5PzTHxeAgF0uQV5/w3BqIBZxQf40He9mCXTOUHHDNRo8lkgwiR0ZBn2h0BpUAbvCDHkCyMIDDJyy5QHv9N7K4otKZuflm5LfDaIK6wLZJSeqIMk7jxKEUbo2B4nuo/1Q6MpDPDN7pSF1IugWy78ekJQrYwtzm64R1m4VXkmDVp+10CrVkvXyWGbeCH/LblcWUjh6hQTLKAUY5I2Qkh7qdpNP3v0sRjQh7pwIbsuKGev2Hs8/4P8EPRrMTANha82hBR5CGIzcihcefJnfonnogBcdfVlNcQXaRYtG8K7L8hL0mbuQxUP+MIz08x1EKU1o4ZdDcApuYwljW31IBArKS8ZicKz9Hk2p6iIL7D22XePe87awWPEBBMjZlromU1hTEK9fLiTRiPZhMKh428tIuag26/jtGWPvWU/sAt9wqIyN7wB7k3+djBhr5RsTTIe54K5ezfZ6zo6dgPj3hjP6Xs3ENy4TbL6K63KAdmV3VymLmBA4TsHhUXhKVf4l2MzqRQak+5YEon+EP3Vykr1j6fTLN+qwqhl8T/8oQVv9SOwTTxIFsBk3LVYH1U1bZJZCl3ShbD5YUw+zI3JR5CznNWr/WRb3dKo515WRxDJQ5Ss28tIgl7mSCn4aLxmsALD7LWKKu75s+43B+5ypGWyPJL7ZrPIW9D+U2vUByzpanYV6oERrbViVIevPvQ3UVsbjPupUFxrefJh7jfAsf7nnl1PMlMHKFw/ZDfMakIakOBBLovYG1Q3c7vgRdnIAR4ZN35XT2pufCcIsqJ7huBdNjDa+bUNfwBk/yMD0Akkq6Qdxs5ybkaFleEnGeCShbcW9yhs6qSFEQKzWzBmhR11shQrFQCNxmIIBIfA3ZsCJvoEBuzssUR9Ib5doHbsnz1cGZcUXgrwf/VDr+lbWrRxXGlcOTxRHxmj/jsgpsrogznBewF6RO0Mar3dd9JPTP+xLalCCIFj9Pd9+8UVYM3N+umnlIu6tLSoszc0bJC5ElUBINKiCs7g2S9N4KpaVBu7TH1bu9izOlMMRBtldYE72TmAQNb3UkQGbdIr0Ym2FC9Eo77xHhSAW4/eLVD19iJgHa7lIrOBFivBTerPrsH0LYYbiWg7zRKL9e+gASq1wLwfB/1fhvFwqqNAG8fhKiDcguqcJPkcOWYKmV6f7xeKJy0gGwdmEMirXDpHcOR76fzintLxZ9RhuRCMOmmJfHEqcMyN2DVB8NcpT8hU70kS2ct66kwI0j43HmLfTFHBu0VKqk25nFuU5/N+g7tHbAYuMDWrsVH5g/Nj83MY0hBpTFeaU+Wo3bQ3fCMwNeXyeA4SFPJfI3WfwGHeZrHSy6fzcwnW6ISqjB6cJsL+q8LYdX76alqdoI5kPMr0vh13xGI8+jd0qMRBWQIKlE1BXZ0fqRT6J7G3k7FOnPWNc2EWXERW3xyNjXh1MgVqACnuxb6OYieQlvmaS2WIUJrblJwRjhyLV85TjNBokkUrWqjEVaSCCJyJMspToz+u3QMSdag3flNmo2cMhLz9sEhqBKU4/gPRjgFlspvY3FhTiID+Hgh3TaibbOamlSQ8FZPxaFeUFfpBa47ikcGhNR5Sy2d2BiPSiifcS9lyA0JV/HPX/KJURNErD6jlYtP360HNj0j7ZRh5zQDnobCpBYVIBCjReLGwgpjU/hyM6XkIfXRavix7IgcNgO1/BT0Hd/vRLmQOhDqCjgTwXRpIuMRRpHjMH+slf5AGR+WzAE+hDcFSvfx06LcvGL3Cps4Liq9JEU0C963GS2b1CeC59JUgtmEG0VCAwO9kWkg3J7uFvJrdMPAyG1bVbmbieudhZttci6ahhBmvY9shnaux87iaOgR1xFxsDgnrQJznz2t9bgZYxD4HIZ4gBdY3av3it+Ha5PQBMShY4cZextV5cOyn7Gi/b2/ps1tfaJZz4RoeIIOX7BWWIeqcU2AC/8c7uvjqBVtXiuWryWaDTPxb/ex7K8vBDE0K5uykT1XInh3HwTMMqnSJtLGBPnSKaZ/+lKKWj0qwZQJmBbCq0qzIG0o0MdASVLPuUJDv5g1AE4u1oVsoV6TMJGA/u4Ac4MR9yDOJxsav7xYEN0BjytBAwajshKb0rA57RqLgiVQA1wPxrrEo4L4kmBdc32JWAFQ163GHN/gusEr3gzm41EaMZiePNVzDXdkPMeQWkIWtvJP3aXjQxE2qNIzvr79LlIarJpZqbAlW54J+ROS5FPA5iI9nD+DLuGZ0P9ejLd9P19n/Oi/Vs+N4HQB5+kPkF1hDP2/E3D/sss5fLT7/77ze5IMJUx7kFY5V7oM3totQeOJVsBlNPbmTiHY+IO3DVd1gaBVMaaGeLUzn4nTvBAP95TLMUvHaC0HY4WXj6Wt5VARwa3ilFPI6MDKsXxS4bmkyvRsZqcvDIxIyaDE+4E1RMTPK47+1OBonrm1+Itd2WROJq5Ims0o9d1HEph7+U453dA4mlTebjkgguuJEqneznANzVASO5IZX4bNOdpQkPpbeoFcbt5yywX17YoTtunDbME4wlyVeifZsE6I1fY4DGbbUnZMvAKML1psVSD33R43pxtNuWHOJxzTGA3PS0Pj13MvSI3zXQWQ2iDar8fgOLZ5PRSieojsA2g6HDqgF79wDFT3BM3aMFsNfu8dUVMtSHLMNhlFKxMEDYLWwO5MnwkE18/sait2R18vJpU0HfZaDRuKOo39Lg626J5daacjpO+MmGflPDFFTs6c02QgTVUPNMnEJRrWzDyEqrABzI37o/5oJKw+iHohKeG8NGjSAIfRbdyY2MuhuuUYWBx71XYBQ0hVIvJhftmfH7PjE/2vxJGCjCo3u1C/u8CHINN8HFapy0onXEPqWKQ6Cl9r2HsCmTf4pALT9Nk5Qrmt6qa9FCb+r0yQoIARSDE7F9bHWODL8r0wrjt9d7ifIF1UHeL/faJ04oQRiSsejhKQjT6PksAQcyb75UfR3PBcuTbu96FPkn2GI/fduK0HvL9jplVgbNDWBfq1th48MByyHd/jpxNTN5llil6g7dmU//ilYLXHZsBHr4MM+cqFiv/+1bwWpK2XAMTpRLBzpr1hNbaRG27JiEfzyqCjHZoz4rJiQT/G1mVnBkg11FSaJg9zTddt6Ccs28nDTJZE/9Ut23FJNBrpS2/OrTWQVGrXWWa/9ZyUF8182rZ3GZEbYapd+efByLW+9cHiZD+QqP3jsr5wycdeY5Wo99EYoSKoCNCB1fOA459Rx6dhvu8/1ywmVU2li/l0ClLt8MH0rE/uSU4ejqnWd0F83gdEUHNChmO6KMbXblb2KYZxmDKnpGWU9ZSwHsKd/3GUhi7C5uJzO3/KK9z/blMWMZkDD/jfpXeDVqbQXU02Hy6YpY55W0qCmL8Lb7mtny50dYQQLbx5Wrz0WOplGJV8Vw1CJnkMsU30R7jzqra/6h2OcKfuZLEEpLx86zSi79/U4rm26Yn+yMEkkazUyLE5CEQg7gJ280w7j65BmfEyFfFuQ6g+5lNFComTrYWfhWtvcPlQTiZ42ZXR9klfZoPgODy9qPhVHr75AGSMLk9dwbQzAq7U9iFxvtCmV31tmCpgDjkG8kaovpR79k59VhX62L38c2nVpYgjwmJBOfmvMTQODakfMz949dOIm1k2Sp8dposeNyjH8V+ck0xJRkQCMjNKCd20geqRcJpNYdjjY/H3NlRFkHILPM+u3GKOidN7xxjeCoGkeSe1bZG2IyOc3DIJ3UgiFtxjJJdIlTUfbEYrHu10UHRjjMYdCwKmPHedXyIeaRUW6hkghUgpnlF1ipHgPjB/K9doap3Syz4h1Whx4om24VUnDF2+eZs07zswIC59/zt5FDvADVB6D/qS0uwrbb9vpdoTXmU/csjAkdpvZUgJVOk345TSHgC7gVtnyWMn4RzdWSZ40iExDNnEfPS6G+bMDyLvwRfDQH9rIanCFZ3qSdbxX1CTZ3vxa21ZMZJZ6m6H8pM8qT+gLfnZaMl4xQp4WckJ+++/e2Y+iVKoKkUGcL3tSulIl0O6Jj8mC5qct+ndZuia8bfm+Ap6CyJ8as9a8L9V3MnxkRC2nTDD973dlesl9W6n9F/6WWfIOFGNMgXLeY2SK175l+9Mqm3dmisKoISWw2XxmoxxYlUM05Ddo1jMHd+9gScFmAQHz4Yn2dbsYq2TDx97eqeSWv4Q2sqsiBePFWWOL9tz8RaBznCFnMX06MzLZVPoUIQ6x5C6yNBweECxRqZ6dQTGPhZcecxssSL0e9KF5Hi+zGuTU/eqP5cQeb0QkmXCOPQXnYZ8PPxstwMBStDy5RKLxeXDKwCAcVuU+d37MoyGl8SRcQu+czmD/8A1anQ3SLMVNFOebw6vz6yv5ekU01tMfU7gzctZOBn4qNWuDzGslYKdliiNXWbRbqyTCpIJuaUervrFQiAEMwtYTdlHHDd7jxiHbPvpXuopf62dw8bymFHjF8qY9W80iI4MkGXLfrWmdOzWoAIJtkkag5RLjKgjdHoTuClbJbN4dTgRvPVJxQswGgDY0QLIYW2siZKZRNgsECAEwCRVw/+6p+Zofy8/IvTz3vL/Y0bn6grCG7JKay3c748oSooOxZYYqpghOZ8ls8xIC70lfC+uz3r/+1AeHK//RuhVwPtfWZH1eIYBUPzb7/9cgBIvYxVe2D6UOC7E6DbzS4zvrrQx15YbJyBJ42hulLiBi6FM4SinlXockFkHL6zk1NYwDegr4WZuSCl35LSD4vbZGcpPa7f1m96Mn+4eySdDnfy32ufx78apfl1fs/Z6gqNsjgjNCtVpu0dwFGd5t4twdUdtH00UIB9p/ZeTePVOa9QCAxd/rUgR13KiT4WxJbHLI2w7rpGur8NsS88ygeo7xoNDzT25P6SsgXJiLNELSRPtjLV6PKdKwYEomB8SMawYE2iDiYTEFV8UTsKklje3ZNtr9dxqT/vIBlEgyNPui3jpZhsY4EosCQC3fW//ta3lrYyPYxHH4tNkgAOAbNZRTnjMEgRbn0MMIvfTmM+11sJOrwlCYzRqb92rmroaNaBhHavAH6ye44iRS3v575HMQB9ourM4dmetlZv57eTQ0WY1j1o9tRMvI7hSVumQokuLxkE9MBBze2FLYlpJKhmzgkDcsfQ6tQ1ydI6AfS2DhlNmCjODub3sRBkaAi9MVAmD4+nk6uFuM3w7cK+PfcvGZoKgw0Xfe5xVsiCaUokotIB8Ij9dHSCv0+yb2blIgvj9COQO5pRBCPkrkItdBwGfIgLoahPeTYn1Ojx7tqX+SQgNALlAXQ0Wpk8THUXBQqRpSNZ6pxYQV9bo0ZNfzKUuwpdgL98lv2wQi68d0Sb862ygy+/zT4/LbfUpF1sTOBCjJSIqj5WxKEA6ATunvsI570r/wgMy0Nc5YDQXrUpECJtvP8OveJhp6wbkwcu5/k0ikIyhIFNeRqtEuDnxpBUhg3P4m4gQSxN1pTSO1aXRzx7VKKM0KLBOeXm5orK/USpT2nOHuCMNh/eAphWXUwZngRY/aBhZJTB4tQC73hPAQAQ520YSfX4O9BTK+O8Ke6BEOYUR6XRCZFQOdqhEyFLi6b39BeoCV0Q3DH8OE1P54rXL7juk4qn/M6QSZsGmssFcUJgRAn77lqhu+TCqIj/uxyMBg0SzCR3H8jArk7lgga4vVpBQJ8eFp1XtOsRKj1EEwJhQ7rB4Ue0QrUI4lplq2HwoKMatbsWKGpSds/nLeEAC3H1wnIIFojBN+/w12/ky4J6/BLJJWiCvWlZpj/XacGwPs1JRXXn+hwYer5zlOvG+SriNHLlz3sLaQdIbfKT5PDUsZah3nhCG2nXxXvayrbA6yroQB0B70BRTYmWZwWTDz7qOdyWQmoj9hRE1LJJjn/wX1aT/HnnbxcuY11z5iJySOVApquqUKv6F+tqTPEQzbE/AN5Juq0431zWFRIGqPAXpQjnTbLE2sJdCqOyzSImGyAl7jT6nCKG9rlBxbvzvVJ4hhFPl2yqpltWJJyVBBRIGedySvNMImvBH2l+v7XEFYwLNzwxKBvgQsiuZaiOJyG0Z92bv3EuNzruJBx/UXRzYTtlHlD6M9Q6ZgKylGF1jruA7hxm73jFH7k7CXTaJt3Uh9jnQHJCTWqARSa6twHtRm4GUqxvKb12k/qc2ouY2TYuAOETrKdolBn/I6lL1QMP9PMDQtBjX67AQY1v5sRTT0XkVuWAtr1S3/zLdxltdAQa+S6SM6NSHHCJJqLnFi/WMEhaakHaTzcc8CSU/MFG4iINyiF9YOcyEL7Xpu2aIIVz0ZOc64sZJNapTkR4arzw2aJYK1oKpM5APchNwFxN3kll0KYwYpW43y/P1/hcSPJzswxH8iRwGORBxZ7NiIRpg/x0eUIkU90Xzpl3c9xVmgFGNULATaCNuVd4vfgB47m9Ampr34fPQPKby0JMhY8xw78rCfXr+SF5jTFSs6zqCq0AqQ9mouG+yO0AzLUR5BX/V0BkM5GHNOQ5Ri9B6dDrKWtpeDM4MPq37w9jKom//xf2EcAHI6q8Np4bxccRjNsgLpTDkIipUgmNAhXVTfEEbRooDOAX1VD3F2dZzVCVV0YHh54OeBIpz18DkLdohtPLECBXs+7t3YZu0d8QPrzxeSRcf6K5fNEoyasyPkuQdgMm1bqi+OodHLqW875vf+uvvg5ITVoA+h5TVgZZrtzkhVP/C+WMsgo6lmZksPFTHQnOo6tNisWx1iju664NGulUz6L3eEMiPzpQOrf5NL69o9zrALmE9OVFf6miATxwa6uOEeqLYd7tYEK3jVj7HTn93k868KxJcPR8Uy96ujtlLLNVzgyd9j1fqEe6sW5iXdQWFj4sUj+lzaH+/SjkKerRNAxlo1f1OFtx2VYO0XJCIxzDBz7coV3sLxuQGE2EFq8K9u8MGDxD1eX4nnBiqBEBESwX4HLiHsVgwblpJp+zG6aqZ/UIBGtzVBKO08bVKW0f+9UhdJ2byG7Gvd6CCnHhH6GJMQccYoh37YNGAuRw2xTwgacK5bjO2uj1TKSb2nBfEWqwRpxcXvWBg5NGrlYut0Rvq9cV0oMFrAvGbn3h0hJ6M7xOeCLdmOH44FVrAWKQ44cANUeqp5VpnkNXi8FyYm8+hJH25MwPGW4yHnUUJ41EYgVn+qkUFiuzcuEEy+M8yBo8eLAmUAlJKD/CzXhrWB1/8VxKUVTwZJVUy38hNhI0yTPlmElPou21DVTm+0CY6eMru6zrUxkz5wnA/pMU+QQxj7+djQ5qMFTd3JQn/ql0jKaDGMcp/RM2pO1m2+mvo3rQBWaG309hengMi3dF1drKSnz4rmcsVhfra4e+tM+MxI3QDyxnqWM8E+Oetv/ZOw6aWJb35EYLXQuhpGndKT2SAuV7omLk/2Y3b5M+cEqQbZBJeL0X8UcA0xi1rjoDKGzK6HkSJdulcKacFhKsemSIyKwJTOL3zBkaDSCPQD/+gA0tM2XBJ1y5y9F+TxVC/Hmj+Qb8/cdlAIvgzj8Wgsy6Kc6tw0hHOeN2BVSZQksGtd3prswk2A0nzlQrPjsl+sLkRqPT6FaY0rbalUtHtm7ffWxVyfzPfTRYedIQMCnRTjz3CWHHKCC0QcY3LRmgfCXfFaLMSMpXIy6hc2MD2m2oFtyIKuoKqbkk5OxuwI6WnPdaMua/k/xsoo/49UvZshR7Ke4aqTKi4nfP6FmyGUgafDdWtAp0GdE0VmcEzIYeMQgPLo00YIvcNO7chWzeBV8RiptLS2zYBlzOjYzDhqfRuh/TcfReMHFszPxazoVzyK2b0cMfRurJCBEAeufj+tXxT4dmMcIHMXC6g34G7DgssGpyPYz5OJADvT9HskffURjI8qasdQj5ddNqpJmcFL7P4iY9OfT5H/HO4yrLe/iEJTXDmhEhal3jZ+KRNq7rKBn6KlZlJommYCRDfwZuNRnuscIuM/weL6AoRA22x0LJXQpyHpKeWJw/W2cBeiBLTO7c598s1qbkYsr64lP7wQUIl1ZGvbvEoBbHIDi8fWS9ofiWZX96ODAMiDTxMSURx1+roawdasAQnpmbdlzpy2v4jxzkYwbudBLsGoCwDN5xhVjend2Qu6r3A2sqz5OyQAufuqJte3cDQLKVM0ksUf2bWb2chtiyh2ESeHUb2euAGX5xMxcsysf8+F89019RlTg2EAFG3e1ZljAGB/T4XR2QD60snujwK+pgOd88xh+tLTOfE9jtxwrGQIxgYE67fZd492aqgmxMWCVdWcWMmRloqEecm3QXNQYlNtAKD7RqlowtDGVxNn2vBJYKn322MOeuwf1JhhD1x1hPhyds24p/xgukVO9QP/qeqo9EGSy6iAxlBI/Tw1hph3EaeM6qX9+y4oGqEGLpbNHXMeVVDqXECN3LfTf5ocXrf5ZlkVJGGr0I5DIBFa6H/ZvTJu4KWWwfUvQSDxTJE3HCmz3kBPYvvVYMY7hLwdzHH6N00KX6qDMfLiYj4mMBdDFvV6zaBDRLU/z3rRDD6yu3zCDEIxZEnqKXd1WxaSKevqObElufWuzGrvq6XmMbTd3N8FfhRNrH987/qkiJIsSEPtJEgH1WSA2M2l0QoPbiEQaUGCHvpNfqI6cnQLLcKXcDHC83L1jZariN896LadHalbY0ZwD3Uwp9UmP8pAo1qOL7F1V5q7u5BsCs8DaKtyxY/kmlZ8UY/yc2zLHkoxHCcE0BuYzdIPG2sZdpAImx2aGODwdyIrElKfbQAdvhKzIt8DPC5d40fDTObUyAwzmM2TJI3umn0WXOmwmsn3dngV4zFvhEbI6+Z4zcywdaPiovWNtGNO65Rwb4pzkt5HyIxGWOOinTDqCHDg7xUTTvgp3XU0vq9q9IxuwfUKKseiqZ/MnDY1zzhCwxhjAU9l2X6rr7UR6OGeIhi0H1/0QwUdtRCwvK/jUyQNe0LKMzW78EF8HGHnjO13zMFQVvPxbUkSZOrvFjVGuAgmvhSK265MYb4eMam4a/bwZN93ICqzaSJUzXe+DivG7KNeqkqmEDVzxpG2pVVDzEbuYhF63Du044neFfnzyVkd6LGBjxZ1Q8hOa5el2eTrabqNiYdqyeL2D9Q/0gqhNUao1OnAGFs/3YH3AStUC8ezBa38ZZeYefmOWcoD/qlR3m9/QfIQ5v4heKNQ2Har9Ko2n8G0B5ItcBoMXoWmYbjOiGQcIoPRWUpTye4F1kFYNliH79fwLbxaqqd+VsQkucCVvq2UmWakshJmNm6Pq40aI69su0j+sf1ZykpVk3h8XdtB029fBsmUs2oOSfrBkLqWyiqlHsRlS8DoI8WzeptJWawdDcRSPbUM1EMQ9QQP/Yd4x2KZMlr4lJg5ixkcAO/aeafR81B7c0WD23BpS7IRavU2VRFQJ7UCq4TxFsU1FXZoX9XBnp7kBeJWaLzS9I3SqvsfZv9TaI2Z59RKIFJ/7GEVWBdFIRmdGXqhwNTxnvkiqBw730UElv8dMrQO2eTjRPn4J8ho/hI4MIohpF+nlrRoELSB8M6UEe4IfPT8AzxZ7019nThlrn/k1BSdHj8Rk7G31Kn581IYVFVMiGe98UGqUflGQ2QJH+Nu9z4iet1+NG3yNofc48R+/PRJvDgkX4ug15IO2jnsM+WOZ/U9Y7FnnVPI66hSPRCtRP1V48S4NqaGQ7MMtf5FiUb1PiuSD94kWk5SDe2957VNmf45K80ontbHzgDR6KI5g09rERJeYWWQm0QY2o9DOAh9NaNtpLGCGsdVquyi1R2uXCP8Cgku77TqEhm1ApdErIizN1YL9xubl3GlLsQn1SeZ99bhRYvUF2AglDOLNusbwbXxyEpvM59CVtQyyckv8pEEVsosDg4LtJRHm61v7jB3dPerHWqGcgRH8T8MN0LsPw2HErIeTAXt0MOqdwWN0LgKhsWFMrXgtMVKjuxQ6LQbXDMWwuTqOmSxa+niKcbOt0G844SCkqfY1jj0MrzK7PkgRm4I9SsrdlgvGSEv7rUR3C+QjI/VZ4NuNDP0spRXjdIj3VR528/l4mvJJ5K0TqfqIDDdAGf86N4nj12JvkUHhrABlLX0P2e7qRvPb5mJIi1DerKmmMgc+eO7SFquVHXx+D+1gH9r0XzbbU087nNQE+BUe7BW8vRixMM82HbPYixsP2rkXd7frEhFgmk4d4I1MLKjangTu/m8QIvOCjhVTR1c/b6RQCoPYRpHDmq7Ml9FMArlhiW07XRmHflQkn4lxzJu0PJDjxWpOMti7jSpwToFDapFMYLMIJJmIFwPfekQd60TIeIUcwyBQkzdERleCOpuWDedNMCC19pQZv6HfWKtTqc23wEdgxrecRSMM66IojDTYxPT/PWf9jXO2FxHknyVwdRCK4HJnDkJuQv3KkOqvS+KGBF63ebTec1X1Px3jRA4QSBq++LBcTevrEo44f86iWVkn+mS23mKubuAjmqjosIXFPIHU4up3/JSv8JvvTDRhfpllNZ9r2vY+eqxRHDVKSP9+W37bp08ExFBeZwLiSBtd6FXqU3tiKtjfyamqH0t92TYre1n1lSlit4qT/XQhdW8LAmwhRltzQwCiqpC/Pdy1NydvTujufNMkfcgfIbJrxvMJ8lVstTKCKHvxClVTU91B/9ddVLrnR2XsR5O3ZWn3Im+m3+4Ahi6w5xphcZE4Asi5PTb3f5yZPuj6ZPP815ixGRSYvGmigmVz8ymUb1GxyuKgMuKrBgUzkdzqnoNaJzeImD32vS3cecLW7p9Rgy/1ZBHlGMKYLgxcar9X4bR90hFeQXmMO1Jn5+18lfBPk6W0fvB2UCl/Zv9IuHEDsXDb0CL+b4VcNZ90AOnR6qVKq2F2wwCTCb6sxg4N979dGUfIbRcTyK7BEews9sWIjE+pZZ0jTlPvhZb/ni9NFkwsTGJwckqtJzo5Q/nSwDqz4yFTEeSZphLJb6nw44m/BQxfriQ3dmIXz1Jx9iozm0EQ9SUzcmJfBadJv82VdiPr44LjQq4+fcr4ru9EZpchclWs4bjqHj9ygSY1HLN6GwPfts/tuUDUN396ZxX9qsL1AoD4ODHIf3jVxgqXXj2ryEzasGjGO72p4qWLJPRWMkxQhSzYcK5hbQd5RcrbdkVLAdJXSozbWrzLM7PL3upj7DBji1T4mt2K/nS5UbB5Xx7IIjDKfk1jYZuDP7drO8CQ72LN/x8LIv+hlVhou4pgX37belCqrsTxOFdNwdKSjWy3JfIOliRaiz+Oq13kwPoeAYfMSUokZt7FJUdMSdgTo4mV0C8On1Ba5VtsiYeG6YBK2zvtJ7jo+cXKkk3cs54hoNGEDWDX1MfdqSUcWkxwn+KRG+slGz1Qt8QbWiIHlt5I5IAdGhKyKSVMndZU4hZnNBbZGtJm21pwE2/HOkolGf2g/KbkHZXAonw9V7SASPCI/XQVgjSoSRYSYA2vgxCH8lnglMzDTuic+8lTj1kCfiKFLtW++trBNeOP/wU83T4lZvQ5KLg4Glat4aop+Vh1VU0ybkEZmr9md2Br/AuupRiILzIJUqT6nfRqlrAvvskXYcCVH6BLa9hIgpbLERoQLMBN04sjstGNVwAxwZpXp1+PYzmumQ5RulTvmwgErP0S5JGolfjaLSvCSv9KE+HsZvJGlNtqcYYgea5p7t2+OAcwNSHDsdjM+G4qKayK1UkRZDLEJ4P+Rp/np6igvofx+l3mY95Gwf7NiYOx60b/p4XTOsQy+i2M9mAMsetOVKWidTucvTxf/iqawY5nhyMyTfPCaNK+e1xHdZOAgaxwravaUqPI/zG5PdXw/0amWCAXDWiDKYfRVzI2ZLpcruLFFdWCW8AvovcsP6oq0a3MfkPfKM/gtV8rlZIqfWRiJaaWkV6xhomNI8JbgFr1r8nh2dbOxMCfCPJ+ZXQIyM0nsurytPISeCypgDkRlbimxLBtcQKtrxLu52WUf4XwpE9XQsCSkbPnDFjKk/2R6JwEMlDMNic36grGaAdPgN4ytdpOVRYqXGAdfjiTfO6A0aigRaSZJNZQj1giIi22frENN6Fj46aMF3u2qX1cWrIm00EHx3ZYO4JhUabOLxLTCPYhEKPLNWh4X0ydLtDv8Wh35sAcM9Wl7E08bxsfyTzc+pIjZtVrQL4iGf4iGONlbvj0noTl0SYI2zwfREOogqgnVZ+k2NFSKffMPLIvEZjFfsZVQuR2t/uWvtEyD0JBSLdU1f5nFI2FhAjmCYx8IaEsBLjAv/jxbcHOOZCruw/xF4rhBn9v6t6W0TVeugUmLuLGjUg4tS5DmKUTxZ4RYXZsYhRqTBs9Lz6sa/PkKDi87qQ44IgdVncJlmPmTNWpLeWf6hdgE5Sh1FRZDA3Btk3GlODaCl5hdyBp4adtJ99XcmvezU4BSM+gsLpiQNDuzK36Uq9Wqox79Sngv0At/DP3CPg+6C9lomA914/VGfc2fV8UEJa/baPHiCzHpE0mJTwJvatuMLXQguXbtpxLZgHlFvUxl1KN+fjGHL1IpmyUKgglOLYa05fUdqVbwZGPlpxu5O0udP8pKKZXFWjvmoO3XjxFfslGfShQ8Pz6e1QhdQMsfciKUqgIwWrUaB882tbOdxehekaecVGF3PY6G3j5mNxBvjAmnZ3mWuSV3aU30xE61bjvI3o9zolraGZWKlTSlvo2rN+FlMDeLTv3DLVCK6rSBbftHHlFl4R18KlRYKBtHSnf9xx/U6BYRA9PH9mIf3hzZ6GfLJycfbFok4tqeTnZGSxMzrpf9MUwoubSSyHUaIp/CYxHpAOhBTye9d1tAWkolbpc3uh3teYW0tEp+fSVRSb5k4rFIGQ8mjLJEomkSIOI462hMISC67aPBaUht3DoZLEUSOlER63AU2p1x3bgh2RBFfCf34uWk9lqpM+yyoPLhRR0Ww+jSFUH8TL+/0g2nBDiN7alM6l0WuUdAm07v2Z6uoop/YNF+auk8rkm04TlDi22gaBJBViE7w2GHEuZsSlvfPqfQ5fonpr/4xh7Sjhfo0AeZFuLb5jHeeahQtALztCnhNy9ajrWzBFDAXTt7f+53wh6dBnPN1DkgymzBqzLWOpUbfkBmRr+L+JhWByggnEwQufBlrS2iB9KQoy7gwOByQJ3eqKhrGvnzG/z3JdxVPBeS1sWuaJoaer4AQXqH+OdA+y6GxD4epGloEjIH/FK38mqbpjxtq4J4pqUhBK1TuMRV8+LVzBCI4YW5IVjf9KQR52XVtI6F4ZvOEMDXhO9ZX7AEXLxLHUHuat4vMwYGlxcrw2LzoKa8Bt5fbFWarv4mylnkQfOQaq1ymUsBTz5TOhBG/AC6eutpuy9oLTePz1JclKgL/hz/To77ESe+UAgWx18KequVzfzfbpls/0KtEgwJ85c5hhgnppq5ua84CGdupIELLn1difEGcVTs9zNgXy7cYFUcVQkE2+P8/adkjr4sm6bA5nyB/pBHpcLSAyutOGVeoJzK4iXbA0BufxiZVeh8nfHgclcGMjslHkWk7IrCdLk+GFvB35XTmlH496JyM/0dMoGJ8cU+JyXEomrU79rO8PIbaXK1rUEG7YXr8pRDbWGmcr2mB7VPsVEgPEs0oGki6CuHP0sH/COo3Yy4lliunb/UjOEx0vOoqc7/ShklafVNJsuhkDmTa1RKRsMJPguDQjDueFC7H2OKHLWyvZloDfQL98WxmrgEBiTJfP9KIgBUWvOcfk62zntiu3/uaWAY+zpYcxCgKga0XYIWYSIRlkHJ9cPwIqCVrl5r6eDb10yZf8/rK4DJ7RGX3msGmdI/gW5KbViJpnOv6yAUm+nRvEH5O7AebNlC/QDFToMpr8ZUiJ5RjyuFitU5Ddk1Vs5E4MnftLV+FvRvfR9E2bkVUbOjdc4DBPaYjaLVsUDK3bjZ8LTaXTbVz0lTl8bg7aPq8o0zJGhIvzGZCVZ6mfzKHEh7l9xK2a9EiKjK/ZM8KQziDSEohLcrtkUQDTh7KWRtJA7U/ZZ4cZTcqnfnJfhfV6Joy5qsEhtY8lRL2HLppSKGO9ra9VoJQd/R2HgsWYw6XWCMAzUneN7HfNwzA+WGmBOISlJ8hO0XIrJVGzAygro7l8BsOpoRWbN3E5X58xzpF7VQvkkpEV0Tme5QLFrRzqSICyMXkwXGVa3jo3txul/8vfSyhgkNjwncv3C5RjEgv2LHDXDuf5g4fpBnD4VUW2pw7U4v6KgP5Gk73jd8z3L0AswhJ68euybwodDiNIrD8rT4CDNv95hbdXhR5fJmLwY38Cgdy1AA/2wyOW511pmAb0WK07Zm6815yBp9ifV+eCET0r3gjSUHKFcI4e3507RtjohvixgK9pri2zJocqi90EzVwMpxTguAp/YAoIj8SAiddaThdRO92zV++G1TuLftyS1+laK5uQ39eaDlQuZmnaEPOsoEdmEyQ4TM+6OIqbCuyrhHhecx05BidPyc+oR9abox48zN4Q9LAC8i5QQgDI1fgf0cuNsAlBEm4RF8+/T0Kn/FxCYDmDriK72+fgTiM080CuBnUW0XHmNHzFqccEBI1Z8UMnc+qz+omJaT9YXjlLFu3JIsPleoxRWNuJDeEluH5vbr7JZanL6/2QolfHXgAnPbtB7ZxnLFUBFbGsxYy9cHQg9X1bWqscATdwJr+rsuwAIl25r/d/uli9noUwsoW0T5k1ua4dT/j9Az+CYl9JnYMPBcLVsG31HaqaEeu0VHhwLWhzf+lwrjgTRdCKOabhg3Ej8v/NhemyBkzQs0rgkxODpqNBvAEjGqsPXDXq4xMkaW8QCP42qo9vQcHzThqadLhpSWXnbMiYhDViqlHplj4dKkTFxpS5q3RrxK+IwDL84GotNbxF8W+aafixXOlmRIcgJov5sSWyXtym8vpZfNHU0TzNv358k0mHcc0GC2yCQy8XWwK95zTbVF4Fqb1ZwVx+EpC8tkJWkrxDiA+QLBdxlJhNeS0MzEFX2Vee5kG3Bk7WaJnO6BDSnVxb5YSEHIqEkYeYzQr9tcU2q660G7BVo8vtpBLeM39gXYIipV5kpYohvlt11O8rwy1cbQNGZf36RCgkZGJRQZ4ZIltqZhXLRbQOJiwEsFlTdsZyV7ZAxNN6I4iV5Rzbyln/UZzsf/0o5k66s+zaVBETXJ1l5xLgx43bYuP7sfmSsBP9zVgoM/SUW93IlvKDBaf8n+ReS3jDUeRi7+bkXG+PnCagrPSJdQoA+ycnXr0RLwUUPXnGSyyu85Aa7jnyHhXSRu2+2L3L+1hWwiR/hRk/7sQreVtNg07IcHHGyh7Nvp+dfNxMQxQdGN/Fs8U5vpOz+MhKjUvZ3uiV5IEzrCWSzcTupsN6Ta/rfSN8Gm2yVfD5ktof/CaW+qDHcRMwM6EbCmowpRCz6E7i6cc7i9HbkjXVzoJ/4ZZJ5Ja79geGpSmCVlt5yQFQ9CQtTaVizIjHAZ1kpzp8jfG4vaidqFfxiurLucsJDDKw8KbPRkKPEb0g6ZLbUIp4egddmdG++NDqDVyWHiowYSDiJlvwEg+wMwKUsZ43OyjA9moCFlRIiv/SNH7P18Ll6o7KQuU/fsokLMExLw3CvnR/Qdq85HPzYQ4X5tCaLKrqX/wlkiAjyPCgQhyyNBYmdOtZKdq7k5VUq93XIwONuJ0h0uzDh0YS877ZPMyfLGas/fHQ0eqdKJ6xfQtCKNDsp/UoaA4MSaTwodHcnpgUt0lJocZVi/VbPwkX/LxMeQtbzPcyyTV9VsF5CEareoRMULFq1MTwU2Xm65s0w87UyWDtqAzt2ys1kZ0E/LCLnKu1uUbRUJ4nJY6DA2owvHoSIGxiwF4eYuTtI/24MrpICXi6QoEgRz/BnP+hHHr089glbEss3JgHmfe4xWP8IeiPbFntr3Veasu3HmMAcIoVycsgHZmJYAox0S788NG/4EOEyuT1X/mwIRIroLY4aruHbm61PVtpkdOy5P5j96KX3VJJfWjPE1ZrW1WrqOePzbRaOadhsXWmTl9fuw4LQ7guZW+zeCD6QyoY61eKAKtQWAbUbMsG1/io+gzp6usIWUY25OYjA/GqXqJN6+JGxjP2Zc2TwYiUki3PqdKDBB1JMKZP9BFhJdt4A3f3YZjOPgqKFYDBV/XcqH9HOwYoY8sM+vnK9g/8AXi7dOa5ax5qjfsb7upyvjDffLyMTQFShMAH+k8VOfbEQya3ofpBB6bxW8b6VEw+CQl8I6qWpAnrcVsZpU4l9LNQUN8c9Sz7/G4J92sozaFUYy1vMHELGuZFl9MWdsjgoXKYHV02WX5bS2MJRkN30B1hVBV2NtBPHGf3pVCSpx/VPvrwtP3lGgJIU9hUQ1VX5LuJWCaZA3YauFrMaZNIs+EknaU926mXzGW5w3hiUUh5XO480jSsLzk58gvdUPlDYEPPOgmrRNl64y17DP9Ljj0yZYZi20RYVNO9BxtBXJb8X2PUMOGACleJIV0IlvqhpN57zHZFfrgVkKNe8hU+AW7+VdvlpTlMaCTX3lr/lZ/9GKBHYhD/ftYHO8e8alL6aHLB9GRQrFs7qraQmY8BRQnm6ihDEA2UFVhb5hPmtnzFJ/LKscv7jwY+FHMr7M7VA9r/evMXmYtJuCSkHOAIr75kaR0zTIClY2F6V0UJQC1bJsE0xTJj37wah2vW6X4rV4NaEmUMZnT/JEVBJBpJ8paAy3NkSYf7d1LAzmAKdqTpRKTRPZqh2fS9iJRk7RCbpABHfPhbmYm3l4pHQnvxREEnshGU8mxJmbr2C795BE3n1BRp+98ZA5zjO0JuwvPi4XQ6xcLOtFtph3Vf4e7hK/4IpZeY0zfpWUiyEqOcd1Zrtbx5R8segeNqP8O3UhwhtsvVhDniXiBu8JCjXO9fdZxE3H5fSGiITf6eCAxHcHDjmSa1fKdxX/gLM6DJx48DimdW/SWKjgSR78l4ZTWtb7bLdqS2EBeCSh2PN73SJHiuSgC+9KGPP8QxFJzuRXu8yMzr810fHCrj+12xxInNBe8jOL7uq19a2JZXQWHeSlq/xjeD5F2/FF7oEzrLd0YYUO76wIH4YmONtDm9NB4Mw2kOCwf9JIQ3FxrmPDIc4OywLEig+/vQ6yIejV2Rm5I089IjhaLowJ5Fv6A4mBwLOIvJZnFpmUG+fbguq0jkAZCIURXDywmqggs2MJX4gA5DCPIGLCDaLwrpbhSDhpTY8Zml/EiGkC6mErCNTtsm/Drvz0MFTHq+p4ZakE+xRvYsKbYrCebdddzYWXMUwrFdpHisfXRbVwxR/SVC/WRMkh2FpDKRwE9joQRCSx7GsBsfuSamnImNg/eey4x5yAZouwloVqy2ePLD3n1X3S5lmkJ5ZR+LtbY4RPtyfcHxAO85oR74biItbzd1Jl6RV8Dq0rLCyxWUp2L3mzu1Go0gl8BY5l+KnQKLppxeA8Sx4V0VqUm/CKqLWCyXHO+Dpf/h2n0iBCwen96VGw2DXwPxK8u7xrDLAVvNqcyPE7LBkrx/mhcFDPCnnlI1IlF98faez6Ag2nJFkAk1Ka8ZXe2iN6izxQlwCQu80xrFmM+daVDT8ydktTkCkQS+QgtVmOsOKlmGq3srN4dJSTyEvMX0ldvAfl5Wm2QEdFfbikjP7fHRF6a6fkklKu24C0zxP3F6Uendi9vJgLkUyxsO6NBTJLwT9goLp5tNnwVOEuRVoz+zsptyCRrKKPROjcUQylhWC3hG6PFILa+VyJOTJVl7W4FOwR3KgkExcKlWgMA865rUgfB2Iz5dvTShPn5eGH4WtXhtgs09QxdWdXhzunkH1dRnf7sxMvXV+moHpOtLSdZbj1ARIfPoRT1gpAbUbngJNwkTIjnf0eqcBnfE8ICKR+bN09Id/nMPNXjr+VAULZ2lqsIVTCz6zC/gHAIiVXWxkWzLNFRMs/PUFhlHJU2ZNySNRnZtqa29mTJg3Y3CHwmbBlQSg5zy4A29qK02pWB/ckh6E6LIAsYr+b3yVAhHWdQ2+SjWQDaAp0SKJuphhWbT4KRLhVf4ToisUsKPuylEykDlpc3AvGcZSlVVeMQQ51NKUR78bCFu0ptuJ4yC19Yhmi6jnSEJiaYsZW8XDgUvA20ZR3AELtxgsVf7981Dbgwfg4fi5WVD9JjzxZfHiZBkx266Y1ahmQeyt4vZcXtjWcrG+BWiKYkqxeL5GK0sQuGEXRXOpwtGhvXP2hHWjJbqkAnwiZB8gFTcjDenF65LhPa6utE0qG1/Q83z8cZkmzHvFJYUSFODsWevrDsed6ATvtbwh2rByio/cj4vhcJoGRfeT6g9+fX+YUjQ1iE6tg2VygL65APHUOAhOv8vQzjeldPJwbjF+k6Qce/p/nlvr6aWAwHkj2P6AlElM4Fpz5wTB/Vbw8NrsPuSgNorHXi+mflSdVk4wEBOrbKnBO0z+DQegJs82BxaAVUjFgEq6nmgZLJg2Z3CCnmRmzb5JrXwfv/rKvCiQgfwz+O5U1ORQTFpxz8h/cuHfctKt/rI3DYYO/y5JT5HrUGpYrnRXIjBRdEFLEd6GL7OO+IL/35f8j8V1YGLitwPda69u/OZBEQ0vi7BVTPQGlgpuuPIgAYZRGzxDbevFVjJJPtK6fH/qmtTnNY01qHmXJIwk/fxibl9CbX5Fvp//1PV84wMuw69fnfarIoBLdvF7bDAUSxPXfTifK92h6uw2EDWeV60VSXTD+NvIV//Spj3RFjuf7W1+7lW60oQnZ4vqHjfRcYdoL4CAxwNM+og6f2EnJAsbpfAcseB2bMeHPOe9LSnGdxHfQ39SX90umZNJveLm6pSrDrado2WrAY/Hk6lGykOO3ys4C2CZclK4+LroGRIlLrs9PiLlp6EyReEMpxSVNvMuvGHINQx1CXZrjIJjjOU6zR1pCAjFv1o+mKDJEVYKjUdDwS3NEg+HHXZWeoJj2cF9YEyo3/D1rDX1rMMSoQ8KC6u+G7WP/3ppBu92E9j9s1geW9IXAKDu/fd4JrB8rI81dHTIyDO0I3fEU2SzpyHaFc4tFv4p/VpFs3vhDycYYF57mMTHLiLSfGW62D/sXOzfx9oKjNOUgrcrgyIcrwTGhrzxuQM/P1EoH6YOdx9PhVyHzqLM6aMmBGcHSV0hvMwjgiOycE3p4nGIr7S1mZnBXjtuGCI/bJVfPvC8d1lxTgnUJA+yJrtcG0OTPoLj+Sh8IVbI4s6MXkY9Bst1KSrsARf+roWZOGRd5ILUD2UZXzu0GJi91rJifTFqqmH2HM3QgyTw4W0pJWiunGWuoI51+u5IevoL5GBYrXuiX1DqqD3H1ElaNbm5z8YnF0KgcDWi3Rr0t3kFqRUoXpCU7nXhcQsdm0GyE5dT3I3pBqVPjStTsmuFLaBqgmrViyZ52pS8CA51e5S2cmBaQtnP8apOPUFOLh4hU9SqYvu0lYnGI9Fqn2k7NTfgAWva0uwWxv8ACGu6ffnWPS5XIGZwjxvZPvCpDWo7Vk4fnIUFYgGJLHHkXFlnaSmEaOZDP5GfrbFXFjO7x5b2aCuwiZgWLKkgNfb8eXuQVnFOh0tbrdpsf+XlfASrIoZ+hKnN1s0Irns7ty6oDIDEL6hws4y9RllidLOa/16k1AuCYy3nU8O2rZDjq3KCh8m3Ejq7NxZ2+V+b9YLlSiCV0F23UKpHwnGo8O4fciYZy3U/4cfYfx2A4c+wys87rvBP/LnR81tfA34h61i4MpdAWvDqC1MMt+ONQobt/N0PuttdERUuQ1CCKrW0uTgGQPkpnB/IcjUbUfP6b1+5T7aJU5+oixIxw3RLIQRtbbL6M3095iy+qTdNepG2NO/B4UaKWYs/WwDb1XeWVG8vCAG2vonsDMIjYPJ9kJpjGi2n+zm1mDfE9ENSSoaJziG7CzUPMuvLknXw4Bt1m9XhN1+z4OyIq90NJFxt/9V0MUo+2JxRtTqDDnP+9zV0jiCbsaCn45l5MwfAbf2m7pjiOsWBniIUM25G/L7a8qCwLikRBcZbalkIIcQ/lEDIwK0he94PiVNdDRjPbm0PwD5BBiQGnp3iLOwllL9k2TkiruMZkPnuGetGi1jIhsGs1QUZlxpTHPJO6ICtEFWnzbha3xIPCKv5VK8jJucN6SK2PErwbjdZUbfI9keB9NGgs1Gnk9Oz5MIU3bMkESSE1C3ucYt4KaQuzrFA9RPRQSA+mlcW6qUITbfafaUBdkRpKDEJhzU5SVSe9g/6Rh8p3lQkHwEqFFkdzECs4XzyPvH5T7cOXJQc4jsQznc0Raos/ARGMJFdJl1eimXkgc8W3S5g86oHpcZIF+/8pc7V+M45YFJuKgMUXvMCnuyDY6d0AU/0EhfSnZpE9d+a2APhCBTG8n1zecca3qFUIk/DjP1C3hmYoOwmKzYNxqkyyfM9zktjcVGt5weXl5Brgb3vvV1QbrPM5BJfhsSk6zKYFpaGwctowZC5I/aZ+jO1Y56eJpPyJx+WoHs3/mBBWUaop6pC2e6cJJ5GQ8bl59VFF/u5OJSI+A32d7VwJgiQMWtw1sbOG2qcxH2kZcSdbUcovW8+rq4aSUby94EVXBxdiifAQhH1Cz+8W9zntcyJrbrZeK1y+NWBW8/kKmRuqgvFYqA+dj7cX+2AIHGssSnZobBnEi1z0kIuHWk3uEjjWQXB6gYY2Mb25v66Z4rRjIAGSzrWXQXMpZ0spk4BRDqDTR19VQMKvNaSuK4Cbd9peAFjocQ7Zx/i/FkSTzXCwwhlEUy4EC9Vb3YSQJIAqwssEdDl63x1M5yvj7X5VDpUzFc9WMC6gZYqTFk8LwsQa84KwirTamVmmY3REJ19LYhxFxt7+6Mn9WB6HsgvnZbqNZ5eEHKigwZM5vi+cg/KAsWGwFwX/GDTNa6HOgEf/gIvgg6zeIvGvqdIosgMz6WGqXSm2Ffct/tTOQaXwm6RcUS2saEDsHrqWEtA8E2Rx7noFjwI5QwseaD7+krIj17Ie/fG+f8GvDOgdlC5MDt5ehtqujUsrHP3JRunvmoH6w/3TQPl2Q76y6Y1vbnFGnh3Yd/lAZqR2IXotFQBUyWgpmvE4xrllTaM9Qne/AmoZ0euDBGGAuR3ym1XH3itcEM9bGkJs8xpXGDcV/eXgJkFkHqahtYErbuUIIyZIOKTr1XlY4ur7p5rnBUCojVVr7jSIzRy/6MLA/HNAqyZyX3+1H9vnixI8H7+INoXfx1OsOxQzCt5DoHkkLIkn5rTBHqU0qAf7dkZOX9a2rwpVLrFVsLjqhg3S4yQndV+qtHCgxq6+w71y458rbH/QUWi1rJlD9CmV2wdfWHe/8Sby5pKyUSFlJpE7Kwx0wdp3mfSdgo6ZTismPXqCReqLZq9V5PxeCyQivRfBLcnTWpHEHczKTDtms1GokwTt2hyk3UdTGIHKMFaFTtAqxM0rcoYnEN+0gIb98Nf9sRCfN6AoXz3TD8PmwlrBtQurGgcbghpe+fEVdhSuq57aYEOiL8lGidoKD7JrZ/tnHwOhsEm3j3kLqUnCC3ceOLVGGeplmjShWwqOORVgGSePd8ohcg65q8YS8GOVtjWvFBBayIX3T9H/fXEm1KtYd7l4Sk5qsP1rXr4pduG6jqIPkMlpUFTn3hNPTRuvxf3wNAkgXTh1Z54jVjfMPEkozCBeEk+gLiPWo7MOk3Ld0gIG2WFcTQIuBhC6767koTpCmvwNxhsqppYJ3maEiIdQPW56we62kkQBkIiO3IY6CbLt3adptGJGb2B69j9ooQffTwNqD0EthiA2+2E/FmYMixlwALHJuWdAiol2toUpOxjpqciwPWGvqvS9F6YmpTHZynziZgKZ83exclfSYyCuDJAq7lPWaS1KcVOdDfanyR6e0XMxYmG6GYKqyvW+oU0rHR05aazfTb5ZndeEXrpNHQ3MDZ70F4OWBgaWWHgJ/J85BOuULiNgA+vpnSRwcEBzX19GLkQgJPdyEMYDSbz51Sn6+2IpKh6417Pq7FZoPG5naVxMLN1+yLT0EsempBqzkr1jE7Ep65Ie6JLzezBVjTDOTDoMalBA++SIMhcgOOAL4ZuAKTsUxTXCzjceudIctMsFZuV1XH0rjPyq3/rgQATJXBXVa/ul7e+ruv2iUnLMCN/acR7NjDIXN3Sm2KaiLnXeM84iqJaReAlojv10ZF7lC7HDqgwUz/KHK6VMRCXZrTJpSMst9QdNvuIRE9PUVP9vRmWJlDFNyGpVyRNLY7ZyqVSNPVfHIlhCc2Rcffw5VOdxEi8ETAJwNmFWGmR/rTG5svjdRiwUm8IOteluW977XuTCYk1VaSZQkJEzvtm0Qb2uplC/ucu8Y4Rc2xSAf15Ya+ZPNIimLHMhL9EXj3GF4wXAq/5PJOmV/c4lrhvZhmBG+TpAfzTpsINnLwEjF8SujPi+WA8bpflhg6xsabZ8JLkpGfwZq0tqz1+t1hLXcJxTy2QDwEeHpVLp/u2najwkrbVYA0Cax+Hf24ut3vS/D+zs3jwLwQUZ+PQ9DVo+OKz8bJfdC2se8l35d6KgEj77YZ0DtT5rKMZcJBMBzEzEF2PQ74SvOXqJN/15iYv35SAu8AtVMQowzCLQUJKLglGygxEpL/VUAB7k8SwkRN38qHaeVpFbJnG11Us92o+YlcFD59hrV2hmThYYAaShzX7IdYy7TK+i2/g==" />
+
+<input type="hidden" name="lng" id="lng" value="en-US" />
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('m$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('m$am',param,callback,ctx,null,true); }
+//]]>
+</script>
+<script src="/ScriptResource.axd?d=qph9tUZ6hGPLbkznkRkqTWmyItfpw0vvOTFazabZxE9r2s5BnQ3oPC5PgDPG5ewR3nVTomqLTiHlsh8CCkNVwJ08AM3q0EdwIJXoVjDewcv_XVaqaeeH36LlABjzuqcS0&amp;t=7c776dc1" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isRTL": "false",
+  "isDebuggingEnabled": false,
+  "applicationUrl": "/",
+  "imagesUrl": "/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDialog": false
+};
+
+//]]>
+</script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A5343185" />
+    
+    <div id="ctxM">
+
+</div>
+    
+
+  <div class='ws-crown'>
+      <div class="mobile-crown-header">
+  <a class="logo" href="/"><img src="/images/windstream-logo.png" alt="Windstream Logo"></a>
+  <ul class="mobile-icon-menu">
+    <li><a href="#"><span class="ws-icon-Cart"></span></a></li>
+    <li><a href="#" class="sso-sign-in" id="mobile-sso"><span class="ws-icon-MyAccountMobile"></span></a></li>
+    <li><a href="#"><span class="ws-icon-Hamburger"></span></a></li>
+  </ul>
+</div>
+
+<div class="desktop-crown-header">
+   <div class="container nopadding">
+    <ul class="site-links-desktop left">
+        <li><a href='https://www.windstream.com/' class="active-site">Residential</a></li>
+        <li><a href='http://smallbusiness.windstream.com/'>Small Business</a></li>
+        <li><a href='https://www.windstreambusiness.com/'>Enterprise</a></li>
+        <li><a href='http://carrier.windstreambusiness.com/'>Wholesale</a></li>
+    </ul>
+    <ul class="site-links-desktop right">
+      <li><a id="crownLocation" href="qualForm" class="crown-location">Click here to provide your location</a></li>
+      <li><a href="/cart" class="ws-icon-Cart desktop-cart"></a></li>
+           <li><a id="destopMenu" href="#">Menu<span>&#9660;</span></a>
+      <ul>
+          <li><a href=' https://www.windstream.com/Special_Offers/'>Special Offers</a></li>
+          <li><a href='https://www.windstream.com/Movers/'>Move My Service</a></li>
+          <li><a href=' http://www.windstream.net/'>Go to Windstream.net</a></li>
+          <li><a href=' http://blog.windstream.com/'>Windstream Blog</a></li>
+          <li><a href=" https://www.windstream.com/contact-us/" class="sso-sign-out">Contact Us</a></li>
+        </ul>
+      </li>
+      <li><a class="sso-sign-in" id="desktopAccount">My Account</a>
+      <ul>
+          <li><a href='https://www.windstreamonline.com/'>Manage My Account</a></li>
+          <li><a href='https://www.windstreamonline.com/'>View or Pay my Bill</a></li>
+          <li><a href='https://www.windstreamonline.com/'>Check My Email</a></li>
+          <li><a href="#" class="sso-sign-out">Sign Out</a></li>
+        </ul>
+      </li>
+      <li>
+        <a id="crownSearchTrigger" class="ws-icon-Search" ></a>
+        <input id="crownSearchInput" class="search-input" type="text" placeholder="Search:">
+      </li> 
+    </ul>
+  </div>
+</div>
+<ul class="site-links">
+ <li><input id="mobileCrownSearch" class="search-input" type="text" placeholder="&#128269;Search windstream.com"></li>
+<li><a href='https://www.windstream.com/high-speed-internet'>Internet</a>
+</li>
+<li><a href='https://www.windstream.com/digital-tv'>TV</a></li>
+<li><a href='https://www.windstream.com/home-phone'>Home Phone</a></li>
+<li><a href='https://www.windstream.com/electronics'>Electronics</a></li>
+<li><a href='https://www.windstream.com/support'>Support</a></li>
+<li><a href='#'>Other Windstream Services</a>
+<ul>
+  <li><a href='https://www.windstream.com/'>Residential</a></li>
+  <li><a href='https://smallbusiness.windstream.com/'>Small Business</a></li>
+  <li><a href='https://www.windstreambusiness.com/'>Enterprise</a></li>
+  <li><a href='http://carrier.windstreambusiness.com/'>Wholesale</a></li>
+</ul>
+</li>
+ <li><a href="#">More</a>
+      <ul>
+          <li><a href='https://www.windstream.com/special-offers'>Special Offers</a></li>
+          <li><a href='https://www.windstream.com/movers'>Move My Service</a></li>
+          <li><a href=' http://www.windstream.net/'>Go to Windstream.net</a></li>
+          <li><a href='http://blog.windstream.com/'>Windstream Blog</a></li>
+          <li><a href='https://www.windstream.com/contactus'>Contact Us</a></li>
+        </ul>
+      </li>
+<li><a id="mobileCrownLocation" href="qualForm" class="crown-location mobile">Click here to provide your location</a></li>
+</ul><ul class="account-links">
+  <li><a href='https://www.windstreamonline.com/'>Manage My Account</a></li>
+  <li><a href='https://www.windstreamonline.com/'>View or Pay my Bill</a></li>
+  <li><a href='https://www.windstreamonline.com/'>Check My Email</a></li>
+  <li><a href="#" class="sso-sign-out">Sign Out</a></li>
+</ul><script type= 'text/javascript' > window.WendyProactiveAliases='product-selector'</script>
+
+
+	<script type="text/javascript">
+		$(function () {
+			VirtuOzVars = { customerType: WSCustomerInfo.CustomerType };
+			if (typeof (WSCustomerInfo.City) != "null") {
+				VirtuOzVars.City = WSCustomerInfo.City;
+				VirtuOzVars.State = WSCustomerInfo.State;
+			}
+
+			var isProd = ((document.location.hostname.indexOf("dev") == -1) && (document.location.hostname.indexOf("test") == -1));
+
+			if (!isProd) {
+				VirtuOzVars.preprod = true;
+			}
+
+			VirtuOzVars.CustomerProduct = WSCustomerInfo.ProfileNames;
+
+			if ((WSCustomerInfo.CustomerType != "Unknown") && (WSCustomerInfo.CustomerType != "Unverified")) {
+				VirtuOzVars.MaxSpeed = WSCustomerInfo.MaxQualificationSpeed;
+			}
+			var pathAlias = window.location.pathname.split("/")[window.location.pathname.split("/").length-1];
+			if (WendyProactiveAliases.indexOf(pathAlias) != -1 && pathAlias!="") {
+				NinaPostQualif = { customerType: WSCustomerInfo.CustomerType, url: "https://agent2.nina-nuance.com/windstream-windstream_commerce_va_us-englishus-WebBotRouter", cookieName: "VirtuOz-VzWindstreamCommerce-postQualif" };
+				VirtuOzVars.proactiveLaunch = {
+					agentName: "VzWindstreamCommerce",
+					delay: 60
+				}
+			}
+
+			agentName = "VzWindstream";
+			cookieName = "VirtuOz-VzWindstream-postQualif";
+			NinaPostQualif = { customerType: WSCustomerInfo.CustomerType, url: "https://agent2.nina-nuance.com/windstream-windstream_commerce_va_us-englishus-WebBotRouter", cookieName: "VirtuOz-VzWindstream-postQualif" };
+		
+			agentName = "VzWindstreamCommerce";
+			NinaPostQualif.cookieName = "VirtuOz-VzWindstreamCommerce-postQualif";
+		
+		$("a[class*='agent']").click(function (evt) {
+			evt.preventDefault();
+			if (typeof VirtuOz != "undefined") {
+				VirtuOz.AgentLoader.loadAgent(agentName);
+			}
+			});
+	})
+</script>
+<script type="text/javascript" src="/CMSScripts/Custom/wendy-commerce/scripts/VirtuOzLoader.js"></script>
+<script type="text/javascript" src="/CMSScripts/Custom/wendy/nina-postqualification.js"></script>
+
+  </div>
+  <div class="topBlock">
+        <nav class="ws-site-nav residential">
+  <div class="container nopadding">
+<a class="logo" href="/"><img src="/images/windstream-logo.png" alt="Windstream Logo" /></a>
+<ul class="CMSListMenuUL"><li class="CMSListMenuLI">
+  <a href="/Shop" class="CMSListMenuLink" title="Shop">Shop</a>
+  
+</li>
+<li class="CMSListMenuLI">
+  <a href="/high-speed-internet" class="CMSListMenuLink" title="Internet">Internet</a>
+  
+</li>
+<li class="CMSListMenuLI">
+  <a href="/digital-tv" class="CMSListMenuLink" title="TV">TV</a>
+  
+</li>
+<li class="CMSListMenuLI">
+  <a href="/home-phone" class="CMSListMenuLink" title="Phone">Phone</a>
+  
+</li>
+<li class="CMSListMenuLI">
+  <a href="/electronics" class="CMSListMenuLink" title="Electronics">Electronics</a>
+  
+</li>
+<li class="CMSListMenuLI">
+  <a href="/support" class="CMSListMenuLink" title="Support">Support</a>
+  <ul class="CMSListMenuUL"><li class="CMSListMenuLI" style="color:#FF0000;">
+  <a href="/contactus" class="CMSListMenuLink" title="Contact Us">Contact Us</a>
+  
+</li></ul>
+</li>
+</ul>
+</div>
+</nav>
+    </div>
+    <div class="mainBlock">
+        
+<div class="container">
+  
+<div class="col-sm-12 ws-title">
+  <h1>Privacy Policy</h1>
+</div>
+<div class="col-sm-12 col-md-4  about-side-nav">
+<h3 id="about-top-trigger">Windstream Information
+  <span id="down" class="down">&#9660;<span>
+</h3>
+<hr>
+<a class="about-title" href="/about">About us</a>
+<ul class="aboutList"><li class="aboutLinkItem">
+  <a class="about-us-trigger" title="Windstream Information">Windstream Information</a>
+  <ul class="aboutList"><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/company-overview" class="aboutLinkItem" title="Company Overview">Company Overview</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/Company-History" class="aboutLinkItem" title="Company History">Company History</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/tariffs" class="aboutLinkItem" title="Tariffs">Tariffs</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/Company-History-(1)" class="aboutLinkItem" title="Company History">Company History</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/cavalier-tariffs" class="aboutLinkItem" title="Cavalier Tariffs">Cavalier Tariffs</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/coverage-map" class="aboutLinkItem" title="Coverage Map">Coverage Map</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/lifeline-assistance-program" class="aboutLinkItem" title="Lifeline Assistance Program">Lifeline Assistance Program</a>
+  <ul class="aboutList"><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/lifeline-assistance-program/lifeline-applications" class="aboutLinkItem" title="Lifeline Applications">Lifeline Applications</a>
+  
+</li></ul>
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/Bill-Information" class="aboutLinkItem" title="Bill Information">Bill Information</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/Store-Finder" class="aboutLinkItem" title="Store Finder">Store Finder</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/windstream-information/Google-Apps-License" class="aboutLinkItem" title="Google Apps License">Google Apps License</a>
+  
+</li></ul>
+</li>
+<li class="aboutLinkItem">
+  <a class="about-us-trigger" title="Suppliers">Suppliers</a>
+  <ul class="aboutList"><li class="aboutLinkItem" >
+  <a href="/about/suppliers/Supplier-Information" class="aboutLinkItem" title="Supplier Information">Supplier Information</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/suppliers/Supplier-Diversity" class="aboutLinkItem" title="Supplier Diversity">Supplier Diversity</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/suppliers/Supplier-Code-of-Ethics" class="aboutLinkItem" title="Supplier Code of Ethics">Supplier Code of Ethics</a>
+  
+</li></ul>
+</li>
+<li class="aboutLinkItem">
+  <a class="about-us-trigger" title="PAETEC Information">PAETEC Information</a>
+  <ul class="aboutList"><li class="aboutLinkItem" >
+  <a href="/about/paetec-information/Interstate-and-International-Telecommunications-Ra" class="aboutLinkItem" title="PAETEC Interstate and International Telecommunications Rates">PAETEC Interstate and International Telecommunications Rates</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/paetec-information/PAETEC-Service-Charges-and-Surcharges-Glossary" class="aboutLinkItem" title="PAETEC Service Charges and Surcharges Glossary">PAETEC Service Charges and Surcharges Glossary</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/paetec-information/PAETEC-Tariffs" class="aboutLinkItem" title="PAETEC Tariffs">PAETEC Tariffs</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/paetec-information/PAETEC-Terms-and-Conditions" class="aboutLinkItem" title="PAETEC Terms and Conditions">PAETEC Terms and Conditions</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/paetec-information/Protecting-CPNI-Your-Rights-and-Opinions" class="aboutLinkItem" title="Protecting CPNI: Your Rights and Opinions">Protecting CPNI: Your Rights and Opinions</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/paetec-information/Service-Charges-and-Surcharges" class="aboutLinkItem" title="PAETEC Service Charges and Surcharges Description">PAETEC Service Charges and Surcharges Description</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/paetec-information/Terms-and-Conditions-for-McLeodUSA-Communications" class="aboutLinkItem" title="Terms and Conditions for McLeodUSA Communications&#39; Customers">Terms and Conditions for McLeodUSA Communications&#39; Customers</a>
+  
+</li></ul>
+</li>
+<li class="aboutLinkItem">
+  <a class="about-us-trigger" title="Legal">Legal</a>
+  <ul class="aboutList"><li class="aboutLinkItem" >
+  <a href="/about/legal/Acceptable-Use-Policy" class="aboutLinkItem" title="Acceptable Use Policy">Acceptable Use Policy</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/legal/broadband-network-statement" class="aboutLinkItem" title="Broadband Network Statement">Broadband Network Statement</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/legal/Fee-and-Surcharge-Guide" class="aboutLinkItem" title="Fee and Surcharge Guide">Fee and Surcharge Guide</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/legal/Legal-Notices" class="aboutLinkItem" title="Legal Notices">Legal Notices</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/legal/Offer-Conditions" class="aboutLinkItem" title="Offer Conditions">Offer Conditions</a>
+  
+</li><li class="aboutLinkItem active" >
+  <a href="/about/legal/Privacy-Policy" class="aboutLinkItem active" title="Privacy Policy">Privacy Policy</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/legal/Procurement-Terms-and-Conditions" class="aboutLinkItem" title="Procurement Terms and Conditions">Procurement Terms and Conditions</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/legal/Terms-and-Conditions" class="aboutLinkItem" title="Terms and Conditions">Terms and Conditions</a>
+  
+</li></ul>
+</li>
+<li class="aboutLinkItem">
+  <a class="about-us-trigger" title="Additional Information">Additional Information</a>
+  <ul class="aboutList"><li class="aboutLinkItem" >
+  <a href="/about/additional-information/Investor-Relations" class="aboutLinkItem" title="Investor Relations">Investor Relations</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/additional-information/News-Center" class="aboutLinkItem" title="News Center">News Center</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/additional-information/Windstream-Talent" class="aboutLinkItem" title="Windstream Talent">Windstream Talent</a>
+  
+</li><li class="aboutLinkItem" >
+  <a href="/about/additional-information/Windstream-net" class="aboutLinkItem" title="Windstream.net">Windstream.net</a>
+  
+</li></ul>
+</li>
+</ul>
+</div>
+<div class="col-sm-12 col-md-8">
+  <div class="about-body">
+         <p>This Privacy Statement describes how Windstream and its affiliates collects information from or about you, either as a customer, visitor to any Windstream website or user of any Windstream mobile apps, when you order services from us, how we use the information we collect, and the choices customers have concerning the collection and use of such information. The goal of this Statement is to ensure that your Windstream experience is secure so that you may use our products and services with complete confidence. Please review this Statement carefully.</p>
+
+    <p>This Statement addresses:</p>
+
+    <ol>
+        <li><a href="#A">Personal Information Collected</a></li>
+        <li><a href="#B">Use of Personally Identifiable Information</a></li>
+        <li><a href="#C">Customer Proprietary Network Information (CPNI)</a></li>
+        <li><a href="#D">SMS/Text Messaging</a></li>
+        <li><a href="#E">Value-Added Services</a></li>
+        <li><a href="#F">Information Disclosed to Third Parties</a></li>
+        <li><a href="#G">Data Collection Technologies</a></li>
+        <li><a href="#H">Security Measures</a></li>
+        <li><a href="#I">Children</a></li>
+        <li><a href="#J">Links</a></li>
+        <li><a href="#K">Statement Updates</a></li>
+        <li><a href="#L">Security Breaches</a></li>
+        <li><a href="#M">Contact Us</a></li>
+        <li><a href="#N">Definitions</a></li>
+        <li><a href="#O">Internet Information</a></li>
+        <li><a href="#P">US-EU Privacy Principles</a></li>
+    </ol>
+
+    <h2 id="A">A. Personal Information Collected</h2>
+
+    <p>Windstream limits the information collected about you to what is needed for conducting business, including the offering of products and services that might be of interest to you. You may choose to provide &ldquo;personally identifiable information&rdquo; (PII) to Windstream in a number of ways either in person, telephonically or via our websites or mobile apps. Examples of how you may share PII with us include: ordering a service or equipment from us, sending us e-mail, responding to Windstream surveys, entering Windstream-sponsored contests or sweepstakes, registering to receive news or public information or applying for a job. We may also obtain PII from third parties (for example, credit agencies) with your permission.</p>
+
+    <p>Examples of PII are:</p>
+
+    <ul>
+        <li>Name (including company name for business customers)</li>
+        <li>Unlisted or restricted mailing address</li>
+        <li>Unlisted or restricted telephone number</li>
+        <li>E-mail address</li>
+        <li>Credit card number or financial/bank account number or information, including routing numbers</li>
+        <li>Passwords or personal identification codes (PINs)</li>
+        <li>Date of birth</li>
+        <li>Social Security number</li>
+        <li>Driver&rsquo;s license number or government issued identification number</li>
+        <li>Company contact information for business customers</li>
+        <li>Information obtained by Windstream through customer referral programs</li>
+    </ul>
+
+    <p>The following information is not PII:</p>
+
+    <ul>
+        <li>Mailing address, unless unlisted or restricted at your request</li>
+        <li>Telephone number, unless unlisted or restricted at your request</li>
+        <li>IP Address allowing you to use our internet service</li>
+        <li>PII included in aggregate data complied by Windstream</li>
+    </ul>
+
+    <p>Windstream may compile or aggregate PII from numerous customers or Web visitors or mobile app users to collect data about groups of customers or potential customers or categories of service. Windstream does not consider this &ldquo;aggregate&rdquo; information as PII because the aggregate information does not contain the PII of any individual customer, Web visitor, or mobile app user.</p>
+
+    <h2 id="b">B. Use of Personally Identifiable Information</h2>
+
+    <p>Windstream uses PII to provide products and services to meet customers&#39; needs, including new products or services. Windstream may share PII with any Windstream-affiliated company, and these companies are subject to the terms of this Statement.</p>
+
+    <p>Windstream retains PII only as long as is necessary for Windstream to comply with business, tax and legal requirements. This retention period could be the entire time you are our customer depending on the type of PII.</p>
+
+    <p><strong>Windstream does not:</strong></p>
+
+    <p>Sell any customer data, whether it be defined as PII or otherwise, to third parties.</p>
+
+    <p>Collect PII from you unless you provide it to us in person, telephonically or electronically by visiting our websites or using our mobile apps, including information you provide in order to use our services.</p>
+
+    <p>Sell the names and addresses of Windstream Web visitors or mobile app users to unaffiliated suppliers, without your prior approval.</p>
+
+    <p>Allow third parties to change your service provider or otherwise access your account information, at your request, without complying with our security policies, including our Customer Account Protection Plan that protects your account from changes not authorized by you.</p>
+
+    <p>Information about our customers and users, including PII, may be shared and transferred as part of any merger, acquisition, sale of company assets or transition of service to another provider. This also applies in the unlikely event of an insolvency, bankruptcy or receivership in which customer and user records would be transferred to another entity as a result of such a proceeding.</p>
+
+    <h2 id="C">C. SMS/Text Messaging</h2>
+
+    <p>If you create an account and provide your cellular telephone number, Windstream may send you administrative text messages. If you opt in to receive promotional/marketing text messages, Windstream may also send you promotional/marketing text messages. If you wish to opt out of any type of text messaging sent to you by Windstream, you may do so by following the &quot;opt-out&quot; instructions in the text message, or by editing your account settings.</p>
+
+    <h2 id="D">D. Customer Proprietary Network Information (CPNI)</h2>
+
+    <p>CPNI is information that relates to the quantity, technical configuration, type, destination, location and amount of use of the telecommunications services purchased by you from Windstream. CPNI is available to Windstream solely through its relationship with you and information contained in your bill for telecommunication services. CPNI does not include information that is typically classified as PII, such as your name or e-mail address and does not include compiled or aggregated PII. U.S. federal law requires Windstream to protect the confidentiality of CPNI. Unless you opt-out from the use of CPNI, Windstream may use CPNI to market service offerings to you to which you do not already subscribe. To opt-out, just&nbsp;<a href="/contactus">contact us</a>. Windstream may, without prior approval from you, use CPNI to provide or market service offerings to you, if the service offerings are within the same categories of service to which you already subscribe, regardless of your CPNI selection.</p>
+
+    <p>If you order Windstream services from a Windstream dealer, Windstream&rsquo;s dealers are prohibited from accessing or using your CPNI unless you sign a consent form authorizing Windstream to release your CPNI to the dealers. Dealers are required by Windstream to take all necessary measures to protect the confidentiality of your CPNI. As part of the dealers&rsquo; agreements with Windstream, dealers agree that, upon termination of your Windstream services, the dealers will promptly return all of your CPNI to Windstream and will not retain any CPNI in any form.</p>
+
+    <h2 id="E">E. Value-Added Services</h2>
+
+    <p>Because we appreciate the trust you have placed in us, we continually look for ways to enhance your customer experience. From time to time, we may notify you about a Windstream product or service using the information you have provided to us either in person, telephonically or electronically by visiting our websites or using our mobile apps, including information you provide to use our services. We strive to limit our offers to those we think you would benefit from and appreciate receiving. We want every contact you have with us to be a positive experience. If you prefer not to receive these Windstream value-added services, offers and opportunities, just&nbsp;<a href="/contactus" target="_blank">contact us</a>.</p>
+
+    <p>Windstream complies with all applicable laws and regulations regarding &ldquo;Do Not Call&rdquo; Lists. Generally, Windstream is allowed to contact its customers, even if the customers are registered with federal or state Do Not Call Lists, because of our relationship with you. Windstream will, of course, honor any request to remove your name from our telephone, mail or e-mail solicitation lists and will delete your information from existing files within a reasonable time period. Just&nbsp;<a href="/contactus" target="_blank">contact us</a>.</p>
+
+    <h2 id="F">F. Information Disclosed to Third Parties</h2>
+
+    <p>Windstream does not sell PII of its customers. In limited circumstances, Windstream may provide PII to third parties:</p>
+
+    <ul>
+        <li>To assist us in developing, promoting, establishing, maintaining, and/or providing Windstream-related products and services to you, including joint marketing efforts or promotions, but PII may not be used by the third parties for any other purpose;</li>
+    </ul>
+
+    <ul>
+        <li>To assist us in establishing accounts, billing, collecting payment (i.e. credit bureaus and collection agencies), enforcing the Terms and Conditions or the Acceptable Use Policy of our Windstream services where permitted by law, and protecting or enforcing our rights or property, or the services of our other customers, from fraudulent, abusive, or unlawful use by you of our services;</li>
+        <li>To comply, when required by law, with court or administrative orders, civil or criminal subpoenas, warrants from law enforcement agencies, federal or state regulatory requirements, mandatory governmental audits, E911 reporting requirements, grand jury investigations, civil or criminal governmental investigations, or reporting required by the National Center for Missing and Exploited Children, designated by federal law as a reporting mechanism for child pornography; and</li>
+        <li>To appropriate law enforcement, 911 centers, or emergency services when Windstream, in good faith, believes the disclosure is necessary to protect a person, Windstream property, or the public from an immediate threat of serious harm.</li>
+    </ul>
+
+    <h2 id="G">G. Data Collection Technologies</h2>
+
+    <p>In addition to PII identified in Section A of this Statement, we, or our third-party partners, may collect non-personal information automatically when you enter Windstream websites or use Windstream mobile apps, such as domain name, browser, your computer operating system, information about the Web page from which you linked to the website, and time spent on different parts of our websites or mobile apps. We or our partners may use this information to evaluate and improve the websites and mobile apps, and may share the information with third parties on an aggregated basis to enhance our products and services offered. This on-line information is typically collected via&nbsp;<strong>cookies</strong>,&nbsp;<strong>web beacons&nbsp;</strong>(see&nbsp;<strong>Section N</strong>&nbsp;for definitions), and/or other data collection technologies. Like virtually all other websites that you visit, we use cookies to deliver Web content specific to your interests and to control access to your personal shopping cart after your initial entry. The cookie permits the server to recall information from your previous shopping trip, should you decide to think about your purchase. A cookie is not used to access or otherwise compromise the data on your hard drive. With most browsers, you can choose to change your browser settings to disable cookies. Please be aware that cookies may be required to complete certain functions on Windstream websites and other websites you may link to from Windstream websites, including making purchases or payments on your Windstream account.</p>
+
+    <h2 id="H">H. Security Measures</h2>
+
+    <p>Windstream wants you to use our services with confidence, and therefore we use a number of security techniques designed to protect your information from unauthorized access, including firewalls and access control procedures. Windstream has physical, electronic, contractual, and managerial security measures in place to protect against the loss, misuse and alteration of information under our control. For example, when you place an order on a Windstream Website, the information you submit is encrypted using the Secure Sockets Layer (SSL) protocol.</p>
+
+    <p>Windstream employees are bound non-disclosure agreements that prevent them from disclosing any PII or CPNI. Further, Windstream&rsquo;s Working with Integrity Guidelines state that Windstream employees must abide by all state and federal laws and regulations in the performance of their job duties.</p>
+
+    <p>Our policies also limit access to PII to only those employees, contractors, agents, or representatives that require the information to perform their jobs or assist Windstream with providing products and services to you.</p>
+
+    <h2 id="I">I. Children</h2>
+
+    <p>Children under the age of majority should consult with their parents or guardian before furnishing any data to us. Parents should consider using one of a number of available parental control tools that provide a child-friendly, on-line environment and can prevent children from disclosing PII without parental consent. If a child has provided personal information without the consent of a parent or guardian, that parent or guardian should&nbsp;<a href="/contactus" target="_blank">contact us</a>&nbsp;to request that the information be deleted from our records. More information about parental controls may be found on Windstream websites or by contacting a Windstream customer care representative.</p>
+
+    <p>Windstream does not knowingly collect PII from children under the age of 13 in connection with providing products and services, and it strives to comply with all provisions of the Children&rsquo;s Online Privacy Protection Act (COPPA). If Windstream inadvertently collects information from minors below the age of 13, the information will be treated as PII of the adult customer.</p>
+
+    <h2 id="J">J. Links</h2>
+
+    <p>Windstream is not responsible for the content or privacy policies of other non-Windstream websites or non-Windstream mobile apps. You should keep this in mind when accessing websites through links on Windstream websites or mobile apps, or through third party advertisements appearing on Windstream websites or mobile apps. Further, Windstream may advertise on other websites or mobile apps. The advertising companies placing our ads may use cookies or web beacons to track the effectiveness of our ads. The use of such technology is subject to the privacy policies of the advertising companies, and not this Statement.</p>
+
+    <h2 id="K">K. Statement Updates</h2>
+
+    <p>We may update this Privacy Statement at any time in connection with our constant efforts to improve our products and services. We strongly encourage you to periodically review this Statement. We reserve the right to expand our capabilities for information collection and use and change this Statement in this regard. If any change constitutes a material change to this Statement, we will post a notice on our websites in a prominent position. If Windstream decides to use PII in a manner that is materially different from what is contained herein, we will post the change on this page for 30 days before making the change.</p>
+
+    <h2 id="L">L. Security Breaches</h2>
+
+    <p>While our goal is to prevent any unauthorized disclosure of PII, Windstream cannot guarantee that a disclosure will not occur. We will make reasonable efforts to contact you if we determine that a security breach has occurred and that there is a reasonable risk of identity theft or as otherwise required by law.</p>
+
+    <h2 id="M">M. Contact Us</h2>
+
+    <p>If you have questions, concerns, or complaints about this Statement or Windstream&rsquo;s privacy practices, please contact a Windstream customer care representative; email us at&nbsp;<a href="mailto:windstream.privacy.statement@windstream.com">windstream.privacy.statement@windstream.com</a>; or write to us at Windstream Services, LLC, ATTN: Legal Department, 4001 Rodney Parham Road, Little Rock, Arkansas 72212. We will respond to your inquiries in a timely manner.</p>
+
+    <h2 id="N">N. Definitions</h2>
+
+    <p><strong>Cookies</strong>&nbsp;are small, encrypted data strings our server writes to your hard drive that contains your unique Windstream User ID.</p>
+
+    <p><strong>Web beacons</strong>&nbsp;are small graphic images imbedded in a webpage or email.</p>
+
+    <h2 id="O">O. Internet Information</h2>
+
+    <p>Windstream&rsquo;s network management practices are designed to provide the best possible online experience to its customers. To that end, Windstream monitors traffic flows between points within its network and between its network and locations on the Internet for purposes of reasonable network management. Windstream uses this information to manage its network, provide security for its customers, plan for future needs, and ensure its network runs efficiently. Monitored information includes the amount of data sent to and from your connection, the source and destination of the data, and the type of information sent and received. In limited circumstances, Windstream may also look into the contents of the information to determine whether it is malicious in nature (such as a virus, spam, worm, etc) or when required by law to comply with judicial orders or regulations.</p>
+
+    <h2 id="P">P. US-EU Privacy Principles</h2>
+
+    <p>For individually identifiable information received by Windstream in the United States from Users in the European Union, Windstream adheres to the following principles:</p>
+
+    <p><strong>Notice:</strong>&nbsp;Windstream will inform Users about the purposes for which it collects and uses PII, the types of non-agent third parties to which Windstream discloses PII, and the choices and means, if any, Windstream offers for limiting use and disclosure of PII.</p>
+
+    <p><strong>Choice:</strong>&nbsp;Windstream will offer Users the opportunity to choose (opt-out) whether their PII is (a) to be disclosed to a third party who is not an agent, or (b) to be used for a purpose other than the purpose for which it was originally collected or subsequently authorized. For sensitive PII, Windstream will give Users the opportunity to affirmatively and explicitly (opt-in) consent to such disclosure or use.</p>
+
+    <p><strong>Access:</strong>&nbsp;Upon request, Windstream will provide Users with the PII that it holds about them and will take reasonable steps to provide individuals with a means to correct, amend or delete PII that is inaccurate or incomplete.</p>
+
+    <p><strong>Dispute Resolution:</strong>&nbsp;For complaints that cannot be resolved between Windstream and the User, such disputes will be governed by the current provisions of Windstream&rsquo;s Terms and Conditions, or the terms of your written agreement with Windstream, if applicable.</p>
+
+   </div>
+</div>
+
+
+</div>
+
+
+
+<div class="ws-modal-container">
+    <div id="ws-modal-background" class="ws-modal-background"></div>
+    <div id="qualForm" data-modal-id="qualForm" data-onload="false" data-modal-template="" class="ws-modal qualForm ws-form-styles">
+        <div class="ws-modal-close"></div>
+        <div class="loading-screen">
+            <div class="loader"></div>
+        </div>
+        
+        <div id="shortForm" class="shortForm qual-form-content-view active">
+            <h2>Discover the Services Windstream Can Bring to You</h2>
+            <p id="shortFormCopy">Please enter your address to see services available in your area.</p>
+            <p id="shortFormSignup">Already a Windstream customer? <a href="#" class="signup sso-sign-in">Sign In</a></p>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 form-field-container">
+                    <label>Street Address, City State</label>
+                    <input id='shortFormStreetAddress' type="text" placeholder="ex. 123 Main St, Lincoln NE">
+                    <ul id="suggestedStreets" class="suggestedStreet hide">
+
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-3 form-field-container optional">
+                    <label>Unit (optional)</label>
+                    <input id='shortFormUnitNumber' type="text" placeholder="ex. Apt #3">
+                </div>
+                <div class="col-sm-12 col-md-3 form-field-container">
+                    <label>Zip Code</label>
+                    <input id='shortFormZip' type="text" placeholder="ex. 12345">
+                </div>
+                <div class="col-sm-12">
+                    <a id="shortFormSubmitBtn" class="ws-btn ws-btn-green msad-submit-btn">Continue</a>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <div id="longForm" class="long-form qual-form-content-view">
+            <h3 id="longFormTitle">DISCOVER THE SERVICES WINDSTREAM CAN BRING TO YOU</h3>
+            <p id="longFormCopy" class="inputedAdress">Please enter your address to see services available in your area</p>
+            <p id="longFormSignup">Please try again <a href="#" class="signup">Sign In</a></p>
+            <p id="longFormProceed" class="hide">Please try again, or <a class="signup">Proceed with this address</a></p>
+            <div class="row">
+                <div class="col-sm-12 col-md-3 form-field-container">
+                    <label>Street Number</label>
+                    <input id='longFormStreetNumber' type="text" placeholder="Street Number">
+                </div>
+                <div class="col-sm-12 col-md-6 form-field-container">
+                    <label>Street Name</label>
+                    <input id='longFormStreetName' type="text" placeholder="Street Name">
+                </div>
+                <div class="col-sm-12 col-md-3 form-field-container">
+                    <select id='longFormStreetType' type="text" placeholder="Street Type">
+                        <option value="">Street Type</option>
+                        <option value="ALY">ALY</option>
+                        <option value="AVE">AVE</option>
+                        <option value="BCH">BCH</option>
+                        <option value="BLF">BLF</option>
+                        <option value="BLVD">BLVD</option>
+                        <option value="BND">BND</option>
+                        <option value="BR">BR</option>
+                        <option value="BRG">BRG</option>
+                        <option value="BYP">BYP</option>
+                        <option value="BYU">BYU</option>
+                        <option value="CIR">CIR</option>
+                        <option value="COR">COR</option>
+                        <option value="CORS">CORS</option>
+                        <option value="CP">CP</option>
+                        <option value="CRK">CRK</option>
+                        <option value="CRST">CRST</option>
+                        <option value="CT">CT</option>
+                        <option value="CTR">CTR</option>
+                        <option value="CURV">CURV</option>
+                        <option value="CV">CV</option>
+                        <option value="DR">DR</option>
+                        <option value="EST">EST</option>
+                        <option value="ESTS">ESTS</option>
+                        <option value="EXT">EXT</option>
+                        <option value="FLS">FLS</option>
+                        <option value="FLT">FLT</option>
+                        <option value="FLTS">FLTS</option>
+                        <option value="FRST">FRST</option>
+                        <option value="FRY">FRY</option>
+                        <option value="FWY">FWY</option>
+                        <option value="GLN">GLN</option>
+                        <option value="GRV">GRV</option>
+                        <option value="HBR">HBR</option>
+                        <option value="HL">HL</option>
+                        <option value="HLS">HLS</option>
+                        <option value="HOLW">HOLW</option>
+                        <option value="HTS">HTS</option>
+                        <option value="HVN">HVN</option>
+                        <option value="HWY">HWY</option>
+                        <option value="IS">IS</option>
+                        <option value="JCT">JCT</option>
+                        <option value="KNLS">KNLS</option>
+                        <option value="LDG">LDG</option>
+                        <option value="LK">LK</option>
+                        <option value="LKS">LKS</option>
+                        <option value="LN">LN</option>
+                        <option value="LNDG">LNDG</option>
+                        <option value="LOOP">LOOP</option>
+                        <option value="MDW">MDW</option>
+                        <option value="MDWS">MDWS</option>
+                        <option value="ML">ML</option>
+                        <option value="MLS">MLS</option>
+                        <option value="MNR">MNR</option>
+                        <option value="MT">MT</option>
+                        <option value="MTN">MTN</option>
+                        <option value="MTWY">MTWY</option>
+                        <option value="PARK">PARK</option>
+                        <option value="PASS">PASS</option>
+                        <option value="PATH">PATH</option>
+                        <option value="PKWY">PKWY</option>
+                        <option value="PL">PL</option>
+                        <option value="PLZPNE">PLZPNE</option>
+                        <option value="PTPTE">PTPTE</option>
+                        <option value="RD">RD</option>
+                        <option value="RDG">RDG</option>
+                        <option value="RIV">RIV</option>
+                        <option value="ROW">ROW</option>
+                        <option value="RUN">RUN</option>
+                        <option value="SHLS">SHLS</option>
+                        <option value="SMT">SMT</option>
+                        <option value="SPG">SPG</option>
+                        <option value="SPGS">SPGS</option>
+                        <option value="SPUR">SPUR</option>
+                        <option value="SQ">SQ</option>
+                        <option value="ST">ST</option>
+                        <option value="STA">STA</option>
+                        <option value="TER">TER</option>
+                        <option value="TL">TL</option>
+                        <option value="TPKE">TPKE</option>
+                        <option value="TRCE">TRCE</option>
+                        <option value="VIS">VIS</option>
+                        <option value="VLG">VLG</option>
+                        <option value="VLY">VLY</option>
+                        <option value="VW">VW</option>
+                        <option value="WALK">WALK</option>
+                        <option value="WAY">WAY</option>
+                        <option value="XING">XING</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-3 form-field-container optional">
+                    <label>Unit (optional)</label>
+                    <input id='longFormUnit' type="text" placeholder="Unit (optional)">
+                </div>
+                <div class="col-sm-12 col-md-3 form-field-container">
+                    <select id='longFormState' type="text" placeholder="State">
+                        <option selected="selected" value="">State</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-3 form-field-container">
+                    <select id='longFormCity' type="text" placeholder="City">
+                        <option selected="selected" value="">City</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 col-md-3 form-field-container">
+                    <label>Zip Code</label>
+                    <input id='longFormZip' type="text" placeholder="Zip Code">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <a id="longFormSubmitBtn" class="ws-btn ws-btn-green msad-submit-btn">Continue</a>
+            </div>
+        </div>
+        
+
+        
+        <div id="notAvalible" class="not-avalible qual-form-content-view">
+            <h3 id="notAvalibleHeadline">Windstream is not available in your area</h3>
+            <p class="inputedAdress"></p>
+            <a href="https://www.movearoo.com/windstream/out-of-area?kbid=56644" class="ws-btn ws-btn-green" target="_blank">View Carriers in Your Area</a>
+            <div class="backToAddressContainter">
+                 <a class="backToaddressInput">Enter Your Address Again</a>
+            </div>
+        </div>
+        
+        
+        <div id="alternateAddress" class="alternateAddress qual-form-content-view">
+            <p>You entered</p>
+            <p class="inputedAdress"></p>
+            <p>Did you mean</p>
+            <div id="alternateAddressOptions" class="alt-inputs"></div>
+            <a href="#" id="useSelected" class="ws-btn ws-btn-green">Use Selected</a>
+            <div id="toShortForm">
+               <a id="backToaddressInputShortForm" class="text-green">Enter Your Address Again</a>
+            </div>
+            <div id="toLongForm">
+             <a class="backToaddressInput">Try a different method</a>
+             <p id="altProceed"><a class="signup">Proceed with entered address</a></p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+ 
+  
+  <div class="ws-footer">
+    <div class="container">  
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="footer-link-menu">
+                 <div class='row footer-category-links'>
+        <div class='col-sm-4 category-links'>
+            <span class='category-header'>Products</span>
+            <ul>
+                <li><a title="High-Speed Internet" href="/internet">Internet</a></li>
+                <li><a title="Digital TV" href="/tv">TV</a></li>
+                <li><a title="Phone" href="/phone">Phone</a></li>
+                <li><a title="Electronics" href="/electronics">Electronics</a></li>
+                <li><a title="Available Services" href="/products">Available Services</a></li>
+            </ul>
+        </div>
+        <div class='col-sm-4 category-links'>
+            <span class='category-header'>Learn</span>
+            <ul>
+                <li><a title="Support" href="/support">Support</a></li>
+                <li><a title="Store Finder" href="/store-finder">Store Finder</a></li>
+                <li><a href="http://blog.windstream.com/" target="_blank">Windstream Blog</a></li>
+                <li><a title="Windstream.net" href="http://windstream.net/">Windstream.net</a></li>
+            </ul>
+        </div>
+        <div class='col-sm-4 category-links'>
+            <span class='category-header'>Company</span>
+            <ul>
+                <li><a title="Windstream Overview" href="/about">Windstream Overview</a></li>
+                <li><a title="Windstream Careers" href="https://careers.windstream.com/">Careers</a></li>
+                <li><a title="Investor Relations" href="http://abea-43pvyw.client.shareholder.com/investors/" target="_blank">Investor Relations</a></li>
+                <li><a title="Windstream News" href="http://news.windstream.com/">News</a></li>
+                <li><a title="Privacy Policy" href="/privacy">Privacy Policy</a></li>
+                <li><a title="Terms &amp; Conditions" href="/terms">Terms &amp; Conditions</a></li>
+                <li><a title="Offer Conditions" href="/offer-conditions" class="-1">Offer Conditions</a></li>
+                <li><a title="Legal Notices" href="/legal-notices" class="-1">Legal Notices</a></li>
+                <li><a title="Broadband Network Statement" href="/broadband-network-statement">Broadband Network Statement</a></li>
+                <li><a title="Suppliers" href="/about/suppliers/Supplier-Information" class="-1">Suppliers</a></li>
+            </ul>
+        </div>
+    </div>
+
+           </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="about">
+            
+<div class="ws-body-text">
+    <div class='container'>
+        <a id='cc480763-17c4-4e79-a864-568209e10b92-windstream'></a>
+        <div class="row">
+            
+                <h2>
+                  <div class="col-sm-12 text-center">
+                    <span id="p_lt_ctl04_Windstream_BodyText_TitleTextField">WINDSTREAM</span>
+                   </div>
+                </h2>
+            
+            
+
+            <div class='col-sm-12'>
+                <p>Windstream is one of the largest providers of telecommunications services in rural communities in the United States, and we are a customer-focused telecommunications company that provides phone, high-speed Internet and digital television services. We also offer a wide range of IP-based voice and data services and advanced phone systems and equipment to businesses and government agencies.</p>
+
+            </div>
+        </div>
+    </div>
+</div><div class='inter-site-links'>
+    <a href='/'>Residential</a>
+    <a href='https://smallbusiness.windstream.com/'>Small Business</a>
+    <a href='https://www.windstreambusiness.com/'>Enterprise</a>
+    <a href='http://www.windstreamwholesale.com/'>Wholesale</a>
+</div>
+
+            </div>
+          <div class="additional-links">
+            <div class='footer-social'>
+FIND US ON
+  <a href="https://twitter.com/Talk2Windstream" title="Twitter" target="_blank" class="-1">
+    <span class="ws-icon ws-icon-Twitter"></span>Twitter
+  </a>
+  <a title="Facebook" href="http://www.facebook.com/windstreamconnects" target="_blank">
+  <span class="ws-icon ws-icon-Facebook"></span>Facebook
+  </a>
+</div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="legal">
+              <a class="logo" href="/"><img src="/images/windstream-logo.png" alt="Windstream Logo" /></a>
+            <p>Copyright &copy; 2018 Windstream Communications. All rights reserved.</p>
+
+
+
+
+
+<script type="text/javascript">
+	//<![CDATA[
+_satellite.pageBottom();
+//]]>
+</script>
+          </div>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div><!-- /.footer-wrapper -->
+    
+    
+
+<script type="text/javascript">
+	//<![CDATA[
+WebServiceCall('/cmsapi/webanalytics', 'LogHit', '{"NodeAliasPath":"/about/legal/Privacy-Policy","DocumentCultureCode":"en-US","UrlReferrer":""}')
+//]]>
+</script><script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fCustom%2fjquery-2.2.4.min.js" type="text/javascript"></script><script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fCustom%2fslick.min.js" type="text/javascript"></script><script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fcmsscripts%2fcustom%2fres-module-library.js" type="text/javascript"></script></form>
+</body>
+</html>

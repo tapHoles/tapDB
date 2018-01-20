@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-store, must-revalidate, no-cache, private, max-age=0, post-check=0, pre-check=0" />
+<meta http-equiv="X-Xss-Protection" content="0" />
+<meta name='apple-itunes-app' content='app-id=580295142'/>
+<meta name="viewport" content="width=device-width ,initial-scale=1.0">
+
+    <title>Delicious</title>
+
+
+<meta name="description" content="Keep, share, and discover the best of the Web using Delicious, the world&#039;s leading social bookmarking service." />
+
+
+
+<meta name="keywords" content="del.icio.us, delicious, bookmarks, bookmark, social bookmarking, links, link, stacks, stack" />
+
+
+
+<meta name="language" content="en" />
+<script type="text/javascript">
+    var D = {};
+</script>
+<link href="/img/fav-icon.png" rel="icon" />
+
+  <link rel="stylesheet" type="text/css" media="screen" href="https://del.icio.us/static/css/style.css?v=1339-36-gb002d" />
+
+
+<link href="https://del.icio.us/static/css/responsive-style.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/font-awesome.min.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/popcon.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+<link href="https://del.icio.us/static/css/jquery.mCustomScrollbar.min.css?v=1339-36-gb002d" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="https://del.icio.us/static/js/jquery-1.11.3.min.js?v=1339-36-gb002d"></script>
+
+
+<script type="text/javascript" src="https://del.icio.us/static/js/jquery.mCustomScrollbar.concat.min.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/common.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/popcon.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/del_new.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/fblogin.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/gpluslogin.js?v=1339-36-gb002d"></script>
+<script type="text/javascript" src="https://del.icio.us/static/js/twtrlogin.js?v=1339-36-gb002d"></script>
+
+<script type="text/javascript">
+  var onloadCallback = function() {
+    grecaptcha.render('html_element', {
+      'sitekey' : '6Ld2XScTAAAAAOupdoiO6KRii_labn6piwMNVMZL',
+      'callback' : function(d_recaptcha_response) {	
+        $("#recaptcha-response").val(d_recaptcha_response);
+      }
+    });
+  };
+</script>
+</head>
+<body id="index">
+
+   
+    <div id="delAlert" >
+    <div class="alertbg"></div>
+    <div class="alert">
+	    <div class="con">
+		    <div class="head"></div>
+		    <div class="msg"></div>
+		<div class="btns"></div>
+		<div class="clear"></div>
+	    </div>
+    </div>
+</div>
+<div id="loginRequired" class="hide">
+    <p class="memberLogin">Already a member? <a href="#userlogin" id="loginField" class="delPopcon" data-close-prev>Log in</a></p>
+    <div class="popInner">
+	<h3>Sign up with your...</h3>
+	<div class="socialMediaOuterWrapper">
+	    <a href="#" class="twtrlogin">
+		<div class="socialMediaBlock twitterBlock">
+		    <div class="socialIconPanel"><i class="fa fa-twitter"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Twitter</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="fblogin">
+		<div class="socialMediaBlock facebookBlock">
+		    <div class="socialIconPanel"><i class="fa fa-facebook"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Facebook</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="gpluslogin">
+		<div class="socialMediaBlock googleplusBlock">
+		    <div class="socialIconPanel"><i class="fa fa-google-plus"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Google+</strong></p></div>
+		</div>
+	    </a>
+	</div>
+	<div class="popupBottomCont">
+	    <p>or</p>
+	</div>
+	<p class="emailAddTxt"><a href="#usersignup" class="delPopcon" data-close-prev>Sign Up with your email address</a></p>
+    </div>
+</div>
+
+<div id="addTagPop" class="hide">
+    <div class="popInner">
+	<h3>Add Tags</h3>
+	<form name="frm_addTags" id="frm_addTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Type tags to add</label>
+		<input type="text" name="tags" id="tags">
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Add Tags</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="dupTagPop" class="hide">
+    <div class="popInner">
+	<h3>Duplicate Tags</h3>
+	<form name="frm_dupTags" id="frm_dupTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <input type="hidden" name="tags" id="tags">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Common tags to remove</label>
+		<div id="duptaghtml"></div>
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Remove Tags</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="renTagPop" class="hide">
+    <div class="popInner">
+	<h3>Rename Tags</h3>
+	<form name="frm_renTags" id="frm_renTags" action="" method="post" target="_top">
+	    <input type="hidden" name="url" id="url">
+	    <input type="hidden" name="tags" id="tags">
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Select a tag to rename</label>
+		<select name="oldTag"></select>
+		<label>New tag name</label>
+		<input type="text" name="newTag">
+		<div class="saveSocialLinks">		    
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Rename Tag</button>
+		    </div>
+		</div>		
+	    </div>
+	</form>	
+    </div>
+</div>
+
+
+<div id="trendingSharePop" class="hide">
+    <div class="popInner">
+    <h3>Share This URL With Others!</h3>
+    <form name="frm_shareLink" id="frm_shareLink" action="" method="post" target="_top">
+	<input type="hidden" name="url" value="">              
+	<div class="signInFlds noBtmBdr saveLinkPop">
+	    <label><span class="youtubeIcon"></span><span id="url_lbl"></span></label>                  
+	    
+	    <label>Type Emails or User Names (comma-separated)</label>
+	    <input type="text" name="recipients" id="recipients" placeholder="recipients required">
+	    
+	    <label>Link shares via email will come from your email address so recipients know it's you and can reply.</label>
+	    <textarea name="message" id="message" placeholder="Enter a message (optional)"></textarea>
+	    
+	    <div class="saveSocialLinks">
+		<div class="saveRightBtns">                          
+		    <button type="submit" class="saveLinkBtn">Share</button>
+		</div>
+	    </div>
+	    <div class="bottomSocialIcons">
+		<ul>
+		  <li class="twitter"><a href='#' onclick="javascript:PopupCenter('https://twitter.com/intent/tweet?text=#title#&url=#url#&via=delicious&hashtags=deliciousTrending','twitterPost',700,443); return false;"><i class="fa fa-twitter-square"></i> Twitter</a></li>
+		  <li class="facebook"><a href='#' onclick="javascript:PopupCenter('http://www.facebook.com/share.php?u=#url#','facebookPost',650,300); return false;"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+		  <li class="googlePlus"><a href='#' onclick="javascript:PopupCenter('https://plus.google.com/share?url=#url#','googlePost',650,300); return false;"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+		  <li class="pocket"><a href='#' onclick="javascript:PopupCenter('http://getpocket.com/edit.php?url=#url#&title=#title#','pocketPost',650,300); return false;"><i class="fa fa-get-pocket"></i> Pocket</a></li>
+		  <li class="instapaper"><a href='#' onclick="javascript:PopupCenter('http://www.instapaper.com/edit?url=#url#&title=#title#','instapaperPost',650,300); return false;"><i class="fa instapaperIcon"></i> Instapaper</a></li>
+		  <li class="email"><a href='mailto:?subject=#title#&body=#url#'><i class="fa fa-envelope"></i> Email</a></li>
+		</ul>
+	    </div>
+	</div>
+    </form>	
+  </div>    
+</div>
+
+<div id="savePop" class="hide">
+    <div class="popInner">
+	<h3>Save Link</h3>	
+	
+	<form name="frm_saveLink" id="frm_saveLink" action="" method="post">
+	    <input type="hidden" name="url" value="">
+	    <input type="hidden" name="replace" value="">	    
+	    
+	    <div class="signInFlds noBtmBdr saveLinkPop">
+		<label>Title</label>
+		<input type="text" name="title">
+		
+		<label>Tags <i class="fa fa-question-circle" title="Tags are an important part of organizing on Delicious. Using tags that are smart and simple benifits both you and the community. <ul><li>Lowercase tags are recommended: <code>webdev</code> instead of <code>WebDev</code></li><li>Spaces are allowed but not recommended: <code>machine-learning</code> instead of <code>Machine Learning</code></li><li>Reuse your tags and the tags of the community as much as possible.</li><li>Use ! at the start of a tag if it's unrelated to the link content: <code>!unread</code>, <code>!savedforlater</code>, etc.</li></ul>"></i><span> (Separated by comma)</span></label>
+		<input type="text" name="tags">
+		
+		<label>Comment <span>(Max. <span class="rem">1000</span> characters)</span></label>
+		<textarea name="note"></textarea>
+		
+		<div class="saveSocialLinks">
+		    <div class="saveLeftBtns">
+			<a href="#" class="privateBtn hide"><i class="fa fa-lock"></i>  Private</a>
+			<a href="#" class="publicBtn "><i class="fa fa-unlock"></i>  Public</a>			
+		    </div>
+		    <div class="saveRightBtns">
+			<button type="button" class="cancleBtn" onclick="javascript:popcon.close($('.popcon:eq(0)'));">Cancel</button>
+			<button type="submit" class="saveLinkBtn">Save Link</button>
+		    </div>
+		</div>
+		<input type="checkbox" name="private" class="hide">
+	    </div>
+	</form>	
+    </div>
+</div>
+
+<div id="userlogin" class="hide">
+    <div class="popInner">
+	<h3>Sign in</h3>
+	<div class="socialMediaOuterWrapper">
+	    <a href="#" class="twtrlogin">
+		<div class="socialMediaBlock twitterBlock">
+		    <div class="socialIconPanel"><i class="fa fa-twitter"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Twitter</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="fblogin">
+		<div class="socialMediaBlock facebookBlock">
+		    <div class="socialIconPanel"><i class="fa fa-facebook"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Facebook</strong></p></div>
+		</div>
+	    </a>
+	    <a href="#" class="gpluslogin">
+		<div class="socialMediaBlock googleplusBlock">
+		    <div class="socialIconPanel"><i class="fa fa-google-plus"></i></div>
+		    <div class="socialContent"><p>Sign in with <strong>Google+</strong></p></div>
+		</div>
+	    </a>
+	</div>
+	<div class="popupBottomCont"><!----></div>
+	<form name="login-form" id="login-form" action="login" method="post">
+	<div class="signInFlds">
+	    <input type="text" placeholder="Username or Email" name="username" />
+	    <input type="password" placeholder="Password" name="password" />
+	    <div class="signBtnPan">
+		<button type="submit">Sign In</button>
+		<p><a href="#userforgotpassword" class="delPopcon" data-close-prev>Forgot password?</a></p>
+	    </div>
+	</div>
+	</form>
+	<p class="emailAddTxt"><a href="#usersignup" class="delPopcon" data-close-prev>Sign Up with your email address</a></p>
+    </div>
+</div> 
+
+<div id="usersignup" class="hide">
+    <div class="popInner">
+	<h3>Sign up</h3>	
+	<div class="popupBottomCont"></div>
+	<form name="signup-form" id="signup-form" action="register" method="post">
+	<div class="signInFlds noBtmBdr">
+	    <input type="text" placeholder="Full Name" name="display-name" />
+	    <input type="text" placeholder="Email" name="email" />
+	    <input type="text" placeholder="Username" name="username" />
+	    <input type="password" placeholder="Password" name="password" />	    
+            <input type="hidden" name="recaptcha_response_field" value="nocap"/>	    
+	    <div class="signupChekBox"><input type="checkbox" name="option_terms" id="option_terms" checked><label for="optin">Stay in the loop with Delicious Trending</label></div>
+	    <div class="labelTerms">By clicking the button, you agree to the <a href="/terms" target="_blank">Terms & Conditions</a>.</div>
+	    <div class="signBtnPan">
+		<button type="submit">Sign Up</button>
+	    </div>
+	</div>
+	</form>	
+    </div>
+</div>
+
+<div id="userforgotpassword" class="hide">
+    <div class="popInner">
+	<h3>Forgot Password?</h3>	
+	<div class="popupBottomCont"></div>
+	<p>Please enter your username below and press the send button.</br>A password reset link will be sent to you.</p>
+	<p>If you are unable to access the email address originally associated with your Delicious account, we recommend creating a new account.</p>
+	<form name="forgot-password-form" id="forgot-password-form" action="" method="post">
+	<div class="signInFlds noBtmBdr">	    
+	    <input type="text" name="username_or_email" id="usernameEmail" placeholder="Enter Username or Email" />
+	    <div class="signBtnPan">
+		<button type="submit">Send</button>
+	    </div>
+	</div>
+	</form>	
+    </div>
+</div>
+<!--header starts-->
+<div class="header">
+    <div class="container">
+	<div class="logo">
+	    <a href="https://del.icio.us" target="_top">Delicious</a>
+	</div>
+	<div class="navPanel">
+	    <ul>
+		    <li class="toplink"><i class="fa fa-sign-in"></i> <a href="https://del.icio.us/login" class="" target="_top">Sign In</a></li>
+		    <li class="signupBtn"><a href="https://del.icio.us/join" target="_top">Sign Up</a></li></ul>
+	</div>
+	<div class="headerSearchPan">
+            	<div class="searchPanel">
+		    <form id="global-searchform" action="https://del.icio.us/search" method="get" target="_top">
+                    <input autocomplete="off" name="p" id="global-searchinput" class="searchInput" placeholder="Search" type="text"/>
+		    
+		    <button type="submit">Search</button>
+		    </form>
+            	</div>
+            </div>
+	<div class="navPanSmallScrn">
+	    <ul>
+		<li class="searchBtn"><a href="#"><i class="fa fa-search"></i></a></li>
+		<li class="colaspeMenu"><a href="#"><i class="fa fa-bars"></i></a></li>
+	    </ul>
+	</div>
+	<div class="smallScrnSrch">
+	    <div class="searchPanel">
+		<form id="global-searchform" action="https://del.icio.us/search" method="get" target="_top">
+		<input autocomplete="off" name="p" id="global-searchinput" class="searchInput" placeholder="Search" type="text"/>
+		
+		<button type="submit">Search</button>
+		</form>
+	    </div>
+	</div>
+	<div class="smallScrnMenu">
+	    <ul>
+		    <li><a href="https://del.icio.us/login" class="" target="_top"><i class="fa fa-sign-in"></i> Sign In</a></li>
+		    <li class="toplink"><a href="https://shop.icio.us" target="_blank"><i class="fa fa-shopping-cart"></i> Shop</a></li>
+		    <li class="signupBtn"><a href="https://del.icio.us/join" target="_top">Sign Up</a></li></ul>
+	</div>
+	<div class="clear"><!----></div>	
+    </div>
+</div>
+
+<div class="saveDialog" id="saveDialog0">
+  <div class="saveBody"></div>
+  <div class="clear"></div>
+</div>
+
+<!--header ends-->
+
+<!--top ad starts-->
+<!--top ad ends-->
+    <!--content panel starts-->
+   <div class="homeContentPan">
+        <div class="container">
+            <div class="contentPanel">
+            	
+                <!--left panel starts-->
+                <div class="contentLeftPan">
+                    <div class="contentDoublePanel">
+			 <div class="contentLeft">
+                            <h1>Delicious Privacy Policy</h1>
+                            <h2>Welcome to Delicious!</h2>
+                            <p>Delicious Media, Inc. provides Delicious - the service that enables users to collect and discover web content through our website located at del.icio.us and by using related applications and the Delicious bookmarklet extension for your internet browser. For simplicity, we'll refer to any or all of this as the "Service".</p>
+                            <p>We provide this Privacy Policy so you know what we do regarding the collection, use and disclosure of personal information we receive from users of the Service. This Privacy Policy applies only to information that you provide to us through the Service. Your use of the Service is your consent to the collection, disclosure, transfer, processing, storage and other uses of your information as described in this Privacy Policy.</p>
+                            <h3>Our Core Privacy Principles:</h3>
+                            <p>We take your privacy very seriously.</p>
+                            <p>We collect your information to provide and improve our Service and increase your enjoyment in using it.</p>
+                            <p>Providing us with your Personal Information is your choice.</p>
+                            <h3>What information does Delicious Science collect when we sign up?</h3>
+                            <p>You may use certain features of the Service without registering; however, to get access to all the features of the Service you will need to register at which time you will be asked to provide certain information most of which is optional. The only information you are required to provide is your name, (which will be publicly visible), a user name (which will be publicly visible), your email (which will not be publicly visible) and a password (which will not be publicly visible). All other information you provide when registering or later add to your profile is optional. Additional profile information you choose to provide, including your name, will be publicly available.</p>
+                            <p>Personal Information is information that can be used to contact or identify you. Personal Information includes, but is not limited to, your name and email address. We use your Personal Information to provide the Service and administer your inquiries. We will also use your Personal Information to contact you with Delicious newsletters, marketing or promotional materials and other information that may be of interest to you. If you decide at any time that you no longer wish to receive such communications from us, please follow the unsubscribe instructions provided in any of the communications or update your "Settings" information. (See "Changing or Deleting Information," below.) We do not collect Personal Information from users who are not registered.</p>
+                            <p>Non-Identifying Information is the other information that you provide as part of registration and the administration and personalization of your user experience examples may include: zip code (on its own), gender and geolocation. We may use Non-Identifying Information alone or aggregated with the Non-Identifying Information of other users to attempt to provide you with a better experience, to improve the quality and value of the Service and to analyze and understand how our Service is used. We may also use the combination of your Personal and Non-Identifying information without aggregating it to serve you specifically, for instance to deliver a product to you according to your preferences or restrictions.</p>
+                            <p>Service Usage Information. When you use our Service our servers automatically record information that your browser sends whenever you visit a website or online service ("Log Data"), including, but not limited to, your computer's Internet Protocol ("IP") address, browser type or the webpage you were visiting before you came to our Site, pages of our Site that you visit, the time spent on those pages, information you search for via our Service, access times and dates, and other statistics. We use this information to monitor and analyze use of the Service (e.g., to understand how our users interact with advertisements), for the Service's technical administration, to increase our Service's functionality and user-friendliness, and to better tailor it to our visitors' needs. We do not treat Log Data as Personal Information, though we may aggregate, analyze and evaluate such information for the same purposes as stated above regarding other Non-Identifying Information.</p>
+                            <p>Like many websites and online services, we use "cookies" on our Service to collect information. A cookie is a small data file that we transfer to your computer's hard disk. Most Internet browsers automatically accept cookies. We may use both session cookies and persistent cookies to better understand how you interact with our Service, to save your preferences and personalize the Service for you, to monitor aggregate usage by Delicious Users and web traffic routing on our Service and to improve our Service generally. Third party advertisers may also place or read cookies on your browser. You can instruct your browser, by changing its options, to stop accepting cookies or to prompt you before accepting a cookie from the websites you visit. If you do not accept cookies, however, you may not be able to use all portions of the Site or all functionality of the Service. </p>
+                            <p>We also use "pixel tags," "clear GIFs" or similar means (individually or collectively "Pixel Tags") on our Site. A Pixel Tag is an electronic image, often a single pixel, embedded on web pages. Pixel Tags are ordinarily not visible to users. Pixel Tags allow us to count the number of Delicious Users who have visited certain pages of the Site, to deliver branded services and to generate statistics about how our Site is used.</p>
+                            <h3>Do you share my information with others?</h3>
+                            <p>Personal Information. Your user name, name, and any profile information you choose to add will be publicly available so consider whether you want to any include Personal Information in your profile. Content you add to the Service (things like links, comments, notes, titles, etc.) will be publicly available unless you choose to mark your submission as 'private' and you should keep in mind that your user name (and hence your profile and everything in it) will be associated with all such public submissions. Any User Content marked private will only be viewable to you and those users to whom you explicitly grant access. Other than the foregoing, we do not share Personal Information with third parties except as follows:</p>
+                            <p>Third Party Social Networking Services. Registered users may link their accounts with certain third party social networking services ("SNSs"). In these instances, with your permission and on your behalf, we will share your Personal Information, including, but not limited to, information contained in your profile and any bookmarks with the applicable SNS. Through use of such services' APIs we also receive certain information (which may include your Personal Information) in accordance with the privacy settings you have set in your SNS account, if any. Other than what we may share with the SNS in connection with your linking of accounts, the personal information an SNS has about you is obtained by the SNS independent of our Service. Other services follow different rules regarding the use or disclosure of the personal information you submit to them. We encourage you to read the privacy policies or statements of the other services you use.</p>
+                            <p>Service Providers. We may employ third party companies and individuals to facilitate our Service, to provide the Service on our behalf, to perform Site-related services (e.g., without limitation, maintenance services, database management, web analytics and improvement of the Service's features) or to assist us in analyzing how our Service is used. These third parties may have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                            <p>Compliance with Laws and Law Enforcement. We may disclose any of your information if we believe that it is reasonably necessary to comply with a law, regulation or legal request; to protect the safety of any person; to address fraud, security or technical issues; or to protect Delicious Science' rights or property.</p>
+                            <p>Business Transfers. Delicious Media may sell, transfer or otherwise share some or all of its assets, including your Personal Information, in connection with a merger, acquisition, reorganization or sale of assets or in the event of bankruptcy. We will provide you with notice of the transfer of your Personal Information to the new entity.</p>
+                            <p>Non-Identifying and Service Usage Information. We may share Non-Identifying Information and Service Usage Information in aggregated or non-aggregated formats with third parties for industry analysis, demographic profiling and other purposes. Any information shared in these contexts will not contain your Personal Information.</p>
+                            <p>Third-Party Service Providers: Certain third parties perform service functions on our behalf, including, but not limited to, marketing and analytics. These entities may have access to personally identifiable information if needed to perform their functions.</p>
+                            <p>Business Partners and Other Third Parties: From time to time, we may share your personally identifiable information with our business partners.</p>
+                            <h3>Changing or Deleting Your Information</h3>
+                            <p>All registered users may review, update, correct or delete the Personal Information in their registration profile by contacting us or via the "Settings" section of the Site. If you completely delete all such information, then your account may become deactivated. If you would like us to delete your record in our system, please contact us with a request that we delete your Personal Information from our database. We will use commercially reasonable efforts to honor your request. We may retain an archived copy of your records as required by law or for legitimate business purposes.</p>
+                            <h3>Security</h3>
+                            <p>Delicious Media is very concerned with safeguarding your information. We employ reasonable physical, technological, and administrative security measures and attempt to ensure they are applicable under the circumstances (e.g., we encrypt certain information using secure socket layer technology (SSL)). No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, while we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+                            <p>We will make any legally required disclosures of any breach of the security, confidentiality, or integrity of your unencrypted electronically stored "personal data" (as defined in applicable state statutes on security breach notification) to you via email or conspicuous posting on the Site in the most expedient time possible and without unreasonable delay, insofar as consistent with (i) the legitimate needs of law enforcement or (ii) any measures necessary to determine the scope of the breach and restore the reasonable integrity of the data system.</p>
+                            <h3>International Transfer</h3>
+                            <p>Your information may be transferred to - and maintained on - computers located outside of your state, province, country or other governmental jurisdiction where the privacy laws may not be as protective as those in your jurisdiction. If you are located outside the United States and choose to provide information to us, Delicious Media transfers Personal Information to the United States and processes it there. Your consent to this Privacy Policy by using the Service followed by your submission of such information represents your agreement to that transfer.</p>
+                            <h3>Links to Other Sites</h3>
+                            <p>Our Service contains links to other websites. If you choose to visit an advertiser or third party website by "clicking on" a third party link, you will be directed to that third party's website. The fact that we link to a website is not an endorsement, authorization or representation of our affiliation with that third party, nor is it an endorsement of their privacy or information security policies or practices. We do not exercise control over third party websites or over the choice of which third party sites are linked to using the service. These other websites may place their own cookies or other files on your computer, collect data or solicit personal information from you. Other sites follow different rules regarding the use or disclosure of the personal information you submit to them. We encourage you to read the privacy policies or statements of the other websites you visit.</p>
+                            <h3>Our Policy Toward Children</h3>
+                            <p>This Service is not directed to children under 13. We do not knowingly collect personally identifiable information from children under 13. If we become aware that a child under 13 has provided us with Personal Information, we will delete such information from our files.</p>
+                            <h3>We may make Modifications or Changes</h3>
+                            <p>Delicious Media may, its sole discretion, choose to modify, discontinue or terminate the Service, at any time and without prior notice. Delicious Media may also choose to modify the Terms. Once they become effective your continued use of the Service will mean you agree to be bound by the new terms. If you don't agree then you need to stop using the Service.</p>
+                            <p>We allow third-party companies to collect certain information when you visit our web site. These companies may utilize cookies, pixels or other technologies to collect and use user information (e.g., hashed, de-identified, data, click stream information, browser type, time and date, subject of advertisements clicked or scrolled over) during your visits to this and other web sites in order to provide advertisements about goods and services likely to be of greater interest to you. To learn more about this behavioral advertising practice or to opt-out of this type of advertising, you can visit the websites of the Digital Advertising Alliance at <a href='http://www.aboutads.info/' target='_blank'>www.aboutads.info</a> and Your Online Choices at <a href='http://www.youronlinechoices.com/uk/' target='_blank'>http://www.youronlinechoices.com/uk/</a>.</p>
+                        </div>
+                        <div class="contentRight">
+			 <div class="rightNavigation">
+    <ul>
+	<li><a href="/about">About</a></li>
+	<li><a href="/apps">Apps</a></li>
+	<li><a href="/branding">Branding</a></li>
+	<li><a href="/copyright">Copyright</a></li>
+	<li><a href="/help">Help</a></li>
+	<li><a href="/privacy">Privacy</a></li>
+	<li><a href="/rss">RSS</a></li>
+	<li><a href="/terms">Terms</a></li>
+	<li><a href="/tools">Tools</a></li>
+    </ul>
+</div>
+                        </div>
+                    </div>
+		    
+		    
+                </div>
+                <!--left panel ends-->
+            </div>
+        </div>
+    </div>
+    <!--content panel ends-->
+    <!--footer panel starts-->
+<div class="footer">
+    <div class="container">
+        <div class="footerLeft">
+            <ul>
+                <li><a href="https://del.icio.us">Home</a></li>
+                <li><a href="https://del.icio.us/about">About</a></li>
+                <li><a href="https://del.icio.us/apps">Apps</a></li>
+                <li><a href="http://blog.del.icio.us" target="_blank">Blog</a></li>
+                <li><a href="https://del.icio.us/branding">Branding</a></li>
+                <li><a href="https://del.icio.us/copyright">Copyright</a></li>
+                <li><a href="https://del.icio.us/help">Help</a></li>
+                <li><a href="https://del.icio.us/privacy">Privacy</a></li>
+                <li><a href="https://del.icio.us/rss">RSS</a></li>
+                <li><a href="https://del.icio.us/terms">Terms</a></li>
+                <li><a href="https://del.icio.us/tools">Tools</a></li>
+            </ul>
+        </div>
+        <div class="footerRight">
+          <p>&copy; 2017 Maciej Ceglowski</p>
+        </div>
+    </div>
+</div>
+<!--footer panel ends-->
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100970508); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100970508ns.gif" /></p></noscript>
+<div id="fb-root"></div>
+</body>
+</html>
