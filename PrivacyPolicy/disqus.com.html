@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"bceadb921a","applicationID":"48637645,27456590","transactionName":"JlpeF0ENCggEExtXTRZBXw5WEEkUDhNAVVRKXlI8UhASDQINUUcXFl1fFA==","queueTime":0,"applicationTime":178,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta pod-id="" />
+	  <link href="https://cdn.desk.com/assets/portal_jqueryui_only-ae2078f5d9247e97c310caf0c453b7d9.css" media="screen" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.desk.com/assets/vendor-c0a3f0c532dd6db2d09875a0ea69a8b0.js" type="text/javascript"></script>
+		<script src="https://cdn.desk.com/assets/customer_widget-044efc6df9c5a6cdfe09ae38cde0fa38.js" type="text/javascript"></script>
+		<script src="https://cdn.desk.com/assets/portal-6cf8baf2170daed9feb9f26bb3d2e9d5.js" type="text/javascript"></script>
+      <script src="https://cdn.desk.com/assets/portal/desk.public_event_logger-b261b5d6041d73051bbb6db8fe304281.js" type="text/javascript"></script>
+
+
+		<script src="https://www.google.com/jsapi?key=ABQIAAAAQO2RPu5r12mVC40HMDIFHRQqrBpdv_jP_dFl8Cw_MxS37sDB3xTXnsXso23z1ROPVCqEVVv6cqz_cA" type="text/javascript"></script>
+		
+	<script src="https://cdn.desk.com/assets/tracking-1b7234dfdb53a1f5d1f8c427e6b594f3.js" type="text/javascript"></script>
+
+	<meta content="authenticity_token" name="csrf-param" />
+<meta content="2g6xFIGVe3Pi/KCDHiHTUP52G8+wqsjq9KZj1T4YiXs=" name="csrf-token" />
+	<meta name="site_id" content="47" />
+	<meta name="env" content="production" />
+	<meta name="public_events_server" content="events.deskapi.com" />
+	<meta name="portal_errors_attachment_file_size_too_big" content="The attached file is too big to upload" />
+
+		
+
+
+<link rel="SHORTCUT ICON" type='image/ico' href='https://a.disquscdn.com/1377204025/img/favicon16-32.ico' />
+<link rel="icon" type='image/png' href='https://a.disquscdn.com/1377204025/img/favicon16-32.ico' />
+
+<title>
+  
+    Terms of Service · Disqus
+  
+</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:title" content="Terms of Service"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="DISQUS"/>
+<meta property="og:description" content="Welcome to disqus.com, the website and online service of Disqus, Inc. (“Disqus,” “we,” or “us” or “our”). This page expl..."/>
+
+
+
+
+    <!-- ///////////////////////////////////////////////////////////////
+                  **** STYLE SHEETS FONTS AND MORE ****
+    /////////////////////////////////////////////////////////////// -->
+
+<link rel="stylesheet" href="//disqus-cloudfront.s3.amazonaws.com/docs/css-2/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="//disqus-cloudfront.s3.amazonaws.com/docs/css-2/style.css" rel="stylesheet">
+<link href="//disqus-cloudfront.s3.amazonaws.com/docs/css-2/mobile.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+ <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+<!-- LOGO WIDTH TESTING -->
+
+  
+  
+   
+  
+
+
+<style>
+    
+    /* LOGO FUNCTIONALITY */
+  
+      #header h1 a {
+        display: inline-block;
+        min-width: 100%;
+        background: url('https://help.disqus.com/customer/portal/theme_attachments/41094?cb=1487294210285') no-repeat scroll 0 center transparent;
+        background-size: 204px 38px;
+        height: 38px;
+        padding-left: 228px;
+        line-height: 38px;
+        
+      }
+      Liquid error: Unknown operator =
+      /* ADJUST MENU FOR SUPER WIDE LOGO/BANNER IMAGE */
+      Liquid error: Unknown operator =
+    
+    /** BODY BACKGROUND ONLY  **/
+      body,html {
+        background: #f4f4f4;
+      }
+    /* HEADER */
+      #header,
+      #mobileHeader,
+      #mobile-menu .search,
+      #mobile-menu input#q2{
+        background: #2e9fff;
+      }
+    /* HEADER TEXT/LINKS */
+      #header h1 a,
+      #header ul.nav.nav-pills li a,
+      #header ul.nav.nav-pills li p,
+      #header .langslct,
+      #header .langslct > .langslctInner{
+        color: #ffffff ;
+      }
+    /* HEADER HOVERS */
+      #header ul.nav.nav-pills li:hover a,
+      #header .langslct:hover,
+      #header .langslct.langslctHover,
+      #header .langslct.langslctOpen,
+      #header .langslct.langslctFocus {
+        border-color: #ffffff!important;
+        color: #ffffff!important;
+      }
+    /* MOBILE  HEADER*/
+      #mobileHeader h1 a,
+      #mobile-menu input#q2,
+      #mobile-menu .search button {
+        color: #ffffff!important;
+      }
+      #mobileHeader .menu-button span {
+        background: #ffffff;
+      }
+    /* HEADER COLORS/FACES */
+      body, p, html, h1, h2, h3, h4, h5, h6,
+      #content .container.index .desk-topic h3 a,
+      #content .container.index .desk-qna h3 a,
+      #content .container.index .get-sat h4 a,
+      #content .container.topic .body .qna h3 a,
+      #content .container.topic .body .article h3 a{
+        
+          font-family: 'Source Sans Pro', sans-serif;
+        
+        color: #000000;
+      }
+    /* DEFAULT CONTENT COLORS/FACES */
+      body,p {
+        line-height: 1.64;
+        font-size: 17px;
+      }
+      body, p, blockquote, ul, ol, li,
+      .breadcrumb > .active,
+      .myportal.index .body table tbody,
+      #content .container.index .desk-topic ul li a,
+      #content .container.index .desk-qna ul li a,
+      /*#content .container.index .get-sat ul li a */{
+        color: #333333;
+        text-decoration: none;
+        
+           font-family: 'Source Sans Pro', sans-serif;
+        
+      }
+    /* BUTTON COLORS */
+      .myportal.index .header ul.case-menu li.new a,
+      .myportal.case .status  button,
+      .myportal.case .status  input[type="submit"],
+      .new_customer_contact_email button,
+      #content .container.topic .header .switch .btn.active,
+      #content .container.topic .header .switch .btn:hover,
+      .input-button > input,
+      .attachments a.add_attachment,
+      .desk_file_upload input[type=button],
+      .input-button > input,
+      .input-button > input.btn.btn-submit,
+      .btn.btn-submit,
+      #rowbar ul li a,
+      .label,
+      .topics-only a.btn-primary {
+        background: #;
+        border-color: #;
+        color: #2e87e7;
+      }
+    /* BUTTN HOVERS */
+      .myportal.index .header ul.case-menu li.new a:hover,
+      .myportal.case .status  button:hover,
+      .myportal.case .status  input[type="submit"]:hover,
+      .new_customer_contact_email button:hover,
+      #content .container.topic .header .switch .btn.active,
+      #content .container.topic .header .switch .btn:hover,
+      .input-button > input:hover,
+      .attachments a.add_attachment:hover,
+      .desk_file_upload input[type=button]:hover,
+      .input-button > input:hover,
+      .input-button > input.btn.btn-submit:hover,
+      .btn.btn-submit:hover,
+      #rowbar ul li a:hover,
+      .topics-only a.btn-primary:hover
+      #content .container.topic .header .switch .btn:hover{
+        background: #164b78;
+        border-color: #164b78;
+        color: #2e87e7;
+      }
+    /* DEFAULT PILL STYLE BUTTONS */
+      .login a.btn,
+      .input-button > input.btn,
+      a.btn.btn-pill{
+        background: none;
+        border: 2px solid #;
+        color: #;
+        transition: all 0.5s ease !important;
+      }
+      a.btn.btn-pill span {
+        color: #;
+        border-right: 2px solid #;
+      }
+      .alternatelogins #facebook,
+      .alternatelogins #twitter {
+        border: 2px solid #;
+      }
+      .login a.btn:hover,
+      .alternatelogins #facebook:hover,
+      .alternatelogins #twitter:hover,
+      .input-button > input.btn:hover,
+      #content a.btn.btn-pill:hover{
+        background: #;
+        color: #2e87e7;
+        border-color: #2e9fff;
+      }
+      #content a.btn.btn-pill:hover,
+      #content a.btn.btn-pill span:hover,
+      #content a.btn.btn-pill:hover span{
+        color: #2e87e7;
+        border-color: #2e9fff;
+      }
+      #content a.btn.btn-pill:hover {
+        border-color: #2e9fff;
+      }
+    /* QUESTION/ARTICLE SWITCH */
+      #content .container.topic .header .switch .btn {
+        background: none;
+        border-color: # ;
+        color:  # ;
+      }
+      #content .container.topic .header .switch .btn:hover,
+      #content .container.topic .header .switch .btn.active{
+        background: #;
+        border-color: #;
+        color: #2e87e7;
+      }
+    /* LINKS COLOR */
+      a,
+      #breadcrumbs ol.breadcrumb li a,
+      .myportal.index .body table tbody tr a,
+      div.myportal.account .myaccount-form  div[id^="email_"] .verified input,
+      #add_facebook input.btn,
+      #add_twitter input.btn,
+      .container.pre-create .panel-body ul li h4 a span.highlight,
+      .container.pre-create .panel-body ul li a,
+      .container.pre-create .panel-body ul li h4,
+      div.options ul li a,
+      #sidebar > ul > li > a,
+      .gs-content ul > li > div,
+      #sidebar .autosuggest > ul > li > a > span,
+      #footer,
+      #footer .container p,
+      #footer .container a span,
+      #mobile-menu .mobile-suggest ul.results li a i {
+        color: #2e87e7;
+        text-decoration: none;
+      }
+    /* PAGINATION */
+      .pagination>li>a, .pagination>li>span {
+        color: #;
+        transition: all 0.5s ease;
+      }
+      .pagination>li>a:hover,
+      .pagination>li>span:hover,
+      .pagination>li>a:focus,
+      .pagination>li>span:focus {
+        transition: all 0.5s ease;
+        background-color: #cce9ff;
+        color: #;
+        text-decoration: none;
+      }
+      .pagination>.active>a,
+      .pagination>.active>span,
+      .pagination>.active>a:hover,
+      .pagination>.active>span:hover,
+      .pagination>.active>a:focus,
+      .pagination>.active>span:focus{
+        background: #;
+        border-color: #;
+        transition: all 0.5s ease;
+        color: #e4e7ee;
+      }
+    /* SEARCH BAR -- Uses Old Title Background */
+      #search {background: #cce9ff;}
+    /* AUTOCOLETE */
+      .ui-menu {
+        background: #ffffff;
+      }
+      ul.ui-menu li.ui-menu-item a{
+        font-size: 17px;
+        color: #254689;
+      }
+      ul.ui-menu li.ui-menu-item:hover{
+        background-color: #254689;
+        color: #ffffff;
+      }
+      ul.ui-menu li.ui-menu-item:hover a span {
+        color: #ffffff;
+      }
+     ul.ui-menu li.ui-menu-item .article-autocomplete-body {
+        font-size: 13px;
+        color: #666666;
+      }
+    
+    /** CONTENT BACKGROUND ONLY  **/
+      #content,
+      #breadcrumbs,
+      .panel,
+      .field input[type=text],
+      .field input[type=password],
+      .form-control {
+        background: #ffffff;
+      }
+    
+    /** Custom CSS **/
+    
+  
+    .note {
+      color: #333;
+      background: #cce9ff;
+      font-size: 15px;
+      padding: 10px 30px 10px 20px;
+      line-height: 22px;
+      margin-bottom: 18px;
+      position: relative;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cce9ff', endColorstr='#b3deff'); /* for IE */
+      background: -webkit-gradient(linear, left top, left bottom, from(#cce9ff), to(#b3deff)); /* for webkit browsers */
+      background: -moz-linear-gradient(top,  #cce9ff,  #b3deff); /* for firefox 3.6+ */
+      -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+      -ie-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+    .cta {
+      color: #2a9af9;
+      font-family: "ProximaNovaBold", sans-serif;
+      background-color: #FFF;
+      border: 1px solid #cce9ff;
+      padding: 9px 30px;
+      line-height: 1;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+
+    .cta:hover {
+      background-color: #cce9ff;
+      border-color: #54aeff;
+      box-shadow: 0 1px 3px #CCC;
+      color: #164b78;
+    }
+  
+    .doc-icon {
+      display: inline !important;
+      padding: 0 !important;
+      border: 0 !important;
+      -webkit-border-radius: 0 !important;
+      -moz-border-radius: 0 !important;
+      -webkit-box-shadow: 0 0 0 !important;
+      margin: 0 3px 0 -6px !important;
+      height: auto;
+      width: 40px;
+      opacity: 0.6;
+    }
+    
+    .topic-link {
+      color: #2e87e7 !important;
+      transition: all 0.5s ease !important;
+    }
+  
+    .topic-link:hover {
+      color: #164b78 !important;
+      text-decoration: none !important;
+    }
+  
+    .article-link {
+      color: #353a3d !important;
+      transition: all 0.5s ease !important;
+    }
+  
+    .article-link:hover {
+      color: #2e9fff !important;
+      text-decoration: none !important;
+    }
+     #sidebar > ul > li i {
+      color: #353a3d;
+      transition: all 0.5s ease !important;
+  }
+  
+    #sidebar > ul > li:hover i {
+      color: #2e87e7;
+      transition: all 0.5s ease !important;
+  }
+  
+    /* Disqus Team Module */
+  
+    /* Arranges sidebar horizontally */
+  
+
+
+  .outter-border:hover{
+   background: #2E9FFF;
+  }
+  
+  .outter-border{
+   -webkit-border-radius: 60px; -moz-border-radius: 60px;
+   border-radius: 60px;
+   width: 90px;
+   height: 85px;
+   border-collapse: #000;
+   background: #C6E8FF;
+   transition: all 0.5s ease !important;
+   margin: 20px auto;
+   padding-top: 2.5px;
+  }
+  
+  .outter-background{
+   -webkit-border-radius: 60px; -moz-border-radius: 60px;
+   border-radius: 60px;
+   width: 80px;
+   height: 80px;
+   border-collapse: #000;
+   background: #FFF;
+   margin: 0px;
+  }
+
+  .module ul.team div h3.title{
+  margin: 0 0 0 0 !important;
+  }
+  
+  .avatar {
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  width: 70px;
+  margin: 5px auto;
+  }
+  
+  .module {
+    background-color: ;
+    border-color: ;
+    border-top: 1px solid #e4e7ee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .module > h1 {
+    margin-top: 0px;
+  }
+  
+  .footer-links ul li{
+    text-align: center;
+    color: #cce9ff !important;
+    font-weight: bold !important;
+    display: inline !important;
+    padding: .2em 1em !important;
+    transition: all 0.5s ease !important;
+  }
+  
+  .footer-links ul li:hover{
+    text-decoration: none !important;
+    color: #cce9ff !important;
+  }
+  
+  img {
+    max-width:700px;
+    max-height: 600px;
+  }
+  
+  h1 {
+    font-size: 28px !important;
+  }
+  
+  h2 {
+    font-size: 24px !important;
+  }
+  
+  h3 {
+    font-size: 20px !important;
+  }
+  
+  h4 {
+    font-size: 16px !important;
+  }
+  
+  p {
+    font-size: 17px !important;
+  }
+  
+  span.highlight {
+    background: #fff299 !important;
+  }
+
+    /* Variant to test higher placement and redesigned support links */
+
+#sidebar-variant div > ul, .gs-content ul {
+    border-radius: 10px;
+    list-style: none;
+    background: rgba( 0, 0, 0, .035);
+    padding: 0px 15px;
+    margin: 30px 0px;
+}
+
+#sidebar-variant div > ul > li, .gs-content ul > li {
+    text-transform: uppercase;
+}
+
+#sidebar-variant div > ul > li a, .gs-content ul > li div {
+    color: #3498db;
+    padding: 20px 0px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#sidebar-variant div > ul > li a i {
+    float: right;
+    color: #c5c5c5;
+    margin-right: 10px;
+    font-size: 20px;
+}
+  
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1410476-15', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<meta name="google-site-verification" content="Xb21iYfjWAAvbohTwTHLKipmQ5-gtdVo3K1Yv__0ANs" />
+
+
+
+	</head>
+	<body>
+			<div id="flash" class="flash_html"><div class="agent_notifier_msg a-flash flash_notice">
+  
+  
+</div>
+</div>
+		
+
+<!-- THEME OPTIONS -->
+ <!-- All cases load on my case index page and our sortable -->
+ <!-- Layout Functionality: Topics, Grid, List -->
+ <!-- Enable skip precreate site wide (email,chat, question) -->
+ <!-- Endable/Disable respnsive image functionality within the article body section -->
+<!-- MULTIBRAND OPTIONS -->
+ <!--Enables multibrand search page - all results/brands on one page -->
+ <!-- exclude questions, should only enable if MBSearchPage = true -->
+ <!-- Multibrand search autocomplete similar to desk's support site -->
+ <!-- Multibrand Article suggestion on email/chat/question forms -->
+
+
+<!-- LOGO WIDTH TESTING // DONT REMOVE-->
+
+  
+  
+   
+  
+
+
+
+
+
+
+
+
+<div id="site-wrapper" class="wrapper">
+  <div id="site-canvas" class="content ">
+    <!--MOBILE SLIDEOUT MENU -->
+    <div id="mobile-menu">
+      <div class="search">
+        <div class="row">
+          <div class="col-md-12">
+            <form action="/customer/portal/articles/search" method="get" id="support-search-ornot" class="support-search-small-ornot">
+                
+                <button type="submit" class="fa fa-search" id="support-search-submit" value="Search"></button>
+                <input id="q2" maxlength="100" name="q" type="text" value="" class="ui-autocomplete-input-ornot form-control" autocomplete="on">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-suggest">
+      </div>
+      <div class="brand">
+        <div class="logo">
+          
+            DISQUS
+          
+        </div>
+          
+            Article Topics
+          
+          
+      </div>
+      <ul class="nav nav-pills nav-stacked">
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215144-what-is-disqus-/articles'>What is Disqus?</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1066040-installation/articles'>Installation</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1008068-ads/articles'>Ads</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1066039-troubleshooting/articles'>Troubleshooting</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1066041-disqus-pro/articles'>Disqus Pro</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215157-import-export-and-syncing/articles'>Import, Export, and Syncing</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215154-commenting/articles'>Commenting</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215155-moderation/articles'>Moderation</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/1066043-user-profile/articles'>User Profile</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/107054-developer/articles'>Developer</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/218124-api/articles'>API</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215158-analytics/articles'>Analytics</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/628553-advertisers/articles'>Advertisers</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/839842-channel-moderation/articles'>Channel Moderation</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/637329-community-tips/articles'>Community Tips</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/218131-other-integrations/articles'>Other Integrations</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/215159-terms-and-policies/articles'>Terms and Policies</a>
+            </li>
+            <li>
+              <a href='https://help.disqus.com/customer/en/portal/topics/350116-known-issues/articles'>Known Issues</a>
+            </li>
+
+          
+            
+              <!-- Guest -->
+
+            
+          
+          
+      </ul>
+    </div>
+    <!--MOBILE HEADER/TOPBAR -->
+    <div id="mobileHeader">
+      <div class="row">
+        <div class="col-xs-2">
+          <a id="MobileToggle" class="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <div class="col-xs-8">
+           <h1 class="page-header">
+             <img src="https://help.disqus.com/customer/portal/theme_attachments/41094?cb=1487294210285" style="padding-top: 3px; height: 24px; width: auto;">
+           </h1>
+        </div>
+        <div class="col-xs-2">
+            <!-- <img class="gravatar" alt="" width="50" height="50" src="https://secure.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?rating=PG&amp;size=50&amp;default=https%3A%2F%2Fcdn.desk.com%2Fassets%2Funknown_user_50-8ad5644bbe6b1bd7454f2ea465f782bd.png" /> -->
+        </div>
+      </div>
+    </div>
+    <!-- DESKTOP HEADER -->
+    <div id="header">
+      <div class="container">
+        <div class="row">
+          <div class=" col-md-8 ">
+              
+                <h1 class='page-header'><a href='/'><img class='logo' src='/images/spacer.gif'/>Knowledge Base</a></h1>
+              
+          </div>
+          <div class=" col-md-4 ">
+            <ul class="nav nav-pills">
+              <li>
+                <a href="https://disqus.com/admin/" id="desk-auth-login-link" class="">Admin</a>
+              </li>
+              <li>
+                <a href="https://status.disqus.com/" id="desk-auth-login-link" class="">System Status</a>
+              </li>
+              <li>
+                <a href="https://blog.disqus.com/" id="desk-auth-login-link" class="">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- Container Desktop -->
+    </div><!-- #desk-header -->
+
+    <!-- SEARCH -->
+    
+        <div id="search" class="hidden-phone">
+          <div class="container">
+            <div class="row">
+              <form action='/customer/portal/articles/search' method='get' id='support-search' class='support-search-small'>
+              <div class="col-md-12">
+                
+                
+                  <input type="text" id="q" name="q" maxlength="100" value="" placeholder="Have a question? Ask or enter a search term here." class="input form-control" />
+                
+                  <button type="submit" class="fa fa-search" id="support-search-submit" value="Search"></button>
+              </div>
+              </form>
+            </div>
+          </div><!-- Search Container -->
+        </div><!-- #desk-search -->
+        <div id="SearchAutoSuggest" class="ui-multi-brand"></div>
+    
+    <!-- END SEARCH -->
+    <!-- BREADCRUMBS -->
+    
+        <div id="breadcrumbs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                  <ol class="breadcrumb">
+                    
+                      
+                        <li class="crumb"><a href='/'>Home</a> </li>
+                        <li class="crumb"><a href="/customer/en/portal/topics/215159-terms-and-policies/articles" title="Terms and Policies">Terms and Policies</a> </li>
+                        <li class="active crumb" title="Terms of Service">Terms of Service</li>
+                      
+                    
+                  </ol>
+              </div>
+            </div>
+          </div>
+        </div><!-- #breadcrumbs -->
+    
+    <!-- END BREADCRUMBS -->
+    <!--begin:portal_body-->
+
+<!--begin:page_article-->
+        <!--
+              db      `7MM"""Mq. MMP""MM""YMM `7MMF' .g8"""bgd `7MMF'      `7MM"""YMM
+             ;MM:       MM   `MM.P'   MM   `7   MM .dP'     `M   MM          MM    `7
+            ,V^MM.      MM   ,M9      MM        MM dM'       `   MM          MM   d
+           ,M  `MM      MMmmdM9       MM        MM MM            MM          MMmmMM
+           AbmmmqMA     MM  YM.       MM        MM MM.           MM      ,   MM   Y  ,
+          A'     VML    MM   `Mb.     MM        MM `Mb.     ,'   MM     ,M   MM     ,M
+        .AMA.   .AMMA..JMML. .JMM.  .JMML.    .JMML. `"bmmmd'  .JMMmmmmMMM .JMMmmmmMMM
+                        BEGIN ARTICLE PAGE
+                                                                                   -->
+        
+        <div id="content">
+          <div class="container article">
+            <div class="row">
+              <div class="col-md-8 ">
+                <div class="header row">
+                  <div class="col-md-12">
+                      <h1>
+                        Terms of Service
+                      </h1>
+                  </div>
+                </div><!-- Support Head -->
+                <div class="body row">
+                  <div class="col-md-12">
+                    <h1 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Welcome to disqus.com, the website and online service of Disqus, Inc. (&ldquo;Disqus,&rdquo; &ldquo;we,&rdquo; or &ldquo;us&rdquo; or &ldquo;our&rdquo;). This page explains the terms by which you may use our online service, web site, and software provided on or in connection with the service (collectively the &ldquo;Service&rdquo;). By accessing or using the Service you signify that you have read, understood and agree to be bound by these Terms of Service (&quot;Terms&quot;) and to the collection and use of your information as set forth in the Disqus Privacy Policy at https://help.disqus.com/customer/en/portal/articles/466259-privacy-policy, whether or not you are a registered user of our Service. These Terms apply to all visitors, users, and others who access the Service (&ldquo;Users&rdquo;).</span></span></h1>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">THESE TERMS CONTAIN A MANDATORY ARBITRATION OF DISPUTES PROVISION THAT REQUIRES THE USE OF ARBITRATION ON AN INDIVIDUAL BASIS TO RESOLVE DISPUTES, RATHER THAN JURY TRIALS OR CLASS ACTIONS, AND ALSO LIMITS THE REMEDIES AVAILABLE TO YOU IN THE EVENT OF A DISPUTE.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Description and Use of Our Service</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Description of Our Service</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. The Service provides a comment platform that helps you build an active community from your website&#39;s audience. In addition to other functionalities, the Service provides: (i) a real-time comment system which allows real-time posting and updating; (ii) a notification and reply system that alerts users to responses and allows users to continue a conversation through email; (iii) inline media embedding that allows full integration with media services as well as being able to attach media such as photos and videos within comments; and (iv) mobile commenting to be able to comment on the go.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Eligibility</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. You may use the Service only if you can form a binding contract with Disqus, and only in compliance with this Agreement and all applicable local, state, national, and international laws, rules and regulations. Any use or access to the Service by anyone under 13 is strictly prohibited and in violation of this Agreement. The Service is not available to any Users previously removed from the Service by Disqus.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Changing </span><span style="font-size: 12pt; background-color: transparent; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">or Discontinuing the Service Or Your Access</span><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;"> &nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">We may, without prior notice, change the Service; stop providing the Service or features of the Service, to you or to users generally; or create usage limits for the Service. We may permanently or temporarily terminate or suspend your access to the Service without notice and liability for any reason, including if in our sole determination you violate any provision of these Terms, or for any or no reason. Upon termination for any reason or no reason, you continue to be bound by these Terms with respect to any provision which is intended to survive termination.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Disqus Account</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. Your Disqus account gives you access to the services and functionality that we may establish and maintain from time to time and in our sole discretion. We may maintain different types of accounts for different types of Users. If you open a Disqus account on behalf of a company, organization, or other entity, then (a) &ldquo;you&rdquo; includes you and that entity, and (b) you represent and warrant that you are an authorized representative of the entity with the authority to bind the entity to these Terms, and that you agree to these Terms on the entity&rsquo;s behalf. You may never use another User&rsquo;s account without permission. When creating your account, you must provide accurate and complete information. You are solely responsible for the activity that occurs on your account, and you must keep your account password secure. We encourage you to use &ldquo;strong&rdquo; passwords (passwords that use a combination of upper and lower case letters, numbers and symbols) with your account. You must notify Disqus immediately of any breach of security or unauthorized use of your account. Disqus will not be liable for any losses caused by any unauthorized use of your account. You may control your User profile and how you interact with the Service by changing the settings in your</span><a href="https://disqus.com/account"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;"> </span><span style="font-size: 12pt; font-family: Arial; color: rgb(42, 154, 249); vertical-align: baseline; white-space: pre-wrap;">profile settings</span></a><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. By providing Disqus your email address, you consent to our using the email address to send you Service-related notices, including any notices required by law, in lieu of communication by postal mail. We may also use your email address to send you other messages, such as changes to features of the Service and special offers. If you do not want to receive such email messages, you may opt out or change your preferences in your</span><a href="https://disqus.com/account"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;"> </span><span style="font-size: 12pt; font-family: Arial; color: rgb(42, 154, 249); vertical-align: baseline; white-space: pre-wrap;">settings page</span></a><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. Opting out may prevent you from receiving email messages regarding updates, improvements, or offers.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Free Subscription </span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">&nbsp;Disqus offers a Basic Service that is available to you free-of charge, subject to activity thresholds, such as page views and volume of comments. Basic Service is supported by advertising. The features of the Basic Service are described in the pricing and plans page of the Disqus site.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Paid Subscriptions </span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">&nbsp;Several Paid Subscription options are available to select customers, subject to activity thresholds, such as page views and volume of comments. Paid Subscription options are described in the pricing and plans page of the Disqus site. With a Paid Subscription plan, you can have the option to de-activate Ads on your Service. Disqus may change the Paid Subscription tier you are on at our sole discretion.</span><span style="font-size: 12pt; background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"> Di</span><span style="font-size: 12pt; font-family: Arial; color: rgb(34, 35, 38); vertical-align: baseline; white-space: pre-wrap;">squs may change </span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">the features associated with each Paid Subscription plan</span><span style="font-size: 12pt; font-family: Arial; color: rgb(34, 35, 38); vertical-align: baseline; white-space: pre-wrap;">.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Paid Subscriptions can be purchased either by (1) paying a monthly subscription fee; or (2) </span><span style="font-size: 12pt; font-family: Arial; color: rgb(34, 35, 38); vertical-align: baseline; white-space: pre-wrap;">pre-payment giving you access to the Disqus Service for a specific time period (&ldquo;Pre-Paid Period&rdquo;).</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-family: Arial; color: rgb(34, 35, 38); vertical-align: baseline; white-space: pre-wrap;">Your subscription fee will automatically renew and be due to Disqus at the end of the subscription period, unless you cancel your Paid Subscription through your subscription page before the end of the current subscription period. Any cancellation will take effect the day after the last day of the current subscription period, and you will be downgraded to the then-current features of the Disqus Free advertising supported Service. All subscription fees and Pre-Paid fees are non-refundable.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-family: Arial; color: rgb(34, 35, 38); vertical-align: baseline; white-space: pre-wrap;">Disqus may change the price for the Paid Subscriptions, Pre-Paid Period (for periods not yet paid for), and will communicate any price changes to you in advance. Price changes for Paid Subscriptions will take effect at the start of the next subscription period following the date of the price change. As permitted by local law, you accept the new price by continuing to use the Disqus Service after the price change takes effect. If you do not agree with the price changes, you have the right to reject the change by unsubscribing from the Disqus Service prior to the price change going into effect. Please therefore make sure you read any such notification of price changes carefully.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Service Rules</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. You agree not to engage in any of the following prohibited activities: (i) copying, distributing, or disclosing any part of the Service in any medium, including without limitation by any automated or non-automated &ldquo;scraping&rdquo; except for uses allowed under the &ldquo;Feed and API&rdquo; section below; (ii) using any automated system, including without limitation &ldquo;robots,&rdquo; &ldquo;spiders,&rdquo; &ldquo;offline readers,&rdquo; etc., to access the Service in a manner that sends more request messages to the Disqus servers than a human can reasonably produce in the same period of time by using a conventional on-line web browser (except that Disqus grants the operators of public search engines revocable permission to use spiders to copy materials from disqus.com for the sole purpose of and solely to the extent necessary for creating publicly available searchable indices of the materials, but not caches or archives of such materials); (iii) transmitting spam, chain letters, or other unsolicited email; (iv) attempting to interfere with, to compromise the system integrity or security or to decipher any transmissions to or from the servers running the Service; (v) taking any action that imposes, or may impose at our sole discretion an unreasonable or disproportionately large load on our infrastructure; (vi) uploading invalid data, viruses, worms, or other software agents through the Service; (vii) collecting or harvesting any personally identifiable information, including account names, from the Service; (viii) uploading, posting, transmitting, sharing, storing or otherwise making publicly available on the site, or other channels, any private, personally identifiable information of any third party, including, but not limited to: addresses, phone numbers, email addresses, Social Security numbers and credit card numbers; (ix) using the Service for any commercial solicitation purposes; (x) impersonating another person or otherwise misrepresenting your affiliation with a person or entity or conducting fraud; (xi) interfering with the proper working of the Service; (xii) accessing any content on the Service through any technology or means other than those provided or authorized by the Service or Disqus&rsquo; written permission; or (xiii) bypassing the measures we may use to prevent or restrict access to the Service, including without limitation features that prevent or restrict use or copying of any content or enforce limitations on use of the Service or the content therein.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Accessing the audiovisual content available on the Service for any purpose or in any manner other than Streaming (as defined below) is expressly prohibited. &ldquo;Streaming&rdquo; means a contemporaneous digital transmission of an audiovisual work via the Internet from the Disqus Service to a User&rsquo;s device in such a manner that the data is intended for real-time viewing and not intended to be copied, stored, permanently downloaded, or redistributed by the User.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">You are solely responsible for your interactions with other Disqus Users. We reserve the right, but have no obligation, to monitor disputes between you and other Users. Disqus shall have no liability for your interactions with other Users, or for any User&rsquo;s action or inaction.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Advertisements</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. The basic Disqus Service provided by Disqus is supported by advertising. Paid Subscription plans include advertising, at your option. If you have selected a plan that is supported by advertising, you agree that Disqus may include advertisements and/or content provided by Disqus and/or a third party (collectively &ldquo;Ads&rdquo;) as part of the implementation of the Service. You agree to comply with any specifications that may be provided by Disqus from time to time to enable proper delivery, display, tracking and/or reporting of Ads. </span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Certain publishers may be eligible to disable advertisements by entering into a Paid Subscription with Disqus. </span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Revenue Share Program</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Certain publishers may qualify to receive payments from Disqus related to the advertisements that are displayed on their site. &nbsp;Disqus, in its sole discretion determines which publisher sites are eligible to receive payments for running advertisements. &nbsp;</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">If you are eligible for Revenue Share, after you have submitted valid payment method information and tax forms via our publisher dashboard, you will earn Revenue Share related to the number of valid clicks on Ads, the number of valid impressions of Ads and/or other events performed in connection with the display of Ads on the Permitted Sites (as defined below), in each case as determined by Disqus in its sole discretion in accordance to the then applicable revenue share calculation. You will not be eligible to earn Revenue Share until after you have submitted valid payment method information and tax forms via our publisher dashboard. &nbsp;&ldquo;Permitted Sites&rdquo; means web sites owned, operated or controlled by you on which you have integrated the Service. Your payments will be sent by Disqus within approximately ninety (90) days after the end of each calendar month that Ads are running on the Permitted Sites if your earned balance is $100 or more. If you terminate this Agreement (and you have not breached this Agreement), Disqus will pay you your earned balance within approximately ninety (90) days after the end of the calendar month in which the Agreement is terminated by you (following Disqus&rsquo; receipt of your written request, including by email, to terminate this Agreement). In no event, however, will Disqus make payments for any earned balance less than $10.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Notwithstanding the foregoing, Disqus will not be liable for any payment based on: (a) any amounts which result from invalid clicks or impressions on Ads generated by any person, bot, automated program or similar device, as reasonably determined by Disqus, including without limitation through any clicks or impressions solicited by payment of money, false representation, or request for end users to click on Ads; (b) Ads delivered to end users whose browsers have JavaScript disabled; (c) Ads benefiting charitable organizations and other placeholder or transparent Ads that Disqus may deliver; or (d) clicks co-mingled with a significant number of invalid clicks described in (a) above, or as a result of any breach of this Agreement by you for any applicable pay period. We reserve the right to withhold payment due to any of the foregoing or any breach of the Agreement by you, pending our reasonable investigation of any of the foregoing or any breach of the Agreement by you, or in the event that an advertiser whose Ads are displayed in connection with the Permitted Sites defaults on payment for such Ads to us. You agree to pay all applicable taxes or charges imposed by any government entity in connection with any payments received hereunder. You acknowledge and agree that Disqus may change its pricing and/or payment structure at any time. If you dispute any payment made hereunder, you must notify Disqus in writing within fifteen (15) days of any such payment; failure to so notify Disqus will result in the waiver by You of any claim relating to any such disputed payment.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Payment will be calculated solely based on records maintained by Disqus and no other measurements or statistics of any kind will be accepted or have any effect under this Agreement. We make no guarantee regarding the level of impressions of Ads or clicks on any Ad, the timing of delivery of such impressions and/or clicks, or the amount of any payment to be made to you under this Agreement. Earnings from advertisements will begin accruing only after you successfully submit your payment information and tax forms via the Disqus publisher dashboard. You acknowledge and agree to claim any payments from Disqus within three (3) months of the attempted issuance of that payment otherwise Disqus shall have the right to recapture all payments that are held by Disqus and that are due to you.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Disqus reserves the right, in its sole discretion, to not run Ads on sites based on quality criteria important to our advertisers, including but not limited to: site language, brand safety of content, and user engagement.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Usage License</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Subject to the terms and conditions of these Terms, Disqus grants you a non-exclusive, limited, non-transferable, freely revocable license to use the Service for your personal, noncommercial (i.e. you may not use the Service to provide ads) use only and as permitted by the features of the Service. Disqus reserves all rights not expressly granted herein in the Service and the Disqus Content (as defined below). Disqus reserves the right to terminate your license to use the Service at any time and for any reason or in the future to charge for commercial usage.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">User Responsibility and User-Posted Content</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Some areas of the Service allow Users to post content such as profile information, comments, questions, and other content or information (any such materials a User submits, posts, displays, or otherwise makes available on the Service &ldquo;User Content&rdquo;).</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">You agree not to post User Content that: (i) may create a risk of harm, loss, physical or mental injury, emotional distress, death, disability, disfigurement, or physical or mental illness to you, to any other person, or to any animal; (ii) may create a risk of any other loss or damage to any person or property; (iii) seeks to harm or exploit children by exposing them to inappropriate content, asking for personally identifiable details or otherwise; (iv) may constitute or contribute to a crime or tort; (v) contains any information or content that is illegal (including, without limitation, the disclosure of insider information under securities law or of another party&rsquo;s trade secrets); or (vi) contains any information or content that you do not have a right to make available under any law or under contractual or fiduciary relationships. You agree that any User Content that you post does not and will not violate third-party rights of any kind, including without limitation any Intellectual Property Rights (as defined below), rights of privacy or publicity rights. To the extent that your User Content contains music, you hereby represent that you are the owner of all the copyright rights, including without limitation the performance, mechanical, and sound recordings rights, with respect to each and every musical composition (including lyrics) and sound recording contained in such User Content or your use is covered by a fair use exception and have the power to grant the license granted below. Disqus reserves the right, but is not obligated, to reject and/or remove any User Content that Disqus believes, in its sole discretion, violates these provisions. You understand that publishing your User Content on the Service is not a substitute for registering it with the U.S. Copyright Office, the Writer&rsquo;s Guild of America, or any other rights organization.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">For the purposes of the Terms, &ldquo;Intellectual Property Rights&rdquo; means all patent rights, copyright rights, mask work rights, moral rights, rights of publicity, trademark, trade dress and service mark rights, goodwill, trade secret rights and other intellectual property rights as may now exist or hereafter come into existence, and all applications therefore and registrations, renewals and extensions thereof, under the laws of any state, country, territory or other jurisdiction.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">In connection with your User Content, you affirm, represent and warrant the following: Your User Content and Disqus&rsquo; use thereof as contemplated by these Terms and the Service will not violate any law or infringe any rights of any third party, including but not limited to any Intellectual Property Rights, right of publicity and privacy rights.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Disqus may exercise the rights to your User Content granted under these Terms without liability for payment of any guild fees, residuals, payments, fees, or royalties payable under any collective bargaining agreement or otherwise.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Disqus takes no responsibility and assumes no liability for any User Content that you or any other User or third party posts or sends over the Service. You shall be solely responsible for your User Content and the consequences of posting or publishing it, and you agree that we are only acting as a passive conduit for your online distribution and publication of your User Content. You understand and agree that you may be exposed to User Content that is inaccurate, objectionable, inappropriate for children, or otherwise unsuited to your purpose, and you agree that Disqus shall not be liable for any damages you allege to incur as a result of User Content.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">By posting any User Content on the Service, you expressly grant, and you represent and warrant that you have all rights necessary to grant, to Disqus a royalty-free, sublicensable, transferable, perpetual, irrevocable, non-exclusive, worldwide license to use, reproduce, modify, publish, list information regarding, edit, translate, distribute, syndicate, publicly perform, publicly display, and make derivative works of all such User Content and your name, voice, and/or likeness as contained in your User Content, in whole or in part, and in any form, media or technology, whether now known or hereafter developed, for use in connection with the Service and Disqus&rsquo; (and its successors&rsquo; and affiliates&rsquo;) business, including without limitation for promoting and redistributing part or all of the Service (and derivative works thereof) in any media formats and through any media channels. You also hereby grant each User of the Service a non-exclusive license to access your User Content through the Service, and to use, reproduce, distribute, display and perform such User Content as permitted through the functionality of the Service and under these Terms.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Publisher Responsibility and Content Guidelines</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Disqus enables online discussion communities, and in doing so, freedom of expression and identity are core values of the Service. There are a number of categories of content and behavior, however, that jeopardize the Service by posing risk to users, publishers or third party services utilizing the Disqus platform. Websites or website representatives publishing inappropriate content or exhibiting inappropriate behaviors in connection with their use of the Service, including from the following categories, may have their Disqus account suspended or terminated:</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Blackmail or extortion</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Copyright or trademark Infringement</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Deceitful data collection</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Harm to minors or animals</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Impersonation</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Intimidation of users of the Disqus Service</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Malware</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Privacy violations</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Spam</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Unlawful activities </span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">The above list may be modified or expanded at any time, and individual account deactivation decisions remain at the sole discretion of Disqus.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Feeds and API</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Disqus provides access to portions of its Service via RSS feeds and an API; for the purposes of these Terms, such access constitutes use of the Service. Disqus asks that you use these features respectfully, and as may be outlined in any documentation that we provide. You may not use these or any other features of the Service itself to allow the display of a substantial portion of the Disqus database or reproduce, duplicate or copy any or all of the Disqus Service. Disqus reserves the right to change these features at any time and to disable access to the feeds and the API at any time for any reason or no reason.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Disqus Property and Attribution</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Disqus, the Disqus logo and the Disqus design are trademarks or trade dress of Disqus, and may not be used without express written permission from Disqus, other than for attribution. Attribution branding guidelines can be found at</span><a href="https://disqus.com/brand/"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;"> </span><span style="font-size: 12pt; font-family: Arial; color: rgb(42, 154, 249); vertical-align: baseline; white-space: pre-wrap;">//disqus.com/brand/</span></a><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. Any application displaying a Disqus comment or user profile must display the Disqus social icon linking to</span><a href="https://disqus.com/"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;"> </span><span style="font-size: 12pt; font-family: Arial; color: rgb(42, 154, 249); vertical-align: baseline; white-space: pre-wrap;">//disqus.com/</span></a><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">, the comment timestamp linking to the comment permalink, and the Disqus username linking to the disqus.com user profile URL if the username is available. Any analysis or statistical reporting for public or commercial purposes, derived in part or in its entirety from content on the Disqus Service, must be sourced as &ldquo;Disqus&rdquo; or &ldquo;Disqus comments.&rdquo;</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">All other trademarks not owned by Disqus that appear on this Site are the property of their respective owners, who may or may not be affiliated with, connected to, or sponsored by Disqus. Except for your User Content, the Service and all materials therein or transferred thereby, including, without limitation, software, images, text, graphics, illustrations, logos, APIs, software, patents, trademarks, service marks, copyrights, photographs, audio, videos, music, and User Content belonging to other Users (the &ldquo;Disqus Content&rdquo;), and all Intellectual Property Rights related thereto, are the exclusive property of Disqus and its licensors (including other Users who post User Content to the Service). Except as explicitly provided herein, nothing in these Terms shall be deemed to create a license in or under any such Intellectual Property Rights, and you agree not to sell, license, rent, modify, distribute, copy, reproduce, transmit, publicly display, publicly perform, publish, adapt, edit or create derivative works from any Disqus Content. Use of the Disqus Content for any purpose not expressly permitted by these Terms is strictly prohibited.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Privacy</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">We care about the privacy of our Users. You understand that by using the Services you consent to the collection, use and disclosure of your personally identifiable information and aggregate data as set forth in our Privacy Policy https://help.disqus.com/customer/portal/articles/466259-privacy-policy, and to have your personally identifiable information collected, used, transferred to and processed in the United States.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">DMCA Notice</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Since we respect artist and content owner rights, it is Disqus&rsquo; policy to respond to alleged infringement notices that comply with the Digital Millennium Copyright Act of 1998 (&ldquo;DMCA&rdquo;). If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement and is accessible via the Service, please notify Disqus&rsquo; copyright agent as set forth in the DMCA. For your complaint to be valid under the DMCA, you must provide the following information in writing:</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">An electronic or physical signature of a person authorized to act on behalf of the copyright owner;</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Identification of the copyrighted work that you claim has been infringed;</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Identification of the material that is claimed to be infringing and where it is located on the Service;</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Information reasonably sufficient to permit Disqus to contact you, such as your address, telephone number, and, e-mail address;</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or law; and</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">●</span><span style="font-size: 7pt; font-family: &quot;Times New Roman&quot;; color: rgb(52, 58, 63); vertical-align: baseline; white-space: pre-wrap;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">A statement, made under penalty of perjury, that the above information is accurate, and that you are the copyright owner or are authorized to act on behalf of the owner.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">The above information must be submitted to the following DMCA Agent:</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-style: italic; vertical-align: baseline; white-space: pre-wrap;">Attn:</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;"> DMCA Notice Disqus, Inc.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-style: italic; vertical-align: baseline; white-space: pre-wrap;">Address:</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;"> 301 Howard St, Suite 300 San Francisco, CA 94105</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Telephone: N/A Fax: N/A Email: dmca@disqus.com</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">UNDER FEDERAL LAW, IF YOU KNOWINGLY MISREPRESENT THAT ONLINE MATERIAL IS INFRINGING, YOU MAY BE SUBJECT TO CRIMINAL PROSECUTION FOR PERJURY AND CIVIL PENALTIES, INCLUDING MONETARY DAMAGES, COURT COSTS, AND ATTORNEYS&rsquo; FEES.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Please note that this procedure is exclusively for notifying Disqus and its affiliates that your copyrighted material has been infringed. The preceding requirements are intended to comply with Disqus&rsquo; rights and obligations under the DMCA, including 17 U.S.C. &sect;512(c), but do not constitute legal advice. It may be advisable to contact an attorney regarding your rights and obligations under the DMCA and other applicable laws.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">In accordance with the DMCA and other applicable law, Disqus has adopted a policy of terminating, in appropriate circumstances, Users who are deemed to be repeat infringers. Disqus may also at its sole discretion limit access to the Service and/or terminate the accounts of any Users who infringe any intellectual property rights of others, whether or not there is any repeat infringement.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Third-Party Links</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">The Service may contain links to third-party websites, advertisers, services, special offers, or other events or activities that are not owned or controlled by Disqus. Disqus does not endorse or assume any responsibility for any such third-party sites, information, materials, products, or services. If you access a third party website from the Service, you do so at your own risk, and you understand that these Terms and Disqus&rsquo; Privacy Policy do not apply to your use of such sites. You expressly relieve Disqus from any and all liability arising from your use of any third-party website, service, or content. Additionally, your dealings with or participation in promotions of advertisers found on the Service, including payment and delivery of goods, and any other terms (such as warranties) are solely between you and such advertisers. You agree that Disqus shall not be responsible for any loss or damage of any sort relating to your dealings with such advertisers.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Indemnity</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">You agree to defend, indemnify and hold harmless Disqus and its subsidiaries, agents, licensors, managers, and other affiliated companies, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney&rsquo;s fees) arising from: (i) your use of and access to the Service, including any data or content transmitted or received by you; (ii) your violation of any provision of these Terms, including without limitation your breach of any of the representations and warranties above; (iii) your violation of any third-party right, including without limitation any right of privacy or Intellectual Property Rights; (iv) your violation of any applicable law, rule or regulation; (v) any claim or damages that arise as a result of any of your User Content or any that is submitted via your account; or (vi) any other party&rsquo;s access and use of the Service with your unique username, password or other appropriate security code.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">No Warranty and Limitation of Liability</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">THE SERVICE IS PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS. USE OF THE SERVICE IS AT YOUR OWN RISK. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SERVICE IS PROVIDED WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WITHOUT LIMITING THE FOREGOING, DISQUS, ITS SUBSIDIARIES, AND ITS LICENSORS DO NOT WARRANT THAT THE CONTENT IS ACCURATE, RELIABLE OR CORRECT; THAT THE SERVICE WILL MEET YOUR REQUIREMENTS; THAT THE SERVICE WILL BE AVAILABLE AT ANY PARTICULAR TIME OR LOCATION, UNINTERRUPTED OR SECURE; THAT ANY DEFECTS OR ERRORS WILL BE CORRECTED; OR THAT THE SERVICE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. ANY CONTENT DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SERVICE IS DOWNLOADED AT YOUR OWN RISK AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM SUCH DOWNLOAD OR YOUR USE OF THE SERVICE.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">DISQUS DOES NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE DISQUS SERVICE OR ANY HYPERLINKED WEBSITE OR SERVICE, AND DISQUS WILL NOT BE A PARTY TO OR IN ANY WAY MONITOR ANY TRANSACTION BETWEEN YOU AND THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL DISQUS, ITS AFFILIATES, AGENTS, DIRECTORS, EMPLOYEES, SUPPLIERS OR LICENSORS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING WITHOUT LIMITATION DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES, THAT RESULT FROM THE USE OF, OR INABILITY TO USE, THIS SERVICE. UNDER NO CIRCUMSTANCES WILL DISQUS BE RESPONSIBLE FOR ANY DAMAGE, LOSS OR INJURY RESULTING FROM HACKING, TAMPERING OR OTHER UNAUTHORIZED ACCESS OR USE OF THE SERVICE OR YOUR ACCOUNT OR THE INFORMATION CONTAINED THEREIN.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, DISQUS ASSUMES NO LIABILITY OR RESPONSIBILITY FOR ANY (I) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT; (II) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO OR USE OF OUR SERVICE; (III) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION STORED THEREIN; (IV) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM THE SERVICE; (V) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE THAT MAY BE TRANSMITTED TO OR THROUGH OUR SERVICE BY ANY THIRD PARTY; (VI) ANY ERRORS OR OMISSIONS IN ANY CONTENT OR FOR ANY LOSS OR DAMAGE INCURRED AS A RESULT OF THE USE OF ANY CONTENT POSTED, EMAILED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE THROUGH THE SERVICE; AND/OR (VII) USER CONTENT OR THE DEFAMATORY, OFFENSIVE, OR ILLEGAL CONDUCT OF ANY THIRD PARTY. IN NO EVENT SHALL DISQUS, ITS AFFILIATES, AGENTS, DIRECTORS, EMPLOYEES, SUPPLIERS, OR LICENSORS BE LIABLE TO YOU FOR ANY CLAIMS, PROCEEDINGS, LIABILITIES, OBLIGATIONS, DAMAGES, LOSSES OR COSTS IN AN AMOUNT EXCEEDING GREATER THAN EITHER (A) THE AMOUNT YOU PAID TO DISQUS HEREUNDER OR (B) 1 DOLLAR.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">THIS LIMITATION OF LIABILITY SECTION APPLIES WHETHER THE ALLEGED LIABILITY IS BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR ANY OTHER BASIS, EVEN IF DISQUS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE FOREGOING LIMITATION OF LIABILITY SHALL APPLY TO THE FULLEST EXTENT PERMITTED BY LAW IN THE APPLICABLE JURISDICTION.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">SOME STATES DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU. THESE TERMS GIVE YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY ALSO HAVE OTHER RIGHTS WHICH VARY FROM STATE TO STATE. THE DISCLAIMERS, EXCLUSIONS, AND LIMITATIONS OF LIABILITY UNDER THESE TERMS WILL NOT APPLY TO THE EXTENT PROHIBITED BY APPLICABLE LAW.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">The Service is controlled and operated from its facilities in the United States. Disqus makes no representations that the Service is appropriate or available for use in other locations. Those who access or use the Service from other jurisdictions do so at their own volition and are entirely responsible for compliance with all applicable United States and local laws and regulations.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Assignment</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">These Terms, and any rights and licenses granted hereunder, may not be transferred or assigned by you, but may be assigned by Disqus without restriction. Any attempted transfer or assignment in violation hereof shall be null and void.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Notification Procedures and Changes to Terms</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">Disqus may provide notifications, whether such notifications are required by law or are for marketing or other business related purposes, to you via email notice, written or hard copy notice, or through posting of such notice on our website, as determined by Disqus in our sole discretion. Disqus reserves the right to determine the form and means of providing notifications to our Users, provided that you may opt out of certain means of notification as described in these Terms. Disqus is not responsible for any automatic filtering you or your network provider may apply to email notifications we send to the email address you provide us. Disqus may, in its sole discretion, modify or update these Terms from time to time. When we change these Terms, we will update the &lsquo;last modified&rsquo; date at the bottom of this page. Your continued use of the Service after any such change constitutes your acceptance of the new Terms of Service. If you do not agree to these Terms or to our Privacy Policy, please do not access or use the Service. We recommend that you review this page periodically.</span></span></p>
+
+<h2 dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 15pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Other</span></span></h2>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Governing Law</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. You agree that: (i) the Service shall be deemed solely based in California; and (ii) the Service shall be deemed a passive one that does not give rise to personal jurisdiction over Disqus, either specific or general, in jurisdictions other than California. These Terms shall be governed by the internal substantive laws of the State of California, without respect to its conflict of laws principles. The application of the United Nations Convention on Contracts for the International Sale of Goods is expressly excluded. You agree to submit to the personal jurisdiction of a state or federal courts located in Santa Clara County, California for any actions for which we retain the right to seek injunctive or other equitable relief in a court of competent jurisdiction to prevent the actual or threatened infringement, misappropriation or violation of a our copyrights, trademarks, trade secrets, patents, or other intellectual property or proprietary rights, as set forth in the Arbitration provision below.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">Arbitration</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. In the unlikely event that Disqus has not been able to resolve a dispute it has with you after attempting to do so informally, we each agree to resolve any claim, dispute, or controversy (excluding any Disqus claims for injunctive or other equitable relief) arising out of or in connection with or relating to these Terms, or the breach or alleged breach thereof (collectively, &ldquo;Claims&rdquo;), by binding arbitration by the American Arbitration Association (&ldquo;AAA&rdquo;) in Santa Clara County, California under the commercial rules then in effect for the AAA, except as provided herein. The award rendered by the arbitrator shall include costs of arbitration, reasonable attorneys&rsquo; fees and reasonable costs for expert and other witnesses, and any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction. Nothing in this Section shall be deemed as preventing Disqus from seeking injunctive or other equitable relief from the courts as necessary to protect any of Disqus&rsquo; proprietary interests. ALL CLAIMS MUST BE BROUGHT IN THE PARTIES&rsquo; INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. YOU AGREE THAT, BY ENTERING INTO THESE TERMS, YOU AND DISQUS ARE EACH WAIVING THE RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE IN A CLASS ACTION.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; font-weight: 700; vertical-align: baseline; white-space: pre-wrap;">General</span><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">. Disqus and you are independent entities, and nothing in the Terms, or via use of the Services, will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between Disqus and you. These Terms supersede any previous Terms of Service and represent the entire agreement between Disqus and you. If any provision of the Terms is adjudged to be illegal or unenforceable, the continuation in full force of the remainder of the Terms will not be prejudiced, and the illegal or unenforceable provision of the Terms shall be severed accordingly. No waiver of any term of these Terms shall be deemed a further or continuing waiver of such term or any other term, and Disqus&rsquo; failure to assert any right or provision under these Terms shall not constitute a waiver of such right or provision.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">These Terms were first published and made effective on February 14th, 2017.</span></span></p>
+
+<p dir="ltr"><span id="docs-internal-guid-0e500724-3ebd-ff98-7a7b-01a34ab4ff20"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">If you are an federal agency, your use is governed by the Amendment found</span><a href="https://help.disqus.com/customer/portal/articles/2537842-amendment-to-disqus-terms-of-service-applicable-to-u-s-federal-government-users"><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;"> </span><span style="font-size: 12pt; font-family: Arial; color: rgb(42, 154, 249); vertical-align: baseline; white-space: pre-wrap;">here</span></a><span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;">.</span></span><br />
+<br />
+<span style="font-size: 12pt; vertical-align: baseline; white-space: pre-wrap;"><a href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Click here</a> to view the Privacy Policy.</span></p>
+
+                  </div>
+                </div>
+                
+                <div class="row rateblock">
+                  <div class="col-md-12">
+                    
+                      <p> Did you find this article helpful?</p>
+                    
+                    <div id="rate_article_container" style="display:none;">
+	<div id="rate_article">
+		<div>
+			<a href="https://help.disqus.com/customer/en/portal/articles/466260/rate?rating=1" class="rate_link" data-method="post" data-remote="true" rel="nofollow"> Yes </a>
+			<span>
+        I found this article helpful
+			</span>
+		</div>
+		<div class="rate-link-down">
+			<a href="https://help.disqus.com/customer/en/portal/articles/466260/rate?rating=0" class="rate_link" data-method="post" data-remote="true" rel="nofollow"> No</a>
+			<span>
+        I did not find this article helpful
+			</span>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function() {
+		$.get('/customer/en/portal/articles/466260/is_rateable.json', function(json) {
+			if (json.is_rateable) {
+				$("#rate_article_container").show();
+			}
+		});
+	});
+</script>
+
+                  </div>
+                </div>
+                <div class="row footer">
+                  <div class="col-md-6">
+                    <p class="updated">Last Updated - <time>Apr 04, 2017 02:37PM PDT</time></p>
+                  </div>
+                </div>
+              </div>
+              <!--Begin Sidebar-->
+              
+    <!-- BEGIN MAIN SIDEBAR -->
+      <div id="sidebar" class="col-md-4 ">
+        
+          <h2 style="padding-left: 15px;">
+            Get Support:
+          </h2>
+          <ul>
+
+            <li>
+              <a class="article-link" href='https://disqus.com/home/channel/discussdisqus/'>Discuss Disqus<i class="fa fa-users"></i></a>
+            </li>
+            <li>
+              <a class="article-link" href='https://disqus.com/support/'>Support Hub<i class="fa fa-envelope-o"></i></a>
+            </li>
+
+          </ul>
+        
+        
+      </div>
+    <!-- END MAIN SIDEBAR -->
+
+              <!--END Sidebar-->
+            </div><!--Main Row-->
+          </div><!--Container Article-->
+        </div><!--#Content-->
+        
+<!--end:page_article-->
+
+<!--end:portal_body-->
+
+  </div> <!-- END CONTENT -->
+</div> <!-- Wrapper -->
+<div id="footer">
+    <div class="container">
+        <div class="row footer-links col-md-10">
+            <ul class="list-unstyled">
+                <li><a href="https://disqus.com/features/">Features</a></li>
+                <li><a href="https://disqus.com/how/">How Disqus Works</a></li>
+                <li><a href="https://disqus.com/pricing/">Plans and Pricing</a></li>
+                <li><a href="http://blog.disqus.com/">Blog</a></li>
+                <li><a href="https://disqus.com/api/">API</a></li>
+                <li><a href="https://disqus.com/jobs">Jobs</a></li>
+                <li><a href="https://help.disqus.com/customer/portal/topics/215159-terms-and-policies/articles">Terms and Policies</a></li>
+            </ul>
+        </div>
+
+        <!-- <div class="row attribution col-md-4">
+          <!--
+          ***************
+          The following attribution needs to remain as is in terms of wording with the appropriate link back to desk.com as per our terms of service: http://www.desk.com/terms
+          If you would like, you may change the location or the styling to better match your site, but the content and the link must remain in the template and visible to end users.
+          ****************
+          
+          <div id="desk-attribution" style="color:red !important;"><a href="http://www.desk.com/">Customer service software <span>powered by Desk.com</span></a></div>
+      </div>
+  </div> -->
+</div><!-- #desk-footer -->
+
+
+
+<!-- Facebook Like Button -->
+<div id="fb-root"></div>
+<!-- External Variables for Portal Header -->
+<div id="desk-external-variables-header" class="desk-external-variables" style="display:none;">
+  <div id="system_language">en</div>
+  <div id="results_mobile">results found </div>
+  <div id="read_only"></div>
+  <div id="system-snippets-do_these_help">Do These help?</div>
+  <div id="site-default_mailbox">help@disqus.com</div>
+  <div id="desk_javascript_host">https://cdn.desk.com/</div>
+  <div id="twitter_enabled">false</div>
+  <div id="twitter_username">desk</div>
+  <div id="system-snippets-loading">Loading</div>
+  <div id="system-snippets-seconds_ago">seconds ago</div>
+  <div id="system-snippets-a_minute_ago">a minute ago</div>
+  <div id="system-snippets-minutes_ago">minutes ago</div>
+  <div id="system-snippets-an_hour_ago">an hour ago</div>
+  <div id="system-snippets-hours_ago">hours ago</div>
+  <div id="system-snippets-a_day_ago">a day ago</div>
+  <div id="system-snippets-days_ago">days ago</div>
+  <div id="system-snippets-about">about</div>
+  <div id="enable_gs">false</div>
+  <div id="system-snippets-invalid_characters_found">Invalid characters found</div>
+  <div id="site-search_autocomplete_articles_url">/customer/en/portal/articles/autocomplete</div>
+  <div id="search-term"></div>
+  <div id="read-article">Read Article</div>
+  
+</div>
+<div id="ThemeOptions" class="hidden" style="display:none;">
+  <div id="header_text">#ffffff</div>
+  <div id="current-page">page_article</div>
+  <div id="brand_id"></div>
+  <div id="site-brands">
+    
+       <div id="0">DISQUS</div>
+    
+  </div>
+  
+    <div id="SkipPreCreate">true</div>
+  
+  
+  
+  
+  
+    <div id="responsiveImages">true</div>
+  
+</div>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//desk-customers.s3.amazonaws.com/v10/js/desk.portal.js" type="text/javascript"></script>
+<!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/429754.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+  <!-- Start of Customer.io code -->
+  <script type="text/javascript">
+  var disqusAuthId = $.cookie('disqusauth').split('|')[6];
+  var _cio = _cio || [];
+
+  (function() {
+    var a,b,c;a=function(f){return function(){_cio.push([f].
+    concat(Array.prototype.slice.call(arguments,0)))}};b=["identify",
+    "track"];for(c=0;c<b.length;c++){_cio[b[c]]=a(b[c])};
+    var t = document.createElement('script'),
+        s = document.getElementsByTagName('script')[0];
+    t.async = true;
+    t.id    = 'cio-tracker';
+    t.setAttribute('data-site-id', 'd1a9b4ca479bd13b7d80');
+    t.src = 'https://assets.customer.io/assets/track.js';
+    s.parentNode.insertBefore(t, s);
+  })();
+  </script>
+
+  <script type="text/javascript">
+    if (disqusAuthId) {
+      _cio.identify({
+        id: disqusAuthId,
+        last_kb_visit: {
+          title: 'Terms of Service',
+          url: 'https://help.disqus.com'+'/customer/en/portal/articles/466260-terms-of-service'
+          }
+      });
+    }
+  </script>
+  <!-- End of Customer.io code -->
+
+
+
+	</body>
+</html>

@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>User Agreement</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="referrer" content="always">
+
+
+
+<script>/*! LAB.js (LABjs :: Loading And Blocking JavaScript) [Error Handling Fork]
+    Error Handling Fork https://github.com/jasonhinkle/LABjs-eh
+    v2.0.3 (c) Kyle Simpson
+    MIT License
+*/
+(function(global){var _$LAB=global.$LAB,_UseLocalXHR="UseLocalXHR",_AlwaysPreserveOrder="AlwaysPreserveOrder",_AllowDuplicates="AllowDuplicates",_CacheBust="CacheBust",_Debug="Debug",_BasePath="BasePath",_ErrorHandler="ErrorHandler",root_page=/^[^?#]*\//.exec(location.href)[0],root_domain=/^\w+\:\/\/\/?[^\/]+/.exec(root_page)[0],append_to=document.head||document.getElementsByTagName("head"),opera_or_gecko=(global.opera&&Object.prototype.toString.call(global.opera)=="[object Opera]")||("MozAppearance"in document.documentElement.style),log_msg=function(){},log_error=log_msg,test_script_elem=document.createElement("script"),explicit_preloading=typeof test_script_elem.preload=="boolean",real_preloading=explicit_preloading||(test_script_elem.readyState&&test_script_elem.readyState=="uninitialized"),script_ordered_async=!real_preloading&&test_script_elem.async===true,xhr_or_cache_preloading=!real_preloading&&!script_ordered_async&&!opera_or_gecko;if(global.console&&global.console.log){if(!global.console.error)global.console.error=global.console.log;log_msg=function(msg){global.console.log(msg)};log_error=function(msg,err){global.console.error(msg,err)}}function is_func(func){return Object.prototype.toString.call(func)=="[object Function]"}function is_array(arr){return Object.prototype.toString.call(arr)=="[object Array]"}function canonical_uri(src,base_path){var absolute_regex=/^\w+\:\/\//;if(/^\/\/\/?/.test(src)){src=location.protocol+src}else if(!absolute_regex.test(src)&&src.charAt(0)!="/"){src=(base_path||"")+src}return absolute_regex.test(src)?src:((src.charAt(0)=="/"?root_domain:root_page)+src)}function merge_objs(source,target){for(var k in source){if(source.hasOwnProperty(k)){target[k]=source[k]}}return target}function check_chain_group_scripts_ready(chain_group){var any_scripts_ready=false;for(var i=0;i<chain_group.scripts.length;i++){if(chain_group.scripts[i].ready&&chain_group.scripts[i].exec_trigger){any_scripts_ready=true;chain_group.scripts[i].exec_trigger();chain_group.scripts[i].exec_trigger=null}}return any_scripts_ready}function create_script_load_listener(elem,registry_item,flag,onload){elem.onload=elem.onreadystatechange=function(){if((elem.readyState&&elem.readyState!="complete"&&elem.readyState!="loaded")||registry_item[flag])return;elem.onload=elem.onreadystatechange=null;onload()}}function script_executed(registry_item){registry_item.ready=registry_item.finished=true;for(var i=0;i<registry_item.finished_listeners.length;i++){registry_item.finished_listeners[i]()}registry_item.ready_listeners=[];registry_item.finished_listeners=[]}function request_script(chain_opts,script_obj,registry_item,onload,preload_this_script){setTimeout(function(){var script,src=script_obj.real_src,xhr;if("item"in append_to){if(!append_to[0]){setTimeout(arguments.callee,25);return}append_to=append_to[0]}script=document.createElement("script");if(script_obj.type)script.type=script_obj.type;if(script_obj.charset)script.charset=script_obj.charset;if(preload_this_script){if(real_preloading){if(chain_opts[_Debug])log_msg("start script preload: "+src);registry_item.elem=script;if(explicit_preloading){script.preload=true;script.onpreload=onload}else{script.onreadystatechange=function(){if(script.readyState=="loaded")onload()}}script.src=src}else if(preload_this_script&&src.indexOf(root_domain)==0&&chain_opts[_UseLocalXHR]){xhr=new XMLHttpRequest();if(chain_opts[_Debug])log_msg("start script preload (xhr): "+src);xhr.onreadystatechange=function(){if(xhr.readyState==4){xhr.onreadystatechange=function(){};registry_item.text=xhr.responseText+"\n//@ sourceURL="+src;onload()}};xhr.open("GET",src);xhr.send()}else{if(chain_opts[_Debug])log_msg("start script preload (cache): "+src);script.type="text/cache-script";create_script_load_listener(script,registry_item,"ready",function(){append_to.removeChild(script);onload()});script.src=src;append_to.insertBefore(script,append_to.firstChild)}}else if(script_ordered_async){if(chain_opts[_Debug])log_msg("start script load (ordered async): "+src);script.async=false;create_script_load_listener(script,registry_item,"finished",onload);script.src=src;append_to.insertBefore(script,append_to.firstChild)}else{if(chain_opts[_Debug])log_msg("start script load: "+src);create_script_load_listener(script,registry_item,"finished",onload);script.src=src;append_to.insertBefore(script,append_to.firstChild)}},0)}function create_sandbox(){var global_defaults={},can_use_preloading=real_preloading||xhr_or_cache_preloading,queue=[],registry={},instanceAPI;global_defaults[_UseLocalXHR]=true;global_defaults[_AlwaysPreserveOrder]=false;global_defaults[_AllowDuplicates]=false;global_defaults[_CacheBust]=false;global_defaults[_Debug]=false;global_defaults[_BasePath]="";global_defaults[_ErrorHandler]=function(err){};function execute_preloaded_script(chain_opts,script_obj,registry_item){var script;function preload_execute_finished(){if(script!=null){script=null;script_executed(registry_item)}}if(registry[script_obj.src].finished)return;if(!chain_opts[_AllowDuplicates])registry[script_obj.src].finished=true;script=registry_item.elem||document.createElement("script");if(script_obj.type)script.type=script_obj.type;if(script_obj.charset)script.charset=script_obj.charset;create_script_load_listener(script,registry_item,"finished",preload_execute_finished);if(registry_item.elem){registry_item.elem=null}else if(registry_item.text){script.onload=script.onreadystatechange=null;script.text=registry_item.text}else{script.src=script_obj.real_src}append_to.insertBefore(script,append_to.firstChild);if(registry_item.text){preload_execute_finished()}}function do_script(chain_opts,script_obj,chain_group,preload_this_script){var registry_item,registry_items,ready_cb=function(){script_obj.ready_cb(script_obj,function(){execute_preloaded_script(chain_opts,script_obj,registry_item)})},finished_cb=function(){script_obj.finished_cb(script_obj,chain_group)};script_obj.src=canonical_uri(script_obj.src,chain_opts[_BasePath]);script_obj.real_src=script_obj.src+(chain_opts[_CacheBust]?((/\?.*$/.test(script_obj.src)?"&_":"?_")+~~(Math.random()*1E9)+"="):"");if(!registry[script_obj.src])registry[script_obj.src]={items:[],finished:false};registry_items=registry[script_obj.src].items;if(chain_opts[_AllowDuplicates]||registry_items.length==0){registry_item=registry_items[registry_items.length]={ready:false,finished:false,ready_listeners:[ready_cb],finished_listeners:[finished_cb]};request_script(chain_opts,script_obj,registry_item,((preload_this_script)?function(){registry_item.ready=true;for(var i=0;i<registry_item.ready_listeners.length;i++){registry_item.ready_listeners[i]()}registry_item.ready_listeners=[]}:function(){script_executed(registry_item)}),preload_this_script)}else{registry_item=registry_items[0];if(registry_item.finished){finished_cb()}else{registry_item.finished_listeners.push(finished_cb)}}}function create_chain(){var chainedAPI,chain_opts=merge_objs(global_defaults,{}),chain=[],exec_cursor=0,scripts_currently_loading=false,group;function chain_script_ready(script_obj,exec_trigger){if(chain_opts[_Debug])log_msg("script preload finished: "+script_obj.real_src);script_obj.ready=true;script_obj.exec_trigger=exec_trigger;advance_exec_cursor()}function chain_script_executed(script_obj,chain_group){if(chain_opts[_Debug])log_msg("script execution finished: "+script_obj.real_src);script_obj.ready=script_obj.finished=true;script_obj.exec_trigger=null;for(var i=0;i<chain_group.scripts.length;i++){if(!chain_group.scripts[i].finished)return}chain_group.finished=true;advance_exec_cursor()}function advance_exec_cursor(){while(exec_cursor<chain.length){if(is_func(chain[exec_cursor])){if(chain_opts[_Debug])log_msg("$LAB.wait() executing: "+chain[exec_cursor]);try{chain[exec_cursor++]()}catch(err){chain_opts[_ErrorHandler](err);if(chain_opts[_Debug])log_error("$LAB.wait() error caught: ",err)}continue}else if(!chain[exec_cursor].finished){if(check_chain_group_scripts_ready(chain[exec_cursor]))continue;break}exec_cursor++}if(exec_cursor==chain.length){scripts_currently_loading=false;group=false}}function init_script_chain_group(){if(!group||!group.scripts){chain.push(group={scripts:[],finished:true})}}chainedAPI={script:function(){for(var i=0;i<arguments.length;i++){(function(script_obj,script_list){var splice_args;if(!is_array(script_obj)){script_list=[script_obj]}for(var j=0;j<script_list.length;j++){init_script_chain_group();script_obj=script_list[j];if(is_func(script_obj))script_obj=script_obj();if(!script_obj)continue;if(is_array(script_obj)){splice_args=[].slice.call(script_obj);splice_args.unshift(j,1);[].splice.apply(script_list,splice_args);j--;continue}if(typeof script_obj=="string")script_obj={src:script_obj};script_obj=merge_objs(script_obj,{ready:false,ready_cb:chain_script_ready,finished:false,finished_cb:chain_script_executed});group.finished=false;group.scripts.push(script_obj);do_script(chain_opts,script_obj,group,(can_use_preloading&&scripts_currently_loading));scripts_currently_loading=true;if(chain_opts[_AlwaysPreserveOrder])chainedAPI.wait()}})(arguments[i],arguments[i])}return chainedAPI},wait:function(){if(arguments.length>0){for(var i=0;i<arguments.length;i++){chain.push(arguments[i])}group=chain[chain.length-1]}else group=false;advance_exec_cursor();return chainedAPI}};return{script:chainedAPI.script,wait:chainedAPI.wait,setOptions:function(opts){merge_objs(opts,chain_opts);return chainedAPI}}}instanceAPI={setGlobalDefaults:function(opts){merge_objs(opts,global_defaults);return instanceAPI},setOptions:function(){return create_chain().setOptions.apply(null,arguments)},script:function(){return create_chain().script.apply(null,arguments)},wait:function(){return create_chain().wait.apply(null,arguments)},queueScript:function(){queue[queue.length]={type:"script",args:[].slice.call(arguments)};return instanceAPI},queueWait:function(){queue[queue.length]={type:"wait",args:[].slice.call(arguments)};return instanceAPI},runQueue:function(){var $L=instanceAPI,len=queue.length,i=len,val;for(;--i>=0;){val=queue.shift();$L=$L[val.type].apply(null,val.args)}return $L},noConflict:function(){global.$LAB=_$LAB;return instanceAPI},sandbox:function(){return create_sandbox()}};return instanceAPI}global.$LAB=create_sandbox();(function(addEvent,domLoaded,handler){if(document.readyState==null&&document[addEvent]){document.readyState="loading";document[addEvent](domLoaded,handler=function(){document.removeEventListener(domLoaded,handler,false);document.readyState="complete"},false)}})("addEventListener","DOMContentLoaded")})(this);
+</script><script>$LAB.setGlobalDefaults({'ErrorHandler': function(err) { console.log(err); throw err; }});  var LABqueue = $LAB.script('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js').wait(function() { jq = $.noConflict(); })
+.script('https://assets.hubstatic.com/s/ss177571821.js')
+;
+</script><script src="https://assets.hubstatic.com/s/tt206641510.js" ></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-286186-1', 'hubpages.com');
+ga('send', 'pageview');
+gaSiteTracker = '';
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://assets.hubstatic.com/s/site-bases60140078.css"/>
+
+<style>
+.svglogo.hubpages-logo32 { width: 130px; height: 32px;}
+.svglogo.hubpages-logo30 { width: 122px; height: 30px;}
+</style>
+    
+  </head>
+<body class="hubpages fully-responsive static nomast">
+
+<!-- symbols (7472 bytes) -->
+<svg id="svg-definitions">
+<symbol id="hubpages-logo" viewBox="0 0 260 64"><path d="M252.8 10.2c-.1-.1-.3-.2-.5-.3.5 0 .9-.2 1.2-.5.3-.3.5-.7.5-1.1 0-.3-.1-.6-.3-.9-.2-.3-.4-.5-.7-.6-.3-.1-.8-.2-1.5-.2h-2v5.9h.9V10h.6c.3 0 .6.1.8.2.2.2.6.6 1 1.4l.5.9h1.2l-.7-1.2c-.5-.5-.8-.9-1-1.1zm-1.3-1h-1.1V7.4h1.1c.5 0 .8 0 1 .1.2.1.3.2.4.3.1.1.1.3.1.5 0 .3-.1.5-.3.6-.3.2-.6.3-1.2.3z"/><path d="M256.5 6.7c-.5-.9-1.2-1.5-2-2-.9-.5-1.8-.7-2.7-.7-.9 0-1.8.2-2.7.7-.9.5-1.6 1.1-2 2-.5.9-.7 1.8-.7 2.7 0 .9.2 1.8.7 2.7.5.9 1.2 1.5 2 2 .9.5 1.8.7 2.7.7.9 0 1.8-.2 2.7-.7.9-.5 1.5-1.2 2-2 .5-.9.7-1.8.7-2.7.1-.9-.2-1.8-.7-2.7zm-.7 5c-.4.7-1 1.3-1.7 1.7-.7.4-1.5.6-2.3.6-.8 0-1.5-.2-2.3-.6-.7-.4-1.3-1-1.7-1.7-.4-.7-.6-1.5-.6-2.3 0-.8.2-1.6.6-2.3.4-.7 1-1.3 1.7-1.7.7-.4 1.5-.6 2.2-.6.8 0 1.5.2 2.2.6.7.4 1.3 1 1.7 1.7.4.7.6 1.5.6 2.3.2.9 0 1.6-.4 2.3zM93.4 19.4c-3.9 0-8.1 3.1-10.8 5.9v-.5c0-11.7 1-19.8 1-24.4 0-1.1-6.8.6-6.9 1.8 0 1.2-.7 9.3-.7 16.6 0 8.2.3 14.7 1 19.6 0 3.1-3.4 7.9-7.1 7.9 0 0-1.6-10.5-1.1-26.6 0-1.1-6.9.8-6.9 1.8 0 .6.1 4.9.2 8.8 0 9.8-3.9 17-7.5 17-2.2 0-4.5-2.9-4.5-9.8 0-8.7 2.5-13.9 2.5-16.2 0-.9-1.5-1.6-5.9-1.6-.3 0-.7.3-1 1v.1c-2.5 4.5-5.8 7.6-9.6 9.7V5c0-1.1-6.4.7-6.8 1.7v26.4c-4.3 1.1-8.8 1.4-13.3 1.2V10.7c0-1.1-6.4.7-6.8 1.7v21.3c-1.9-.3-3.7-.6-5.5-1-1.2-.3-1.7 4.2 0 4.6 1.8.5 3.7.9 5.5 1.2v13.7c0 1.1 6.8-.8 6.8-1.8V39.3c4.6.3 9.2 0 13.3-1v15c0 1.1 6.8-.8 6.8-1.8V35.8c2.9-1.5 5.4-3.5 7.4-6.1-.2 2.2-.4 4.8-.4 7.8 0 7.8 4.6 15.3 10.1 15.3 3.9 0 7.5-3.6 9.7-8.7 1.5 6.9 4.7 8 7.2 8 3.9 0 6.6-3.6 8.1-7.3 1.8 5.1 4.9 7.3 10 7.3 10.8 0 14.9-9.8 14.9-18.5.4-8.9-4.2-14.2-9.7-14.2zm-4.8 26.9c-1.4 0-4.9-.6-5.8-15.2.9-.9 5.4-6 10-6 1.1 0 4.2 1.5 4.3 8.4 0 9.5-3.1 12.8-8.5 12.8zm147-27.8c-4.3 17.8-11.3 27.6-19 27.6-2.5 0-5.4-1.2-7.1-3.7 7.6-3.7 15.6-8.2 15.6-14.3 0-3.2-4-8.8-10.5-8.8-3.6 0-13.2 4.8-13.2 17.2 0 1.3.2 2.5.4 3.6-2.3 1.3-4.5 2.6-6.3 4 0-.1 0-.1-.1-.1-.6-6.8-.3-8.1.7-18.7v-.4c0-.2 0-.5.1-.7.1-.8.1-1.6.2-2.5.1-1.1-6.5-.9-6.5 1.1V24c-2.1-2.7-5.1-4.5-8.1-4.5-4.1 0-12.3 5.1-12.3 17.4 0 4.7-4.1 10.1-6.3 10.1 0 0-.5-6.2.6-25.2.1-1.1-6.5-.9-6.5 1.1v.6c-2.1-2.4-4.9-4-7.7-4-4.1 0-12.3 5.1-12.3 17.4 0 7.8 4.6 15.3 10.1 15.3 3.7 0 7.5-3.3 10-8 .1 5.9 2.8 8.2 5.7 8.2 2.9 0 5.9-3.6 7.9-7.5 1.8 4.3 5 7.4 8.5 7.4 3.7 0 7.4-3.2 9.9-7.8 0 1.7.1 3.5.2 5.5-2.1 2.7-3.9 5.8-3.9 8.2 0 4.1 1.3 6.2 4.7 6.2 3 0 5.7-3.4 5.4-13.1.6-2 3.9-3.9 8-5.9 2.9 4.3 7.7 6.8 12.6 6.8 4.1 0 7.7-1.5 11-4.6 2.1 2.3 5.4 4.6 9.8 4.6 5.5 0 12.8-3.2 12.8-11.7s-9.6-16.5-9.6-20.7l-4.8-1.3zm-86.8 28c-2.2 0-4.5-2.9-4.5-9.8 0-8.8 3.5-11.7 7.3-11.7 2 0 5.2 3 5.8 3.6v2.1c-.6 8.9-5.3 15.8-8.6 15.8zm32.1 0c-2.2 0-4.5-2.9-4.5-9.8 0-8.8 3.5-11.7 7.3-11.7 2.2 0 5.9 3.7 5.9 3.7 0 9.8-5.1 17.8-8.7 17.8zm26.9-10.2c0-7.2 3.7-11.4 6.9-11.4 2.8 0 4.4 1.9 4.4 3.9 0 2.4-5.3 5-11.2 8-.1-.1-.1-.3-.1-.5zm29.5 10.4c-2.9 0-5.3-1.1-7-2.4 3-4 5.6-9.6 7.7-16.9 2.5 4.1 5.9 7.6 5.9 12.4 0 4.5-4.1 6.9-6.6 6.9zm-117.1-42c-12.7 0-19.2 12.4-19.4 13.6 0 0 1.9 2.5 3.2 2.2.7-.1 2.1-2.5 4.5-4.9l.1 36c0 1.1 6.6-.8 6.6-1.7V39.2c1.8 1.2 4.2 2.4 6.8 2.4 9.6 0 14.9-9.1 14.9-17.9-.1-13.6-8.4-19-16.7-19zm1.7 31.2c-2.4 0-4.9-.8-6.8-1.6V11.2c1.4-.5 2.9-.8 4.6-.8 5.6 0 10.8 4 10.8 14.5 0 6.3-3.2 11-8.6 11z"/></symbol>
+<symbol id="search-magnify" viewBox="0 0 36 36"><path d="M35.525 31.228l-8.88-8.882c1.444-2.238 2.298-4.895 2.298-7.752C28.943 6.684 22.505.25 14.597.25 6.687.25.254 6.686.254 14.595c0 7.91 6.433 14.344 14.343 14.344 2.856 0 5.513-.85 7.752-2.294l8.88 8.88c.294.297.78.297 1.075 0l3.22-3.22c.3-.296.3-.78 0-1.076zM4.81 14.593c0-5.396 4.39-9.788 9.788-9.788 5.398 0 9.787 4.392 9.787 9.788 0 5.398-4.39 9.79-9.787 9.79-5.398 0-9.788-4.392-9.788-9.79z"/></symbol>
+<symbol id="bell" viewBox="0 0 16 16"><path d="M16 13c-1.657 0-3-1.343-3-3v-4.455c0-2.199-1.718-4.033-4-4.454v-1.091h-2v1.091c-2.282 0.421-4 2.255-4 4.454v4.455c0 1.657-1.343 3-3 3v1h6.712c-0.081 0.178-0.127 0.377-0.127 0.586 0 0.781 0.633 1.414 1.414 1.414s1.414-0.633 1.414-1.414c0-0.209-0.045-0.407-0.127-0.586h6.713v-1z"></path></symbol>
+<symbol id="question" viewBox="0 0 16 16"><path d="M9 12c0 0.552-0.448 1-1 1s-1-0.448-1-1 0.448-1 1-1 1 0.448 1 1z"></path><path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path><path d="M8 10.004c-0.414 0-0.75-0.336-0.75-0.75v-0.5c0-0.525 0.203-0.998 0.602-1.404 0.295-0.3 0.653-0.525 0.999-0.742 0.712-0.447 1.024-0.687 1.024-1.107 0-0.457-0.264-0.762-0.485-0.938-0.355-0.282-0.849-0.437-1.39-0.437-0.821 0-1.559 0.548-1.796 1.333-0.12 0.397-0.538 0.621-0.934 0.502s-0.621-0.538-0.502-0.934c0.205-0.68 0.631-1.291 1.2-1.721 0.589-0.445 1.292-0.68 2.031-0.68 0.878 0 1.703 0.271 2.322 0.762 0.679 0.539 1.053 1.289 1.053 2.113 0 1.293-0.998 1.92-1.726 2.377-0.611 0.384-0.899 0.596-0.899 0.876v0.5c0 0.414-0.336 0.75-0.75 0.75z"></path></symbol>
+<symbol id="facebook" viewBox="0 0 16 16"><path d="M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z"></path></symbol>
+<symbol id="pinterest" viewBox="0 0 16 16"><path d="M8 1.069c-3.828 0-6.931 3.103-6.931 6.931 0 2.938 1.828 5.444 4.406 6.453-0.059-0.547-0.116-1.391 0.025-1.988 0.125-0.541 0.813-3.444 0.813-3.444s-0.206-0.416-0.206-1.028c0-0.963 0.559-1.684 1.253-1.684 0.591 0 0.878 0.444 0.878 0.975 0 0.594-0.378 1.484-0.575 2.306-0.166 0.691 0.344 1.253 1.025 1.253 1.231 0 2.178-1.3 2.178-3.175 0-1.659-1.194-2.819-2.894-2.819-1.972 0-3.128 1.478-3.128 3.009 0 0.597 0.228 1.234 0.516 1.581 0.056 0.069 0.066 0.128 0.047 0.2-0.053 0.219-0.169 0.691-0.194 0.787-0.031 0.128-0.1 0.153-0.231 0.094-0.866-0.403-1.406-1.669-1.406-2.684 0-2.188 1.587-4.194 4.578-4.194 2.403 0 4.272 1.712 4.272 4.003 0 2.388-1.506 4.313-3.597 4.313-0.703 0-1.362-0.366-1.588-0.797 0 0-0.347 1.322-0.431 1.647-0.156 0.603-0.578 1.356-0.862 1.816 0.65 0.2 1.337 0.309 2.053 0.309 3.828 0 6.931-3.103 6.931-6.931 0-3.831-3.103-6.934-6.931-6.934z"></path></symbol>
+<symbol id="hubpages-h" viewBox="0 0 16 16"><path d="M13.757 6.636c-.448.448-.96.832-1.44 1.152V.11c0-.352-2.078.224-2.205.544v8.253c-1.343.48-2.814.704-4.35.672V1.933c0-.352-2.078.223-2.206.543V9.42c-.575-.065-1.183-.193-1.79-.32-.416-.097-.544 1.375 0 1.503.64.128 1.215.256 1.79.32v4.542c0 .384 2.207-.256 2.207-.576v-3.743c1.663.032 3.1-.192 4.35-.576v5.31c0 .385 2.205-.255 2.205-.575v-5.79c.8-.544 1.503-1.184 2.046-1.92.192-.287-.35-1.215-.607-.96z"></path></symbol>
+<symbol id="envelop" viewBox="0 0 16 16"><path d="M15 2h-14c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h14c0.55 0 1-0.45 1-1v-10c0-0.55-0.45-1-1-1zM5.831 9.773l-3 2.182c-0.1 0.073-0.216 0.108-0.33 0.108-0.174 0-0.345-0.080-0.455-0.232-0.183-0.251-0.127-0.603 0.124-0.786l3-2.182c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786zM13.955 11.831c-0.11 0.151-0.282 0.232-0.455 0.232-0.115 0-0.23-0.035-0.33-0.108l-3-2.182c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l3 2.182c0.251 0.183 0.307 0.535 0.124 0.786zM13.831 4.955l-5.5 4c-0.099 0.072-0.215 0.108-0.331 0.108s-0.232-0.036-0.331-0.108l-5.5-4c-0.251-0.183-0.307-0.534-0.124-0.786s0.535-0.307 0.786-0.124l5.169 3.759 5.169-3.759c0.251-0.183 0.603-0.127 0.786 0.124s0.127 0.603-0.124 0.786z"></path></symbol>
+<symbol id="bubble-lines" viewBox="0 0 16 16"><path d="M14.5 1h-13c-0.825 0-1.5 0.675-1.5 1.5v8c0 0.825 0.675 1.5 1.5 1.5h2.5v4l4.8-4h5.7c0.825 0 1.5-0.675 1.5-1.5v-8c0-0.825-0.675-1.5-1.5-1.5zM7 9h-4v-1h4v1zM11 7h-8v-1h8v1zM13 5h-10v-1h10v1z"></path></symbol>
+</svg>
+
+<div id="header_placeholder"><div id="header_wrap"><header id="header"><div class="desktop_hamburger"><div class="menu_bar"><hr/><hr/><hr/></div><div class="menu_bar more">MORE</div></div><div id="hamburger_close" class="close_icon header_icon" style="display: none"><hr class="bar1"/><hr class="bar2"/><hr class="bar3"/></div><div id="site_title" ><a tabindex="-1" href="http://hubpages.com/" title="HubPages"><svg class="svglogo hubpages-logo hubpages-logo32"><title>HubPages</title><use xlink:href="#hubpages-logo"></use></svg></a></div><div id="mobile_menu_bar" class="menu_bar"><hr><hr><hr></div><div id="header_search"><div id="header_search_container"><form action="/search/" name="search_form_mobile" id="search_form"><input id="search_input" name="s" type="text" value="" placeholder="Search" autofocus="autofocus"/><div id="search_button"><svg class="moon tiny icon search-magnify"><use xlink:href="#search-magnify"></use></svg></div></form></div><span id="search_icon" class="header_icon"><svg class="moon smallish icon search-magnify"><use xlink:href="#search-magnify"></use></svg></span><div id="close_icon" class="close_icon header_icon" style="display: none"><hr id="bar1" /><hr id="bar2" /><hr id="bar3" /></div></div><div id="header_right"><a id="signin_span" tabindex="-1" href="https://hubpages.com/signin/">Sign In</a><a tabindex="-1" href="https://hubpages.com/user/new/" class="call_to_action">Join</a></div></header></div></div><div id="container">
+
+<h1>HubPages Network Terms of User</h1>
+
+<p>These Terms of Use were updated on January 27, 2017 and are effective as of February 5, 2017. See <a href="#recent">the bottom of this page</a> for recent changes to these Terms of Use.</p>
+
+<h2 id="acceptance">1. ACCEPTANCE OF TERMS</h2>
+
+<p>These terms and conditions ("Terms") govern the use of the <a href="http://hubpages.com">HubPages website</a> and other websites that may be added in the future (the "Website") and all related services provided by HubPages, Inc. (the Website and related services are collectively referred to as the "Service") and constitute an agreement between you ("You") and HubPages, Inc. ("HubPages"). Your use of the Service, including any new services or functionalities that may be made available by HubPages from time to time, is conditioned upon Your acceptance of and continued adherence to these Terms. HubPages reserves the right to alter or revise these Terms at any time by notifying you as provided in these Terms, provided that no notice shall be required for non-substantive changes to the Terms. If we substantively amend this Agreement, we will give you at least seven (7) days notice before the changes take effect, during which period of time you may reject the changes by terminating your account. Your continued use of the Service indicates Your acceptance of any and all revised Terms. HubPages reserves the right to suspend or terminate Your account at any time or discontinue Your access to the Service or remove your Hubs for any reason.</p>
+
+<h2 id="definitions">2. DEFINITIONS AND SERVICE DESCRIPTION</h2>
+<ul>
+	<li>"Author" or “Hubber”: A person that creates an account on the Service.</li>
+	<li>"Author Content": Any content, including without limitation questions, answers, forum posts, ratings, votes, and Hub comments, that Authors post on the Service other than on the Author’s Hub, and all photographs that Authors post on the Service (including on the Author’s Hub).</li>
+	<li>"Author Service(s)": is the author’s process of including and managing Hub Content and/or Author Content on the Service.</li>
+	<li>"Hub": A webpage created via the Service.</li>
+	<li>"Hub Content": Any content, including without limitation text, data, video, and links, but excluding photographs, that an Author posts on the Author’s Hub.</li>
+	<li>"HubScore": Scoring system to determine the quality of a Hub and used in programming the Service.</li>
+       <li>"HubTool": Tool for creating a Hub or Hubs.</li>
+       <li>“Earning Page View”: This is a page view of either a Hub, Profile Page, or a Question or Answer where ads or affiliate links are served with attributable earning.</li>
+       <li>“Earning Ad Impression”: This is a single occurrence of a display ad.</li>
+       <li>“Profile”: Your personal profile page on the Service.</li>
+       <li>“Question”: A post made using the “Ask A Question” function on the Service. An “Answer” is a post made in answer to a Question on the Service.</li>
+
+</ul>
+
+<p>HubPages makes available a HubTool (and other tools) to create Hubs and for the Author to engage in Author Services. The Service hosts and serves the Hubs, including the Hub Content, to users of the Service ("Users"). HubPages will program portions of the Hubs created by Authors with information related to other Hubs on the Service. Users can read, rate, send Hubs via email, subscribe to RSS feeds of Hubs, and search for Hubs, as may be permitted by the features and functions of the Service.</p>
+
+<p>The Service is automatically programmed by the HubScore system. Low quality Hubs will not be programmed in the Service. Hubs and Author Content that are determined to be low quality will be removed from the Service.</p>
+
+<h2 id="permitted-uses">3. PERMITTED USES</h2>
+
+<p>You must register with HubPages and create an Author account (including selecting a screen name/username and subdomain name for Your Account) in order to create a Hub. HubPages, in its sole discretion and at any time, may change, remove, reclaim, and/or reassign the screen name/username and/or subdomain name associated with Your Author account (this potentially includes but is not limited to a trademark owner complaining about a screen name/username/subdomain name that does not closely resemble Your real name). Only adults (18 years and over) may register for an Author account. Your Author account gives You access to the services and functionality that we may establish and maintain from time to time and in our sole discretion. You are responsible for any and all activities occurring or content that is posted under Your account. If You discover any unauthorized activity under Your account, please alert HubPages immediately, by sending an email alert to team@HubPages.com.</p>
+
+<ul>
+	<li>You must do Your best to create high quality Hubs.</li>
+	<li>You are solely responsible for Your Hub Content.</li>
+	<li>You must follow specific guidelines for publishing forum posts, comments, questions and answers, and other content services that are posted on the Service.</li>
+	<li>You may only use Hub Content to which You have the necessary rights, including (but not limited to) intellectual property rights regarding copyright, trademark, and trade secrets. This means, among other things, that You must have permission to use third party content from the content owners.</li>
+</ul>
+
+<p>By giving us Your email address, You grant us permission to send communications from HubPages, such as account creation confirmations, service announcements, administrative messages, and any of the opt-in HubPages newsletters you select to that address. You may opt out of certain email communications from HubPages by following the instructions on the email. You may not opt out of Service-related messages. If You do not want to receive such messages from HubPages, you must cancel Your account.</p>
+
+<h2 id="restrictions">4. RESTRICTIONS AND PROHIBITIONS ON USE</h2>
+
+<p>In Your use of the Service You must abide by the following restrictions and prohibitions on use. As a Service User or Author, You may Not:</p>
+<ul>
+	<li>Publish Hubs or Hub or Author Content that include any content or links that are pornographic, defamatory, libelous, tortuous, vulgar, obscene, invasive of privacy, racially or ethnically objectionable, hateful, promotes or provides instructional information about illegal activities, promotes any act of cruelty to animals, or is otherwise offensive.</li>
+	<li>Publish Hubs or Hub or Author Content targeted at children under the age of 13.</li>
+	<li>Use HubPages, the Service to violate any Federal, state or local laws. Your Hubs must comply with all laws regarding online conduct and acceptable content.</li>
+	<li>Hack the Service or modify any Hubs that are not Your own.</li>
+	<li>Link to any worms or viruses or any code of a destructive nature.</li>
+	<li>Link to pages or sites that are unrelated to the topic and content of Your Hub.</li>
+	<li>Remove, decompile, disassemble or reverse engineer any HubPages Software (as defined below) or use any network monitoring or discovery software to determine the Service architecture.</li>
+	<li>Publish Hubs or Content in breach of a confidentiality or fiduciary obligation You may have.</li>
+	<li>Attempt to automatically redirect Service users to other domains, mislead users of the origins of the Hub Content contained in Your Hubs, or use Your Hubs as storage for remote loading or a door or signpost to a website outside of the Service.</li>
+	<li>Impersonate another person, Author, entity, or any representative or employee of HubPages (note that such may include the screen name/username/subdomain name that You select for Your Author account).</li>
+	<li>Disrupt the HubPages Service, or any servers by embedding code in the Hubs or otherwise attacking the Service.</li>
+	<li>Publish Hubs or Content for any illegal activities or to promote or make solicitations for any illegal or unauthorized activity.</li>
+	<li>Spam any User or mass email any User in an automated fashion.</li>
+	<li>Collect personal identifiable information about the Users of Your Hubs and sell or transfer that information.</li>
+	<li>Use any automatic or manual process to harvest email addresses or other information from the Service.</li>
+	<li>Harass, threaten or intimidate Authors or others who use the Service.</li>
+	<li>Publish Hubs or Content written primarily in a language other than English.</li>
+	<li>Promote gambling or links to sites that promote/offer gambling for money.</li>
+	<li>Display misleading tags, categorizations, and/or titles that don’t match the Hub’s content, including irrelevant or excessive tagging.</li>
+	<li>Engage in behavior that is overly promotional, including excessive linking to any one site or domain.</li>
+	<li>Engage in behavior designed to manipulate HubScores.</li>
+	<li>Spam to promote Hubs or Profiles, including comment spam, forum spam, spam blogs, email spam, instant message spam, or similar.</li>
+	<li>Use automation tools to create HubPages Accounts, Hubs, or Author Content, to follow topics or Authors, or to edit Hubs. This includes, but is not limited to, article spinner software, blog and comment blasters, and similar software and online tools and services.</li>
+	<li>Publish Hubs or Hub Content that are identical to, substantially similar to, or derived from other Hubs and/or content published elsewhere on the Web. This applies even if You are the owner of that content and/or have the rights to publish that content online.</li>
+</ul>
+<p>Each of Your screen name/username/subdomain names must comply fully with all HubPages content rules and restrictions.</p>
+
+<h2 id="discontinuation">5. DISCONTINUATION OR MODIFICATION OF THE SERVICE</h2>
+
+<p>HubPages reserves the right to modify or discontinue, temporarily or permanently, the Service or any portion thereof at any time, without liability to You or any third party. In addition, HubPages, in its sole discretion, may terminate Your password, account or use of or access to the Service (including Earning Money Through HubPages as further described below), and remove and delete any Hubs or Content, for any reason.</p>
+
+<h2 id="content-ownership">6. PROPRIETARY RIGHTS; CONTENT OWNERSHIP</h2>
+
+<p>The Service and any software used in connection with the Service ("Software") contain proprietary and confidential information that is protected by applicable intellectual property and other laws. Except as expressly authorized by HubPages or advertisers, You agree not to modify, rent, lease, loan, sell, distribute or create derivative works based on the Service or the Software, in whole or in part. In addition, the content, organization, graphics, design, compilation, magnetic translation, digital conversion and other matters related to the Service are protected under applicable copyrights, trademarks and other proprietary (including, but not limited to, intellectual property) rights. The copying, redistribution, use or publication by You of any such matters or any part of the Service, except as expressly allowed herein or via distribution tools HubPages makes available to Users, such as RSS feeds and widgets, is strictly prohibited. HubPages may at any point make additional software and tools available to Authors in connection with the Service ("Additional Software"). Authors who incorporate such Additional Software into their Hubs may have to agree to additional terms and conditions before using such software, and all rules and obligations outlined in these Terms apply to the ownership and use of such Additional Software.</p>
+
+<p>HubPages does not claim ownership of Your Hub Content or Author Content. Such content will be owned by You or a third party from whom You got permission to post the content. By posting Hub Content on the Service, You grant HubPages a worldwide, royalty-free, and non-exclusive license, for as long as Your Hub is displayed on HubPages and for a commercially reasonable time thereafter, to reproduce, publicly display, publicly perform, distribute, modify, adapt and publish the Hub Content solely for the purpose of displaying, distributing and promoting Your Hub on or in connection with the Service. By posting Author Content on the Service, You grant HubPages a worldwide, royalty-free, non-exclusive, perpetual, irrevocable license to reproduce, publicly display, publicly perform, distribute, modify, adapt and publish the Author Content on or in connection with the Service. You may remove Your Hub Content from the Service at your discretion. You may not remove your Author Content from the Service. HubPages may preserve and store Hub Content (including, for a commercially reasonable time, Hub Content you have removed from the Service) or Author Content, and may disclose such content if required to do so by law or if HubPages believes in good faith that such preservation or disclosure is reasonably necessary to: (a) comply with legal process (e.g., subpoenas); (b) enforce these Terms; (c) respond to claims that any Hub or Content violates the rights of third parties; or (d) protect the rights, property, or personal safety of HubPages, its users and the public.</p>
+
+<p>The Author, and not HubPages, will be fully responsible for all Hub Content or Author Content that is uploaded, posted, transmitted or otherwise made available by the Author on the Service (collectively "User Content"). HubPages cannot guarantee the accuracy, integrity or quality of User Content. HubPages does not pre-screen User Content, but will have the right (but not the obligation) in its sole discretion to refuse or remove any User Content for any reason, including User Content that may violate these Terms, or that is otherwise objectionable. HubPages also cannot take responsibility for anything that Your Hub users may do in reliance on the Hub Content You post in Your Hubs.</p>
+
+<h2 id="trademarks">7. TRADEMARKS AND SERVICE MARKS</h2>
+
+<p>"HubPages," "HubScore," and "Hub" are HubPages service marks or trademarks and protected by applicable laws. Other product and company names mentioned on the Service may be the trademarks of their respective owners.</p>
+
+<h2 id="links">8. LINKS TO THIRD PARTY WEBSITES</h2>
+
+<p>Your Hub and the Service may include links to other sites or resources over which HubPages has no control or responsibility. HubPages does not monitor, investigate or check these sites for accuracy or completeness. As a result, HubPages is not responsible for the content or advertising on such sites, products or other materials which they may provide, such sites’ availability, or any damages caused or alleged to be caused in connection with such external websites. All such external websites included as links in Your Hub or accessed by You via the Service is done at Your own risk and with Your own liability.</p>
+
+<p>HubPages may provide pre-built modules that make it easy for You to find and add links to various sites. However, just because HubPages provides these modules does not mean HubPages is responsible for their accuracy. The Author is still responsible for what links he or she elects to put in his or her Hubs or Author Content.</p>
+
+<h2 id="earning">9. EARNING MONEY THROUGH HUBPAGES – AFFILIATE IDs PROGRAM AND HUBPAGES EARNING PROGRAM PARTICIPATION</h2>
+
+<p>HubPages offers Authors the ability to share in Earning Page Views from third party websites by a variety of means:</p>
+
+<h2 id="affiliate-ids">Assigning Affiliate IDs Program.</h2>
+
+<p>Authors may assign an affiliate ID for third party accounts to their HubPages account (each an "ID"). For example, you can input your Google AdSense information into your HubPages account, and HubPages will share the Earning Ad Impressions with such services through that ID. You are solely responsible for verifying that you have entered a valid ID correctly.</p>
+
+<p>Assigning an Amazon Associates ID: By entering a valid Amazon Associates ID, your ID will have a sixty percent (60%) chance of being placed in the Earning Page Views in the Hubs you create.</p>
+
+<p>Assigning a Google AdSense Publisher ID: By entering or associating a valid Google AdSense Publisher ID HubPages will place your ID in up to four (4) Earning Ad Impressions when an Earning Page View for the Hubs you create is selected to include your ID. Earning Page View selection is done randomly where each Earning Page View has a sixty percent (60%) chance of including your ID. The location, size and any other aspect will be chosen at HubPages’ sole discretion. Additional Earning Ad Impressions on an Earning Page View will not be assigned your Google AdSense Publisher ID.</p>
+
+<p>You acknowledge and agree that your ID is not guaranteed to be placed in any Earning Page Views, and that placement of IDs (including but not limited to your ID) on any given Earning Page View is done randomly.</p>
+
+<p>These Impression-sharing services are provided subject generally to these Terms of Service, and in particular the terms in this section. There may also be additional terms imposed by the third parties with whom You choose to do business.</p>
+
+<p>Your use of the Affiliate IDs program on the Service constitutes Your agreement to uphold and be subject to these additional terms and conditions, as well as those that may be imposed by third parties with whom You may engage in the course of Your participation in Affiliate IDs Program services. By registering with third parties that share ad revenue with Users and inputting that information into the Service, You hereby appoint HubPages as Your exclusive agent to handle all such third party ad-sharing transactions as well as to input your ID into the pages you create. Such third party will hold any revenues generated from the use of the third party services on Your Hubs. Such third party will track all earnings and deliver all payments to You in accordance with Your agreement with such third party.</p>
+
+<h2 id="hubpages-earnings-program">HubPages Earnings Program.</h2>
+
+<p>You may elect to participate in the HubPages Earnings Program, which participation will be covered under this Agreement. "HubPages Earnings Program" means that part of the Service that delivers payments to Hubbers for earnings from the HubPages Ad Program, Amazon Program, HubPages Contests, and any other program, service or opportunity HubPages offers Hubbers the ability to earn money.</p>
+
+<p>You may run portions of the HubPages Earnings Program in conjunction with the Assigning Affiliate IDs Program. (the two are different programs). To enroll in the HubPages Earnings Program we require a valid PayPal Account and completed tax forms.</p>
+
+<p>The HubPages Earnings Program is a requirement of the HubPages Ad Program and Amazon Program.</p>
+
+<p>By electing to run the HubPages Earnings Program on Your Hubs, you acknowledge and agree to the following:</p>
+
+<ul>
+	<li>Your approval and acceptance into the HubPages Earnings Program is in HubPages’ sole discretion</li>
+	<li>HubPages may suspend or remove the HubPages Earnings Program or any part thereof (including Your participation in it) at any time, in HubPages’ sole discretion</li>
+	<li>Your election to run the HubPages Earnings Program may result in additional advertisements being placed on Your Hubs</li>
+	<li>You may not transfer or assign Your HubPages Earnings Program account to any other person and/or entity</li>
+</ul>
+
+<h2 id="hubpages-ad-program">HubPages Ad Program.</h2>
+
+<p>As part of Your participation in the HubPages Earnings Program, as an option You may request to join the HubPages Ad Program. The HubPages Ad Program is only available for Earning Page Views on Hubs. HubPages provides advertisements and/or other revenue earning options directly or from third-party providers, for possible placement on Your Hubs. Hubbers that participate in the HubPages Ad Program will earn from the Earning Page Views on the Hubs you create. Your Earning Page View share will be selected based on a 60% chance of generating earnings for the author. Your earnings will be based on a formula selected by HubPages, in its sole discretion, which formula HubPages may change at any time for Your account.</p>
+
+<p>Valid earnings from activity with the HubPages Ad Program under HubPages Earnings Program will be tracked (as part of Your Earned Balance) and paid to You by HubPages (in accordance with the terms of the Payments section herein to this section). By participating in the HubPages Ad Program, you acknowledge and agree to the following:</p>
+
+<ul>
+
+<li>Advertisements from the HubPages Ad Program will appear on Your Hubs at HubPages’ discretion (and such advertisements may appear on every page load of your Hub)</li>
+<li>The third-party advertising, referral, and/or other revenue providers in the HubPages Ad Program will be determined in HubPages’ sole discretion</li>
+<li>The type, style, placement, and any other implementation decisions regarding how, when, and where ads in the HubPages Ad Program are placed on Your Hub will be determined in HubPages’ sole discretion</li>
+<li>Advertisements for both the Affiliate IDs Program and the HubPages Ad Program may appear on Your Hubs simultaneously</li>
+<li>HubPages Ad Program may place unpaid public-service, charitable, and/or default/placeholder ads on Your Hub</li>
+<li>You will not engage in any fraudulent or deceptive practices with respect to the use of HubPages Ad Program</li>
+<li>HubPages makes no guarantee that the HubPages Ad Program will be operational at all times</li>
+<li>HubPages may require Your participation in specific portions of the Affiliate ID program (and meet other requirements) in order for You to be eligible to participate in the HubPages Ad Program (including specific subcomponents thereof).</li>
+
+</ul>
+
+
+<h2 id="amazon-program">Amazon Program.</h2>
+
+<p>As part of Your participation in the HubPages Earnings Program, as an option You may request to turn on the Amazon Program in order to earn advertising fees via referrals to Amazon from Your Hubs. Valid earnings from activity with the Amazon Program under HubPages will be tracked (as part of Your Earned Balance) and paid to You by HubPages (in accordance with the terms of the Payments section herein to this section). Note that crediting of Amazon-related earning activity into Your Earned Balance may be delayed until sales are deemed final (that is, no longer eligible for return or other adjustments). Earnings will be based on a formula selected by HubPages, in its sole discretion, which formula HubPages may change at any time for Your account. The Amazon Program earnings for Your Hubs are advertising fees based on: i) a percentage of qualifying revenues from transactions that occur on Amazon via a referral of a user from Your Hubs, ii) a cost-per-click fee for valid referrals from Your Hubs, or iii) as an alternate formula that HubPages selects. The earnings formula may not be identical across all HubPages Earnings Program accounts that run the Amazon Program.</p>
+ 
+<p>In order to participate in the Amazon Program under HubPages, you must have signed-up for, been accepted into, and remain in good standing with both HubPages and the HubPages Earnings Program. You acknowledge and agree that Your participation in the Amazon Program under HubPages is subject to Your ongoing compliance with program terms and conditions required (which may include but is not limited to those for the Amazon Associates Program shown <a href="https://affiliate-program.amazon.com/gp/associates/agreement/">here</a> and <a href="https://affiliate-program.amazon.com/gp/associates/help/operating/participation/">here</a> as of the original date of publish of this section). If you do not agree to any of these terms and conditions, do not use or access (or continue to access) the Amazon Program on HubPages.</p>
+
+<p>HubPages reserves the right to discontinue, temporarily or permanently, Your participation in the Amazon Program under HubPages at any time and for any reason, without liability to You or any third party.</p>
+
+<p>For the avoidance of doubt, with Your participation in the Amazon Program under HubPages, You will not have a direct contractual relationship with Amazon, the Amazon Associates Program, or any advertiser/merchant of Amazon. You acknowledge and agree that with respect to Your participation in the Amazon Program under HubPages: i) You are prohibited from entering into any additional tier of affiliate relationship, and You will not utilize any HubPages-issued Amazon tracking ID anywhere other than on the HubPages Website; ii) Amazon, the Amazon Associates Program, and advertisers/merchants of Amazon are exempt from liability to You; iii) The Amazon Program under HubPages is made available to you without warranty of any kind and on an “AS-IS” and “AS-AVAILABLE” basis, and any such use of the Amazon Program under HubPages is at your own risk; iv) HubPages shall not be liable to You for any direct, indirect, punitive, incidental, special, consequential or exemplary damages that result from Your use of the Amazon Program, even if HubPages was advised of the possibility of such damages; v) HubPages shall not be liable to You for any decrease in earnings that may occur due to a change of earnings formula that impacts Your account; and vi) You expressly waive any claims against HubPages relating to Your participation in the Amazon Program on HubPages.</p>
+
+
+<h2 id="payment">Payment.</h2>
+
+<p>As consideration for your participation in HubPages Earnings Program and any of the HubPages Ad Program orAmazon Program, You shall receive a payment related to the valid advertising and/or referral activity on Your Hubs from participating third-party advertisers and/or networks as a part of each Program. For the avoidance of doubt, payments to You for Your participation in the HubPages Earnings Program will be made to you by HubPages and is distinct from any payments You may receive in relation to Your Hubs from any third-party pursuant to you linking of an affiliate ID or any other part of the Service. Your payment shall consist of Your Earned Balance. "Earned Balance" means Your net revenue share portion of those valid, earned, and collected (by HubPages) revenues credited to your account that are generated solely from any of Programs under the HubPages Earnings Program-based advertising and/or referral activity on Your Hub (and not any other advertising and/or referral activity that may appear on Your Hub), minus any and all commissions, fees, bad debts, third-party deductions, payment processing costs, charge-backs to Your account, fraudulent amounts, and any other deductions that HubPages deems necessary with respect to the provision of the HubPages Earnings Program for Your Hub (such deductions to be determined in HubPages’ sole discretion). You acknowledge and agree that HubPages may change the revenue share with any third-party and/or You at any time, in HubPages’ sole discretion.</p>
+
+<p>The final determination of Your Earned Balance and payment amount to You for use of the HubPages Earnings Program on Your Hubs will be made by HubPages in its sole discretion. Payment shall be calculated and based on records maintained by Hubpages (possibly in conjunction with any third-party advertising and/or referral program that participates in the HubPages Earnings Program). No other data or statistics shall be accepted by HubPages or have any effect with respect to the HubPages Earnings Program.</p>
+
+<p>Payments to You shall be sent by HubPages within approximately Thirty (30) days after the end of each calendar month that valid ads and/or referrals from the HubPages Earnings Program were credited to your Earned Balance history, if Your Earned Balance history is Fifty Dollars ($50) or more (otherwise payments will be withheld and will rollover until that month in which the total Earned Balance history has exceeded Fifty Dollars ($50). For the avoidance of doubt, payments may be delayed and/or withheld (among other reasons) to the extent that HubPages has a delay in processing applicable reports, crediting Your account, and/or has yet to receive applicable funds from a third-party advertisers who participate in the program.</p>
+
+<p>You acknowledge and agree that You will not publicly disclose Your payments or Earned Balance (including any subcomponents thereof) from the HubPages Earnings Program without prior written consent of HubPages.</p>
+
+<h2 id="fraud">Fraud, Other Invalid Activity, and Breach.</h2>
+
+<p>HubPages reserves the right to withhold payment from You if You have, directly or indirectly, engaged in activity that is deceptive or fraudulent in nature, as determined by HubPages in its sole discretion. Notwithstanding anything to the contrary, HubPages shall not be liable for any payment from the use of HubPages Earnings Program based on: (a) any fraudulent or deceptive activities; (b) invalid activities generated by any person or automated means; (c) requests for end users to click on advertisements on Your Hub or repeatedly reload Your Hub to generate additional page impressions.</p>
+
+<p>Any breach by You of this Agreement shall result in the permanent forfeiture of any Earned Balances for the applicable period. Notwithstanding any other remedies that HubPages may elect to pursue, such breach may result in a charge-back and/or future withholding for Your account, and you agree that HubPages may seek any such amounts from you in any manner permitted by law.</p>
+
+<h2 id="account-information">Account Information.</h2>
+
+<p>With respect to Your use of the HubPages Earnings Program, in order to ensure payment, You agree to provide and maintain accurate information associated with Your account, including: name, address, additional contact information (as may be requested), payment account information, tax information, and any other information (as reasonably requested by HubPages). You acknowledge and agree that it is Your sole responsibility to provide HubPages with accurate and sufficient information (as deemed by HubPages in its sole discretion) such that HubPages may make payments to You. HubPages may not be able to make payment to You, and may withhold payment, because of any (or combination) of the following reasons, including but not limited to: You have submitted inaccurate, partial, or insufficient payment information; You have submitted inaccurate, partial, or insufficient tax information; HubPages has been unable to reach You after contacting the address listed in Your account; the selected payment organization has rejected and/or returned payment to HubPages; You have not logged into Your account to provide all necessary information for the HubPages Earnings Program.</p>
+
+<h2 id="taxes">Taxes.</h2>
+
+<p>By participating in the HubPages Earnings Program, You assume sole responsibility for any taxes owed, and You agree to pay all applicable taxes or charges imposed by any government entity in connection with Your participation. You are solely responsible to provide all required tax information to HubPages. If You are a United States taxpayer, this includes but is not limited to: a) a valid United States tax identification number, and b) a completed Form W-9. If You are a non-United States taxpayer, this includes but is not limited to: a) a signed certification by You that You do not have activities in the United States, b) a completed Form W-8, or c) any other forms required by the United States tax authorities. Forms completed by non-United States taxpayers may require a valid United States tax identification number. You acknowledge and agree that for tax-related purposes HubPages may be required to make withholdings of payment amounts due to you.</p>
+
+<p><a href="https://hubpages.com/my/earnings/taxes/">Click here</a> to visit HubPages’ tax center to submit Your tax information.</p>
+
+<h2 id="hep-payments">Payment Mechanism and Uncollected Payments.</h2>
+
+<p>HubPages in its sole discretion will determine the approved payment mechanism(s) for You to receive payments due from Your running the HubPages Earnings Program. Your participation in the HubPages Earnings Program may be suspended or approval withheld until HubPages can validate that You have a valid account with approved payment mechanism. Payment mechanisms may be edited, added, or removed at any time, in HubPages sole discretion. The following are the currently approved payment mechanisms for the HubPages Earnings Program: PayPal. You must provide all necessary information (to both HubPages and any applicable third-parties) for HubPages to process payments to You. You must collect the payment amount posted to Your account with the payment company within six (6) months of such payment being made by HubPages. If after such six (6) month timeframe, either You fail to collect Your payment and/or payment is not accepted into Your account with the payment company (i.e. bounced payments), You acknowledge and agree that the funds represented by such uncollected payment may be cancelled and that (if cancelled) You hereby forfeit such payment amount, waive any claim relating to the dispute of such payment, and disclaim any and all interest in such funds.</p>
+
+<h2 id="hep-closure">Account Closure and Inactivity.</h2>
+
+<p>In the event that the Agreement is terminated by HubPages and/or HubPages elects to cease Your participation in the HubPages Earnings Program, then except in the event of breach by You, HubPages will make payment of an Earned Balance in Your account that is greater than Fifty Dollars ($50) within approximately ninety (90) days after the end of the calendar month in which the HubPages Earnings Program has stopped running. Any Earned Balance lesser than this payment threshold will be permanently forfeit by You (and You hereby waive any claim relating to the dispute of such payment and disclaim any and all interest in such funds).</p>
+
+<p>In the event that the Agreement is terminated by You (pursuant to HubPages’ receipt of Your written termination notice) the entire amount of an Earned Balance in Your account will be permanently forfeit by You (and You hereby waive any claim relating to the dispute of such payment and disclaim any and all interest in such funds).</p>
+
+<p>In the event You elect to turn off the HubPages Earnings Program (which turn-off must be made by you in Your online account; and You agree not to engage in excessive changes of HubPages Earnings Program status) but not terminate this Agreement, HubPages will make payment of an Earned Balance in Your account that is greater than Fifty Dollars ($50) within approximately ninety (90) days after the end of the calendar month in which the HubPages Earnings Program has stopped running.</p>
+
+<p>In the event of Inactivity, the entire amount of an Earned Balance in Your account will be permanently forfeit by You (and You hereby waive any claim relating to the dispute of such payment and disclaim any and all interest in such funds). "Inactivity" means that any of the following have occurred:</p>
+
+<p>a) There has been no change to Your Earned Balance for a period of greater than six (6) months;</p>
+<p>b) Your account has expired tax information that is greater than six (6) months beyond the date of such expiration;</p>
+<p>c) You have uncollected payments or unaccepted payments by the payment company into your account for a period of greater than six (6) months; or</p>
+<p>d) You have not responded to attempts to contact You at the primary email address listed in the contact information in Your account for a period of six (6) months from the date of the first attempt to contact You for which no response has been received.</p>
+
+<h2 id="author-referrals">Author Referrals</h2>
+
+<p>You may also earn money through HubPages by registering as a user, participating in any combination of the Affiliate IDs Program and any of the HubPages Earning Programs and then referring people to the Service. If they register and create Hubs, HubPages may place your combination of Earning Programs on the Hubs Earning Page Views from the HubPages share that the users You sign up create. Earning Page Views will have a ten percent (10%) chance of displaying your combination of Earning Programs. Self referrals are prohibited. You acknowledge and agree that your Earning Programs are not guaranteed to be placed in any Earning Page Views, and that placement of your Earning Programs on any given Earning Page View is done randomly.</p>
+
+<h2 id="general">General</h2>
+
+<p>HubPages reserves the right to modify the Affiliate IDs program and/or HubPages Earnings program, including without limitation the percentage share or payment structure, at any time in its sole discretion. If HubPages changes any significant terms of the Affiliate IDs program and/or HubPages Earnings Program, HubPages will notify You by email, if reasonably practicable, at least two weeks before any such change occurs. At that point, You will have the option of removing Your Hubs from the Service, or, if your Hub is non-commercial, setting your ad level to "zero," if You choose to stop working with the Affiliate IDs Program and/or HubPages Earnings Program under the new structure.</p>
+
+<p>HubPages integrates with certain third party programs in order to provide the Affiliate IDs program and HubPages Earnings program. HubPages does not warrant or guarantee the accuracy of such integration or such third party’s website.</p>
+
+<p>By using the Affiliate IDs Program services, You acknowledge and agree that HubPages will not be responsible for, and will not be obligated in any manner to repay You for, any lost earnings. HubPages makes no guarantee under this agreement regarding the amount of Earned Balance you will achieve in Your account, the revenue share, the level of Impressions, number and/or placement of advertisements, or the timely completion or delivery of any impressions, clicks, or referral information. YOU UNDERSTAND AND ACKNOWLEDGE THAT THERE IS NO GUARANTEE THAT ANY MINIMUM LEVEL OF REVENUE, OR ANY REVENUE, WILL BE GENERATED AS A RESULT OF USING THE AFFILIATE IDs PROGRAM AND/OR THE HUBPAGES EARNING PROGRAM.</p>
+
+<h2 id="disclosure">10. DISCLOSURE OF MATERIAL CONNECTION</h2>
+
+<p>(a) HubPages may have a marketing or affiliate connection to products or services linked-to or otherwise made available on the Service. Through the use of advertising, marketing or affiliate links contained on the Service, HubPages may collect fees from transactions conducted or purchases made. HubPages makes this disclosure in accordance with the Federal Trade Commission’s 16 CFR, Part 255: "Guides Concerning the Use of Endorsements and Testimonials in Advertising."</p>
+
+<p>(b) If You endorse any products or services on the Service for which there is a connection that might materially affect the weight or credibility of the endorsement (i.e., the connection is not reasonably expected by the audience), You must fully disclose the connection. For additional information, please review 16 CFR, Part 255 "Guides Concerning the Use of Endorsements and Testimonials in Advertising."</p>
+
+
+<h2 id="privacy">11. PRIVACY POLICY</h2>
+
+<p>We care about the privacy of our Users. By using the Service, you are consenting to have your personally identifiable information and aggregate data collected, used, and disclosed as set forth in our Privacy Policy (http://hubpages.com/privacy-policy), and to have your personally identifiable information transferred to and processed in the United States.</p>
+
+<h2 id="indemnification">12. INDEMNIFICATION</h2>
+
+<p>You agree to indemnify, defend and hold HubPages and its partners, agents, officers, directors, employees, subcontractors, successors, assigns, third party suppliers of information, attorneys, advertisers and affiliates harmless from any liability, loss, claim and expense, including reasonable attorney’s fees, related to your violation of these Terms or use of the Service.</p>
+
+<h2 id="disclaimer">13. DISCLAIMER</h2>
+
+<p>THE SERVICE ARE PROVIDED "AS IS", "AS AVAILABLE", WITH "ALL FAULTS", AND ALL WARRANTIES, EXPRESS OR IMPLIED, ARE HEREBY DISCLAIMED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SERVICE IS AT YOUR SOLE RISK. THE SERVICE MAY CONTAIN BUGS, ERRORS, PROBLEMS OR OTHER LIMITATIONS. HUBPAGES MAKES NO WARRANTY THAT THE SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE, OR THAT THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE SERVICE WILL MEET YOUR EXPECTATIONS, OR THAT ANY ERRORS IN THE SOFTWARE WILL BE CORRECTED OR THAT THE SERVICE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. ANY CONTENT DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SERVICE IS DOWNLOADED AT YOUR OWN RISK AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM SUCH DOWNLOAD OR YOUR USE OF THE SERVICE..</p>
+
+<h2 id="limitation-of-liability">14. LIMITATION OF LIABILITY</h2>
+
+<p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, YOU EXPRESSLY UNDERSTAND AND AGREE THAT HUBPAGES WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM THE USE OR THE INABILITY TO USE THE SERVICE, UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR HUBS, CONTENT TRANSMISSIONS OR DATA, STATEMENTS OR CONDUCT OF ANY THIRD PARTY ON THE SERVICE, OR ANY OTHER MATTER RELATING TO THE SERVICE. HUBPAGES ALSO WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE ARISING FROM YOUR FAILURE TO COMPLY WITH THE PROVISIONS OF THESE TERMS.</p>
+
+<p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, HUBPAGES ASSUMES NO LIABILITY OR RESPONSIBILITY FOR ANY (I) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT; (II) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO OR USE OF OUR SERVICE; (III) ANY UNAUTHORIZED ACCESS TO OR USE OF OUR SECURE SERVERS AND/OR ANY AND ALL PERSONAL INFORMATION STORED THEREIN; (IV) ANY INTERRUPTION OR CESSATION OF TRANSMISSION TO OR FROM THE SERVICE; (V) ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE THAT MAY BE TRANSMITTED TO OR THROUGH OUR SERVICE BY ANY THIRD PARTY; (VI) ANY ERRORS OR OMISSIONS IN ANY CONTENT OR FOR ANY LOSS OR DAMAGE INCURRED AS A RESULT OF THE USE OF ANY CONTENT POSTED, EMAILED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE THROUGH THE SERVICE; AND/OR (VII) USER CONTENT OR THE DEFAMATORY, OFFENSIVE, OR ILLEGAL CONDUCT OF ANY THIRD PARTY. IN NO EVENT SHALL HUBPAGES, ITS AFFILIATES, AGENTS, DIRECTORS, EMPLOYEES, SUPPLIERS, OR LICENSORS BE LIABLE TO YOU FOR ANY CLAIMS, PROCEEDINGS, LIABILITIES, OBLIGATIONS, DAMAGES, LOSSES OR COSTS IN AN AMOUNT EXCEEDING THE AMOUNT YOU PAID TO HUBPAGES HEREUNDER.</p>
+
+<p>THIS LIMITATION OF LIABILITY SECTION APPLIES WHETHER THE ALLEGED LIABILITY IS BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR ANY OTHER BASIS, EVEN IF HUBPAGES HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THE FOREGOING LIMITATION OF LIABILITY SHALL APPLY TO THE FULLEST EXTENT PERMITTED BY LAW IN THE APPLICABLE JURISDICTION.</p>
+
+<p>THE RELEASES HEREUNDER ARE INTENDED TO APPLY TO ALL CLAIMS NOT NOW KNOWN OR SUSPECTED TO EXIST WITH THE INTENT OF WAIVING THE EFFECT OF CALIFORNIA CIVIL CODE SECTION 1542, WHICH STATES: "A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR," ASWELL AS OTHER LAWS REQUIRING PRESENT INTENT TO RELEASE FUTURE UNKNOWN CLAIMS.</p>
+
+<p>The Service is controlled and operated from its facilities in the United States. HubPages makes no representations that the Service is appropriate or available for use in other locations. Those who access or use the Service from other jurisdictions do so at their own volition and are entirely responsible for compliance with all applicable United States and local laws and regulations, including but not limited to export and import regulations. You may not use the Service if you are a resident of a country embargoed by the United States, or are a foreign person or entity blocked or denied by the United States government. Unless otherwise explicitly stated, all materials found on the Service are solely directed to individuals, companies, or other entities located in the United States.</p>
+
+<h2 id="security">15. SECURITY</h2>
+
+<p>We have implemented commercially reasonable technical and organizational measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration or disclosure. However, we cannot guarantee that unauthorized third parties will never be able to defeat those measures or use your personal information for improper purposes. You acknowledge that you provide your personal information at your own risk.</p>
+
+<h2 id="third-party-links">16. THIRD-PARTY LINKS</h2>
+
+<p>The Service may contain links to third-party websites, advertisers, services, or other events or activities that are not owned or controlled by HubPages. HubPages does not endorse any such sites or the information, materials, products, or services contained on or accessible through such sites. HubPages has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites or services. If you access a third party website from the Service, you do so at your own risk, and you understand that this Agreement and HubPages’s Privacy Policy do not apply to your use of such sites. You expressly relieve HubPages from any and all liability arising from your use of any third-party website or services or third party owned content. Additionally, your dealings with or participation in promotions of advertisers found on the Service, including payment and delivery of goods, and any other terms (such as warranties) are solely between you and such advertisers. You agree that HubPages shall not be responsible for any loss or damage of any sort relating to your dealings with such advertisers.</p>
+
+<p>We encourage you to be aware of when you leave the Service, and to read the terms and conditions and privacy policy of any third-party website or service that you visit.</p>
+
+<p>Both HubPages and authors may be participants in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+
+<h2 id="copyrights">17. COPYRIGHTS AND COPYRIGHT AGENTS</h2>
+
+<p>We respect the intellectual property of others, and we ask you to do the same. If you believe that your content or other work has been copied in a way that constitutes copyright infringement, please provide our Copyright Agent the following information in accordance with the Digital Millennium Copyright Act:</p>
+<ul>
+	<li>An electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest;</li>
+	<li>A description of the copyrighted work that you claim has been infringed;</li>
+	<li>A description of where the material that you claim is infringing is located on the Service;</li>
+	<li>Your address, telephone number, and email address;</li>
+	<li>A statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; and</li>
+	<li>A statement by you, made under penalty of perjury, that the above information in your Notice is accurate and that you are the copyright owner or authorized to act on the copyright owner’s behalf.</li>
+</ul>
+<p>Our Copyright Agent for Notice of claims of copyright infringement via the Service can be reached by following the procedure at <a href="http://hubpages.com/copyright">http://hubpages.com/copyright</a>.</p>
+
+<p>HubPages will terminate a user account if, under appropriate circumstances, the user is determined to be a repeat infringer of copyrights (or other intellectual property) of others.</p>
+
+<h2 id="governing-law">18. GOVERNING LAW</h2>
+
+<p>These Terms will be governed by the laws of the State of California without regard to its conflict of law provisions.</p>
+
+<h2 id="entire-agreement">19. ENTIRE AGREEMENT</h2>
+
+<p>These Terms, together with the HubPages Privacy Policy and any other agreements incorporated by reference in these Terms or entered into between You and HubPages in connection with Your registration as a Author, constitute the entire agreement between You and HubPages and govern Your use of the Service, superseding any prior agreements between You and HubPages. You also may be subject to additional terms and conditions that may apply when You use affiliate or other HubPages services (such as Impression services), third-party content or third-party software.</p>
+
+<h2 id="waiver">20. WAIVER</h2>
+
+<p>The failure of HubPages to exercise or enforce any right or provision of the Terms will not constitute a waiver of such right or provision.</p>
+
+<h2 id="assignment">21. ASSIGNMENT</h2>
+
+<p>These Terms, and any rights and licenses granted hereunder, may not be transferred or assigned by you, but may be assigned by HubPages without restriction.</p>
+
+<h2 id="notices">22. NOTICES</h2>
+
+<p>HubPages may provide notifications, whether such notifications are required by law or are for marketing or other business related purposes, to you via email notice, written or hard copy notice, or through conspicuous posting of such notice on our website, as determined by HubPages in our sole discretion. HubPages reserves the right to determine the form and means of providing notifications to our Users, provided that you may opt out of certain means of notification as described in this Agreement. HubPages is not responsible for any automatic filtering you or your network provider may apply to email notifications we send to the email address you provide us. We recommend that you add team@hubpages.com to your email address book to help ensure you receive email notifications from us.</p>
+
+<h2 id="dispute-resolution">23. DISPUTE RESOLUTION</h2>
+
+<p>If a dispute arises during your use of the Service or under these Terms, You agree to abide by the following dispute resolution process, only proceeding to the next step if the previous step has not resolved the issue satisfactorily.</p>
+
+<p>1. Read our FAQ file posted at http://hubpages.com/faq/ to see if Your question has been previously answered.</p>
+
+<p>2. Send an email to HubPages at: team@HubPages.com describing the nature of the issue.</p>
+
+<p>3. Send HubPages a letter by registered mail, outlining in detail the problem, steps taken and matters remaining to be resolved to: WeWork c/o HubPages (Floor 3 - Room #169) 1111 Broadway Oakland, CA 94607, USA</p>
+
+<p>For any claim related to a payment under the HubPages Earnings Program, You must notify HubPages in writing within thirty (30) days of such payment. By failing to notify HubPages within such timeframe, You hereby waive any and all claims relating to any such disputed payment.</p>
+
+<p>For any claim (excluding claims for injunctive or other equitable relief) arising in whole or in part from the Service or these Terms where the total amount of the award sought is less than $10,000, the party requesting relief may elect to resolve the dispute through binding non-appearance-based arbitration. The party electing such arbitration shall initiate the arbitration through an established alternative dispute resolution ("ADR") provider mutually agreed upon by the parties. The ADR provider and the parties must comply with the following rules: a) the arbitration shall be conducted by telephone, online and/or be solely based on written submissions, as selected by the party initiating the arbitration; b) the arbitration shall not involve any personal appearance by the parties or witnesses unless otherwise mutually agreed by the parties; and c) any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction. You agree that all other claims arising in whole or in part from the Service or these Terms shall be decided exclusively by a court of competent jurisdiction located in Santa Clara County, California.</p>
+
+<p><sup>1</sup> Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates;</p>
+
+<p><sup>2</sup> Google, and Adsense are the trademarks of Google, Inc.</p>
+
+<p><sup>3</sup>PayPal are trademarks of PayPal, Inc. or its affiliates</p>
+
+<p><sup>4</sup> Facebook and Facebook Connect are trademarks of Facebook, Inc.</p>
+
+<a name="recent"></a><h2>RECENT CHANGES</h2>
+
+<p>January 27, 2017: We removed the eBay Partner Network from the Terms of Use and it's no longer offered as part of the HubPages service.</p>
+<p>February 2, 2016: We added websites to the service for where Hubs may appear when published.  Network sites include tatring.com, pethelpful.com and additional websites in the future.  Registration information is shared across all websites in the service.</p>
+
+<p>September 8, 2015: We added information to section 9 covering the HubPages Earning Program and its subcomponents.  We amended the Affiliate IDs section and named it the Affiliate IDs Program which now includes a limitation on the number of display ads included in the program and allows HubPages to place additional ads on the Earning Page Views.  We added definitions for Earning Page View and Earning Ad Impression.</p>
+
+<p>November 18, 2011: We have revised the terms to reflect our participation in the Amazon Associates Program.</p>
+
+<p>October 4, 2011: We have generally revised the terms to reflect our participation in the eBay Partner Network.</p>
+
+<p>August 9, 2011: We added a bullet regarding duplicate or similar content in section 4.</p>
+
+<p>July 13, 2011: We added permitted uses and restrictions to user subdomains, since they were made available broadly to Authors today.</p>
+
+<p>June 7, 2011: We removed references to the ad network Kontera, since we no longer provide support for it.</p>
+
+<p>February 24, 2011: We added new information to Section 9 and Section 22 covering the HubPages Ad Program. We added a definition of Author Services and a reference to Author Services in Section 2. We updated Section 1 to reflect the current company name, HubPages, Inc.</p>
+
+<p>September 20, 2010: We revised the definitions of Author Content and HubContent in Section 2, to make all photographs uploaded to the Service Author Content. (We did this because the technology we use to upload photos permits you to remove photographs from your gallery, but not from the Service itself.)</p>
+
+<p>May 20, 2010: We clarified a restriction against spamming and promotion, and against using automated tools and services to create accounts and publish content.</p>
+
+<p>March 8, 2010: We added notification in Section 15 of our and our authors’ participation in the Amazon Services LLC Associates program.</p>
+
+<p>November 19, 2009: We made changes throughout the Terms. Please review the amended Terms carefully. Among other things, we clarified the licenses you grant to Hub Content and Author Content, changed the dispute resolution process, and added Sections 14, 15, 20, and 21.</p>
+
+</div><div id="before_footer"></div><div id="footer_wrap"><div id="footer"><a id="footer_logo" tabindex="-1" href="http://hubpages.com/" title="To the HubPages home page"><svg class="svglogo hubpages-logo hubpages-logo30"><title></title><use xlink:href="#hubpages-logo"></use></svg></a><ul id="footerlist"><li><a tabindex="-1" href="https://hubpages.com/about/us">About Us</a></li><li><a tabindex="-1" href="https://hubpages.com/copyright">Copyright</a></li><li><a tabindex="-1" href="https://hubpages.com/user-agreement">Terms of Use</a></li><li><a tabindex="-1" href="https://hubpages.com/privacy-policy">Privacy Policy</a></li></ul><div class="legalese"><p>Copyright &copy; 2018 HubPages Inc. and respective owners. Other product and company names shown may be trademarks of their respective owners. HubPages<sup>&reg;</sup> is a registered Service Mark of HubPages, Inc. HubPages and Hubbers (authors) may earn revenue on this page based on affiliate relationships and advertisements with partners including Amazon, Google, and others.</p></div><div style="clear:both;"></div></div></div><div id="mobile_menu" hidden><div id="mobile_menu_content"><div class="button_section section"><a href="https://hubpages.com/signin/">Sign In</a><a href="https://hubpages.com/user/new/" class="button primary_action">Join</a></div><div class="search section"><form action="/search/" name="search_form_mobile" class="search_form" target="_top"><input class="search_input" name="s" type="text" value="" placeholder="Search"/><div class="search_button"><svg class="moon tiny icon search-magnify"><use xlink:href="#search-magnify"></use></svg></div></form></div><div class="categories section"><div class="category_group"><h3><a href="https://hubpages.com/art">Arts and Design</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/autos">Autos</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/literature">Books, Literature, and Writing</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/business">Business and Employment</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/education">Education and Science</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/entertainment">Entertainment and Media</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/family">Family and Parenting</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/style">Fashion and Beauty</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/food">Food and Cooking</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/games-hobbies">Games, Toys, and Hobbies</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/relationships">Gender and Relationships</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/health">Health</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/holidays">Holidays and Celebrations</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/living">Home</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/community">HubPages Tutorials and Community</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/money">Personal Finance</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/animals">Pets and Animals</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/politics">Politics and Social Issues</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/religion-philosophy">Religion and Philosophy</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/sports">Sports and Recreation</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/technology">Technology</a></h3></div><div class="category_group"><h3><a href="https://hubpages.com/travel">Travel and Places</a></h3></div></div><div class="resourcelinks section"><ul><li><a href="http://blog.hubpages.com">Blog</a></li><li><a href="http://hubpages.com/help-wizard/">Help</a></li></ul><div style="clear:both"></div></div><div class="footer section"><h3><a href="https://hubpages.com/about/us">About Us</a></h3><ul><li><a href="https://hubpages.com/copyright">Copyright</a></li><li><a href="https://hubpages.com/user-agreement">Terms of Use</a></li><li><a href="https://hubpages.com/privacy-policy">Privacy Policy</a></li></ul><p class="legalese">Copyright &copy; 2018 HubPages Inc. and respective owners. </div></div></div><script>LABqueue.wait(function() {crossDomainSetup('https://equalstyle.com/login-hub/', false);
+jq(document).ready(function() { hpSiteInit(); });
+window.userimg_domain = 'hubstatic.com';
+jq(document).ready( function() { loadLazyImages(); } );
+
+jq('#mobile_menu .search_button').click(function() {
+				jq(this).parents('form').submit();
+			});
+jq('#search_form').bind('submit',function(event) {
+	if (jq.trim(jq('#search_input').val())=='') {
+		event.stopPropagation(); return false;
+	}}
+);
+jq('#search_button').click(function() {
+	jq('#search_form').submit();
+});
+jq(window).resize(function() {
+	var winWidth = jq(window).width();
+	if (winWidth > 800) {
+		jq('#header_search_container').css('width', '');
+		jq('#search_icon, #site_title, #mobile_menu_bar').css('display','');
+		jq('#close_icon').hide();
+	}
+});
+	jq('#search_icon').click(function(event) {
+		//on sites close the hamburger menu if open
+		if (typeof closeHamburgerMenu === "function" && jq('body').hasClass('menu_on')) {
+			closeHamburgerMenu();
+			jq('body').toggleClass("menu_on");
+			setTimeout(function() { jq('#mobile_menu_bar').hide(); }, 500);
+		}
+
+		jq('#search_icon, #site_title, #mobile_menu_bar').hide();
+		jq('#close_icon').show();
+		jq('#header_search_container').css("width","78%");
+		jq('#search_input').focus();
+
+		jq('#bar1').addClass("rotate_right_x");
+		jq('#bar2').addClass("rotate_left_x");
+		jq('#bar3').fadeOut(100);
+		return false;
+	});
+	jq('#close_icon').click(function(event) {
+		jq('#bar1').removeClass("rotate_right_x");
+		jq('#bar2').removeClass("rotate_left_x");
+		jq('#bar3').fadeIn(100);
+
+		jq('#header_search_container').css("width","0px");
+		setTimeout(function() {
+			jq('#search_icon, #site_title, #mobile_menu_bar').css('display','');
+			jq('#close_icon').hide();
+		}, 250);
+	});
+});</script></body></html>
+<!-- rendered by hubwbc06 at Sat, 20 Jan 18 01:33:34 -0800 -->
+<!-- uncategorized hpads-ourshare -->
+<!-- served from cache Sat, 20 Jan 18 02:07:28 -0800 -->

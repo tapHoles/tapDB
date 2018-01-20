@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <script type="text/javascript"  src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        /**
+         * Overrides the NikeScriptManager request method and prevents
+         * Unite from being loaded twice - It works by looking for the nike.gadget.mobile.OneNikeNav
+         * and removing the unite script, and the disabling the unite config
+         *
+         * Will fail if the ScriptLoader doesn't load with 7 seconds.
+         *
+         * Once the override occurs it falls back to
+         * @param w - window object (Global)
+         */
+        $(function() {
+            var w = window;
+
+            function monitor() {
+                nike.unlisten(nike.EVENT_REQUESTED_SCRIPTS_LOADED, monitor);
+                var originalRequest = nike.ScriptLoader.request;
+                nike.ScriptLoader.request = function request(o, a, b){
+
+                    originalRequest(o, function success(i) {
+                        if (o.data && o.data.gadgetName === 'nike.gadget.mobile.OneNikeNav') {
+                            nike.ScriptLoader.request = originalRequest;
+                            if (i && i.data) {
+                                i.data = i.data.replace(/<script.*unite.*<\/script>/, '');
+                                i.data = i.data.replace(/id="nike-unite/g, 'id="off-nike-unite');
+                            }
+                        }
+                        if (a) {
+                            a(i);
+                        }
+                    }, function failure() {
+                        if (o.data && o.data.gadgetName === 'nike.gadget.mobile.OneNikeNav') {
+                            nike.ScriptLoader.request = originalRequest;
+                        }
+                        if (b) {
+                            b.apply(arguments);
+                        }
+                    });
+                };
+            };
+            // Wait for the nike.listen object to be ready, and then
+            // listen for the EVENT_REQUESTED_SCRIPTS_LOADED event
+            function injectMonitor(w, c) {
+                if (!w.nike || !w.nike.listen) {
+                    if (c <= 1000) {
+                        setTimeout(function() {
+                            injectMonitor(w, c++);
+                        }, 10);
+                    }
+                } else {
+                    nike.listen(nike.EVENT_REQUESTED_SCRIPTS_LOADED, monitor);
+                }
+            };
+            injectMonitor(w, 0);
+        });
+    </script>
+    <script type="text/javascript">
+        var nsgConfig = {
+            HOST: 'https://www.nike.com',
+            BASEPATH: '/styleguide/nsg/',
+            TENANT: 'NIKE',
+            LOCALE: 'en_us',
+            PLATFORM: 'desktop',
+            PLACEMENT: 'prepend',
+            INPUT: 'touch'
+        };
+    </script>
+    <script type="text/javascript" src="https://www.nike.com/styleguide/init/nsg.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://secure-store.nike.com/us/en_us/style.css?app=nikestore&version=latest&assets=nike,nike.gadget.OneNikeNav,nike.gadget.OneNikeFooter,nike.fonts.glyphPolyfill,nike.style.exp.exp-desktop,nike.style.nsg.nsg-desktop,nike.style.nsg.font.desktop-font-en_us&assetType=STYLE" />
+    <script type="text/javascript" src="https://secure-store.nike.com/us/en_us/NikeScriptManager.js?app=nikestore&assets=nike,nike.fonts.Selector,nike.fonts.glyphPolyfill,nike.gadget.OneNikeNav,nike.gadget.OneNikeFooter,yepnope.injectCss&assetType=SCRIPT"></script>
+    <link href="https://s3.amazonaws.com/web.nike.com/agreementservice/legal.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        .nav-panel__btn [class*=nsg-glyph--] {
+            position: absolute;
+        }
+        span.nav-right a {text-decoration:none;}
+    </style>
+</head>
+
+<body class="legalContainer Desktop Mac">
+<div id="nikeHeader" data-gadget="nike.gadget.OneNikeNav" class="mobileHide"></div>
+<div id="nikeMobileHeader" data-gadget="nike.gadget.mobile.OneNikeNav" class="mobileShow"></div>
+<div class="legalAgreement nsg-font-family--platform content" id="legalContainer">
+
+    <h1>Nike Digital Privacy Policy</h1>
+<p><em>Effective January 1, 2014</em></p>
+<p>This NIKE Digital Privacy Policy (USA) ("Privacy Policy") describes how we collect and use your information through a variety of digital means. By accessing or using this website, mobile application or other NIKE product or service on any computer, mobile phone, tablet, console or other device (collectively, "Device"), you consent to our Privacy Policy. NIKE may modify this Privacy Policy at any time effective upon its posting. Your continued use of our products and services constitutes your acceptance to this Privacy Policy and any updates. This Privacy Policy is incorporated into, and is subject to, the <a href="http://agreementservice.svs.nike.com/rest/agreement?requestType=redirect&agreementType=termsOfUse&country=US&language=en&uxId=com.nike.commerce.nikedotcom.web" shape="rect">Terms of Use</a>.</p>
+<p>While this Privacy Policy is intended to generally describe our privacy practices, our goal is to also provide more detailed information at times when it's most meaningful to you. Please look for these notices within our NIKE services.</p>
+<h2>COLLECTING INFORMATION</h2>
+<h3>WHAT YOU GIVE US</h3>
+<p>We collect information you give us or permit us to access. Information may include, but is not limited to, your name, image, birth date, email and physical address, telephone number, gender, contact lists, social media information and profile, location (GPS) information, activity and performance information, and when necessary, credit card information.</p>
+<h3>WHAT WE COLLECT FROM YOU</h3>
+<p>We may automatically collect information regarding your interaction with, and use of, our products and services. Information we may collect includes, but is not limited to, your telephone number, Device identifier and hardware information, IP address, browser type and language, cookie information, system type, whether you have enabling software to access certain features, access times, referring website URLs, information about your purchases and other information about your interactions with us.</p>
+<h3>WHAT WE COLLECT FROM OTHER NIKE INTERACTIONS AND THIRD PARTIES</h3>
+<p>We may combine information you give us with other information from NIKE sources, transactions and communications. This may include, but is not limited to, information from NIKE stores, direct mail, catalogs, events, products and applications, or other NIKE interactions. We may also combine that information with data that is publicly available and data from third parties. We also collect information about gift recipients provided by the giver.</p>
+<h3>CHILDREN'S PRIVACY</h3>
+<p>We do not knowingly collect or solicit personal information from children under 13.</p>
+<h3>USING INFORMATION</h3>
+<p>We may use your information to do the following:</p>
+<h3>ENABLE YOUR USE</h3>
+<ul><li>Enhance, customize and personalize your NIKE experiences and communications</li>
+<li>Use NIKE features, such as running routes, race registrations, placing an order and other activities</li>
+</ul><p> </p>
+<h3>OPERATE, IMPROVE AND ANALYZE</h3>
+<ul><li>Operate, provide, improve and maintain NIKE's products and services, including analyzing user behavior and trends</li>
+<li>Send you administrative messages and other information about NIKE. Communicate with you about your purchase, account information or customer service</li>
+</ul><p> </p>
+<h3>PROVIDE AND CONDUCT MARKETING AND PROMOTIONS</h3>
+<ul><li>Communicate with you about our products, services and events, and for other promotional purposes</li>
+<li>Administer contests, promotions, events, surveys or other features</li>
+<li>Display relevant marketing to you</li>
+</ul><p> </p>
+<h2>SHARING INFORMATION</h2>
+<h3>NIKE FAMILY</h3>
+<p>We may provide your information to NIKE, Inc. companies and affiliates, including Converse and Hurley ("NIKE Family"), some of which may be outside the U.S.</p>
+<h3>SERVICE PROVIDERS</h3>
+<p>We may transfer your information to NIKE Family service providers to conduct our business. For example, they may handle credit card processing, shipping, data management, email distribution, market research, information analysis, and promotions management. We may also share your information to administer features (e.g. music download, race registration, or workout routine).</p>
+<h3>BY LAW OR TO PROTECT RIGHTS</h3>
+<p>We may disclose information upon governmental request, in response to a court order, when required by law, to enforce our policies, or to protect our or others' rights, property or safety. We may share information to prevent illegal uses of NIKE's products and services or violations of the Terms of Use, or to defend ourselves against third-party claims. We may also share information with companies assisting in fraud protection or investigation.</p>
+<h3>BUSINESS TRANSFERS</h3>
+<p>Your information may be transferred to a third party as a part of our business assets in a sale of a part or all of NIKE. If this should happen, notice will be provided by posting to the website or other form of communication.</p>
+<h2>PUBLIC SHARING</h2>
+<h3>DEFAULT SHARING</h3>
+<p>When you join or use certain services, you agree to publicly share a basic amount of information, which may include your username, city location, and profile picture.</p>
+<h3>SHARING YOU CHOOSE</h3>
+<p>You may choose to share certain information. In order to participate in certain features, you may have to adjust your privacy settings and share more information. You may also choose to share your activity on other platforms, such as Facebook and Twitter. Please read the privacy policies of those platforms, because your NIKE activity published on those platforms will no longer be governed by NIKE's Privacy Policy.</p>
+<h3>NIKE SHARING</h3>
+<p>Information that is publicly shared may be used by Nike for promotional purposes.</p>
+<h3>PROTECTING INFORMATION</h3>
+<p>Security Measures: We use a variety of security measures, including encryption and authentication tools, to help protect your information. We use secure servers when you place orders. All credit card information you supply is transmitted via Secure Socket Layer (SSL) technology and then encrypted within our databases.</p>
+<h3>NO GUARANTEE</h3>
+<p>However, like other companies, NIKE cannot guarantee 100% the security or confidentiality of the information you provide to us.</p>
+<h2>COLLECTION TOOLS</h2>
+<h3>HOW WE COLLECT INFORMATION</h3>
+<p>NIKE automatically collects information within our products and services or stored by your browser or Device. We use a variety of methods to collect this information, including, but not limited to, cookies and pixel tags/web beacons ("Collection Tools").</p>
+<h3>TURNING OFF COLLECTION TOOLS</h3>
+<p>If you turn off certain Collection Tools, you may not have access to many features that make your experience more efficient and some of our services and features may not function properly. However, you can still place product orders over the telephone by contacting our customer service number at 1-800-806-6453. Note that our websites may not recognize or respond to Do Not Track (DNT) headers from web browsers.</p>
+<h3>THIRD PARTY TRACKING</h3>
+<p>We also work with other companies who use tracking technologies to serve ads on our behalf across the Internet. These companies may collect information about your interaction with us, including advertising. These companies may not recognize or respond to DNT headers from web browsers. If you would like to opt-out of receiving ads tailored by 3rd party tracking technologies associated with our website, please click <a href="http://www.networkadvertising.org/managing/opt_out.asp" shape="rect">here</a>. Note that if you opt-out from these third party tracking technologies, you may still see our ads at other websites, but the ads will not be tailored using third party tracking technologies associated with our website.</p>
+<h2>CHOICES</h2>
+<h3>MODIFYING OR DELETING YOUR INFORMATION</h3>
+<p>You can modify or delete your profile within certain NIKE services, through your account. Your information previously posted may still be publicly viewable. NIKE may keep information and content in our backup files and archives.</p>
+<h3>COMMUNICATION/UNSUBSCRIBE/OPT-OUT</h3>
+<p>Regardless of the settings you select, NIKE may send you service-related communications. To unsubscribe and stop receiving messages, please change your settings or follow the instructions in the email, text message, notification or other message type. If you have unsubscribed from any NIKE communications, due to production schedules, you may receive communications already in production.</p>
+<h3>INTERNATIONAL USERS</h3>
+<p>Our digital operations are conducted, in whole or in part, in the United States. Regardless of where you live, you consent to have your personal data transferred, processed and stored in the United States, and allow NIKE to use and collect your personal information in accordance with this Privacy Policy.</p>
+<h3>TERMS OF USE</h3>
+<p>Your use of our products and services, and any disputes arising from them, is subject to this Privacy Policy as well as our <a href="http://agreementservice.svs.nike.com/rest/agreement?requestType=redirect&agreementType=termsOfUse&country=US&language=en&uxId=com.nike.commerce.nikedotcom.web" shape="rect">Terms of Use</a>. Please visit our <a href="http://agreementservice.svs.nike.com/rest/agreement?requestType=redirect&agreementType=termsOfUse&country=US&language=en&uxId=com.nike.commerce.nikedotcom.web" shape="rect">Terms of Use</a>, which explains other terms governing the use of our products and services.</p>
+<p>For questions or concerns, please contact Consumer Services/Privacy at: 1-800-806-6453 or NIKE Consumer Services/Privacy, One Bowerman Drive, Beaverton, OR 97005.</p>
+
+</div>
+<div id="nikeFooter" data-gadget="nike.gadget.OneNikeFooter" class="mobileHide"></div>
+<div id="nikeMobileFooter" data-gadget="nike.gadget.mobile.OneNikeFooter" class="mobileShow"></div>
+</body>
+</html>

