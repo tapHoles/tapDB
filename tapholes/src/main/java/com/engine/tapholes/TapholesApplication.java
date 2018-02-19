@@ -5,8 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class TapholesApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(TapholesApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TapholesApplication.class, args);
+    }
 }
